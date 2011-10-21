@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-21T17:11:40+02:00</updated>
+  <updated>2011-10-21T18:08:46+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,29 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Blubber]]></title>
-    <link href="http://johl.github.com/blog/2011/10/21/blubber/"/>
-    <updated>2011-10-21T16:56:00+02:00</updated>
-    <id>http://johl.github.com/blog/2011/10/21/blubber</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[new-post]]></title>
-    <link href="http://johl.github.com/blog/2011/10/21/new-post/"/>
-    <updated>2011-10-21T16:55:00+02:00</updated>
-    <id>http://johl.github.com/blog/2011/10/21/new-post</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[So ist das Leben]]></title>
-    <link href="http://johl.github.com/blog/2011/10/21/so-ist-das-leben/"/>
-    <updated>2011-10-21T00:00:00+02:00</updated>
-    <id>http://johl.github.com/blog/2011/10/21/so-ist-das-leben</id>
-    <content type="html"><![CDATA[<p>Das Leben ist so.</p>
+    <title type="html"><![CDATA[So ist das nun mal]]></title>
+    <link href="http://johl.github.com/blog/2011/10/21/so-ist-das-nun-mal/"/>
+    <updated>2011-10-21T18:08:00+02:00</updated>
+    <id>http://johl.github.com/blog/2011/10/21/so-ist-das-nun-mal</id>
+    <content type="html"><![CDATA[<p>Manchmal ist das einfach so. Da kann man wenig dran machen.</p>
 ]]></content>
   </entry>
   
