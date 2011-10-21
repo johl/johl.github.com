@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-21T16:49:23+02:00</updated>
+  <updated>2011-10-21T16:56:52+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,9 +14,18 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Blubber]]></title>
+    <link href="http://johl.github.com/blog/2011/10/21/blubber/"/>
+    <updated>2011-10-21T16:56:00+02:00</updated>
+    <id>http://johl.github.com/blog/2011/10/21/blubber</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[new-post]]></title>
     <link href="http://johl.github.com/blog/2011/10/21/new-post/"/>
-    <updated>2011-10-21T16:36:00+02:00</updated>
+    <updated>2011-10-21T16:55:00+02:00</updated>
     <id>http://johl.github.com/blog/2011/10/21/new-post</id>
     <content type="html"><![CDATA[
 ]]></content>
