@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-21T16:56:52+02:00</updated>
+  <updated>2011-10-21T17:11:40+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -28,6 +28,15 @@
     <updated>2011-10-21T16:55:00+02:00</updated>
     <id>http://johl.github.com/blog/2011/10/21/new-post</id>
     <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[So ist das Leben]]></title>
+    <link href="http://johl.github.com/blog/2011/10/21/so-ist-das-leben/"/>
+    <updated>2011-10-21T00:00:00+02:00</updated>
+    <id>http://johl.github.com/blog/2011/10/21/so-ist-das-leben</id>
+    <content type="html"><![CDATA[<p>Das Leben ist so.</p>
 ]]></content>
   </entry>
   
