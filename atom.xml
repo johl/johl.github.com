@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-21T18:08:46+02:00</updated>
+  <updated>2011-10-21T18:39:41+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jens Ohlig]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -16,9 +16,9 @@
   <entry>
     <title type="html"><![CDATA[So ist das nun mal]]></title>
     <link href="http://johl.github.com/blog/2011/10/21/so-ist-das-nun-mal/"/>
-    <updated>2011-10-21T18:08:00+02:00</updated>
+    <updated>2011-10-21T18:37:00+02:00</updated>
     <id>http://johl.github.com/blog/2011/10/21/so-ist-das-nun-mal</id>
-    <content type="html"><![CDATA[<p>Manchmal ist das einfach so. Da kann man wenig dran machen.</p>
+    <content type="html"><![CDATA[<p>Manchmal ist das einfach so. Da kann man nichts machen.</p>
 ]]></content>
   </entry>
   
