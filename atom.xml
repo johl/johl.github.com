@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-22T16:54:23+02:00</updated>
+  <updated>2011-10-22T16:59:00+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -75,6 +75,16 @@ Nifty, was?</p>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --global blog.path /pfad/zu/meinem/octopress
 </span><span class='line'>$ git config --global core.editor /pfad/zu/meinem/lieblingseditor</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Wer Lust hat, kann sich danach noch einen <code>git</code>-Befehl namens <code>git blog-deploy</code> anlegen</p>
+
+<figure class='code'><figcaption><span>/usr/local/bin/git-blog-deploy  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake generate <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake deploy
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Ach ja. Nebenbei bemerkt: Hallo Welt!</p>
