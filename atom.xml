@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-22T18:24:50+02:00</updated>
+  <updated>2011-10-22T18:38:21+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -82,8 +82,24 @@ Nifty, was?</p>
 <figure class='code'><figcaption><span>/usr/local/bin/git-blog-deploy  </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
-</span><span class='line'><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake generate <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake deploy
+</span><span class='line'><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span>
+</span><span class='line'>git add _posts/
+</span><span class='line'>git status | grep <span class="s2">&quot;Changes to be committed:&quot;</span>
+</span><span class='line'><span class="k">if </span><span class="nb">test</span> <span class="nv">$?</span> -eq 0; <span class="k">then</span>
+</span><span class='line'><span class="k">    </span>git commit -a -m <span class="s2">&quot;Automatically commited.&quot;</span>
+</span><span class='line'>    <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake generate <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake deploy
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="k">    </span><span class="nb">exit</span>
+</span><span class='line'><span class="k">fi</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
