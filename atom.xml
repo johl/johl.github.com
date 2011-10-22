@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-22T18:23:48+02:00</updated>
+  <updated>2011-10-22T18:24:50+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Testing]]></title>
-    <link href="http://johl.github.com/blog/2011/10/22/testing/"/>
-    <updated>2011-10-22T18:16:00+02:00</updated>
-    <id>http://johl.github.com/blog/2011/10/22/testing</id>
-    <content type="html"><![CDATA[<p>Test.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[git blog — mein Zusatzkommando für Octopress]]></title>
