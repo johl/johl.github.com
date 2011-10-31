@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-31T11:58:23+01:00</updated>
+  <updated>2011-10-31T18:23:51+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[LiquidFeedback der Piratenpartei unter Python mit der API abrufen]]></title>
-    <link href="http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei-unter-python-mit-der-api-abrufen%3A-so-einfach-geht-das/"/>
+    <link href="http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei/"/>
     <updated>2011-10-31T11:16:00+01:00</updated>
-    <id>http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei-unter-python-mit-der-api-abrufen:-so-einfach-geht-das</id>
+    <id>http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei</id>
     <content type="html"><![CDATA[<div><script src='https://gist.github.com/1327231.js?file='></script>
 <noscript><pre><code>import requests, json # ggf. requests (http://docs.python-requests.org/en/latest/index.html) installieren mit 'pip install requests'
 base_url = &quot;https://lqfb.piratenpartei.de/pp/&quot; # oder einen anderen Basis-URL für eine andere LQFB-Instanz
