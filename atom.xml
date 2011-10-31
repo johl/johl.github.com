@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-10-30T19:30:12+01:00</updated>
+  <updated>2011-10-31T11:21:59+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[LiquidFeedback der Piratenpartei unter Python mit der API abrufen]]></title>
+    <link href="http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei-unter-python-mit-der-api-abrufen%3A-so-einfach-geht-das/"/>
+    <updated>2011-10-31T11:16:00+01:00</updated>
+    <id>http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei-unter-python-mit-der-api-abrufen:-so-einfach-geht-das</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/1327231.js?file='></script>
+<noscript><pre><code>import requests, json # ggf. requests (http://docs.python-requests.org/en/latest/index.html) installieren mit 'pip install requests'
+base_url = &quot;https://lqfb.piratenpartei.de/pp/&quot; # oder einen anderen Basis-URL für eine andere LQFB-Instanz
+key = &quot;xxxxxxx&quot; # Zu finden unter https://lqfb.piratenpartei.de/pp/member/developer_settings.html
+r = requests.get(base_url + &quot;/api/initiative.html?key=&quot; + key + &quot;&amp;api_engine=json&quot;)
+initiatives = json.loads(r.content)
+print &quot;Letzte Initiativen: &quot;
+for initiative in initiatives:
+    print initiative[&quot;name&quot;]</code></pre></noscript></div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Phaidros und Sokrates treffen sich im Internet]]></title>
