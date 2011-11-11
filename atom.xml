@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-11-08T15:39:07+01:00</updated>
+  <updated>2011-11-11T13:43:37+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pepero Day]]></title>
+    <link href="http://johl.github.com/blog/2011/11/11/pepero-day/"/>
+    <updated>2011-11-11T13:36:00+01:00</updated>
+    <id>http://johl.github.com/blog/2011/11/11/pepero-day</id>
+    <content type="html"><![CDATA[<p>Heute ist der 11.11.11. Damit seid ihr dabei, wenn der Pepero Day begangen wird, zumindest in Korea, wo man sich an diesem Tag mit <a href="http://en.wikipedia.org/wiki/Pepero">Schokolade ummantelte Stäbchen</a> schenkt. Aufgrund der Form des Datums (&#8220;11&#8221; sieht nun mal aus wie wie zwei Sckokostäbchen) feiern wir dieses Jahr sogar den extrem seltenen und nur alle tausend Jahre einmal vorkommenden &#8220;Millenium Pepero Day&#8221;. Alle Details zu diesem wichtigen Feiertag vermittelt das folgende Video:</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/4SwV5YfnJ6E" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Memepunk, ein glücklicherweise weniger bekanntes literarisches Genre]]></title>
