@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-11-25T16:35:56+01:00</updated>
+  <updated>2011-12-07T13:07:09+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hackerbrause zum Lesen]]></title>
+    <link href="http://johl.github.com/blog/2011/12/07/hackerbrause-zum-lesen/"/>
+    <updated>2011-12-07T13:04:00+01:00</updated>
+    <id>http://johl.github.com/blog/2011/12/07/hackerbrause-zum-lesen</id>
+    <content type="html"><![CDATA[<p>Die letzten Monate haben ihdl, yetzt und ich damit verbracht ein Buch über Hackerbrausen zu schreiben. Jetzt ist es Ende Dezember endlich soweit — gerade noch rechtzeitig für die letzten geekigen Weihnachtsgeschenke erscheint „Hackerbrause kurz&amp;geek“ im O’Reilly Verlag. Alle weiteren Infos, Vorbestellmöglichkeiten und ein Link zu einem Probekapitel findet ihr auf <a href="http://hacker.brau.se/2011/12/ab-20-dezember-2011-erhaltlich-unser-buch/">hacker.brau.se</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wie ich das Geld auf der Straße fand und was ich damit tat nachdem ich es gefunden hatte]]></title>
