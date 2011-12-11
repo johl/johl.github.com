@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-12-07T13:07:09+01:00</updated>
+  <updated>2011-12-11T16:50:01+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Roböxtica 2011: All filled up by machines of loving grace]]></title>
+    <link href="http://johl.github.com/blog/2011/12/11/roboexotica-2011/"/>
+    <updated>2011-12-11T16:43:00+01:00</updated>
+    <id>http://johl.github.com/blog/2011/12/11/roboexotica-2011</id>
+    <content type="html"><![CDATA[<blockquote><p>There are bytes in the air, and Turing machines *everywhere* .</p><footer><strong>Travis Goodspeed</strong><cite></cite></footer></blockquote>
+
+
+<p>Man soll Ereignisse verbloggen, bevor es zu spät ist. Schon viel zu lange her ist mein Besuch in Wien, wo ich an der <a href="http://www.roboexotica.org/">Roböxtica</a> teilnahm, einem u.a. von der <a href="http://de.wikipedia.org/wiki/Monochrom_(Gruppe">Kunst-, Theorie- und Bastelneigungsgruppe monochrom</a>) veranstaltetes Festival für Cocktailrobotik:</p>
+
+<blockquote><p><img class="imgborder" src="http://kurier.at/mmedia/medienpool/2011-12-05/957_fe3.jpg" alt="" title="Credit: Lisa Stadler"><br/><p class="bildbeschreibung">&#8220;Wien ist die Hauptstadt der Cocktail-Robotik&#8221;, verkündet Johannes Grenzfurthner (<em>Bild</em>) stolz. Er ist Teil der Künstlergruppe <strong>monochrom</strong>, die heuer wieder gemeinsam mit dem Kollektiv Shifz zur Roboexotica laden. Bei dem seit 2002 stattfindenden Festival im Kunstkontext schenken Roboter verschiedenster Art Cocktails aus.<br><br></p></p><footer><strong>&#8220;Kurier.at Festival: Cocktail-Robotik & Palatschinken&#8221;</strong><cite><a href='http://kurier.at/kult/4451664-festival-cocktail-robotik-amp-palatschinken.php'>kurier.at/kult/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Drei Tage Trinken und Theorie mit Robotern (u.a. war ich auf einem eher spontan organisierten Panel zum Thema &#8220;Out of Control&#8221;) zehrten ganz schön an der Substanz, aber das Erlebnis war wunderschön. Wäre ich nicht selbst da gewesen, ich wäre neidisch auf mich.</p>
+
+<p>Mein eigenes Projekt hieß &#8221;<strong>PrecariBot: A Twittering Tip Jar in
+Times of Precarious Work</strong>&#8221;:</p>
+
+<p><img class="left" src="http://f.cl.ly/items/443Y0q3k2Y200D3d1Z0g/picplz%202011-12-01%2018.28.09.png" width="400" height="400" title="PrecariBot" ></p>
+
+<blockquote><p>Precariedad. Precariedade. Précarité. Precarietà. Prekariat. Precarity. Non- standard employment which is poorly paid, insecure, unprotected, and cannot support a household is on the rise in Europe, especially in the service industry. While drink-mixing robots and machines represent the fun side of Post-Fordism in bars, let’s talk about money here.</p><p>The PrecariBot is a simple, Arduino-based tip jar. Customers, probably “first- stage gentrifiers” in the neighborhood of the bar, possessing the relevant cultural capital and smart phones, get lured in by the technological novelty of tipping using a QR code and the peer-to-peer currency of Bitcoin. The tip jar will spread messages of precarious work on Twitter with every tip received. At the end of the month, those registered as precarious workers with the tip jar get an e-mail message that asks them to organize and redistribute the acquired wealth.</p></blockquote>
+
+
+<p>Das twitternde Trinkgeldglas, das Bitcoins entgegennimmt und prekäre Arbeit thematisiert, war eher ein Prototyp — auch wenn alles funktionierte und zweimal auch von mir Unbekannten Besucherinnen oder Besuchern der Ausstellung Geld &#8220;eingeworfen&#8221; wurde. Ich will aber in den nächsten Wochen daran arbeiten, es tatsächlich in Cafes und Restaurants zu bringen. Dann gibt es auch den dazugehörigen Sourcecode online. Versprochen. Prost, Fordismus!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hackerbrause zum Lesen]]></title>
