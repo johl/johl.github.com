@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2011-12-18T17:08:52+01:00</updated>
+  <updated>2012-01-03T02:25:10+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[28C3]]></title>
+    <link href="http://johl.github.com/blog/2012/01/03/28c3/"/>
+    <updated>2012-01-03T02:04:00+01:00</updated>
+    <id>http://johl.github.com/blog/2012/01/03/28c3</id>
+    <content type="html"><![CDATA[<p>Ich wünschte, ich könnte mehr zum <a href="http://events.ccc.de/congress/2011/wiki/Welcome">28C3</a> sagen, aber dazu müsste ich meine Gedanken erstmal ordnen. Immerhin kann ich überhaupt wieder etwas sagen und bin nicht mehr abgetaucht im Strudel der Ereignisse. Hier ein paar wirklich grobe Gedankensplitter:</p>
+
+<ul>
+<li><p>Beim Anschauen des Panels <a href="http://www.youtube.com/watch?v=QnfOOoTOrDE">&#8220;Geeks and Depression&#8221;</a> habe ich viel gedacht, auch viel, was zu persönlich ist, aber eine Idee möchte ich dann doch teilen: Sollte es irgendwann einmal eine <a href="http://de.wikipedia.org/wiki/Parteinahe_Stiftung">parteinahe Stiftung</a> der Piratenpartei geben, soll sie bitte &#8221;<a href="http://de.wikipedia.org/wiki/Florian_Hufsky">Florian Hufsky</a> Stiftung&#8221; heissen.</p></li>
+<li><p>Jaja, <a href="https://twitter.com/#!/map/statuses/151790287600091136">&#8220;#28c3 - The only place in the known universe where bitcoin is still relevant.&#8221;</a> — dafür gab es dann aber doch einige Talks zu dem Thema. Und bei mir im Kopf entstand die Idee, ob man ein <a href="http://de.wikipedia.org/wiki/Mixmaster-Remailer">Mixmaster</a>-System aufbauen könnte, in das man BitCoin einzahlt und das dann anonymisiert und verteilt über verschiedene PayPal-Accounts und Kreditkarten gestückelt das Geld an einem anderen Ende wieder auszahlt. Ist das überhaupt legal oder Geldwäsche?</p></li>
+<li><p>Die <a href="http://lanyrd.com/2011/spack0/">Spackeriade</a> war großartig, nur ein Talk war ein bisschen schwach, der Rest hat mich inspiriert. Eine längere Veranstaltung, vielleicht in Form eines Post-Privacy-Camps, fände ich nicht falsch.</p></li>
+<li><p><a href="https://r0ket.badge.events.ccc.de/">r0ket</a>. Damit muss ich in Zukunft noch viel mehr basteln. Und um sie auf dem Mac zu flashen braucht man kein Ubuntu in einer VM, <a href="https://github.com/Lotterleben/dinge">dank Lotterleben</a>.</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Roböxtica 2011: All filled up by machines of loving grace]]></title>
