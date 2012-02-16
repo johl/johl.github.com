@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-02-12T19:45:03+01:00</updated>
+  <updated>2012-02-16T23:01:50+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sneak preview]]></title>
+    <link href="http://johl.github.com/blog/2012/02/16/vorschau/"/>
+    <updated>2012-02-16T22:57:00+01:00</updated>
+    <id>http://johl.github.com/blog/2012/02/16/vorschau</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/0u3e0K2Z2Z1W2y0W2I2y/IMG_20120216_222331.jpg" title="Dinge, die ihren Schatten voraus werfen" ></p>
+
+<p>Gerade lese ich ein bisschen, weil Dinge ihren Schatten vorauswerfen.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2012: Schreckensvision einer fernen Zukunft]]></title>
