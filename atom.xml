@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-02-26T19:08:37+01:00</updated>
+  <updated>2012-02-26T19:09:22+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[<ul>
 <li><a href="http://buzzientdev.posterous.com/django-outside-of-django">Using Django outside of Django</a> — wenn ein IRC-Bot oder sonst ein Wesen der Nacht auf die Django-Datenstruktur zugreifen soll</li>
 <li><a href="http://schnitzelpress.org/">Schnitzelpress is a Blogging Engine for the modern Web</a> — Im Wesentlichen Octpress mit einer Datenbank</li>
-<li><a href="http://www.askgeo.com/">AskGeo | Latitude and Longitude to Time Zone Conversion Web API</a> — wie heisst die Zeitzone von dem Ort, wo ich gerade bin in Unix-Sprech?</li>
+<li><a href="http://www.askgeo.com/">AskGeo | Latitude and Longitude to Time Zone Conversion Web API</a> — wie heisst die Zeitzone von dem Ort, wo ich gerade bin, in Unix-Sprech?</li>
 </ul>
 
 ]]></content>
