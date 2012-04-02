@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-02-26T19:09:22+01:00</updated>
+  <updated>2012-04-02T09:03:26+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Es geht los]]></title>
+    <link href="http://johl.github.com/blog/2012/04/02/es-geht-los/"/>
+    <updated>2012-04-02T08:55:00+02:00</updated>
+    <id>http://johl.github.com/blog/2012/04/02/es-geht-los</id>
+    <content type="html"><![CDATA[<p>Ich bin ganz aufgeregt. Heute geht es dann wirklich los bei Wikidata, dem Projekt, was das Internet ein bisschen umkrempeln könnte. Am Freitag gab es eine Pressekonferenz zu dem Thema und das Echo war ganz ansehnlich.</p>
+
+<p>Techcrunch schrieb enthusiastisch <a href="http://techcrunch.com/2012/03/30/wikipedias-next-big-thing-wikidata-a-machine-readable-user-editable-database-funded-by-google-paul-allen-and-others/">&#8220;Wikipedia’s Next Big Thing: Wikidata, A Machine-Readable, User-Editable Database Funded By Google, Paul Allen And Others&#8221;</a>, etwas nüchterner war Netzpolitik.org mit <a href="http://netzpolitik.org/2012/wikidata-strukturierte-daten-fur-wikipedia-co/">&#8220;Wikidata: Strukturierte Daten für Wikipedia &amp; Co.&#8221;</a> und <a href="http://www.tagesschau.de/inland/wikidata100.html">auch die Tagesschau hatte was, wenn auch nur am Rande</a>.</p>
+
+<p>Jetzt müssen wir das &#8220;nur noch&#8221; programmieren. Drückt uns die Daumen!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Webdevelopment und sonstiger Geek-Kram, der anfiel — eine kleine Liste gefunderer Links mal wieder]]></title>
