@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-04-02T09:03:26+02:00</updated>
+  <updated>2012-05-01T05:18:44+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bundestagswahlprogramm 1987 Die Grünen]]></title>
+    <link href="http://johl.github.com/blog/2012/05/01/bundestagswahlprogramm-1987-die-grnen/"/>
+    <updated>2012-05-01T05:08:00+02:00</updated>
+    <id>http://johl.github.com/blog/2012/05/01/bundestagswahlprogramm-1987-die-grnen</id>
+    <content type="html"><![CDATA[<blockquote><p>DIE GRÜNEN befürworten eine bedürfnisorientierte Technikentwicklung auch im Kommunikationsbereich. DIE GRÜNEN unterstützen den Widerstand gegen IuK-Techniken und<br/>fordern:<br/>• Ausweitung der Mitbestimmungsrechte über Betriebe und Branchen hinweg, um der übergreifenden technischen Vernetzung begegnen zu können.<br/>• Verbot von Personalinformationssystemen und sonstiger Systeme, die geeignet sind, die Beschäftigten zu verdaten.<br/>• Keine Digitalisierung des Fernsprechnetzes.<br/>• Keine Dienste- und Netzintegration im Fernsprechnetz (ISDN).<br/>• Keine Glasfaserverkabelung (Breitband-ISDN).<br/>• Stopp des Kabel- und Satellitenfernsehens.<br/>• Wirksame parlamentarische Kontrolle der Post.</p></blockquote>
+
+
+<p><a href="http://www.boell.de/downloads/stiftung/1987_Wahlprogramm(1).pdf">Bundestagswahlprogramm 1987 DIE GRÜNEN: Farbe bekennen</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Es geht los]]></title>
@@ -382,100 +394,6 @@ kann ebenso gut an Morozov, den ständigen Mahner vor den dunklen Seiten des Net
     <content type="html"><![CDATA[<p><img class="left" src="http://www.oreilly.de/catalog/covers/hackerbrauseprger.s.gif">
 In der Endphase befindet sich bei mir gerade das Korrekturlesen für <a href="http://www.oreilly.de/catalog/hackerbrauseprger/">ein kleines, feines Buch, das demnächst bei O&#8217;Reilly erscheint</a> und das ich zusammen mit zwei tollen Menschen geschrieben habe. Es handelt sich um ein Buch zum Thema Hackerbrause und ist quasi das Papier-Pendant zu unserem Blog <a href="http://hacker.brau.se/">hacker.brau.se</a>.
 Über den Verlauf der Buchproduktion werde ich in den nächsten Tagen an dieser Stelle berichten.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[git blog — mein Zusatzkommando für Octopress]]></title>
-    <link href="http://johl.github.com/blog/2011/10/22/git-blog--mein-zusatzkommando-fr-octopress/"/>
-    <updated>2011-10-22T15:03:00+02:00</updated>
-    <id>http://johl.github.com/blog/2011/10/22/git-blog&#8211;mein-zusatzkommando-fr-octopress</id>
-    <content type="html"><![CDATA[<p>Für dieses Blog benutze ich <a href="http://octopress.org/">Octopress</a>, das &#8220;blogging framework for hackers&#8221;. Theoretisch
-gibt es da auch ein <code>rake</code>-Kommando, um neue Posts abzusetzen (nämlich <code>rake new_post</code>), ich hatte allerdings schon ein halbfertiges Skript da, welches ich als <code>/usr/local/bin/git-blog</code>
-gespeichert habe.</p>
-
-<p>Mit diesem Skript wird ein neues Posting angelegt und mein Lieblingseditor geöffnet. Sobald es gespeichert ist, verfügt meine lokale Git-Installation über einen neuen Befehl, <code>git blog</code>.
-Nifty, was?</p>
-
-<figure class='code'><figcaption><span>/usr/local/bin/git-blog  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
-</span><span class='line'><span class="k">if </span><span class="nb">test</span> <span class="nv">$# </span>-eq 0; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;blog title required&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit </span>1
-</span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="k">    </span><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span>
-</span><span class='line'>    <span class="nv">title</span><span class="o">=</span><span class="nv">$@</span>
-</span><span class='line'>    <span class="nv">date</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&quot;%Y-%m-%d %H:%M&quot;</span><span class="sb">`</span>
-</span><span class='line'>    <span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;_posts/$(date +&quot;</span>%Y-%m-%d<span class="s2">&quot;)-$(echo $@|sed -e &#39;s/[^ -~]//g&#39;|sed -e &#39;s/ /-/g&#39;|sed -e &#39;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&#39;).markdown&quot;</span>
-</span><span class='line'>    <span class="k">if</span> <span class="o">[</span> ! -f <span class="nv">$filename</span> <span class="o">]</span>;
-</span><span class='line'>        <span class="k">then</span>
-</span><span class='line'><span class="k">            </span><span class="nb">echo</span> <span class="s2">&quot;---&quot;</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;layout: post&quot;</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;title:&quot;</span> <span class="nv">$title</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;date: &quot;</span> <span class="nv">$date</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;comments: true&quot;</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;categories:&quot;</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;---&quot;</span> &gt;&gt; <span class="nv">$filename</span>;
-</span><span class='line'>        <span class="k">fi</span>
-</span><span class='line'>    <span class="k">$(</span>git config core.editor<span class="k">)</span> <span class="nv">$filename</span>
-</span><span class='line'><span class="k">fi</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Vorher sollte noch <code>git</code> konfiguriert werden. Dabei sollte das <code>blog.path</code>-Verzeichnis das sein, in dem sich das <code>_posts</code>-Verzeichnis befindet (bei Octopress ist das unterhalb von <code>source</code>):</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --global blog.path /pfad/zu/meinem/octopress
-</span><span class='line'>$ git config --global core.editor /pfad/zu/meinem/lieblingseditor</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Wer Lust hat, kann sich danach noch einen <code>git</code>-Befehl namens <code>git blog-deploy</code> anlegen:</p>
-
-<figure class='code'><figcaption><span>/usr/local/bin/git-blog-deploy  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
-</span><span class='line'><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span>
-</span><span class='line'>git add _posts/
-</span><span class='line'>git status | grep <span class="s2">&quot;Changes to be committed:&quot;</span>
-</span><span class='line'><span class="k">if </span><span class="nb">test</span> <span class="nv">$?</span> -eq 0; <span class="k">then</span>
-</span><span class='line'><span class="k">    </span>git commit -a -m <span class="s2">&quot;Automatically commited.&quot;</span>
-</span><span class='line'>    <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake generate <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake deploy
-</span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="k">    </span><span class="nb">exit</span>
-</span><span class='line'><span class="k">fi</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Ach ja. Nebenbei bemerkt: Hallo Welt!</p>
 ]]></content>
   </entry>
   
