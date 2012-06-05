@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-06-05T02:54:40+02:00</updated>
+  <updated>2012-06-05T03:10:29+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -28,9 +28,7 @@ projects.</p>
 <p>We presented our work on
 <a href="http://meta.wikimedia.org/wiki/Wikidata">Wikidata</a> on the two days
 before the Hackathon for those interested. I had a short session about
-single sign-on and problems that may come with it. <a href="http://ultimategerardm.blogspot.de/2012/06/wmdevdays-single-signon.html">Gerard Meijssen
-blogged about
-this</a>.</p>
+single sign-on and problems that may come with it. <a href="http://ultimategerardm.blogspot.de/2012/06/wmdevdays-single-signon.html">Gerard Meijssen blogged about this</a>.</p>
 
 <p>Saturday and Sunday was time for hacking and training. I decided to dive
 into the new possibilties that are offered by the <a href="http://www.mediawiki.org/wiki/Extension:Scribunto">Scribunto
