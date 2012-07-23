@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-06-05T03:11:32+02:00</updated>
+  <updated>2012-07-23T03:33:14+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ideen, die ich gern verwirklicht sähe]]></title>
+    <link href="http://johl.github.com/blog/2012/07/23/ideen/"/>
+    <updated>2012-07-23T03:05:00+02:00</updated>
+    <id>http://johl.github.com/blog/2012/07/23/ideen</id>
+    <content type="html"><![CDATA[<p>&#8230; für die meine Motivation oder Zeit aber leider nicht ausreicht.</p>
+
+<ol>
+<li>Nachdem mich <a href="http://johannesluderschmidt.de/lang/de/about/">Johannes Luderschmidt</a> auf das Potenzial aufmerksam machte, wünsche ich mir sehr dringend ein Comic über die <a href="http://de.wikipedia.org/wiki/X-Men">X-Men</a>/<a href="http://de.wikipedia.org/wiki/Die_R%C3%A4cher">Avengers</a>/<a href="http://de.wikipedia.org/wiki/Justice_League_of_America">Justice League</a> des Katholizismus: Die <a href="http://de.wikipedia.org/wiki/Vierzehn_Nothelfer">vierzehn Nothelfer</a>.</li>
+<li>Beim Anlegen der <a href="http://www.rollergirl.ca/misc/roller-derby-fresh-meat-file.html#protective_gear">Rüstung zum Rollschuhlaufen</a> setzte sich folgender Gedanke in mein Hirn: Roller <a href="http://de.wikipedia.org/wiki/Kend%C5%8D">Kendo</a>, warum existiert das nicht?</li>
+<li>Ganz offensichtlich war ich nicht der erste, der auf die Idee gekommen ist, dass Griechenland ja Infrastrukturprojekte auf Kickstarter stellen könnte — zumindest <a href="https://twitter.com/towo/status/226783627109883904">Towo war eher als ich auf den Gedanken gekommen</a>. Aber die Frage bleibt: Crowdfunding für verschuldete Staaten, kann das funktionieren oder ist da auf Kickerstarter et al. kein Blumentop zu gewinnen, weil es kein Science-Fiction Gadget Videospiel ist?</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[MediaWiki Hackathon Berlin 2012]]></title>
@@ -519,25 +535,6 @@ for initiative in initiatives:
 <p>Phaidros: Wir wissen nicht, wohin die Welt sich wendet. Zur Freiheit jedes Bürgers, gespeist aus einem Quell der Daten aller Menschen, dem Wissen, das den Vätern noch unglaublich klang, oder der Tyrannei der Daten, die uns wie Schatten Tag und Nacht beherrschen. Und wo Beherrschung ist durch Daten, folgt die Beherrschung durch die Tyrannis bald. Ich weiss es nicht, o Sokrates. Ich weiss nur wohl, dass mein Herz ist erbrannt in Liebe, in knabenhafter Datenliebe zu dem, was eine schöne, neue Welt uns bietet. Der Mahner vor der Tyrannis der Datenschatten gibt es viele. Doch gibt es wen, der für die wahrhaft Verliebten zu den Daten spricht? Weisst du denn, Lehrer und Freund, welches die Richtung ist, die wir einschlagen?</p>
 
 <p>Sokrates: Ich weiss, dass ich nichts weiss.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Was vom RSS-Reader übrig blieb]]></title>
-    <link href="http://johl.github.com/blog/2011/10/25/was-vom-rss-reader-brig-blieb/"/>
-    <updated>2011-10-25T23:31:00+02:00</updated>
-    <id>http://johl.github.com/blog/2011/10/25/was-vom-rss-reader-brig-blieb</id>
-    <content type="html"><![CDATA[<p>Ein paar Links, die in den letzten Tagen an mir vorbeipurzelten:</p>
-
-<ul>
-<li><a href="http://anquestria.blogspot.com/">Anquestria, the &#8216;My Little Pony: Friendship is Magic&#8217; Angband variant</a>. <a href="http://de.wikipedia.org/wiki/Angband">Angband</a> ist ein Rogue-ähnliches Computer-Rollenspiel. Endlich ein klassisches, zeichenbasiertes Unix-Terminal-Spiel mit Ponies.</li>
-<li><a href="http://www.webmonkey.com/2011/10/gate-one-puts-a-terminal-emulator-in-your-web-browser/">Gate One Puts a Terminal Emulator in Your Web Browser</a> Fetziger SSH-Terminal-Emulator.</li>
-<li><a href="http://www.nytimes.com/2011/10/23/technology/at-waldorf-school-in-silicon-valley-technology-can-wait.html?_r=2&amp;src=me&amp;ref=general">A Silicon Valley School That Doesn’t Compute</a> Eine Waldorfschule in den USA, eine der wenigen. Ausgerechnet im Silicon Valley.</li>
-<li><a href="http://www.krazydad.com/tutorials/circles/">Circles, Spirals and Sunflowers</a> Ein schönes HTML5/Canvas-Tutorial</li>
-<li><a href="https://tools.ietf.org/html/draft-nottingham-http-new-status-02">Additional HTTP Status Codes</a> Entwurf für neue Statusnachrichten für HTTP</li>
-<li><a href="http://www.sicher.org/2011/10/18/how-to-create-a-language-in-one-day/">How to create a language in one day</a> Linguistisch nicht der Oberkracher, aber ganz lustig, wenn man mal schnell eine Sprache erfinden muss (z.B. für ein Computerspiel). <a href="http://conlang.org/">Die &#8220;Language Creation Society&#8221;</a> hat linguistisch fundiertere Materialien.</li>
-</ul>
-
 ]]></content>
   </entry>
   
