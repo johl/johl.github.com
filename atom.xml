@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-08-08T09:15:50+02:00</updated>
+  <updated>2012-08-25T21:55:33+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Gentrifizierungskritik als Wirtschafts- und Wachstumsmotor in Kreuzberg]]></title>
+    <link href="http://johl.github.com/blog/2012/08/25/gentrifizierungskritik/"/>
+    <updated>2012-08-25T21:36:00+02:00</updated>
+    <id>http://johl.github.com/blog/2012/08/25/gentrifizierungskritik</id>
+    <content type="html"><![CDATA[<p>Mit mindestens einem passenden &#8220;Event&#8221; (Demo, Infoveranstaltung, Protestcamp am Kottbusser Tor) pro Woche ist Gentrifizierungskritik in Kreuzberg längst zu einem wichtigen mittelständischen Wirtschaftsbereich geworden. Dabei präsentiert sich das weltoffene Kreuzberg den angereisten <em>Gentrification</em>-Kritikern gern von seiner besten Seite, denn das Trendthema wird hier mit Leib und Seele gelebt und immer mit der berühmten Berliner Schnauze kommentiert. Der &#8220;Kiez&#8221; liebt seine Gentrifizierungskritik und findet sie &#8220;knorke&#8221;: Gerade die positiven Impulse für die ansässige Gastronomie durch Demobesucher liegen volkswirtschaftlich auf der Hand und stellen einen wichtigen Beitrag zur Aufwertung des ehemaligen Postleitzahlenbreichs 36 dar.</p>
+
+<p>Die freche Kritik an der Gentrifizierung macht den ehemals ärmlichen Stadtteil auch attraktiv für eine immer größer werdende Schicht an modernen Verbrauchern, die Wohnen und Leben mit politischem Engagement verbinden wollen und gerne (auch gegen höhere Kosten) einen Lebensstil pflegen, der von Gesundheitsbewusstsein und -vorsorge sowie der Ausrichtung nach Prinzipien der Nachhaltigkeit geprägt ist.  Anti-Gentrifizierung ist &#8220;in&#8221;: Mit dem heissen Trend dieses Sommers hat der Szenebezirk ein weiteres Mal das richtige Näschen auf dem Markt der politischen Angebote bewiesen.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dystopie]]></title>
@@ -494,33 +505,6 @@ Neben dem <em>Kimchi</em> wird als <em>Banchan</em> oft <em>Namul</em> serviert:
 <p>Hauptgerichte bestehen oft aus gebratenem Fleisch, wobei Rind, Schwein und Geflügel in Korea verzehrt werden. Marinierte Rippchen (<em>Galbi</em>) oder marinierte Fleischstreifen (<em>Bulgogi</em>) werden dabei oft am offenen Grill gebraten. Daneben schätzen Koreaner vor allem Fisch und Meeresfrüchte wie Oktopus oder Kalmar. In den buddhistischen Klöstern Koreas hat sich daneben auch eine eigene rein vegetarische Küche entwickelt.</p>
 
 <p>Traditionell wird auf dem von der koreanisch Fußbodenheizung <em>Ondol</em> geheizten Boden sitzend von einem niedrigen Tisch gegessen. Dabei werden wie in anderen ostasiatischen Ländern Essstäbchen verwendet, die in Korea allerdings häufig aus Metall sind. Neben den Stäbchen wird im Unterschied etwa zu China und Japan unbedingt auch ein Metalllöffel gedeckt. Beim Essen werden soziale Regeln gepflegt, wenn man sich gegenseitig Getränke einschenkt und sich gemeinsam an den Beilagen der Tafel bedient. Koreanische Mahlzeiten spiegeln damit den Charakter der koreanischen Gesellschaft wieder: in ihrem dynamischen und feurigen Geschmack finden sich die ästhetischen Vorlieben der traditionellen Kunst, die anders als etwa die extreme Reduziertheit japanischer Ästhetik sehr lebhaft ist, ebenso wie sich in den Regeln und Hierarchien bei der Einnahme der Speisen die konfuzianische Gesellschaftsordnung beim Essen als sozialer Handlung erkennen lässt.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[LiquidFeedback der Piratenpartei unter Python mit der API abrufen]]></title>
-    <link href="http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei/"/>
-    <updated>2011-10-31T11:16:00+01:00</updated>
-    <id>http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei</id>
-    <content type="html"><![CDATA[<div><script src='https://gist.github.com/1327231.js?file='></script>
-<noscript><pre><code>import requests, json # ggf. requests (http://docs.python-requests.org/en/latest/index.html) installieren mit 'pip install requests'
-base_url = &quot;https://lqfb.piratenpartei.de/pp/&quot; # oder einen anderen Basis-URL für eine andere LQFB-Instanz
-key = &quot;xxxxxxx&quot; # Zu finden unter https://lqfb.piratenpartei.de/pp/member/developer_settings.html
-r = requests.get(base_url + &quot;/api/initiative.html?key=&quot; + key + &quot;&amp;api_engine=json&quot;)
-initiatives = json.loads(r.content)
-print &quot;Letzte Initiativen: &quot;
-for initiative in initiatives:
-    print initiative[&quot;name&quot;]</code></pre></noscript></div>
-
-
-<p>Lesenswert dazu:</p>
-
-<ul>
-<li><a href="http://www.maha-online.de/blog/2011/10/23/kleiner-spickzettel-cheat-sheet-fur-liquid-feedback/">Kleiner Spickzettel (Cheat Sheet) für Liquid Feedback von Martin Haase</a></li>
-<li><a href="http://www.public-software-group.org/liquid_feedback_frontend_api">LiquidFeedback API</a></li>
-<li><a href="http://demokratiepiraten.blogspot.com/2011/10/magisterarbeit-liquid-democracy-in-der.html">Innerparteiliche Demokratie in der Piratenpartei: Magisterarbeit</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
