@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-08-25T22:02:58+02:00</updated>
+  <updated>2012-09-16T22:02:22+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Es ist niemals zu Sp&auml;ti]]></title>
+    <link href="http://johl.github.com/blog/2012/09/16/sptis/"/>
+    <updated>2012-09-16T20:20:00+02:00</updated>
+    <id>http://johl.github.com/blog/2012/09/16/sptis</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/0/01/Korg_Pa80_-_Sp%C3%A4tkauf_in_Hamburg.jpg" width="480" title="&#34;von Sven Dietrich originally posted to Flickr as Spätkauf in Hamburg CC-BY-2.0, via Wikimedia Commons&#34;" alt="&#34;von Sven Dietrich originally posted to Flickr as Spätkauf in Hamburg CC-BY-2.0, via Wikimedia Commons&#34;">
+&#8221;<a href="http://www.berliner-zeitung.de/berlin/berliner-ladenoeffnungsgesetz-sonntags-bleibt-der-spaeti-geschlossen,10809148,17226218.html">F&uuml;r die etwa 1000 Berliner Sp&auml;tverkaufsstellen gibt es keine gelockerte Regelung f&uuml;r die Sonntags&ouml;ffnung</a>&#8221; berichtet die Berliner Zeitung. Als jemand, der auf die &#8220;Sp&auml;tis&#8221; zur Aufrechterhaltung einer l&uuml;ckenlosen Versorgung mit Hackerbrause (auch an Sonn- und Feiertagen) angewiesen ist, fiel mir die Kinnlade zu Boden und diese riss im freien Fall auch noch gleich meinen Geduldsfaden durch.</p>
+
+<p>Heraus kam nach dem ersten Schreck dann diese Frage auf Twitter:</p>
+
+<blockquote><p>Volksbegehren f&uuml;r Sp&auml;tis. Wer macht mit?</p><footer><strong>@johl</strong><cite><a href='https://twitter.com/johl/status/245862595565875201'>twitter.com/johl/status/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Tatsächlich erscheint mir die Frage nach den &#8221;<em>Legitimationsproblemen im Späti-Kapitalismus</em>&#8221; (Habermas) populistisch genug, um bei einer Volksabstimmung gut abzuschneiden. Dazu kommt, dass das Land Berlin tatsächlich einige Tools zur <a href="http://de.wikipedia.org/wiki/Volksgesetzgebung_in_Berlin">Volksgesetzgebung</a> bereithält und Volksbegehren in Berlin ein durchaus bekanntes und teilweise auch erfolgreiches Instrument ist.</p>
+
+<p>Der Trick besteht darin, ein Gesetz vorzuschlagen, dass nicht gleich als verfassungswidrig kassiert wird. <a href="http://de.wikipedia.org/wiki/Laden%C3%B6ffnungszeit">Ladenöffnungszeiten</a> sind zwar Ländersache und durch Ländergesetze geregelt, aber die Grenzen finden sie dann in dem, was verfassungsrechtlich in Ordnung ist. Wir erinnnern uns: Als Berlin an allen Adventssonntagen die Ladenöffnungszeiten komplett aufheben wollte, <a href="http://www.bverfg.de/pressemitteilungen/bvg09-134.html">gab es vom Bundesverfassungsgericht in Karlsruhe was auf den Deckel.</a></p>
+
+<p>Da können sich die Berliner noch so sekulär geben, wenn die verfassungsmässige Feiertagsruhe angetastet wird, ist Schluss mit lustig. Leider hilft auch der eigentlich hervorragende <a href="https://twitter.com/pfadintegral/status/245907765300703232">Kompromissvorschlag von Dr. Simon Weiss</a> (&#8220;Reicht es nicht wenn die Christen <em>glauben</em>, dass Spätis am Sonntag geschlossen sind?&#8221;) hier nicht viel.</p>
+
+<p>Ich vermute als juristischer Laie, dass eine Regelung, die unter das <a href="http://de.wikipedia.org/wiki/Gewohnheitsrecht">Gewohnheitsrecht</a> fällt (&#8220;&#8230; das wa schon immer so!&#8221;) jetzt nicht mehr möglich ist. Spätestens, wenn die SPD sich weigert, extra für die Spätis das Ladenschutzgesetz anzupassen, weil der &#8220;Schutz des Sonntags Verfassungsrang [hat]&#8221; (Arbeitssenatorin Dilek Kolat) können wir schwerlich darauf hoffen, dass ohne rechtliche Regelung einfach ein Auge zugedrückt wird.</p>
+
+<p>Dabei gibt es selbstverständlich bereits Ausnahmen vom Verkaufsverbot am Sonntag: Bäckereien und Tankstellen müssen nicht zumachen, ebenso dürfen Blumen verkauft werden. Ein Volksbegehren für die Kiezkultur der Spätis müsste also zunächst eine juristisch wasserdichte Definition von Spätis liefern, für die es dann eine weitere Ausnahmeregelung zu erstreiten gälte. Als Arbeitsgrundlage könnte <a href="http://de.wikipedia.org/wiki/Trinkhalle_(Verkaufsstelle)">der entsprechende Wikipedia-Artikel</a> dienen. Liebe Jursitinnen und Juristen: Wäre das was?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Gentrifizierungskritik als Wirtschafts- und Wachstumsmotor in Kreuzberg]]></title>
@@ -207,7 +232,7 @@ return p</code></pre></noscript></div>
 
 
 <p>This is what it does:
-<a href="http://scribunto.wmflabs.org/index.php/User:Jens_Ohlig?action=purge">Generate a random curry recipe</a></p>
+<a href="http://test2.wikipedia.org/wiki/User:Jens_Ohlig?action=purge">Generate a random curry recipe</a></p>
 
 <p>Everything about the Hackathon was great — I loved the organization as
 well as the participants. I was able to get in touch with someone doing
@@ -483,28 +508,6 @@ Ihrem Auftraggeber berichtete sie per Rohrpost, wie ein Boss. &#8220;Hasser werd
 Eine Aufzeichnung des Vortrags gibt es im MP3-Format <a href="http://www.roboexotica.org/audio/Ghost_In_The_Machine_Ohlig.mp3">hier</a>. Mittlerweile ist der Vortrag auch in Buchform <a href="http://www.turia.at/titel/ballh_g.html">in einer Aufsatzsammlung</a> erschienen.</li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Koreanische Esskultur]]></title>
-    <link href="http://johl.github.com/blog/2011/11/01/koreanische-esskultur/"/>
-    <updated>2011-11-01T21:59:00+01:00</updated>
-    <id>http://johl.github.com/blog/2011/11/01/koreanische-esskultur</id>
-    <content type="html"><![CDATA[<p><em>Ich wurde gebeten, für eine Veranstaltung der Botschaft der Republik Korea ein paar Worte für deutsche Leserinnen und Leser zu schreiben, um die koreanische Esskultur knapp zu erklären. Damit der schnell geschriebene Text nicht in der Versenkung verschwindet, packe ich ihn einfach mal hier in dieses Blog.</em></p>
-
-<p><img class="left" src="http://f.cl.ly/items/2F2t123R0U460g2g3c1y/198993251_e42543b430_o.jpg" width="500" height="500" title="Koreanische Esskultur" >
-Die koreanische Esskultur hat, bedingt durch die Geschichte und Geographie des Landes, auf den ersten Blick einige Gemeinsamkeiten und bemerkenswerte Unterschiede zu den ostasiatischen Nachbarn. Das Essen ist oft feurig scharf und kräftig — Chili und Knoblauch prägen den Geschmack koreanischer Speisen.
-Grundlage einer koreanischen Mahlzeit ist der gekochte Reis (<em>bap</em>), der so wichtig und zentral für die Ernährung ist, dass er synonym für Essen allgemein verwendet wird: Wenn Koreaner einander fragen, ob sie schon zu Mittag gegessen haben, fragen sie &#8220;Hast du Reis gegessen?&#8221;</p>
-
-<p>Neben dem Reis gehört zu einer koreanischen Mahlzeit eine Suppe und eine reiche Auswahl an Beilagen (<em>banchan</em>). Je nach Anzahl der servierten Beilagen bezeichnet man das Arrangement auf dem Esstisch als 3 <em>cheop</em>, 5 <em>cheop</em>, 7 <em>cheop</em>, 9 <em>cheop</em> oder 12 <em>cheop bansang</em>. 12 <em>cheop</em> ist in Korea für die traditionelle königliche Hofküche reserviert.</p>
-
-<p>Unter den <em>Banchan</em>-Beilagen ist <em>Kimchi</em> am bedeutendsten. <em>Kimchi</em> ist eingelegtes und milchsauer vergorenes Gemüse (ähnlich dem deutschen Sauerkraut), das mit Salz und Chilipulver gewürzt wird und häufig aus Chinakohl zubereitet wird. <em>Kimchi</em> ist bei koreanischen Mahlzeiten so essenziell als <em>Banchan</em>, dass einige Koreaner ein Essen ohne <em>Kimchi</em> nicht als vollständige Mahlzeit ansehen. Ausser aus Chinakohl wird <em>Kimchi</em> auch aus anderen Gemüsen zubereitet, etwa Frühlingszwiebeln, Rettich oder Gurken. Der scharfe Geschmack von Chili, der so charakteristisch für die koreanische Küche ist, kam allerdings erst im 16. Jahrhundert dazu: portugiesische Seefahrer brachten die Chilischote aus Amerika auf die koreanische Halbinsel, wo sie begeistert aufgenommen wurde — zumindest begeisterter als die Versuche, die Bevölkerung zum Christentum zu missionieren.
-Neben dem <em>Kimchi</em> wird als <em>Banchan</em> oft <em>Namul</em> serviert: <em>Namul</em> nennt man gedünstetes, mariniertes, oder im Wok gebratenes Gemüse, das etwa mit Sesamöl, Salz, Essig, gehacktem Knoblauch, Frühlingszwiebeln, getrocknetem Chili oder Sojasauce gewürzt wird.</p>
-
-<p>Hauptgerichte bestehen oft aus gebratenem Fleisch, wobei Rind, Schwein und Geflügel in Korea verzehrt werden. Marinierte Rippchen (<em>Galbi</em>) oder marinierte Fleischstreifen (<em>Bulgogi</em>) werden dabei oft am offenen Grill gebraten. Daneben schätzen Koreaner vor allem Fisch und Meeresfrüchte wie Oktopus oder Kalmar. In den buddhistischen Klöstern Koreas hat sich daneben auch eine eigene rein vegetarische Küche entwickelt.</p>
-
-<p>Traditionell wird auf dem von der koreanisch Fußbodenheizung <em>Ondol</em> geheizten Boden sitzend von einem niedrigen Tisch gegessen. Dabei werden wie in anderen ostasiatischen Ländern Essstäbchen verwendet, die in Korea allerdings häufig aus Metall sind. Neben den Stäbchen wird im Unterschied etwa zu China und Japan unbedingt auch ein Metalllöffel gedeckt. Beim Essen werden soziale Regeln gepflegt, wenn man sich gegenseitig Getränke einschenkt und sich gemeinsam an den Beilagen der Tafel bedient. Koreanische Mahlzeiten spiegeln damit den Charakter der koreanischen Gesellschaft wieder: in ihrem dynamischen und feurigen Geschmack finden sich die ästhetischen Vorlieben der traditionellen Kunst, die anders als etwa die extreme Reduziertheit japanischer Ästhetik sehr lebhaft ist, ebenso wie sich in den Regeln und Hierarchien bei der Einnahme der Speisen die konfuzianische Gesellschaftsordnung beim Essen als sozialer Handlung erkennen lässt.</p>
 ]]></content>
   </entry>
   
