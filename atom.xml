@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-10-20T21:59:17+02:00</updated>
+  <updated>2012-10-20T23:48:00+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -25,7 +25,7 @@ FIM++ ist eine imperative, dynamisch typisierte, interpretierte Sprache, deren S
 
 <p>Ein einigermaßen funktionierender Interpreter ist <a href="https://github.com/KarolS/fimpp">auf github verfügbar</a> und lässt sich problemlos an den Start bringen, wenn Scala installiert ist.</p>
 
-<p>Zum Ausprobieren von FiM++ habe ich mich mal eine Version des Fizzbuzz-Tests gemacht. Dabei wird eine Schleife durchlaufen und die Zahl ausgedruckt. Wenn die Zahl ohne Rest durch 3 teilbar ist, wird stattdessen &#8220;Fizz!&#8221; ausgegeben, wenn sie ohne Rest durch 5 teilbar ist, wird &#8220;Buzz!&#8221; ausgegeben und wenn sie ohne Rest durch 3 und 5 gelichzeitig teilbar ist, wird stattdessen &#8220;Fizzbuzz!&#8221; ausgegeben. Fizzbuzz ist eine klassische und im Grunde sehr einfache Aufgabe in Vorstellungsgesprächen für Programmierer — <a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">die aber faszinierenderweise dennoch von erschreckend vielen Kandidaten nicht gelöst werden kann</a>.</p>
+<p>Zum Ausprobieren von FiM++ habe ich mich mal eine Version des Fizzbuzz-Tests gemacht. Dabei wird eine Schleife durchlaufen und die Zahl ausgedruckt. Wenn die Zahl ohne Rest durch 3 teilbar ist, wird stattdessen &#8220;Fizz!&#8221; ausgegeben, wenn sie ohne Rest durch 5 teilbar ist, wird &#8220;Buzz!&#8221; ausgegeben und wenn sie ohne Rest durch 3 und 5 gleichzeitig teilbar ist, wird stattdessen &#8220;Fizzbuzz!&#8221; ausgegeben. Fizzbuzz ist eine klassische und im Grunde sehr einfache Aufgabe in Vorstellungsgesprächen für Programmierer — <a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">die aber faszinierenderweise dennoch von erschreckend vielen Kandidaten nicht gelöst werden kann</a>.</p>
 
 <p>Fizzbuzz für Ponies sieht so aus:</p>
 
