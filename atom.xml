@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-09-16T22:31:17+02:00</updated>
+  <updated>2012-10-20T21:59:17+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fizzbuzz für Ponies — It's Magic!]]></title>
+    <link href="http://johl.github.com/blog/2012/10/20/fim/"/>
+    <updated>2012-10-20T20:23:00+02:00</updated>
+    <id>http://johl.github.com/blog/2012/10/20/fim</id>
+    <content type="html"><![CDATA[<p>FiM++ ist eine esoterische Programmiersprache, die nach den &#8221;<a href="http://mlp.wikia.com/wiki/Friendship_reports">friendship reports</a>&#8221; in der Fernsehserie &#8221;<a href="http://mlp.wikia.com/wiki/My_Little_Pony_Friendship_is_Magic">My Little Pony Friendship is Magic</a>&#8221; aufgebaut ist.
+FIM++ ist eine imperative, dynamisch typisierte, interpretierte Sprache, deren Sprachumfang momentan Ganzzahlenarithmetik, Ausgaben auf der Konsole, dynamisch wachsende Arrays und Subroutinen unterstützt.</p>
+
+<p>Ursprünglich entstand FiM++ als Idee in einem Posting <a href="http://www.equestriadaily.com/2012/10/editorial-fim-pony-programming-language.html">auf dem Blog Equestria Daily</a>, gefolgt von <a href="http://www.equestriadaily.com/2012/10/fim-update.html">einem weiteren Posting</a>, bis schließlich so etwas wie ein Sprachstandard <a href="https://docs.google.com/document/d/1gU-ZROmZu0Xitw_pfC1ktCDvJH5rM85TxxQf5pg_xmg/mobilebasic?pli=1">als GoogleDocs-Dokument</a> veröffentlicht wurde.</p>
+
+<p>Ein einigermaßen funktionierender Interpreter ist <a href="https://github.com/KarolS/fimpp">auf github verfügbar</a> und lässt sich problemlos an den Start bringen, wenn Scala installiert ist.</p>
+
+<p>Zum Ausprobieren von FiM++ habe ich mich mal eine Version des Fizzbuzz-Tests gemacht. Dabei wird eine Schleife durchlaufen und die Zahl ausgedruckt. Wenn die Zahl ohne Rest durch 3 teilbar ist, wird stattdessen &#8220;Fizz!&#8221; ausgegeben, wenn sie ohne Rest durch 5 teilbar ist, wird &#8220;Buzz!&#8221; ausgegeben und wenn sie ohne Rest durch 3 und 5 gelichzeitig teilbar ist, wird stattdessen &#8220;Fizzbuzz!&#8221; ausgegeben. Fizzbuzz ist eine klassische und im Grunde sehr einfache Aufgabe in Vorstellungsgesprächen für Programmierer — <a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">die aber faszinierenderweise dennoch von erschreckend vielen Kandidaten nicht gelöst werden kann</a>.</p>
+
+<p>Fizzbuzz für Ponies sieht so aus:</p>
+
+<div><script src='https://gist.github.com/3924535.js?file=fizzbuzz.fimpp'></script>
+<noscript><pre><code>Dear Princess Celestia: Letter about the great and powerful Fizzbuzz.
+
+I learned about Fizzbuzz:
+Did you know that Rainbow Dash likes 1, because she wants to be number 1 in everything?
+I said Rainbow Dash!
+Did you know that Pinkie Pie likes 3, because she's so random? 
+Did you know that Applejack likes 5, because it's a pretty down-to-earth number?
+I did this while Rainbow Dash had less than 101:
+Rarity made remainder of Rainbow Dash and Pinkie Pie, because she is just stylish like that!
+Fluttershy made remainder of Rainbow Dash and Applejack, because even her sneezes are graceful!
+When Rarity was equal to zero:
+When Fluttershy was equal to zero:
+When Twilight Sparkle was equal to zero:
+I sang &quot;Fizzbuzz!&quot;.
+Did you know that Twilight Sparkle likes 1?
+That's what I did.  That's what I did.
+When Twilight Sparkle was equal to zero:
+I wrote &quot;Fizz!&quot;. Did you know that Twilight Sparkle likes 1?
+That's what I did.  That's what I did.
+When Rarity had more than zero:
+When Fluttershy was equal to zero:
+When Twilight Sparkle was equal to zero:
+I said &quot;Buzz!&quot;. Did you know that Twilight Sparkle likes 1?
+That's what I did.  That's what I did.
+When Twilight Sparkle was equal to zero:
+I said Rainbow Dash!
+Did you know that Twilight Sparkle likes 1?
+That's what I did!  That's what I did!
+Rainbow Dash got one more.
+Did you know that Twilight Sparkle likes 0?
+That's what I did!
+That's about Fizzbuzz!
+
+Today I learned:
+  I made Fizzbuzz!
+
+Your faithful student, johl.</code></pre></noscript></div>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Es ist niemals zu Sp&auml;ti]]></title>
@@ -494,20 +554,6 @@ Morgen ist es Samstag und danach kommt Sonntag!&#8221; Sie wusste, dass sie eine
 Ihrem Auftraggeber berichtete sie per Rohrpost, wie ein Boss. &#8220;Hasser werden hassen&#8221; kabelte Boxxy zurück, hinter sieben Proxies sitzend und mit mächtiger Verschlüsselungssoftware ausgestattet. Nichts war mehr sicher. Sie war sich nicht sicher, ob sie Mensch war oder Tänzer. Möglicherweise gab es aber vor Ort gibt es auch eine Gruppe von Pedobären, deren Unterstützung sie gewinnen konnte, wenn sie ihnen half, über 9000 Gigapuddings zu stehlen. Ja, so müsste es klappen. Sie schaute auf die membetriebene Sonnenuhr an ihrem Handgelenk und wusste, dass ihr nur noch Stunden blieben. Der Showdown sollte um Punkt 12 auf einer Baustelle stattfinden. Sie zitterte angesichts des bevorstehenden Kampfes, denn es war schon in ihrer Jugend nicht immer gut ausgegangen. Sie war damals in ein ganz kleines Scharmützel geraten und ihre Mutter hatte Angst bekommen und sagte: &#8220;Du ziehst zu deiner Tante und Onkel nach Bel-Air&#8221;. Tränen kullerten ihr von der Wange. Es war hoffnungslos. Es war dem Feind gelungen, die Front in breiter Formation zu durchbrechen. Im Süden hatt der Gegner Zossen genommen und stieß auf Stahnsdorf vor. Der Feind operierte jetzt am nördlichen Stadtrand zwischen Frohnau und Pankow, und im Osten war der Feind bis zur Linie Lichtenberg, Mahlsdorf, Karlshorst gelangt.</p>
 
 <p>Aber mit dem Angriff schlecht plagiierter, mäßig lustiger und über Gebühr strapazierter Meme würde das alles in Ordnung kommen.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Algorithmische Gedichte und das Urheberrecht]]></title>
-    <link href="http://johl.github.com/blog/2011/11/05/algorithmische-gedichte-und-das-urheberrecht/"/>
-    <updated>2011-11-05T01:19:00+01:00</updated>
-    <id>http://johl.github.com/blog/2011/11/05/algorithmische-gedichte-und-das-urheberrecht</id>
-    <content type="html"><![CDATA[<ol>
-<li><blockquote><p><b>Hunderttausend Milliarden Gedichte</b> (frz.: <i>Cent Mille Milliards de Poèmes</i>) ist ein experimentelles Ensemble von zehn <a href="http://de.wikipedia.org/wiki/Sonett" title="Sonett">Sonetten</a>, das 1961 von <a href="http://de.wikipedia.org/wiki/Raymond_Queneau" title="Raymond Queneau">Raymond Queneau</a> publiziert wurde. Sonette haben vierzehn Zeilen. Die Sonette dieses Werkes reimen sich nach dem Schema <i>abab abab ccd eed</i>. Das Besondere an diesen Sonetten von Raymond Queneau ist, dass in <i>allen</i> zehn Sonetten die a, b,c, usw. des Reim-Schemas für <i>dieselben</i> Zeilenendungen stehen, d.h. alle zehn Sonette sind nach demselben Reimschema gebaut, nicht nur insofern als sie Sonette sind, sondern auch insofern als sie alle zehn in den entsprechenden Versen immer übereinstimmende Endungen haben, sodass jede beliebige 1. Zeile (aus den zehn 1. Zeilen) mit jeder beliebigen 2. Zeile (aus den zehn 2. Zeilen) kombiniert mit jeder beliebigen 3. Zeile (aus den zehn 3. Zeilen), usw. usf., bis zu einer beliebigen 14. Zeile (aus den zehn 14. Zeilen) wieder ein (bezüglich des ganzen Reimschemas) korrekt geformtes Sonett ergeben. Das ergibt 10<em>10</em>10<em>&#8230;</em>10 = 10<sup>14</sup> (= 100&#8217;000&#8217;000&#8217;000&#8217;000) Möglichkeiten — daher der Titel. Die einzelnen Verse sind <a href="http://de.wikipedia.org/wiki/Alexandriner_(Verslehre)" title="Alexandriner (Verslehre)">Alexandriner</a>.<br/>[&#8230;]<br/><strong>Da das Werk Eigenschaften von <a href="http://de.wikipedia.org/wiki/Hypertext" title="Hypertext">Hypertext</a> besitzt, würde sich eine Darstellung mit <a href="http://johl.github.com/wiki/Computer" title="Computer">Computerunterstützung</a> anbieten. Die aktuellen Rechteinhaber haben Webimplementationen Dritter jedoch bisher nicht zugestimmt. Am 5. Mai 1997 wurde ein Webseiteninhaber auf Antrag von Queneaus Sohn Jean-Marie Queneau und des Verlags Éditions Gallimard gerichtlich zur Entfernung des Inhalts gezwungen.</strong></p><footer><strong>Wikipedia: Hunderttausend Milliarden Gedichte</strong><cite><a href='http://de.wikipedia.org/wiki/Hunderttausend_Milliarden_Gedichte'>de.wikipedia.org/wiki/&hellip;</a></cite></footer></blockquote></li>
-<li>Im November 2007 hielt ich auf Englisch einen Vortrag zum Thema &#8221;<em>Why machines should generate literature so humans don&#8217;t have to</em>&#8221; in Wien als Teil des Symposiums &#8221;<em>Ghost in the Machine</em>&#8221; auf der <a href="http://www.roboexotica.org/">Roboexotica</a> 2007. <a href="http://www.boingboing.net/2007/11/29/cocktail-robotics-fe-1.html">Boingboing</a> (deren Co-Autor Cory Doctorow ebenfalls mit mir zusammen bei dem Symposium vortrug) schrieb darüber und zeigte meine einzige Folie im Vortrag mit einem Rechtschreibfehler. Nie lagen Ruhm und Peinlichkeit so nah zusammen.
-Eine Aufzeichnung des Vortrags gibt es im MP3-Format <a href="http://www.roboexotica.org/audio/Ghost_In_The_Machine_Ohlig.mp3">hier</a>. Mittlerweile ist der Vortrag auch in Buchform <a href="http://www.turia.at/titel/ballh_g.html">in einer Aufsatzsammlung</a> erschienen.</li>
-</ol>
-
 ]]></content>
   </entry>
   
