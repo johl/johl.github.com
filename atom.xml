@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-11-24T19:14:55+01:00</updated>
+  <updated>2012-12-14T00:27:28+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mediawiki in hübsch]]></title>
+    <link href="http://johl.github.com/blog/2012/12/13/making-mediawiki-pretty/"/>
+    <updated>2012-12-13T22:43:00+01:00</updated>
+    <id>http://johl.github.com/blog/2012/12/13/making-mediawiki-pretty</id>
+    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/393l0y0H1d2i2R1k0Y1I/14.12.12%2000:21-Schnappschuss.png">
+Das aktuelle Wiki des
+<a href="https://events.ccc.de/congress/2012/wiki/Main_Page">29C3</a>, das
+<a href="http://erdgeist.org/">erdgeist</a> und andere gezaubert haben, ist
+wunderschön: endlich sieht es aus wie eine Webseite im Jahr 2012 und
+nicht mehr wie ein mehr oder weniger umgestaltetes Mediawiki. Mir war
+nicht bewusst, dass man mit der <a href="https://github.com/mtyeh411/mediawiki-bootstrap">Bootstrap Skin für
+Mediawiki</a> so etwas
+zaubern kann. Chapeau!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Was tun gegen rassistische Gewalt? Ich hätte da mal zehn Vorschläge]]></title>
@@ -560,18 +577,6 @@ Für mich war klar, dass nur Kapitalflucht als Option in Frage kam. Aber anstatt
 <p>Wenn Journalistinnen und Journalisten sich zu den Hintergründen des plötzlich und völlig unerwartet aufgetauchten Nazi-Terrors informieren wollen und bei der seit Jahren als Expertin für rechtsextremen Terror arbeitenden thüringischen Landtagsabgeordneten <a href="http://de.wikipedia.org/wiki/Katharina_K%C3%B6nig">Katharina König</a> anrufen, werden sie dabei möglicherweise vom Verfassungsschutz abgehört. Ihr Telefon ist auf ihren Vater, den evangelischen Theologen und Stadtjugendpfarrer in Jena <a href="http://de.wikipedia.org/wiki/Lothar_K%C3%B6nig_(Theologe)">Lothar König</a> angemeldet, gegen den wegen seiner Teilnahme an einer Demonstration gegen Nazis in Dresden ein Verfahren wegen &#8220;aufwieglerischen Landfriedensbruch&#8221; läuft. <a href="http://netzpolitik.org/2011/die-razzia-bei-pfarrer-lothar-konig/">Kurz bevor Lothar König Redner auf der diesjährigen Demonstration &#8220;Freiheit statt Angst&#8221; war, gab es eine Razzia in seinem Büro durch etwa 25 bewaffnete Polizeibeamte einer sächsischen Beweissicherungs- und Festnahmeeinheit</a>. Ein Interesse am rechten Terror scheint bei den Verfassungsschützern zumindest nicht auf dem Gebiet der Strafverfolgung zu bestehen: <a href="http://www.berliner-zeitung.de/politik/thueringen-der-verfassungsschutz-subventionierte-die-neonaziszene,10808018,11142588.html">In Thüringen subventioniert der Verfassungsschutz seit Jahren die rechte Szene</a>, obwohl deren Gefährlichkeit auch durch die Arbeit von Lothar König und der Jungen Gemeinde bekannt ist. Über die Neonazi-Szene in Thüringen um 1997/98 stellte die Junge Gemeinde vor einigen Tagen <a href="http://vimeo.com/31787025">ein dokumentierendes Video ins Netz</a>.</p>
 
 <p>Ich möchte, dass sich etwas grundlegend ändert. Ich möchte, dass die staatliche finanzielle und logistische Unterstützung von Nazi-Terror sofort beendet wird. Ich möchte, dass die staatliche Repression und Einschüchterung gegen Nazi-Gegner aufhört. Ich will, dass die völlig gescheiterte Extremismuspolitik von Ministerin Schröder beendet wird. Ich wünsche mir, dass offen über eine Auflösung des Bundesamtes und der Landesämter für Verfassungsschutz debattiert wird, die offensichtlich in den letzten Jahren den rechten Terror unterschätzt oder gar unterstützt haben. Ich halte das alles nicht für übertrieben aufgeregte oder gar linksradikale Forderungen. Ich halte sie angesichts der Gesamtlage für dringend notwendige Beiträge zur Wiederherstellung eines zivilisatorischen Mindeststandards.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Pepero Day]]></title>
-    <link href="http://johl.github.com/blog/2011/11/11/pepero-day/"/>
-    <updated>2011-11-11T13:36:00+01:00</updated>
-    <id>http://johl.github.com/blog/2011/11/11/pepero-day</id>
-    <content type="html"><![CDATA[<p>Heute ist der 11.11.11. Damit seid ihr dabei, wenn der Pepero Day begangen wird, zumindest in Korea, wo man sich an diesem Tag mit <a href="http://en.wikipedia.org/wiki/Pepero">Schokolade ummantelte Stäbchen</a> schenkt. Aufgrund der Form des Datums (&#8220;11&#8221; sieht nun mal aus wie wie zwei Sckokostäbchen) feiern wir dieses Jahr sogar den extrem seltenen und nur alle tausend Jahre einmal vorkommenden &#8220;Millenium Pepero Day&#8221;. Alle Details zu diesem wichtigen Feiertag vermittelt das folgende Video:</p>
-
-<iframe width="560" height="315" src="http://www.youtube.com/embed/4SwV5YfnJ6E" frameborder="0" allowfullscreen></iframe>
-
 ]]></content>
   </entry>
   
