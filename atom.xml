@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2012-12-17T17:35:52+01:00</updated>
+  <updated>2012-12-17T17:51:02+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/7/7b/SantiagoChileCryptoParty.jpg" width="450" title="'By Santiago Cryptoparty CC-BY-3.0, via Wikimedia Commons'" >
 Manchmal kommt die Geschichte wieder zurück und das Rad wird in einer neuen, verbesserten Version neu erfunden und ein bisschen runder — oder es werden schon längst geführte Diskurse einfach nochmal geführt. Am 22.  August 2012 twitterte die australische alleinerziehende Mutter und digitale Aktivistin, die sich im Netz Asher Wolf nennt, eine <a href="https://twitter.com/Asher_Wolf/status/238224764739653632">Party-Einladung, bei der sie zu einer Crypto-Party einlud: &#8220;BYO devices, beer, &amp; music.&#8221;</a>.</p>
 
-<p>Daraus entstand so etwas wie <a href="http://en.wikipedia.org/wiki/CryptoParty">eine weltweite Bewegung von Parties, auf denen Verschlüsselungs- und Anonymisierungstechniken mit TOR, GnuPG oder OTR erklärt und installiert werden</a>. Bei der ersten dieser Parties in Berlin entstand dann auch in einem <a href="http://www.booksprints.net/">Booksprint</a> das <a href="https://github.com/cryptoparty/handbook">CryptoParty Handbook</a>, bei dem nicht nur die Anwesenden in Berlin mitschrieben, sondern auch Asher Wolf zugeschaltet wurde.</p>
+<p>Daraus entstand so etwas wie <a href="http://en.wikipedia.org/wiki/CryptoParty">eine weltweite Bewegung von Parties, auf denen Verschlüsselungs- und Anonymisierungstechniken mit Tor, GnuPG oder OTR erklärt und installiert werden</a>. Bei der ersten dieser Parties in Berlin entstand dann auch in einem <a href="http://www.booksprints.net/">Booksprint</a> das <a href="https://github.com/cryptoparty/handbook">CryptoParty Handbook</a>, bei dem nicht nur die Anwesenden in Berlin mitschrieben, sondern auch Asher Wolf zugeschaltet wurde.</p>
 
 <p>Die fast vergessene Geschichte von den Cypherpunks, die ihre <a href="http://ciphersaber.gurus.org/">CipherSaber</a> wie Lichtschwerter herumwirbeln und mit Software Politik machen, ist wieder da, fast wie zu Zeiten des <a href="http://en.wikipedia.org/wiki/Clipper_chip">Clipper-Chips</a> und der <a href="http://www.philzimmermann.com/EN/essays/WhyIWrotePGP.html">Kryptokriege um PGP</a> — und Crypto-Parties sind nur ein Beispiel unter vielen:</p>
 
