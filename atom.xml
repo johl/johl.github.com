@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-01-14T20:38:12+01:00</updated>
+  <updated>2013-01-20T22:02:37+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Strukturierte Debatten im Internet]]></title>
+    <link href="http://johl.github.com/blog/2013/01/19/debattenkultur/"/>
+    <updated>2013-01-19T15:08:00+01:00</updated>
+    <id>http://johl.github.com/blog/2013/01/19/debattenkultur</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://johl.github.com//upload.wikimedia.org/wikipedia/commons/8/8a/Jakobinerklub.jpg" width="512" title="Jakobinerklub. Stich nach einer Zeichnung von Vilette (Bibliothèque 11 nationale de France, Paris)..DaQuirin at de.wikipedia [Public domain], 12 from Wikimedia Commons" >
+<a href="http://blog.lqfb.piratenpartei.de/2013/01/17/testbetrieb-neue-api-und-bombay-crushed/">Inspiriert von der alternativen Oberfläche zu LiquidFeedback, der gerade im Testbetrieb gestarteten &#8220;Saftigen Kumquat&#8221;</a>, habe ich mich auf die Suche nach einem Tool für eine Leerstelle bei der Meinungsbildung über LiquidDemocracy gemacht.</p>
+
+<p>Meines Erachtens fehlt dem sehr ausgeklügelten Delegations- und Wahlsystem für Vorschläge ein entsprechend strukturierendes Element für die Debattenphase, bei der Argumente pro und contra abgewogen und eingebracht werden können. Die jetztigen Mechanismen zum Einbringen von Änderungsvorschlägen oder Gegeninitiativen sind nicht immer für eine schrittweise Verbesserung des Textes geeignet und ein gern genommener Work-Around, nämlich ein einfacher Link auf ein EtherPad zur Initiative, kann nur bei Selbstdisziplin der Teilnehmer_innen als Tool für eine strukturierte Debatte fungieren.</p>
+
+<p>Da ich dieses Blog auch gerne mal für unfertige Gedanken und Work in Progress benutze spricht nichts gegen eine Liste von Tools, oder?</p>
+
+<ul>
+<li><a href="http://de.wikiarguments.net/">Wikiarguments</a> strukturiert die Debatte so: Jede These kann beliebig viele Pro- und Contra-Argumente bekommen.  Diese können hoch- und runtergevotet werden. Ich hätte eine <a href="http://www.mediawiki.org/wiki/Manual:Extensions">Mediawiki-Extension</a> erwartet, aber Wikiargument scheint selbstgestrickter PHP-Code zu sein, der mich auf den ersten Blick nicht überzeugte.</li>
+<li>Wenn man dem Motto <a href="http://de.wikipedia.org/wiki/Code_and_Other_Laws_of_Cyberspace">&#8220;Code is Law&#8221;</a> folgt, dann ist das Schaffen von Gesetzen gleichzusetzen mit Codieren. Und das macht die Debatte vor dem Beschluss wiederum zum Code-Review. Warum also nicht gleich ein etabliertes Werkzeug zum interlinearen Code Review benutzen, um einen Initiativentext zu annotieren und zu zerpflücken? Etwa so: <iframe src="http://player.vimeo.com/video/20084957" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li>
+<li>Reddit hat sich als Debattentool bewährt, ist als gut verständliche Python-Applikation <a href="https://github.com/reddit">Open Source verfügbar</a> und bietet quasi die Luxus-Variante von dem, was Wikiarguments macht: Hoch- und runtervoten, verschiedene Unterbereiche, Diskussionsfäden etc. Was spricht eigentlich dagegen, es zu benutzen?</li>
+</ul>
+
+
+<p>Gibt es noch mehr Ideen und Anregungen? Bitte kommentiert!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Urheberrechtsextremismus]]></title>
@@ -579,15 +602,6 @@ Times of Precarious Work</strong>&#8221;:</p>
 
 <p>Ein Höhepunkt der Ausstellung war für mich neben verschiedenen Maschinen, die mehr oder weniger kompliziert Cocktails zubrereiteten oder servierten, ein Roboter, der alkoholische Crêpes herstellte — oder wie man <a href="http://de.wikipedia.org/wiki/Liste_von_Austriazismen">in der österreichischen Varietät des Deutschen</a> sagt: <a href="http://en.wikipedia.org/wiki/Palatschinke">Palatschinken</a>, ein Wort entlehnt aus tschechisch <em>palačinka</em> zu lateinisch <em>placenta</em> „Kuchen“. Lecker!
 <img src="http://f.cl.ly/items/0c080O072w1a0g2A1d2N/IMG_20111204_172624.jpg" title="Palatschinkenroboter" ></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hackerbrause zum Lesen]]></title>
-    <link href="http://johl.github.com/blog/2011/12/07/hackerbrause-zum-lesen/"/>
-    <updated>2011-12-07T13:04:00+01:00</updated>
-    <id>http://johl.github.com/blog/2011/12/07/hackerbrause-zum-lesen</id>
-    <content type="html"><![CDATA[<p>Die letzten Monate haben ihdl, yetzt und ich damit verbracht ein Buch über Hackerbrausen zu schreiben. Jetzt ist es Ende Dezember endlich soweit — gerade noch rechtzeitig für die letzten geekigen Weihnachtsgeschenke erscheint „Hackerbrause kurz&amp;geek“ im O’Reilly Verlag. Alle weiteren Infos, Vorbestellmöglichkeiten und ein Link zu einem Probekapitel findet ihr auf <a href="http://hacker.brau.se/2011/12/ab-20-dezember-2011-erhaltlich-unser-buch/">hacker.brau.se</a></p>
 ]]></content>
   </entry>
   
