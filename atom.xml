@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-01-31T12:34:10+01:00</updated>
+  <updated>2013-02-06T18:09:26+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Oh! Onigiri]]></title>
+    <link href="http://johl.github.com/blog/2013/02/06/onigiri/"/>
+    <updated>2013-02-06T04:22:00+01:00</updated>
+    <id>http://johl.github.com/blog/2013/02/06/onigiri</id>
+    <content type="html"><![CDATA[<p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/1/1c/Salmon_onigiri_by_yomi955.jpg" width="450" title="'By yomi955 (Flickr) CC-BY-2.0 via Wikimedia Commons'" >
+Es besteht die Möglichkeit, dass ich mich für den nächsten Hype entschuldigen muss, wenn die Zeit gekommen ist. Die Tatsache, dass ich Bubble Tea vor einer gefühlten Ewigkeit (ca. letzter Sommer) noch abfeierte, weil es ihn endlich häufiger so zu kaufen gab, wie ich ihn aus New Yorks Chinatown kannte und liebte, lastet immer noch ein bisschen auf mir und mein Enthusiasmus tut mir leid. Ich bin voll in die Hipster-Falle getappt, plötzlich wurden die Innenstädte von Bubble Tea überschwemmt, Läden machten auf und gingen kurz danach ein und am Schluß gab es überzuckerten Schlabber mit Perlen sogar bei McDonald&#8217;s — of all places. Bitte verzeiht mir.</p>
+
+<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/d/d7/Rice_balls_of_Seven-Eleven.jpg" width="300" title="'By Corpse Reviver (Own work) GFDL or CC-BY-SA-3.0 via Wikimedia Commons'" >
+Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit Sachen (Lachs oder Hühnchen oder Sesam und Gemüse), bisweilen umhüllt von einem Algenblatt: Das bessere Butterbrot, ab zwei oder drei Stück erstaunlich sättigend, was wohl am Reis liegt. In Japan sind Onigiri viel verbreiteter als alles, was wir hier an japanischem Essen zu kaufen bekommen: Oft daheim zubereitet werden sie zur Arbeit mitgebracht, im Supermarkt werden sie in langen Reihen im Kühlregal fertig angeboten. Aus Korea kenne ich sie als Chumokbap (추믁밥), was &#8220;Faust-Reis&#8221; heisst. Ich mag Onigiri und ich habe mich gefreut, als ich nur kurze Zeit hintereinander zwei Möglichkeiten in Berlin entdeckt habe, um mir den Bauch mit ihnen vollzuschlagen.</p>
+
+<p>Das gibt es zunächst am <a href="http://de.wikipedia.org/wiki/U-Bahnhof_Sch%C3%B6nleinstra%C3%9Fe">U-Bahnhof Schönleinstraße</a> den Onigiri-Stand <a href="http://rice-up.de/">Rice Up</a>, den ich deshalb als ersten erwähne, weil er jeden Morgen auch ein potenzielles Anlaufziel auf dem Weg zur Arbeit für mich darstellt. Schön Bio alles, etwas kleine (und dafür teure) Portionen, aber durchaus gut: Jeden Tag vegane Onigiri und welche mit Fleisch oder Fisch (Lachs mit scharfer Pflaume ist ein prima Frühstück). Natürlich ist der Stand gut zu erreichen, weil er ja genau auf dem Bahnsteig liegt, aber insgesamt gehen bei dem Angebot schon leichte Hipster-Alarmglocken los. Sei&#8217;s drum. Es schmeckt.</p>
+
+<p>Dann gibt es die unglaublich nette Natsuko, die mit ihrem <a href="http://samuraisnack.com/">Samurai Snack</a> eine lustige Idee verfolgt: Zu Mittagszeit liefert sie an Büros (hauptsächlich Start-Ups, wenn ich das richtig verstanden habe). Wenn sie beladen mit ihren Onigiri, die man tags zuvor über ein Formular per Mail bestellt, in unserem Büro auftauscht, pünktlich um 12:30 uhr, ist die Freude groß. Statt irgendwelchem Fast-Food-Quatsch einfach mal Onigiri in der Mittagspause, da gibt es eigentlich keine Gegenargumente, zumal ihre Onigiri nur die Hälfte von denen an der Schönleinstraße kosten, dafür aber größer und viel leckerer sind. Natsuko holt sich Rezepte für Onigiri regelmäßig bei ihrer Mutter in Japan ab und ich finde man schmeckt die Mühe, die sie in ihr kleines Unternehmen steckt.</p>
+
+<p>In einer Stadt mit gleich zwei Onigiri-Optionen zu leben, ist irgendwie auch Luxus ausserhalb Ostasiens. Hoffen wir mal, dass der Hypezirkel bis zum Absturz in die Peinlichkeit diesmal nicht ganz so rasant verläuft wie bei Bubble Tea.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Das Netz als röchelndes, gurgelndes, pfeifendes Wesen]]></title>
@@ -578,23 +597,6 @@ Wie konnte es zu diesem Überwachungsstaat von Orwellschem Format kommen? Der An
 <p>Geradzu blind rannte die Gesellschaft vor 25 Jahren in ihr Verderben, als sie die offensichtlichen Parallelen zwischen Atomkraft und digitaler Übertragung von Sprache nicht erkannte, obwohl beispielsweise Robert Jungk vor dem &#8220;Atomstaatsyndrom&#8221; bei der I&amp;K-Technik warnte: &#8221;<em>Eine so riskante Technik wie die AKW-Technik, bzw. die auf ihrer Grundlage aufgebauten Betriebe kann der Staat ebenso wenig einfach in der Gegend herumstehen lasssen wie die Einrichtungen der I&amp;K-Techniken, von denen die Gesellschaft in wachsendem Maße abhängig wird.</em>&#8221; (S. 213)</p>
 
 <p>Seufzend fragen wir uns im Jahr 2012, ob wir es denn hätten verhindern können. Wieder einmal hätte der Lauf der Geschichte gestoppt werden können, wenn nicht einzelne Profiteure der Verdatung vorgeprescht wären oder zumindest rechtzeitig gestoppt worden wären, bevor sie ihr Unheil anrichten konnten. Doch wir alle hatten die Heuschrecken des Überwachungsstaates unterschätzt, die die Einführung von IuK-Techniken in allen gesellschaftlichen Bereichen der Bundesrepublik um jeden Preis ergaunern wollten: &#8221;<em>Nur so bekommt es auch einen Sinn, daß die CDU-Fraktion mit der Anschaffung von 150 Wang-Computern im Herbst 1986 bereits irreversible Fakten geschaffen hat.</em>&#8221; (S. 189) Und nicht nur aus dem bürgerlichen Lager kamen die Überwacher, der Verrat kam direkt aus dem Herzen der aufgeklärten Linken, die immerhin eine Unterkommission zur Erprobung und Einführung &#8220;neuer Informations- und Telekommunikationstechnologien&#8221; im Parlament installieren konnte, wenn sich dies jedoch als bitterster Pyrrhussieg von allen herausstellte und den Überwachungsstaat seinerzeit besiegelte: &#8221;<em>Vorsitzende ist die vom Spiegel ehemals als &#8216;links&#8217; eingeordnete SPD-Abgeordnete Sigrid Skarpelis-Sperk, die sich bereits 1980 bei ihrem Einzug ins &#8216;Hohe Haus&#8217; damit hervortat, daß sie erst einmal &#8216;auf eigene Kosten&#8217; ihr Büro mit einem Schreibcomputer ausstattete.</em>&#8221; (S.188)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Resteessen vom 28C3]]></title>
-    <link href="http://johl.github.com/blog/2012/01/03/28c3/"/>
-    <updated>2012-01-03T02:04:00+01:00</updated>
-    <id>http://johl.github.com/blog/2012/01/03/28c3</id>
-    <content type="html"><![CDATA[<p>Ich wünschte, ich könnte mehr zum <a href="http://events.ccc.de/congress/2011/wiki/Welcome">28C3</a> sagen, aber dazu müsste ich meine Gedanken erstmal ordnen. Immerhin kann ich überhaupt wieder etwas sagen und bin nicht mehr abgetaucht im Strudel der Ereignisse. Hier ein paar wirklich grobe Gedankensplitter:</p>
-
-<ul>
-<li><p>Beim Anschauen des Panels <a href="http://www.youtube.com/watch?v=QnfOOoTOrDE">&#8220;Geeks and Depression&#8221;</a> habe ich viel gedacht, auch viel, was zu persönlich ist, aber eine Idee möchte ich dann doch teilen: Sollte es irgendwann einmal eine <a href="http://de.wikipedia.org/wiki/Parteinahe_Stiftung">parteinahe Stiftung</a> der Piratenpartei geben, soll sie bitte &#8221;<a href="http://de.wikipedia.org/wiki/Florian_Hufsky">Florian Hufsky</a> Stiftung&#8221; heissen.</p></li>
-<li><p>Jaja, <a href="https://twitter.com/#!/map/statuses/151790287600091136">&#8220;#28c3 - The only place in the known universe where bitcoin is still relevant.&#8221;</a> — dafür gab es dann aber doch einige Talks zu dem Thema. Und bei mir im Kopf entstand die Idee, ob man ein <a href="http://de.wikipedia.org/wiki/Mixmaster-Remailer">Mixmaster</a>-System aufbauen könnte, in das man BitCoin einzahlt und das dann anonymisiert und verteilt über verschiedene PayPal-Accounts und Kreditkarten gestückelt das Geld an einem anderen Ende wieder auszahlt. Ist das überhaupt legal oder Geldwäsche? Und ist das wichtig, darüber nachzudenken oder typisch deutsch?</p></li>
-<li><p>Die <a href="http://lanyrd.com/2011/spack0/">Spackeriade</a> war großartig, nur ein Talk war ein bisschen schwach, der Rest hat mich inspiriert. Eine längere Veranstaltung, vielleicht in Form eines Post-Privacy-Camps, fände ich nicht falsch.</p></li>
-<li><p><a href="https://r0ket.badge.events.ccc.de/">r0ket</a>. Damit muss ich in Zukunft noch viel mehr basteln. Und um sie auf dem Mac zu flashen braucht man kein Ubuntu in einer VM, <a href="https://github.com/Lotterleben/dinge">dank Lotterleben</a>.</p></li>
-</ul>
-
 ]]></content>
   </entry>
   
