@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>LiquidFeedback der Piratenpartei unter Python mit der API abrufen - Hackety hack hack</title>
+  <title>Geheim und sicher wählen im Internet? - Hackety hack hack</title>
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="import requests, json # ggf. requests (http://docs.python-requests.org/en/latest/index.html) installieren mit 'pip install requests'
-base_url = & &hellip;">
+  <meta name="description" content="Ich habe ein Verständnisproblem und hoffe ganz ernsthaft, ihr könnt mir helfen. Geheime, sichere und nicht manipulierbare Wahlen über das Internet &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ base_url = & &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei">
+  <link rel="canonical" href="http://johl.github.com/blog/2013/02/07/commitcoin">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +79,7 @@ base_url = & &hellip;">
   
   <header>
     
-      <h1 class="entry-title">LiquidFeedback der Piratenpartei unter Python mit der API abrufen</h1>
+      <h1 class="entry-title">Geheim und sicher wählen im Internet?</h1>
     
     
       <p class="meta">
@@ -91,31 +90,25 @@ base_url = & &hellip;">
 
   
 
-<time datetime="2011-10-31T11:16:00+01:00" pubdate>Oct 31<span>st</span>, 2011</time>
+<time datetime="2013-02-07T23:40:00+01:00" pubdate>Feb 7<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><div><script src='https://gist.github.com/1327231.js?file='></script>
-<noscript><pre><code>import requests, json # ggf. requests (http://docs.python-requests.org/en/latest/index.html) installieren mit 'pip install requests'
-base_url = &quot;https://lqfb.piratenpartei.de/pp/&quot; # oder einen anderen Basis-URL für eine andere LQFB-Instanz
-key = &quot;xxxxxxx&quot; # Zu finden unter https://lqfb.piratenpartei.de/pp/member/developer_settings.html
-r = requests.get(base_url + &quot;/api/initiative.html?key=&quot; + key + &quot;&amp;api_engine=json&quot;)
-initiatives = json.loads(r.content)
-print &quot;Letzte Initiativen: &quot;
-for initiative in initiatives:
-    print initiative[&quot;name&quot;]</code></pre></noscript></div>
+<div class="entry-content"><p>Ich habe ein Verständnisproblem und hoffe ganz ernsthaft, ihr könnt mir helfen. Geheime, sichere und nicht manipulierbare Wahlen über das Internet sind nicht möglich, soweit mein bisheriger Kenntnisstand. Schon Wahlen auf Papier sind manipulierbar, wenn ein Computer ins Spiel kommt, der beliebig programmiert werden kann, skaliert die Manipulierbarkeit ins Unendliche. Das ist letztendlich auch der Hintergrund für das <a href="http://wahlcomputer.ccc.de/rechtliches/urteil-wahlcomputer/">Urteil des Bundesverfassungsgerichts am 3. März 2009</a>, dass der Einsatz von Wahlcomputern bei der Bundestagswahl 2005 verfassungswidrig war, da der Wähler weder die abgegebenen Stimmen noch deren Auszählung selbst kontrollieren konnte. Der Chaos Computer Club hat sich um die Ächtung von Wahlcomputern in den letzten Jahren <a href="http://wahlcomputer.ccc.de/">verdient gemacht</a>.</p>
 
+<p>Bis ins Jahr 1997 existierte an der Universität Göttingen der <a href="http://de.wikipedia.org/wiki/Wolfskehl-Preis">Wolfskehl-Preis</a>, der für den Beweis des <a href="http://de.wikipedia.org/wiki/Gro%C3%9Fer_Fermatscher_Satz">großen Fermatschen Satzes</a> ausgelobt war. Am Göttinger Mathematischen Institut waren fast 90 Jahre (1908-1997) lang ein oder zwei Assistenten mit der Bearbeitung von Einsendungen beschäftigt, die von Unmengen von Amateuren eingeschickt wurden. Meist reichte ein einfacher Formbrief als Antwort, in dem nur eingetragen werden musste, auf welcher Seite und in welcher Zeile sich der erste logische Fehler im &#8220;Beweis&#8221; befand.</p>
 
-<p>Lesenswert dazu:</p>
+<p>Wenn jetzt ein Paper behauptet, das Problem geheimer und sicherer,
+manipulationsresistenter Wahlen per Computer gelöst zu haben, ist
+Skepsis angebracht. Deshalb meine Frage: Wo in diesem Paper befindet
+sich der erste logische Fehler?</p>
 
-<ul>
-<li><a href="http://www.maha-online.de/blog/2011/10/23/kleiner-spickzettel-cheat-sheet-fur-liquid-feedback/">Kleiner Spickzettel (Cheat Sheet) für Liquid Feedback von Martin Haase</a></li>
-<li><a href="http://www.public-software-group.org/liquid_feedback_frontend_api">LiquidFeedback API</a></li>
-<li><a href="http://demokratiepiraten.blogspot.com/2011/10/magisterarbeit-liquid-democracy-in-der.html">Innerparteiliche Demokratie in der Piratenpartei: Magisterarbeit</a></li>
-</ul>
+<p><a href="http://people.scs.carleton.ca/~clark/projects/commitcoin/">CommitCoin: Carbon Dating Commitments with Bitcoin</a></p>
+
+<blockquote><p>Can you have both secret ballots and verifiable results?</p><p>Yes. Crypto can do seemingly impossible things. One of those things is<br/>having a voting system where ballot is anonymous (you can&#8217;t prove how<br/>you voted) and yet you can make sure that your ballot is included<br/>unmodified in the final tally! Crypto voting systems are often called<br/>E2E or end-to-end verifiable. Scantegrity is one, there are others.<br/>Scantegrity is the only one that has been used in an actual governmental<br/>election (two municipal elections in Takoma Park, Maryland, USA).</p></blockquote>
 
 </div>
 
@@ -134,7 +127,7 @@ for initiative in initiatives:
 
   
 
-<time datetime="2011-10-31T11:16:00+01:00" pubdate>Oct 31<span>st</span>, 2011</time>
+<time datetime="2013-02-07T23:40:00+01:00" pubdate>Feb 7<span>th</span>, 2013</time>
       
 
 
@@ -143,13 +136,13 @@ for initiative in initiatives:
       <div class="sharing">
   
   <a class="FlattrButton" style="display:none;"
-        title="LiquidFeedback der Piratenpartei unter Python mit der API abrufen"
+        title="Geheim und sicher wählen im Internet?"
         lang="en_GB"
         rev="flattr;uid:johl;category:rest;button:compact;"
-        href="http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei/">LiquidFeedback der Piratenpartei unter Python mit der API abrufen ( http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei/ )</a>
+        href="http://johl.github.com/blog/2013/02/07/commitcoin/">Geheim und sicher wählen im Internet? ( http://johl.github.com/blog/2013/02/07/commitcoin/ )</a>
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei/" data-via="johl" data-counturl="http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://johl.github.com/blog/2013/02/07/commitcoin/" data-via="johl" data-counturl="http://johl.github.com/blog/2013/02/07/commitcoin/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -162,10 +155,8 @@ for initiative in initiatives:
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/10/27/phaidros-und-sokrates/" title="Previous Post: Phaidros und Sokrates treffen sich im Internet">&laquo; Phaidros und Sokrates treffen sich im Internet</a>
+        <a class="basic-alignment left" href="/blog/2013/02/06/onigiri/" title="Previous Post: Oh! Onigiri">&laquo; Oh! Onigiri</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2011/11/01/koreanische-esskultur/" title="next Post: Koreanische Esskultur">Koreanische Esskultur &raquo;</a>
       
     </p>
   </footer>
@@ -275,8 +266,8 @@ for initiative in initiatives:
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei';
-        var disqus_url = 'http://johl.github.com/blog/2011/10/31/letzte-initiativen-im-liquidfeedback-der-piratenpartei';
+        var disqus_identifier = 'http://johl.github.com/blog/2013/02/07/commitcoin';
+        var disqus_url = 'http://johl.github.com/blog/2013/02/07/commitcoin';
         var disqus_script = 'embed.js';
       
     (function () {
