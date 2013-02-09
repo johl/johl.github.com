@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-02-08T00:06:28+01:00</updated>
+  <updated>2013-02-09T15:08:30+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[TPB AFK]]></title>
+    <link href="http://johl.github.com/blog/2013/02/09/tpb-afk/"/>
+    <updated>2013-02-09T15:05:00+01:00</updated>
+    <id>http://johl.github.com/blog/2013/02/09/tpb-afk</id>
+    <content type="html"><![CDATA[<blockquote><p>TPB AFK: The Pirate Bay Away From Keyboard is a documentary film released on February 8 2013, directed by Simon Klose, based on the lives of the three founders of The Pirate Bay - Peter Sunde, Fredrik Neij and Gottfrid Svartholm.</p><footer><strong>Wikipedia, TPB AFK</strong><cite><a href='http://en.wikipedia.org/wiki/TPB_AFK'>en.wikipedia.org/wiki/TPB_AFK/&hellip;</a></cite></footer></blockquote>
+
+
+<p><a href="http://thepiratebay.se/search/tpb.afk/0/99/0">Viel mehr gibt es nicht zu sagen. Seht selbst.</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Geheim und sicher wählen im Internet?]]></title>
@@ -584,17 +596,6 @@ I&#8217;ve ever been to. A++++++, great weekend, would buy again.</p>
 
 <blockquote><p>I don’t know if I’m exaggerating but it seems like every programmer who gets monads posts a tutorial about them. (And each post begins with: There’s already a lot of monad tutorials on the Internet, but…) The reason is that getting monads it’s like a spiritual experience that you want to share with others.</p><footer><strong>Bartosz Milewski,</strong><cite><a href='http://bartoszmilewski.com/2011/01/09/monads-for-the-curious-programmer-part-1/'>Monads for the Curious Programmer</a></cite></footer></blockquote>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Sneak preview]]></title>
-    <link href="http://johl.github.com/blog/2012/02/16/vorschau/"/>
-    <updated>2012-02-16T22:57:00+01:00</updated>
-    <id>http://johl.github.com/blog/2012/02/16/vorschau</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/0u3e0K2Z2Z1W2y0W2I2y/IMG_20120216_222331.jpg" title="Dinge, die ihren Schatten voraus werfen" ></p>
-
-<p>Gerade lese ich ein bisschen, weil Dinge ihren Schatten vorauswerfen.</p>
 ]]></content>
   </entry>
   
