@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-02-09T15:08:30+01:00</updated>
+  <updated>2013-03-03T19:58:16+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Leichter Neid zum Berlin Geekettes Hackthon]]></title>
+    <link href="http://johl.github.com/blog/2013/03/03/bghackathon/"/>
+    <updated>2013-03-03T19:39:00+01:00</updated>
+    <id>http://johl.github.com/blog/2013/03/03/bghackathon</id>
+    <content type="html"><![CDATA[<p>Ich habe heute kurz zum Abschluß, wo auch Gäste zugelassen waren, ein paar Präsentationen von Projekten angesehen, die über das Wochenende beim <a href="http://berlingeekettes.github.com/hackathon/">Berlin Geekettes Hackathon</a> entstanden sind. Ich bin geflasht und beeindruckt. Es gab einen morsenden Mini-Hubschrauber, eine E-Book-Leseapp für Hörbücher, Gürtelschnallen zum Tetris-Spielen, einen Wecker, der bei jedem mißlungenen Versuch ihn abzustellen immer schlechtere Musik spielte, eine App die ausgehend von Etsy-Einkäufen Immobilien vorschlägt und vieles mehr, was in ca. 24 Stunden entstanden ist.</p>
+
+<p>Deutschlands (wahrscheinlich) erster Woman-Only-Hackathon, den die <a href="http://berlingeekettes.com/">Berlin Geekettes</a> organisiert wurde, schien für all die kreativen Hackerinnen dort <a href="http://bghackathon.tumblr.com/">ein großer Spaß</a> gewesen zu sein. Ich war auf eine sehr schöne Art und Weise neidisch darauf, einfach mal nicht gemeint zu sein, wenn es um den kreativen Umgang mit Technik geht. Ich wünsche mir mehr Momente dieses Neids. Irgendwann in ferner Zukunft könnte es dann auch auch mal sein, dass so ein Neid nicht mehr nötig ist. <a href="http://www.youtube.com/watch?v=wKu7RxpOo2Y">Aber das ist ein Märchen von Übermorgen</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TPB AFK]]></title>
@@ -583,18 +594,6 @@ I&#8217;ve ever been to. A++++++, great weekend, would buy again.</p>
 <li><a href="http://schnitzelpress.org/">Schnitzelpress is a Blogging Engine for the modern Web</a> — Im Wesentlichen Octpress mit einer Datenbank</li>
 <li><a href="http://www.askgeo.com/">AskGeo | Latitude and Longitude to Time Zone Conversion Web API</a> — wie heisst die Zeitzone von dem Ort, wo ich gerade bin, in Unix-Sprech?</li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Die hintereinander aufgerufenen Monadenerklärungsmonaden]]></title>
-    <link href="http://johl.github.com/blog/2012/02/24/monadenerklrungsmonade/"/>
-    <updated>2012-02-24T16:52:00+01:00</updated>
-    <id>http://johl.github.com/blog/2012/02/24/monadenerklrungsmonade</id>
-    <content type="html"><![CDATA[<p>Was mir nicht klar war: <a href="http://www.haskell.org/haskellwiki/Monad_tutorials_timeline">Dass die Erklärung von Monaden ein komplettes Genre der Computerliteratur ist</a>, mit einem stetigen Wachstum an Output seit 2000. Und warum?</p>
-
-<blockquote><p>I don’t know if I’m exaggerating but it seems like every programmer who gets monads posts a tutorial about them. (And each post begins with: There’s already a lot of monad tutorials on the Internet, but…) The reason is that getting monads it’s like a spiritual experience that you want to share with others.</p><footer><strong>Bartosz Milewski,</strong><cite><a href='http://bartoszmilewski.com/2011/01/09/monads-for-the-curious-programmer-part-1/'>Monads for the Curious Programmer</a></cite></footer></blockquote>
 
 ]]></content>
   </entry>
