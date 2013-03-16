@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-03-03T20:26:37+01:00</updated>
+  <updated>2013-03-16T22:16:31+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Die Spam-Bibliothek von Babel]]></title>
+    <link href="http://johl.github.com/blog/2013/03/16/monkey-typewriter-amazon/"/>
+    <updated>2013-03-16T21:49:00+01:00</updated>
+    <id>http://johl.github.com/blog/2013/03/16/monkey-typewriter-amazon</id>
+    <content type="html"><![CDATA[<p><a href="https://de.wikipedia.org/wiki/Infinite-Monkey-Theorem">Das Infinite-Monkey-Theorem, auch deutsch Theorem der endlos tippenden Affen, besagt, dass ein Affe, der unendlich lange zufällig auf einer Schreibmaschine herumtippt, fast sicher irgendwann alle Bücher in der Bibliothèque nationale de France, der Nationalbibliothek Frankreichs, schreiben wird. In englischsprachigen Ländern heißt es, dass so irgendwann die Werke William Shakespeares entstehen werden.</a></p>
+
+<p>Der Kindle-Store von Amazon wird derzeit von einer Menge seltsamen Büchern überschwemmt. Eins der Werke, die dort angeboten werden, beinhaltet <a href="https://en.wikipedia.org/wiki/The_Song_That_Never_Ends">den Liedtext des Nerv-Klassikers &#8220;The Song That Never Ends&#8221;</a>, immer wieder wiederholt <a href="http://www.publishingtrends.com/2011/03/the-kindle-swindle/">auf über 700 Seiten</a>, andere Titel <a href="http://tech.fortune.cnn.com/2012/04/16/amazon-knock-off-bestsellers/">sind Bestsellern zum Verwechseln ähnlich</a>. E-Books und textgenerierende Algorithmen machen es möglich.</p>
+
+<p><img class="left" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Typing_monkey.svg">
+Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand von einer unendlichen Anzahl von Affen (oder Algorithmen) jeder beliebige Text, jede mögliche Buchstabenkombination verlegt und bei Amazon verkauft werden kann, wer bekommt dann die Einkünft aus dem Leistungsschutzrecht für automatisch generierte Texte? Und: Wenn mit einer gewissen Wahrscheinlichkeit irgendwann der Algorithmus &#8220;Mein Kampf&#8221; generiert und bei Amazon zum Verkauf anbietet, macht sich der Affe dann strafbar?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Leichter Neid zum Berlin Geekettes Hackathon]]></title>
@@ -581,20 +595,6 @@ I&#8217;ve ever been to. A++++++, great weekend, would buy again.</p>
 <p>Techcrunch schrieb enthusiastisch <a href="http://techcrunch.com/2012/03/30/wikipedias-next-big-thing-wikidata-a-machine-readable-user-editable-database-funded-by-google-paul-allen-and-others/">&#8220;Wikipedia’s Next Big Thing: Wikidata, A Machine-Readable, User-Editable Database Funded By Google, Paul Allen And Others&#8221;</a>, etwas nüchterner war Netzpolitik.org mit <a href="http://netzpolitik.org/2012/wikidata-strukturierte-daten-fur-wikipedia-co/">&#8220;Wikidata: Strukturierte Daten für Wikipedia &amp; Co.&#8221;</a> und <a href="http://www.tagesschau.de/inland/wikidata100.html">auch die Tagesschau hatte was, wenn auch nur am Rande</a>.</p>
 
 <p>Jetzt müssen wir das &#8220;nur noch&#8221; programmieren. Drückt uns die Daumen!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Webdevelopment und sonstiger Geek-Kram, der anfiel — eine kleine Liste gefunderer Links mal wieder]]></title>
-    <link href="http://johl.github.com/blog/2012/02/26/linkschleuder/"/>
-    <updated>2012-02-26T18:59:00+01:00</updated>
-    <id>http://johl.github.com/blog/2012/02/26/linkschleuder</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://buzzientdev.posterous.com/django-outside-of-django">Using Django outside of Django</a> — wenn ein IRC-Bot oder sonst ein Wesen der Nacht auf die Django-Datenstruktur zugreifen soll</li>
-<li><a href="http://schnitzelpress.org/">Schnitzelpress is a Blogging Engine for the modern Web</a> — Im Wesentlichen Octpress mit einer Datenbank</li>
-<li><a href="http://www.askgeo.com/">AskGeo | Latitude and Longitude to Time Zone Conversion Web API</a> — wie heisst die Zeitzone von dem Ort, wo ich gerade bin, in Unix-Sprech?</li>
-</ul>
-
 ]]></content>
   </entry>
   
