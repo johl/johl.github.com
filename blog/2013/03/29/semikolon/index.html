@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Dystopie - Hackety hack hack</title>
+  <title>Plötzlich Semikolon — Automatic Semicolon Insertion - Hackety hack hack</title>
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="Was heute noch wie ein Märchen klingt, kann morgen Wirklichkeit sein.
-Hier ist ein Märchen von übermorgen: Wir befinden uns in einer fernen Zukunft. &hellip;">
+  <meta name="description" content="Für ein Buch, an dem ich gerade arbeite, war der folgende Text zu lang und zu ausführlich. Wegwerfen wollte ich ihn aber nicht, so dass er hier im &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Hier ist ein Märchen von übermorgen: Wir befinden uns in einer fernen Zukunft.
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://johl.github.com/blog/2012/08/07/sci-fi">
+  <link rel="canonical" href="http://johl.github.com/blog/2013/03/29/semikolon">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +79,7 @@ Hier ist ein Märchen von übermorgen: Wir befinden uns in einer fernen Zukunft.
   
   <header>
     
-      <h1 class="entry-title">Dystopie</h1>
+      <h1 class="entry-title">Plötzlich Semikolon — Automatic Semicolon Insertion</h1>
     
     
       <p class="meta">
@@ -91,20 +90,52 @@ Hier ist ein Märchen von übermorgen: Wir befinden uns in einer fernen Zukunft.
 
   
 
-<time datetime="2012-08-07T20:14:00+02:00" pubdate>Aug 7<span>th</span>, 2012</time>
+<time datetime="2013-03-29T21:01:00+01:00" pubdate>Mar 29<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Was heute noch wie ein Märchen klingt, kann morgen Wirklichkeit sein.
-Hier ist ein Märchen von übermorgen:</p>
+<div class="entry-content"><p>Für ein Buch, an dem ich gerade arbeite, war der folgende Text zu lang und zu ausführlich. Wegwerfen wollte ich ihn aber nicht, so dass er hier im Blog landete, in dem schon lange nichts mehr aus dem Bereich Programmieren vorkam.</p>
 
-<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/a/a7/Singularity_Deniers_Dystopia_Holocaust_Denial_LOW_RESOLUTION.png" width="150" title="" >
-Wir befinden uns in einer fernen Zukunft. <a href="http://www.globalsecurity.org/military/world/war/index.html">Weltweit finden mehr als 30 Kriege gleichzeitig statt</a>. <a href="http://de.wikipedia.org/wiki/Nuklearkatastrophe_von_Fukushima">Japan wurde von Naturkatastrophen heimgesucht und Teile des Landes gelten mittlerweile als verstrahlt</a>. <a href="http://de.wikipedia.org/wiki/Nahostkonflikt">Im Konflikt um die immer knapper werdenden Rohstoffe haben Vertreter uralter Wüstenreligionen den Kampf gegeneinander aufgenommen.</a> <a href="http://de.wikipedia.org/wiki/Europ%C3%A4ische_Agentur_f%C3%BCr_die_operative_Zusammenarbeit_an_den_Au%C3%9Fengrenzen">An den Grenzen der Festung des vereinigten Europas sterben Flüchtlinge.</a> <a href="http://de.wikipedia.org/wiki/Stuxnet">Supermächte sind dazu übergegangen, andere Länder mittels Computerviren anzugreifen.</a></p>
+<h2>JavaScript und Semikolons</h2>
 
-<p>Anscheinend ungerührt davon verfolgen weltweit Menschen die Landung eines atomgetriebenen Roboters mit Lasern auf dem Mars. Dazu blicken sie auf die Bildschirme ihrer tragbaren Computertelefone.</p>
+<p>Das automatische Einfügen von Semikolons (<em>Automatic Semicolon Insertion</em>, ASI) ist eine der verwirrendsten und umstrittensten Eigenschaften von JavaScript. Die Regeln für das Einfügen von Semikolons beginnen im <a href="http://ecma-international.org/ecma-262/5.1/">Sprachstandard ECMA 262</a> recht simpel: Wenn ein gültiges JavaScript-Statement von einem anderen gültigen JavaScript-Statement durch einen Zeilenumbruch (<em>linefeed</em>) oder das Zeichen &#8221;<code>}</code>&#8221; getrennt wird, dann wird ein Semikolon vor dem Trennzeichen eingesetzt. Am Ende einer Zeile oder eines Blocks können Semikolons also normalerweise weggelassen werden.</p>
+
+<p>Ein Semikolon kann zudem am Ende eines Programms weggelassen werden. Es muss also nicht als letztes Zeichen in der Datei stehen. Dies sind schon alle einfacheren Bedingungen für ASI.  Es gilt zudem die Regel, dass ein Semikolon niemals automatisch eingefügt wird (und damit auch nicht weggelassen werden kann), wenn dadurch ein leeres Statement zustande käme. Auch in der Klammer mit den Bedingungen einer <code>for</code>-Schleife wird niemals automatisch ein Semikolon ergänzt.</p>
+
+<p>Die Postfix-Ausdrücke <code>++</code> und <code>--</code> und die Befehle <code>continue</code>, <code>break</code>, <code>return</code> und <code>throw</code> haben ihre eigenen Regeln.  Wenn <code>++</code> oder <code>--</code> als Postfix-Operator geparst werden können und sie vom vorhergehenden Zeichen durch einen Zeilenumbruch getrennt werden, dann fügt JavaScript vor ihnen ein Semikolon ein.</p>
+
+<p>  <code>a = b</code><br/>
+  <code>++c</code></p>
+
+<p>wird also zu:</p>
+
+<p>  <code>a = b;</code><br/>
+  <code>++c;</code></p>
+
+<p>Wenn bei continue, break, return und throw das nächste Zeichen erst nach einem Zeilenumbruch folgt, dann fügt JavaScript nach diesen Befehlen ein Semikolon ein.</p>
+
+<p>  <code>return</code><br/>
+  <code>a + b</code></p>
+
+<p>wird demnach zu:</p>
+
+<p>  <code>return;</code><br/>
+  <code>a + b;</code></p>
+
+<p>Rund um die ASI ist ein geradezu religiöser Streit in der JavaScript-Community entstanden. Ursprünglich dachte Brendan Eich, dass sich mit ASI die Anzahl der Fehler beim Parsen von Programmcode verringern lassen — JavaScript war schließlich für weniger versierte Programmiererinnen und Programmierer gedacht. Douglas Crockford, Autor des wahrscheinlich meistgelesenen JavaScript Stil-Handbuchs <a href="http://www.oreilly.de/catalog/9780596517748/">&#8220;JavaScript: The Good Parts&#8221;</a> und einflussreicher Entwickler von Technologien wie JSON (JavaScript Object Notation, also der Serialisierung von Daten in JavaScript), empfiehlt, ASI vollständig zu missachten und jedes Statement einfach mit einem Semikolon abzuschließen, ohne auf die eingebaute Magie des Parsers zu vertrauen.</p>
+
+<p>Demgegenüber steht das meist beobachtete Projekt auf Github, das Framework <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a>, das in seinem JavaScript-Code völlig auf Semikolons verzichtet. Crockford kommentierte das renommierte Bootstrap-Projekt in Hinblick auf seinen JavaScript-Komprimierer JSMin drastisch: &#8221;<em>That is insanely stupid code.  I am not going to dumb down JSMin for this case. (&#8230;) Learn to use semicolons properly. ! is not intended to be a statement separator. ; is.</em>&#8221;&#8221;</p>
+
+<p>Woraufhin der Bootstrap-Entwickler Jacob Thornton antwortete:
+&#8221;<em>I have learned to use them, that’s why there isn’t one present.</em>&#8221;</p>
+
+<p>Aus praktischen Gründen empfiehlt es sich, sich hauptsächlich an Crockford zu halten. Allerdings
+sollten wir zur
+Kenntnis nehmen, dass es auch andere religiöse Ansichten zu Semikolons gibt,
+die wir zu respektieren haben.</p>
 </div>
 
 
@@ -122,7 +153,7 @@ Wir befinden uns in einer fernen Zukunft. <a href="http://www.globalsecurity.org
 
   
 
-<time datetime="2012-08-07T20:14:00+02:00" pubdate>Aug 7<span>th</span>, 2012</time>
+<time datetime="2013-03-29T21:01:00+01:00" pubdate>Mar 29<span>th</span>, 2013</time>
       
 
 
@@ -131,13 +162,13 @@ Wir befinden uns in einer fernen Zukunft. <a href="http://www.globalsecurity.org
       <div class="sharing">
   
   <a class="FlattrButton" style="display:none;"
-        title="Dystopie"
+        title="Plötzlich Semikolon — Automatic Semicolon Insertion"
         lang="en_GB"
         rev="flattr;uid:johl;category:rest;button:compact;"
-        href="http://johl.github.com/blog/2012/08/07/sci-fi/">Dystopie ( http://johl.github.com/blog/2012/08/07/sci-fi/ )</a>
+        href="http://johl.github.com/blog/2013/03/29/semikolon/">Plötzlich Semikolon — Automatic Semicolon Insertion ( http://johl.github.com/blog/2013/03/29/semikolon/ )</a>
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://johl.github.com/blog/2012/08/07/sci-fi/" data-via="johl" data-counturl="http://johl.github.com/blog/2012/08/07/sci-fi/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://johl.github.com/blog/2013/03/29/semikolon/" data-via="johl" data-counturl="http://johl.github.com/blog/2013/03/29/semikolon/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -150,10 +181,8 @@ Wir befinden uns in einer fernen Zukunft. <a href="http://www.globalsecurity.org
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/07/23/ideen/" title="Previous Post: Ideen, die ich gern verwirklicht sähe">&laquo; Ideen, die ich gern verwirklicht sähe</a>
+        <a class="basic-alignment left" href="/blog/2013/03/16/monkey-typewriter-amazon/" title="Previous Post: Die Spam-Bibliothek von Babel">&laquo; Die Spam-Bibliothek von Babel</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/08/25/gentrifizierungskritik/" title="next Post: Gentrifizierungskritik als Wirtschafts- und Wachstumsmotor in Kreuzberg">Gentrifizierungskritik als Wirtschafts- und Wachstumsmotor in Kreuzberg &raquo;</a>
       
     </p>
   </footer>
@@ -263,8 +292,8 @@ Wir befinden uns in einer fernen Zukunft. <a href="http://www.globalsecurity.org
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://johl.github.com/blog/2012/08/07/sci-fi';
-        var disqus_url = 'http://johl.github.com/blog/2012/08/07/sci-fi';
+        var disqus_identifier = 'http://johl.github.com/blog/2013/03/29/semikolon';
+        var disqus_url = 'http://johl.github.com/blog/2013/03/29/semikolon';
         var disqus_script = 'embed.js';
       
     (function () {

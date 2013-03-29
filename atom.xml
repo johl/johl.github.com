@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-03-17T15:34:01+01:00</updated>
+  <updated>2013-03-29T22:26:44+01:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Plötzlich Semikolon — Automatic Semicolon Insertion]]></title>
+    <link href="http://johl.github.com/blog/2013/03/29/semikolon/"/>
+    <updated>2013-03-29T21:01:00+01:00</updated>
+    <id>http://johl.github.com/blog/2013/03/29/semikolon</id>
+    <content type="html"><![CDATA[<p>Für ein Buch, an dem ich gerade arbeite, war der folgende Text zu lang und zu ausführlich. Wegwerfen wollte ich ihn aber nicht, so dass er hier im Blog landete, in dem schon lange nichts mehr aus dem Bereich Programmieren vorkam.</p>
+
+<h2>JavaScript und Semikolons</h2>
+
+<p>Das automatische Einfügen von Semikolons (<em>Automatic Semicolon Insertion</em>, ASI) ist eine der verwirrendsten und umstrittensten Eigenschaften von JavaScript. Die Regeln für das Einfügen von Semikolons beginnen im <a href="http://ecma-international.org/ecma-262/5.1/">Sprachstandard ECMA 262</a> recht simpel: Wenn ein gültiges JavaScript-Statement von einem anderen gültigen JavaScript-Statement durch einen Zeilenumbruch (<em>linefeed</em>) oder das Zeichen &#8221;<code>}</code>&#8221; getrennt wird, dann wird ein Semikolon vor dem Trennzeichen eingesetzt. Am Ende einer Zeile oder eines Blocks können Semikolons also normalerweise weggelassen werden.</p>
+
+<p>Ein Semikolon kann zudem am Ende eines Programms weggelassen werden. Es muss also nicht als letztes Zeichen in der Datei stehen. Dies sind schon alle einfacheren Bedingungen für ASI.  Es gilt zudem die Regel, dass ein Semikolon niemals automatisch eingefügt wird (und damit auch nicht weggelassen werden kann), wenn dadurch ein leeres Statement zustande käme. Auch in der Klammer mit den Bedingungen einer <code>for</code>-Schleife wird niemals automatisch ein Semikolon ergänzt.</p>
+
+<p>Die Postfix-Ausdrücke <code>++</code> und <code>--</code> und die Befehle <code>continue</code>, <code>break</code>, <code>return</code> und <code>throw</code> haben ihre eigenen Regeln.  Wenn <code>++</code> oder <code>--</code> als Postfix-Operator geparst werden können und sie vom vorhergehenden Zeichen durch einen Zeilenumbruch getrennt werden, dann fügt JavaScript vor ihnen ein Semikolon ein.</p>
+
+<p>  <code>a = b</code><br/>
+  <code>++c</code></p>
+
+<p>wird also zu:</p>
+
+<p>  <code>a = b;</code><br/>
+  <code>++c;</code></p>
+
+<p>Wenn bei continue, break, return und throw das nächste Zeichen erst nach einem Zeilenumbruch folgt, dann fügt JavaScript nach diesen Befehlen ein Semikolon ein.</p>
+
+<p>  <code>return</code><br/>
+  <code>a + b</code></p>
+
+<p>wird demnach zu:</p>
+
+<p>  <code>return;</code><br/>
+  <code>a + b;</code></p>
+
+<p>Rund um die ASI ist ein geradezu religiöser Streit in der JavaScript-Community entstanden. Ursprünglich dachte Brendan Eich, dass sich mit ASI die Anzahl der Fehler beim Parsen von Programmcode verringern lassen — JavaScript war schließlich für weniger versierte Programmiererinnen und Programmierer gedacht. Douglas Crockford, Autor des wahrscheinlich meistgelesenen JavaScript Stil-Handbuchs <a href="http://www.oreilly.de/catalog/9780596517748/">&#8220;JavaScript: The Good Parts&#8221;</a> und einflussreicher Entwickler von Technologien wie JSON (JavaScript Object Notation, also der Serialisierung von Daten in JavaScript), empfiehlt, ASI vollständig zu missachten und jedes Statement einfach mit einem Semikolon abzuschließen, ohne auf die eingebaute Magie des Parsers zu vertrauen.</p>
+
+<p>Demgegenüber steht das meist beobachtete Projekt auf Github, das Framework <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a>, das in seinem JavaScript-Code völlig auf Semikolons verzichtet. Crockford kommentierte das renommierte Bootstrap-Projekt in Hinblick auf seinen JavaScript-Komprimierer JSMin drastisch: &#8221;<em>That is insanely stupid code.  I am not going to dumb down JSMin for this case. (&#8230;) Learn to use semicolons properly. ! is not intended to be a statement separator. ; is.</em>&#8221;&#8221;</p>
+
+<p>Woraufhin der Bootstrap-Entwickler Jacob Thornton antwortete:
+&#8221;<em>I have learned to use them, that’s why there isn’t one present.</em>&#8221;</p>
+
+<p>Aus praktischen Gründen empfiehlt es sich, sich hauptsächlich an Crockford zu halten. Allerdings
+sollten wir zur
+Kenntnis nehmen, dass es auch andere religiöse Ansichten zu Semikolons gibt,
+die wir zu respektieren haben.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Die Spam-Bibliothek von Babel]]></title>
@@ -582,19 +629,6 @@ I&#8217;ve ever been to. A++++++, great weekend, would buy again.</p>
 
 
 <p><a href="http://www.boell.de/downloads/stiftung/1987_Wahlprogramm(1).pdf">Bundestagswahlprogramm 1987 DIE GRÜNEN: Farbe bekennen</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Es geht los]]></title>
-    <link href="http://johl.github.com/blog/2012/04/02/es-geht-los/"/>
-    <updated>2012-04-02T08:55:00+02:00</updated>
-    <id>http://johl.github.com/blog/2012/04/02/es-geht-los</id>
-    <content type="html"><![CDATA[<p>Ich bin ganz aufgeregt. Heute geht es dann wirklich los bei Wikidata, dem Projekt, was das Internet ein bisschen umkrempeln könnte. Am Freitag gab es eine Pressekonferenz zu dem Thema und das Echo war ganz ansehnlich.</p>
-
-<p>Techcrunch schrieb enthusiastisch <a href="http://techcrunch.com/2012/03/30/wikipedias-next-big-thing-wikidata-a-machine-readable-user-editable-database-funded-by-google-paul-allen-and-others/">&#8220;Wikipedia’s Next Big Thing: Wikidata, A Machine-Readable, User-Editable Database Funded By Google, Paul Allen And Others&#8221;</a>, etwas nüchterner war Netzpolitik.org mit <a href="http://netzpolitik.org/2012/wikidata-strukturierte-daten-fur-wikipedia-co/">&#8220;Wikidata: Strukturierte Daten für Wikipedia &amp; Co.&#8221;</a> und <a href="http://www.tagesschau.de/inland/wikidata100.html">auch die Tagesschau hatte was, wenn auch nur am Rande</a>.</p>
-
-<p>Jetzt müssen wir das &#8220;nur noch&#8221; programmieren. Drückt uns die Daumen!</p>
 ]]></content>
   </entry>
   
