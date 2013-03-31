@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-03-29T22:26:44+01:00</updated>
+  <updated>2013-03-31T22:30:42+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Was mag es sein?]]></title>
+    <link href="http://johl.github.com/blog/2013/03/31/was-mag-es-sein%3F/"/>
+    <updated>2013-03-31T22:23:00+02:00</updated>
+    <id>http://johl.github.com/blog/2013/03/31/was-mag-es-sein?</id>
+    <content type="html"><![CDATA[<div><script src='https://gist.github.com/5281890.js?file='></script>
+<noscript><pre><code></code></pre></noscript></div>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Plötzlich Semikolon — Automatic Semicolon Insertion]]></title>
@@ -617,18 +630,6 @@ I&#8217;ve ever been to. A++++++, great weekend, would buy again.</p>
 <p>Eine weitere Runde Selbstmitleid ohne Ausweichmöglichkeit von der Bühne herab ist nicht zielführend. Wenn es weiter gehen soll, dann bräuchten wir entweder Vortragende, die psychologisch-medizinisch fundiertere Neuigkeiten erzählen können — oder wir suchen einen anderen Rahmen. Die Überlegungen zur <a href="http://konvergenzfehler.de/2012/04/30/die-hackerethik-als-ursache-fur-depression/">&#8220;Hackerethik als Ursache für Depression&#8221;</a> bei Pylon gehen schon in die richtige Richtung der Selbstreflexion: Den Druck, der sich vielleicht in der Depression entlädt, bauen wir schliesslich auch selbst auf, im Zusammenspiel als Teile einer Gesellschaft. Dabei bin ich als Mit-Autor eines Buches zur Kultur von Wachmachern in gewisser Weise nicht unschuldig: Neoliberale Selbstverbesserungsideologie ist das, was du draus machst. Auch die während unseres Vortrags immer wieder unterschwellig verbreitete Message, dass Depression die tollen, bewundernswerten Hacker mit den vielen Projekten ereilt, ist schief — auch wenn wir meinten, dadurch darauf hinzuweisen, dass selbst vermeintliche Vorbilder leiden, kam im Umkehrschluss dabei heraus, dass diejenigen, die nach eigenem Empfinden &#8220;gar nichts tolles&#8221; können, unsichtbar bleiben und mit den dunklen Schatten auf der Seele eben doppelt allein.</p>
 
 <p>Ich wünsche mir, dass wir jetzt gemeinsam die Sache in die Hand nehmen und nicht Vortragende auf einer Bühne brauchen. Vorbilder haben wir trotzdem: Die <a href="http://blog.noisebridge.net/2011/11/21/geeks-depression-meetup-in-san-francisco/">Geeks and Depression Meetups</a> oder die Initiative <a href="http://bluehackers.org/">Bluehackers</a>. Selbstorganisation ist die beste Organisation.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Bundestagswahlprogramm 1987 Die Grünen]]></title>
-    <link href="http://johl.github.com/blog/2012/05/01/bundestagswahlprogramm-1987-die-grnen/"/>
-    <updated>2012-05-01T05:08:00+02:00</updated>
-    <id>http://johl.github.com/blog/2012/05/01/bundestagswahlprogramm-1987-die-grnen</id>
-    <content type="html"><![CDATA[<blockquote><p>DIE GRÜNEN befürworten eine bedürfnisorientierte Technikentwicklung auch im Kommunikationsbereich. DIE GRÜNEN unterstützen den Widerstand gegen IuK-Techniken und fordern:</p><p>• Ausweitung der Mitbestimmungsrechte über Betriebe und Branchen hinweg, um der übergreifenden technischen Vernetzung begegnen zu können.<br/>• Verbot von Personalinformationssystemen und sonstiger Systeme, die geeignet sind, die Beschäftigten zu verdaten.<br/>• Keine Digitalisierung des Fernsprechnetzes.<br/>• Keine Dienste- und Netzintegration im Fernsprechnetz (ISDN).<br/>• Keine Glasfaserverkabelung (Breitband-ISDN).<br/>• Stopp des Kabel- und Satellitenfernsehens.<br/>• Wirksame parlamentarische Kontrolle der Post.</p></blockquote>
-
-
-<p><a href="http://www.boell.de/downloads/stiftung/1987_Wahlprogramm(1).pdf">Bundestagswahlprogramm 1987 DIE GRÜNEN: Farbe bekennen</a></p>
 ]]></content>
   </entry>
   
