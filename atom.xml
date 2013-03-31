@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-03-31T22:30:42+02:00</updated>
+  <updated>2013-04-01T00:56:44+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Python und die Liebe]]></title>
+    <link href="http://johl.github.com/blog/2013/04/01/python-und-die-liebe/"/>
+    <updated>2013-04-01T00:53:00+02:00</updated>
+    <id>http://johl.github.com/blog/2013/04/01/python-und-die-liebe</id>
+    <content type="html"><![CDATA[
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># Python on love:</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">this</span>
+</span><span class='line'><span class="n">love</span> <span class="o">=</span> <span class="n">this</span>
+</span><span class='line'><span class="n">this</span> <span class="ow">is</span> <span class="n">love</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="n">love</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Was mag es sein?]]></title>
@@ -604,32 +628,6 @@ the same room, or at least someone who knew them was.</p>
 <p>The playful, but incredibly smart atmosphere and the desire to get stuff
 done made all this probably one of the most satisfying technical meetups
 I&#8217;ve ever been to. A++++++, great weekend, would buy again.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Genug auf Bühnen geredet über Depressionen und Geeks]]></title>
-    <link href="http://johl.github.com/blog/2012/05/23/depression/"/>
-    <updated>2012-05-23T01:12:00+02:00</updated>
-    <id>http://johl.github.com/blog/2012/05/23/depression</id>
-    <content type="html"><![CDATA[<p>Am Wochenende fand die <a href="http://sigint.ccc.de/Main_Page">SIGINT</a> in Köln statt, eine Konferenz des Chaos Computer Club zu Diskursen im digitalen Zeitalter, oder weniger hochtrabend ausgedrückt: ein Ort, um lose Enden der Diskussion vom <a href="http://events.ccc.de/congress/">CCCongress</a> wieder zusammenzufügen.</p>
-
-<p>Zusammen mit <a href="http://stephanurbach.de/">Stephan Urbach</a> habe ich über ein schwieriges Thema gesprochen. Unsere Session kam — den Twitterkommentaren nach zu urteilen — sehr gut an und erzeugte auch ein kleines Medienecho:</p>
-
-<blockquote><p>Die Verantwortung der Hacker im digitalen Zeitalter müsse auch zu mehr Achtsamkeit führen innerhalb der Hacker-Gemeinschaft selbst. So rufen Jens Ohlig und Stephan Urbach in einem Kamingespräch dazu auf, sich in der Szene gegenseitig zu helfen, wenn so mancher auch psychisch mit dem Druck nicht mehr klarkomme, den diese gefühlte Verantwortung mit sich bringe. Es schade nicht, im Netz einen netteren Umgang miteinander zu pflegen - statt des oft kriegerischen Tonfalls in Foren und Chats.</p><footer><strong>SPIEGEL online</strong><cite><a href='http://www.spiegel.de/netzwelt/web/sigint-konferenz-hacker-suchen-neue-regeln-a-834085.html'>&#8220;Sigint-Konferenz: Hacker Suchen Neue Regeln&#8221;</a></cite></footer></blockquote>
-
-
-<p>Es ging um Probleme wie chronische Depression, Stress, Burnout oder bi-polare Störungen in der Hackercommunity. Wir haben einen Schwerpunkt auf praktische Tipps zum Umgang mit dem &#8220;schwarzen Hund&#8221; (Churchill) gelegt, auch um ausser emotionalen Triggern noch mehr zu hinterlassen nach unserem Kamingespräch (während wir auf der Bühne redeten, brannte auf Youtube und dem Beamer ein Kaminfeuer statt Slides). Der beste Artikel zu unserem Talk ist vermutlich bei <a href="http://www.heise.de/newsticker/meldung/SIGINT-Depressionen-und-Hackerethik-1580985.html">heise</a> zu finden.</p>
-
-<p>Das Thema &#8220;Depression&#8221; in Geek-Kreisen ist wichtig. Auf dem 28C3 gab es <a href="http://www.youtube.com/watch?v=QnfOOoTOrDE">ein emotional sehr aufwühlendes Panel zu diesem Thema</a>, das spontan ins Programm gehievt wurde. Die &#8220;Szene&#8221; hatte mehr als einen Suizid zu beklagen von Menschen, die als Flamme doppelt so hell brannten als andere und entsprechend schnell erloschen, dabei sind <a href="http://www.ccc.de/en/updates/2011/len-sassaman">Len Sassaman</a>, <a href="http://de.wikipedia.org/wiki/Florian_Hufsky">Florian Hufsky</a> und <a href="http://blog.noisebridge.net/2011/11/19/please-reach-out/">Ilya Zhitomirskiy</a> leider nur drei Beispiele. Auch auf der re:publica in Berlin gab es eine Veranstaltung zu diesem Thema unter dem Titel <a href="http://stephanurbach.de/2012/05/republica-12-dark-side-of-action-video/">The Dark Side of Action</a>.</p>
-
-<p>Mit einigem Abstand bin ich jetzt zu der Überzeugung gelangt, dass die Form, die wir für die Awareness in Bezug auf das Thema gewählt haben, nicht beliebig neu anwendbar ist. <strong><em>Es ist genug mit Geek-Depressions-Panels.</em></strong></p>
-
-<p>Die Position, die wir einnehmen, wenn wir auf der Bühne über Depression reden, ist nicht unproblematisch: Gerade, wenn wir vermitteln wollen, dass es darum geht, zuzuhören, ist ein Predigen von Oben herab nicht zielführend. Dabei denke ich nicht, dass unser Talk falsch war, oder einer der vorangegangenen. Ich weiss, dass etliche Menschen dadurch erst inspiriert wurden, sich mit sich selbst und anderen in diesem Kontext zu beschäftigen, was wohl einer der größten Erfolge ist, die ein Vortrag auf einer &#8220;Szene-Konferenz&#8221; haben kann. Aber die Botschaft ist mittlerweile angekommen und das Mem in die Köpfe gesetzt.</p>
-
-<p>Eine weitere Runde Selbstmitleid ohne Ausweichmöglichkeit von der Bühne herab ist nicht zielführend. Wenn es weiter gehen soll, dann bräuchten wir entweder Vortragende, die psychologisch-medizinisch fundiertere Neuigkeiten erzählen können — oder wir suchen einen anderen Rahmen. Die Überlegungen zur <a href="http://konvergenzfehler.de/2012/04/30/die-hackerethik-als-ursache-fur-depression/">&#8220;Hackerethik als Ursache für Depression&#8221;</a> bei Pylon gehen schon in die richtige Richtung der Selbstreflexion: Den Druck, der sich vielleicht in der Depression entlädt, bauen wir schliesslich auch selbst auf, im Zusammenspiel als Teile einer Gesellschaft. Dabei bin ich als Mit-Autor eines Buches zur Kultur von Wachmachern in gewisser Weise nicht unschuldig: Neoliberale Selbstverbesserungsideologie ist das, was du draus machst. Auch die während unseres Vortrags immer wieder unterschwellig verbreitete Message, dass Depression die tollen, bewundernswerten Hacker mit den vielen Projekten ereilt, ist schief — auch wenn wir meinten, dadurch darauf hinzuweisen, dass selbst vermeintliche Vorbilder leiden, kam im Umkehrschluss dabei heraus, dass diejenigen, die nach eigenem Empfinden &#8220;gar nichts tolles&#8221; können, unsichtbar bleiben und mit den dunklen Schatten auf der Seele eben doppelt allein.</p>
-
-<p>Ich wünsche mir, dass wir jetzt gemeinsam die Sache in die Hand nehmen und nicht Vortragende auf einer Bühne brauchen. Vorbilder haben wir trotzdem: Die <a href="http://blog.noisebridge.net/2011/11/21/geeks-depression-meetup-in-san-francisco/">Geeks and Depression Meetups</a> oder die Initiative <a href="http://bluehackers.org/">Bluehackers</a>. Selbstorganisation ist die beste Organisation.</p>
 ]]></content>
   </entry>
   
