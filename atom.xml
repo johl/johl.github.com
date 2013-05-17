@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://johl.github.com/atom.xml" rel="self"/>
   <link href="http://johl.github.com/"/>
-  <updated>2013-05-17T04:25:56+02:00</updated>
+  <updated>2013-05-17T04:27:51+02:00</updated>
   <id>http://johl.github.com/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -18,9 +18,7 @@
     <link href="http://johl.github.com/blog/2013/05/13/laufende-projekte/"/>
     <updated>2013-05-13T22:45:00+02:00</updated>
     <id>http://johl.github.com/blog/2013/05/13/laufende-projekte</id>
-    <content type="html"><![CDATA[<p>Neben meiner Arbeit beschäftigen mich zur Zeit zwei Projekte (plus
-einige andere Dinge, die ein anderes Mal erzählt werden sollen), die ich
-noch nicht direkt in diesem Blog erwähnt habe.</p>
+    <content type="html"><![CDATA[<p>Neben meiner Arbeit beschäftigen mich zur Zeit zwei Projekte (plus einige andere Dinge, die ein anderes Mal erzählt werden sollen), die ich noch nicht direkt in diesem Blog erwähnt habe.</p>
 
 <h2>Das Curry-Buch - Funktional programmieren lernen mit JavaScript von Jens Ohlig, Stefanie Schirmer, Hannes Mehnert</h2>
 
