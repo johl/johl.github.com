@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Hackety hack hack]]></title>
-  <link href="http://johl.github.com/atom.xml" rel="self"/>
-  <link href="http://johl.github.com/"/>
-  <updated>2013-05-21T03:33:00+02:00</updated>
-  <id>http://johl.github.com/</id>
+  <link href="http://blog.johl.io/atom.xml" rel="self"/>
+  <link href="http://blog.johl.io/"/>
+  <updated>2013-05-21T03:43:08+02:00</updated>
+  <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Laufende Projekte]]></title>
-    <link href="http://johl.github.com/blog/2013/05/13/laufende-projekte/"/>
+    <link href="http://blog.johl.io/blog/2013/05/13/laufende-projekte/"/>
     <updated>2013-05-13T22:45:00+02:00</updated>
-    <id>http://johl.github.com/blog/2013/05/13/laufende-projekte</id>
+    <id>http://blog.johl.io/blog/2013/05/13/laufende-projekte</id>
     <content type="html"><![CDATA[<p>Neben meiner Arbeit beschäftigen mich zur Zeit zwei Projekte (plus einige andere Dinge, die ein anderes Mal erzählt werden sollen), die ich noch nicht direkt in diesem Blog erwähnt habe.</p>
 
 <h2>Das Curry-Buch - Funktional programmieren lernen mit JavaScript von Jens Ohlig, Stefanie Schirmer, Hannes Mehnert</h2>
@@ -40,14 +40,14 @@
   
   <entry>
     <title type="html"><![CDATA[Neues vom Angriff der Zukunft auf die Gegenwart]]></title>
-    <link href="http://johl.github.com/blog/2013/04/19/zukunft/"/>
+    <link href="http://blog.johl.io/blog/2013/04/19/zukunft/"/>
     <updated>2013-04-19T00:05:00+02:00</updated>
-    <id>http://johl.github.com/blog/2013/04/19/zukunft</id>
+    <id>http://blog.johl.io/blog/2013/04/19/zukunft</id>
     <content type="html"><![CDATA[<p><a title="By Jean Marc Cote [Public domain or Public domain], via
 Wikimedia Commons"
 href="http://commons.wikimedia.org/wiki/File%3AFrance_in_XXI_Century._Electric_scrubbing.jpg"><img
 width="512" alt="France in XXI Century. Electric scrubbing"
-src="http://johl.github.com//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/France_in_XXI_Century._Electric_scrubbing.jpg/512px-France_in_XXI_Century._Electric_scrubbing.jpg"/></a></p>
+src="http://blog.johl.io//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/France_in_XXI_Century._Electric_scrubbing.jpg/512px-France_in_XXI_Century._Electric_scrubbing.jpg"/></a></p>
 
 <p>Eine kleine Sammlung an Links:</p>
 
@@ -67,9 +67,9 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
   
   <entry>
     <title type="html"><![CDATA[Python und die Liebe]]></title>
-    <link href="http://johl.github.com/blog/2013/04/01/python-und-die-liebe/"/>
+    <link href="http://blog.johl.io/blog/2013/04/01/python-und-die-liebe/"/>
     <updated>2013-04-01T00:53:00+02:00</updated>
-    <id>http://johl.github.com/blog/2013/04/01/python-und-die-liebe</id>
+    <id>http://blog.johl.io/blog/2013/04/01/python-und-die-liebe</id>
     <content type="html"><![CDATA[
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -91,9 +91,9 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
   
   <entry>
     <title type="html"><![CDATA[Was mag es sein?]]></title>
-    <link href="http://johl.github.com/blog/2013/03/31/was-mag-es-sein%3F/"/>
+    <link href="http://blog.johl.io/blog/2013/03/31/was-mag-es-sein%3F/"/>
     <updated>2013-03-31T22:23:00+02:00</updated>
-    <id>http://johl.github.com/blog/2013/03/31/was-mag-es-sein?</id>
+    <id>http://blog.johl.io/blog/2013/03/31/was-mag-es-sein?</id>
     <content type="html"><![CDATA[<div><script src='https://gist.github.com/5281890.js?file='></script>
 <noscript><pre><code></code></pre></noscript></div>
 
@@ -104,9 +104,9 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
   
   <entry>
     <title type="html"><![CDATA[Plötzlich Semikolon — Automatic Semicolon Insertion]]></title>
-    <link href="http://johl.github.com/blog/2013/03/29/semikolon/"/>
+    <link href="http://blog.johl.io/blog/2013/03/29/semikolon/"/>
     <updated>2013-03-29T21:01:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/03/29/semikolon</id>
+    <id>http://blog.johl.io/blog/2013/03/29/semikolon</id>
     <content type="html"><![CDATA[<p>Für ein Buch, an dem ich gerade arbeite, war der folgende Text zu lang und zu ausführlich. Wegwerfen wollte ich ihn aber nicht, so dass er hier im Blog landete, in dem schon lange nichts mehr aus dem Bereich Programmieren vorkam.</p>
 
 <h2>JavaScript und Semikolons</h2>
@@ -151,9 +151,9 @@ die wir zu respektieren haben.</p>
   
   <entry>
     <title type="html"><![CDATA[Die Spam-Bibliothek von Babel]]></title>
-    <link href="http://johl.github.com/blog/2013/03/16/monkey-typewriter-amazon/"/>
+    <link href="http://blog.johl.io/blog/2013/03/16/monkey-typewriter-amazon/"/>
     <updated>2013-03-16T21:49:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/03/16/monkey-typewriter-amazon</id>
+    <id>http://blog.johl.io/blog/2013/03/16/monkey-typewriter-amazon</id>
     <content type="html"><![CDATA[<p><a href="https://de.wikipedia.org/wiki/Infinite-Monkey-Theorem">Das Infinite-Monkey-Theorem, auch deutsch Theorem der endlos tippenden Affen, besagt, dass ein Affe, der unendlich lange zufällig auf einer Schreibmaschine herumtippt, fast sicher irgendwann alle Bücher in der Bibliothèque nationale de France, der Nationalbibliothek Frankreichs, schreiben wird. In englischsprachigen Ländern heißt es, dass so irgendwann die Werke William Shakespeares entstehen werden.</a></p>
 
 <p>Der Kindle-Store von Amazon wird derzeit von einer Menge an seltsamen Büchern überschwemmt. Eins der Werke, die dort angeboten werden, beinhaltet <a href="https://en.wikipedia.org/wiki/The_Song_That_Never_Ends">den Liedtext des Nerv-Klassikers &#8220;The Song That Never Ends&#8221;</a>, immer wieder wiederholt <a href="http://www.publishingtrends.com/2011/03/the-kindle-swindle/">auf über 700 Seiten</a>, andere Titel <a href="http://tech.fortune.cnn.com/2012/04/16/amazon-knock-off-bestsellers/">sind Bestsellern zum Verwechseln ähnlich</a>. E-Books und textgenerierende Algorithmen machen es möglich.</p>
@@ -165,9 +165,9 @@ Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand 
   
   <entry>
     <title type="html"><![CDATA[Leichter Neid zum Berlin Geekettes Hackathon]]></title>
-    <link href="http://johl.github.com/blog/2013/03/03/bghackathon/"/>
+    <link href="http://blog.johl.io/blog/2013/03/03/bghackathon/"/>
     <updated>2013-03-03T19:39:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/03/03/bghackathon</id>
+    <id>http://blog.johl.io/blog/2013/03/03/bghackathon</id>
     <content type="html"><![CDATA[<p>Ich habe heute kurz zum Abschluß, wo auch Gäste zugelassen waren, ein paar Präsentationen von Projekten angesehen, die über das Wochenende beim <a href="http://berlingeekettes.github.com/hackathon/">Berlin Geekettes Hackathon</a> entstanden sind. Ich bin geflasht und beeindruckt. Es gab einen morsenden Mini-Hubschrauber, eine E-Book-Leseapp für Hörbücher, Gürtelschnallen zum Tetris-Spielen, einen Wecker, der bei jedem mißlungenen Versuch ihn abzustellen immer schlechtere Musik spielte, eine App die ausgehend von Etsy-Einkäufen Immobilien vorschlägt und vieles mehr, was in ca. 24 Stunden entstanden ist.</p>
 
 <p>Deutschlands (wahrscheinlich) erster Women-Only-Hackathon, den die <a href="http://berlingeekettes.com/">Berlin Geekettes</a> organisiert wurde, schien für all die kreativen Hackerinnen dort <a href="http://bghackathon.tumblr.com/">ein großer Spaß</a> gewesen zu sein. Ich war auf eine sehr schöne Art und Weise neidisch darauf, einfach mal nicht gemeint zu sein, wenn es um den kreativen Umgang mit Technik geht. Ich wünsche mir mehr Momente dieses Neids. Irgendwann in ferner Zukunft könnte es dann auch auch mal sein, dass so ein Neid nicht mehr nötig ist. <a href="http://www.youtube.com/watch?v=wKu7RxpOo2Y">Aber das ist ein Märchen von Übermorgen</a>.</p>
@@ -176,9 +176,9 @@ Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand 
   
   <entry>
     <title type="html"><![CDATA[TPB AFK]]></title>
-    <link href="http://johl.github.com/blog/2013/02/09/tpb-afk/"/>
+    <link href="http://blog.johl.io/blog/2013/02/09/tpb-afk/"/>
     <updated>2013-02-09T15:05:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/02/09/tpb-afk</id>
+    <id>http://blog.johl.io/blog/2013/02/09/tpb-afk</id>
     <content type="html"><![CDATA[<blockquote><p>TPB AFK: The Pirate Bay Away From Keyboard is a documentary film released on February 8 2013, directed by Simon Klose, based on the lives of the three founders of The Pirate Bay - Peter Sunde, Fredrik Neij and Gottfrid Svartholm.</p><footer><strong>Wikipedia, TPB AFK</strong><cite><a href='http://en.wikipedia.org/wiki/TPB_AFK'>en.wikipedia.org/wiki/TPB_AFK/&hellip;</a></cite></footer></blockquote>
 
 
@@ -188,9 +188,9 @@ Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand 
   
   <entry>
     <title type="html"><![CDATA[Geheim und sicher wählen im Internet?]]></title>
-    <link href="http://johl.github.com/blog/2013/02/07/commitcoin/"/>
+    <link href="http://blog.johl.io/blog/2013/02/07/commitcoin/"/>
     <updated>2013-02-07T23:40:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/02/07/commitcoin</id>
+    <id>http://blog.johl.io/blog/2013/02/07/commitcoin</id>
     <content type="html"><![CDATA[<p>Ich habe ein Verständnisproblem und hoffe ganz ernsthaft, ihr könnt mir helfen. Geheime, sichere und nicht manipulierbare Wahlen über das Internet sind nicht möglich, soweit mein bisheriger Kenntnisstand. Schon Wahlen auf Papier sind manipulierbar, wenn ein Computer ins Spiel kommt, der beliebig programmiert werden kann, skaliert die Manipulierbarkeit ins Unendliche. Das ist letztendlich auch der Hintergrund für das <a href="http://wahlcomputer.ccc.de/rechtliches/urteil-wahlcomputer/">Urteil des Bundesverfassungsgerichts am 3. März 2009</a>, dass der Einsatz von Wahlcomputern bei der Bundestagswahl 2005 verfassungswidrig war, da der Wähler weder die abgegebenen Stimmen noch deren Auszählung selbst kontrollieren konnte. Der Chaos Computer Club hat sich um die Ächtung von Wahlcomputern in den letzten Jahren <a href="http://wahlcomputer.ccc.de/">verdient gemacht</a>.</p>
 
 <p>Bis ins Jahr 1997 existierte an der Universität Göttingen der <a href="http://de.wikipedia.org/wiki/Wolfskehl-Preis">Wolfskehl-Preis</a>, der für den Beweis des <a href="http://de.wikipedia.org/wiki/Gro%C3%9Fer_Fermatscher_Satz">großen Fermatschen Satzes</a> ausgelobt war. Am Göttinger Mathematischen Institut waren fast 90 Jahre (1908-1997) lang ein oder zwei Assistenten mit der Bearbeitung von Einsendungen beschäftigt, die von Unmengen von Amateuren eingeschickt wurden. Meist reichte ein einfacher Formbrief als Antwort, in dem nur eingetragen werden musste, auf welcher Seite und in welcher Zeile sich der erste logische Fehler im &#8220;Beweis&#8221; befand.</p>
@@ -209,9 +209,9 @@ sich der erste logische Fehler?</p>
   
   <entry>
     <title type="html"><![CDATA[Oh! Onigiri]]></title>
-    <link href="http://johl.github.com/blog/2013/02/06/onigiri/"/>
+    <link href="http://blog.johl.io/blog/2013/02/06/onigiri/"/>
     <updated>2013-02-06T04:22:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/02/06/onigiri</id>
+    <id>http://blog.johl.io/blog/2013/02/06/onigiri</id>
     <content type="html"><![CDATA[<p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/1/1c/Salmon_onigiri_by_yomi955.jpg" width="450" title="'By yomi955 (Flickr) CC-BY-2.0 via Wikimedia Commons'" >
 Es besteht die Möglichkeit, dass ich mich für den nächsten Hype entschuldigen muss, wenn die Zeit gekommen ist. Die Tatsache, dass ich Bubble Tea vor einer gefühlten Ewigkeit (ca. letzter Sommer) noch abfeierte, weil es ihn endlich häufiger so zu kaufen gab, wie ich ihn aus New Yorks Chinatown kannte und liebte, lastet immer noch ein bisschen auf mir und mein Enthusiasmus tut mir leid. Ich bin voll in die Hipster-Falle getappt, plötzlich wurden die Innenstädte von Bubble Tea überschwemmt, Läden machten auf und gingen kurz danach ein und am Schluß gab es überzuckerten Schlabber mit Perlen sogar bei McDonald&#8217;s — of all places. Bitte verzeiht mir.</p>
 
@@ -228,9 +228,9 @@ Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit 
   
   <entry>
     <title type="html"><![CDATA[Das Netz als röchelndes, gurgelndes, pfeifendes Wesen]]></title>
-    <link href="http://johl.github.com/blog/2013/01/31/modemklang/"/>
+    <link href="http://blog.johl.io/blog/2013/01/31/modemklang/"/>
     <updated>2013-01-31T11:26:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/01/31/modemklang</id>
+    <id>http://blog.johl.io/blog/2013/01/31/modemklang</id>
     <content type="html"><![CDATA[<p><a href="http://windytan.blogspot.fi/2012/11/the-sound-of-dialup-pictured.html" title="The sound of the dialup, pictured"> <img src="http://1.bp.blogspot.com/-ocE3ypOxO_c/UKf6aOz38lI/AAAAAAAAAn0/lwAZYB11ztY/s400/dialup-final.png"> </a></p>
 
 <blockquote><p>Kennen Sie das taoistische Märchen von der Zähmung der Harfe?</p><p>Vor langer, langer Zeit stand in der Schlucht von Lungmen ein Kiri-Baum, ein wahrhafter König des Waldes.  Er reckte seine Krone so hoch, daß er mit den Wolken sprechen konnte; seine Wurzeln reichten tief in die Erde, wo ihre bronzefarbenen Locken sich mit denen des silbernen Drachens vermischten, der darunter schlief. Eines Tages geschah es, daß ein mächtiger Zauberer aus diesem Baum eine wundersame Harfe fertigte, deren widerstrebender Geist nur vom größten aller Musiker gezähmt werden konnte.  Lange Zeit befand sich das Instrument im Besitz des Kaisers von China, aber alle Bemühungen, seinen Saiten eine Melodie zu entlocken, waren vergebens. Selbst wenn man sich noch so sehr mühte - aus der Harfe erklangen nur harte, verächtliche Töne, die nicht zu den Liedern paßten, die die Musiker gerne gesungen hätten. Die Harfe wollte keinen von ihnen als ihren Meister anerkennen.</p><p>Zuletzt kam Pei-ya, der Prinz unter den Harfespielern.  Er strich mit zarter Hand über die Harfe, wie jemand, der ein widerspenstiges Pferd besänftigen will und berührte sachte die Saiten. Er sang von der Natur und den Jahreszeiten, von den hohen Bergen und fließenden Wassern. Und siehe da - alle Erinnerungen des Baumes erwachten! Noch einmal spürte der Baum den süßten Atem des Frühlings in seinen Ästen. Die frischen Wasserfälle, die die Schlucht hinuntersprangen, lachten den knospenden Blumen zu. Alsbald hörte man die träumenden Stimmen des Sommers mit seinen Myriaden von Insekten, dem sanften Plätschern des Regens, dem Wehklagen Ein Tiger brüllt - im Tal hallt sein Schrei wider. Es ist Herbst, in der Verlassenheit der Nacht scheint der Mond scharf wie eine Schwert auf das bereifte Gras. Nun herrscht Winter, und durch die schneeige Luft wirbeln Scharen von Schwänen und auf die Zweige prasseln Hagelkörner mit grimmigem Vergnügen.</p><p>Dann wechselte Pei-ya die Tonart und sang von der Liebe.</p><p>Der Wald wiegte sich wie ein entflammter Liebhaber, tief in Gedanken verloren. Hoch oben zog eine hell leuchtende Wolke vorüber, stolz wie ein hochmütiges Mädchen; indem sie weiterzog, warf sie lange Schatten auf den Boden, schwarz wie die Verzeiflung.  Wiederum wechselte die Tonart: Pei-ya sang vom Krieg, von klirrendem Stahl und stampfenden Streitrössern.Und in der Harfe erwuchs der der Sturm der Lungmen, der Drachen ritt auf dem Blitz, die Lawine brach grollend durch die Hügel.</p><p>Von Begeisterung erfüllt, fragte der chinesiche Kaiser Pei-ya, worin das Geheimnis seines Sieges liege.  &#8220;Herr&#8221;, antwortete dieser, andere haben versagt, weil sie nur von sich selbst gesunden haben. Ich überließ es der Harfe, das Thema zu wählen und ich wußte nicht mehr genau, ob die Harfe Pei-ya war oder Pei-ya die Harfe.&#8221;</p><footer><strong>Kakuzo Okakura</strong><cite></cite></footer></blockquote>
@@ -251,10 +251,10 @@ Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit 
   
   <entry>
     <title type="html"><![CDATA[Strukturierte Debatten im Internet]]></title>
-    <link href="http://johl.github.com/blog/2013/01/19/debattenkultur/"/>
+    <link href="http://blog.johl.io/blog/2013/01/19/debattenkultur/"/>
     <updated>2013-01-19T15:08:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/01/19/debattenkultur</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://johl.github.com//upload.wikimedia.org/wikipedia/commons/8/8a/Jakobinerklub.jpg" width="512" title="Jakobinerklub. Stich nach einer Zeichnung von Vilette (Bibliothèque 11 nationale de France, Paris)..DaQuirin at de.wikipedia [Public domain], 12 from Wikimedia Commons" >
+    <id>http://blog.johl.io/blog/2013/01/19/debattenkultur</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://blog.johl.io//upload.wikimedia.org/wikipedia/commons/8/8a/Jakobinerklub.jpg" width="512" title="Jakobinerklub. Stich nach einer Zeichnung von Vilette (Bibliothèque 11 nationale de France, Paris)..DaQuirin at de.wikipedia [Public domain], 12 from Wikimedia Commons" >
 <a href="http://blog.lqfb.piratenpartei.de/2013/01/17/testbetrieb-neue-api-und-bombay-crushed/">Inspiriert von der alternativen Oberfläche zu LiquidFeedback, der gerade im Testbetrieb gestarteten &#8220;Saftigen Kumquat&#8221;</a>, habe ich mich auf die Suche nach einem Tool für eine Leerstelle bei der Meinungsbildung über LiquidDemocracy gemacht.</p>
 
 <p>Meines Erachtens fehlt dem sehr ausgeklügelten Delegations- und Wahlsystem für Vorschläge ein entsprechend strukturierendes Element für die Debattenphase, bei der Argumente pro und contra abgewogen und eingebracht werden können. Die jetztigen Mechanismen zum Einbringen von Änderungsvorschlägen oder Gegeninitiativen sind nicht immer für eine schrittweise Verbesserung des Textes geeignet und ein gern genommener Work-Around, nämlich ein einfacher Link auf ein EtherPad zur Initiative, kann nur bei Selbstdisziplin der Teilnehmer_innen als Tool für eine strukturierte Debatte fungieren.</p>
@@ -274,9 +274,9 @@ Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit 
   
   <entry>
     <title type="html"><![CDATA[Urheberrechtsextremismus]]></title>
-    <link href="http://johl.github.com/blog/2013/01/13/urheberrechtsextremismus/"/>
+    <link href="http://blog.johl.io/blog/2013/01/13/urheberrechtsextremismus/"/>
     <updated>2013-01-13T18:12:00+01:00</updated>
-    <id>http://johl.github.com/blog/2013/01/13/urheberrechtsextremismus</id>
+    <id>http://blog.johl.io/blog/2013/01/13/urheberrechtsextremismus</id>
     <content type="html"><![CDATA[<p>Es mag Leute geben, deren Leben von abstrakten Konzepten wie den Urheber- und Verwertungsrechten für immaterielle Güter nicht berührt wird. Meins gehört nicht dazu, denn die Einschränkungen, die ich erfahre, sind konkret.</p>
 
 <p><a href="http://de.wikipedia.org/wiki/Aaron_Swartz">Aaron Swartz</a> hat sich am Freitag nach einer beispielslosen Jagd der Behörden auf ihn das Leben genommen. Ich habe ihn nicht persönlich kennengelernt, ausser dass wir vor etlichen Jahren auf dem Chaos Communication Congress zusammenstießen.  Offensichtlich war das auch der Chaos Communication Congress, der dazu führte, dass Aaron als einer der allerersten Mitarbeiter bei reddit ging oder gehen musste — unglücklich mit dem Stil, der bei reddit nach der Übernahme durch Condé Nast Einzug hielt, <a href="http://blogoscoped.com/archive/2007-05-07-n78.html">verschwand Aaron erstmal ohne Abmeldung Richtung Europa, um auf der europäischen Hackerparty im BCC zu feiern</a>.</p>
@@ -306,9 +306,9 @@ Kultur ist Remix: Daran hat sich vermutlich seit dem ersten Höhlenbild, das von
   
   <entry>
     <title type="html"><![CDATA[Neo-Cypherpunk?]]></title>
-    <link href="http://johl.github.com/blog/2012/12/17/neo-cypherpunk/"/>
+    <link href="http://blog.johl.io/blog/2012/12/17/neo-cypherpunk/"/>
     <updated>2012-12-17T15:27:00+01:00</updated>
-    <id>http://johl.github.com/blog/2012/12/17/neo-cypherpunk</id>
+    <id>http://blog.johl.io/blog/2012/12/17/neo-cypherpunk</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/7/7b/SantiagoChileCryptoParty.jpg" width="450" title="'By Santiago Cryptoparty CC-BY-3.0, via Wikimedia Commons'" >
 Manchmal kommt die Geschichte wieder zurück und das Rad wird in einer neuen, verbesserten Version neu erfunden und ein bisschen runder — oder es werden schon längst geführte Diskurse einfach nochmal geführt. Am 22.  August 2012 twitterte die australische alleinerziehende Mutter und digitale Aktivistin, die sich im Netz Asher Wolf nennt, eine <a href="https://twitter.com/Asher_Wolf/status/238224764739653632">Party-Einladung, bei der sie zu einer Crypto-Party einlud: &#8220;BYO devices, beer, &amp; music.&#8221;</a>.</p>
 
@@ -336,9 +336,9 @@ Ich habe gar nichts gegen eine gute Geschichte, wenn sich das naive Politikverst
   
   <entry>
     <title type="html"><![CDATA[Mediawiki in hübsch]]></title>
-    <link href="http://johl.github.com/blog/2012/12/13/making-mediawiki-pretty/"/>
+    <link href="http://blog.johl.io/blog/2012/12/13/making-mediawiki-pretty/"/>
     <updated>2012-12-13T22:43:00+01:00</updated>
-    <id>http://johl.github.com/blog/2012/12/13/making-mediawiki-pretty</id>
+    <id>http://blog.johl.io/blog/2012/12/13/making-mediawiki-pretty</id>
     <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/393l0y0H1d2i2R1k0Y1I/14.12.12%2000:21-Schnappschuss.png">
 Das aktuelle Wiki des
 <a href="https://events.ccc.de/congress/2012/wiki/Main_Page">29C3</a>, das
@@ -353,9 +353,9 @@ zaubern kann. Chapeau!</p>
   
   <entry>
     <title type="html"><![CDATA[Was tun gegen rassistische Gewalt? Ich hätte da mal zehn Vorschläge]]></title>
-    <link href="http://johl.github.com/blog/2012/11/22/gegen-rassismus/"/>
+    <link href="http://blog.johl.io/blog/2012/11/22/gegen-rassismus/"/>
     <updated>2012-11-22T01:03:00+01:00</updated>
-    <id>http://johl.github.com/blog/2012/11/22/gegen-rassismus</id>
+    <id>http://blog.johl.io/blog/2012/11/22/gegen-rassismus</id>
     <content type="html"><![CDATA[<p>Seit über einem Jahr sind die Morde des <a href="http://de.wikipedia.org/wiki/Nationalsozialistischer_Untergrund">NSU</a> in ihrem gesamten Ausmaß bekannt. Seit über einem Jahr hat sich trotz einer einzigartigen rassistischen Mordserie nichts an den Grundlagen getan. Bundesministerin Kristina Schröder hält weiterhin an der aus der Kommunistenfurcht der Adenauerzeit stammenden Extremismusdoktrin fest und behindert mit der <a href="http://de.wikipedia.org/wiki/Extremismusklausel">Extremismusklausel</a> aktiv Initiativen gegen rassistischen Terror.</p>
 
 <p>Dabei kommt der Rassismus, der hinter den NSU-Morden steht, aus der Mitte der Gesellschaft und wird, wie <a href="http://www.fes-gegen-rechtsextremismus.de/pdf_12/ergebnisse_mitte_studie_2012.pdf">eine Studie der Friedrich-Ebert-Stiftung erst kürzlich feststellte</a>, von einem zweistelligen Prozentsatz der Bevölkerung in Deutschland getragen. Der rassistische Blick auf &#8220;das Fremde&#8221; ist fest im gesellschaftlichen Gefüge verankert, befeuert durch vermeintlich tabubrechende Abrechnungen mit einer vielfältigen Gesellschaft durch SPD-Politiker wie Sarrazin oder Buschkowsky. Die über ein Jahrzehnt unentdeckten Morden wurde erst möglich in einer Gesellschaft, die die Terroranschläge des NSU (anders als von den Tätern intendiert) gar nicht anders lesen konnte als interne Konflikte innerhalb der &#8220;Fremden&#8221; — eben rassistisch konnotiert als &#8220;Döner-Morde&#8221;.</p>
@@ -390,9 +390,9 @@ Die einfachste Maßnahme, die oft als erste genannt wird, sollte am Schluß steh
   
   <entry>
     <title type="html"><![CDATA[Fizzbuzz für Ponies — It's Magic!]]></title>
-    <link href="http://johl.github.com/blog/2012/10/20/fim/"/>
+    <link href="http://blog.johl.io/blog/2012/10/20/fim/"/>
     <updated>2012-10-20T20:23:00+02:00</updated>
-    <id>http://johl.github.com/blog/2012/10/20/fim</id>
+    <id>http://blog.johl.io/blog/2012/10/20/fim</id>
     <content type="html"><![CDATA[<p>FiM++ ist eine esoterische Programmiersprache, die nach den &#8221;<a href="http://mlp.wikia.com/wiki/Friendship_reports">friendship reports</a>&#8221; in der Fernsehserie &#8221;<a href="http://mlp.wikia.com/wiki/My_Little_Pony_Friendship_is_Magic">My Little Pony Friendship is Magic</a>&#8221; aufgebaut ist.
 FIM++ ist eine imperative, dynamisch typisierte, interpretierte Sprache, deren Sprachumfang momentan Ganzzahlenarithmetik, Ausgaben auf der Konsole, dynamisch wachsende Arrays und Subroutinen unterstützt.</p>
 
@@ -450,9 +450,9 @@ Your faithful student, johl.</code></pre></noscript></div>
   
   <entry>
     <title type="html"><![CDATA[Es ist niemals zu Sp&auml;ti]]></title>
-    <link href="http://johl.github.com/blog/2012/09/16/sptis/"/>
+    <link href="http://blog.johl.io/blog/2012/09/16/sptis/"/>
     <updated>2012-09-16T20:20:00+02:00</updated>
-    <id>http://johl.github.com/blog/2012/09/16/sptis</id>
+    <id>http://blog.johl.io/blog/2012/09/16/sptis</id>
     <content type="html"><![CDATA[<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/0/01/Korg_Pa80_-_Sp%C3%A4tkauf_in_Hamburg.jpg" width="480" title="&#34;von Sven Dietrich originally posted to Flickr as Spätkauf in Hamburg CC-BY-2.0, via Wikimedia Commons&#34;" alt="&#34;von Sven Dietrich originally posted to Flickr as Spätkauf in Hamburg CC-BY-2.0, via Wikimedia Commons&#34;">
 &#8221;<a href="http://www.berliner-zeitung.de/berlin/berliner-ladenoeffnungsgesetz-sonntags-bleibt-der-spaeti-geschlossen,10809148,17226218.html">F&uuml;r die etwa 1000 Berliner Sp&auml;tverkaufsstellen gibt es keine gelockerte Regelung f&uuml;r die Sonntags&ouml;ffnung</a>&#8221; berichtet die Berliner Zeitung. Als jemand, der auf die &#8220;Sp&auml;tis&#8221; zur Aufrechterhaltung einer l&uuml;ckenlosen Versorgung mit Hackerbrause (auch an Sonn- und Feiertagen) angewiesen ist, fiel mir die Kinnlade zu Boden und diese riss im freien Fall auch noch gleich meinen Geduldsfaden durch.</p>
 
@@ -475,9 +475,9 @@ Your faithful student, johl.</code></pre></noscript></div>
   
   <entry>
     <title type="html"><![CDATA[Gentrifizierungskritik als Wirtschafts- und Wachstumsmotor in Kreuzberg]]></title>
-    <link href="http://johl.github.com/blog/2012/08/25/gentrifizierungskritik/"/>
+    <link href="http://blog.johl.io/blog/2012/08/25/gentrifizierungskritik/"/>
     <updated>2012-08-25T21:36:00+02:00</updated>
-    <id>http://johl.github.com/blog/2012/08/25/gentrifizierungskritik</id>
+    <id>http://blog.johl.io/blog/2012/08/25/gentrifizierungskritik</id>
     <content type="html"><![CDATA[<p>Mit mindestens einem passenden &#8220;Event&#8221; (Demo, Infoveranstaltung, Protestcamp am Kottbusser Tor) pro Woche ist Gentrifizierungskritik in Kreuzberg längst zu einem wichtigen mittelständischen Wirtschaftsbereich geworden. Dabei präsentiert sich das weltoffene Kreuzberg den angereisten <em>Gentrification</em>-Kritikern gern von seiner besten Seite, denn das Trendthema wird hier mit Leib und Seele gelebt und immer mit der berühmten Berliner Schnauze kommentiert. Der &#8220;Kiez&#8221; liebt seine Gentrifizierungskritik und findet sie &#8220;knorke&#8221;: Gerade die positiven Impulse für die ansässige Gastronomie durch Demobesucher liegen volkswirtschaftlich auf der Hand und stellen einen wichtigen Beitrag zur Aufwertung des ehemaligen Postleitzahlenbereichs 36 dar.</p>
 
 <p>Die freche Kritik an der Gentrifizierung macht den ehemals ärmlichen Stadtteil auch attraktiv für eine immer größer werdende Schicht an modernen Verbrauchern, die Wohnen und Leben mit politischem Engagement verbinden wollen und gerne (auch gegen höhere Kosten) einen Lebensstil pflegen, der von Gesundheitsbewusstsein und -vorsorge sowie der Ausrichtung nach Prinzipien der Nachhaltigkeit geprägt ist.  Anti-Gentrifizierung ist &#8220;in&#8221;: Mit dem heissen Trend dieses Sommers hat der Szenebezirk ein weiteres Mal das richtige Näschen auf dem Markt der politischen Angebote bewiesen.</p>
@@ -486,9 +486,9 @@ Your faithful student, johl.</code></pre></noscript></div>
   
   <entry>
     <title type="html"><![CDATA[Dystopie]]></title>
-    <link href="http://johl.github.com/blog/2012/08/07/sci-fi/"/>
+    <link href="http://blog.johl.io/blog/2012/08/07/sci-fi/"/>
     <updated>2012-08-07T20:14:00+02:00</updated>
-    <id>http://johl.github.com/blog/2012/08/07/sci-fi</id>
+    <id>http://blog.johl.io/blog/2012/08/07/sci-fi</id>
     <content type="html"><![CDATA[<p>Was heute noch wie ein Märchen klingt, kann morgen Wirklichkeit sein.
 Hier ist ein Märchen von übermorgen:</p>
 
