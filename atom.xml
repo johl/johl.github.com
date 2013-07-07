@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2013-06-19T01:27:27+02:00</updated>
+  <updated>2013-07-07T17:52:57+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Totalreflexion der Daten durch Prism]]></title>
+    <link href="http://blog.johl.io/blog/2013/07/07/totalreflexion-der-daten-durch-prism/"/>
+    <updated>2013-07-07T01:33:00+02:00</updated>
+    <id>http://blog.johl.io/blog/2013/07/07/totalreflexion-der-daten-durch-prism</id>
+    <content type="html"><![CDATA[<p><a title="By Zátonyi Sándor, (ifj.) Fizped (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ASz%C3%ADnsz%C3%B3r%C3%B3d%C3%A1s_prizm%C3%A1n1.jpg"><img align="left"width="256" alt="Színszóródás prizmán1" src="http://blog.johl.io//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sz%C3%ADnsz%C3%B3r%C3%B3d%C3%A1s_prizm%C3%A1n1.jpg/512px-Sz%C3%ADnsz%C3%B3r%C3%B3d%C3%A1s_prizm%C3%A1n1.jpg"/></a> Das <a href="https://de.wikipedia.org/wiki/Prisma_(Optik)">Prisma aus der Optik</a> ist eine spezielle Form des geometrischen Körpers Prisma, das benutzt werden kann, um Licht in seine Bestandteile aufzubrechen. Bei einer verbreiteten Form des Prisma wird das Licht dabei mit Totalreflexion zurückgeworfen, ähnlich der Kugel beim Billiardspiel. Nach einigen Runden teilen sich die die unterschiedlichen Farbtöne des weissen Lichts nach der Reisegeschwindigkeit ihrer Wellenlängen auf. Aus dem Klumpen Big Data des weissen Lichts werden unterscheidbare Daten oder Metadaten extrahiert.Beim NSA-Überwachungsprogramm <strong>P</strong>lanning <strong>T</strong>ool for <strong>R</strong>esource <strong>I</strong>ntegration, <strong>S</strong>ynchronization, and <strong>M</strong>anagement, kurz <em>Prism</em>, wird mindestens die gesamte Internetkommunikation der westlichen Welt durchgeleitet und versucht, aus dieser Kommunikation Daten zu extrahieren, auf deren Grundlage Entscheidungen getroffen werden.</p>
+
+<p><span class='pullquote-right' data-pullquote='Vermutlich gab es zu keiner Zeit eine umfangreiche Überwachung der gesamten Bevölkerung. '>
+Vermutlich gab es zu keiner Zeit eine umfangreiche Überwachung der gesamten Bevölkerung. Ausgehend von dem beschämenden Zitat des Bundespräsidenten Gauck, mit den Aktenschränken der Stasi sei Prism nicht zu vergleichen, haben OpenDataCity <a href="http://apps.opendatacity.de/stasi-vs-nsa/">eine Visualierung</a> erstellt, welche Fläche auf dem Erdball die Daten bei Prism einnehmen würden, wenn sie als Aktenschränke ausgedruckt werden würden. <a href="https://de.wikipedia.org/wiki/Karte_im_Ma%C3%9Fstab_1:1">Die Idee einer Karte im Maßstab 1:1</a>, wie sie schon Borges oder Eco beschrieben haben, kommt in den Sinn.
+</span></p>
+
+<iframe src="http://apps.opendatacity.de/stasi-vs-nsa/frame.html" width="100%" height="580" scrolling="no" frameborder="0" style="margin:0"><a href="http://apps.opendatacity.de/stasi-vs-nsa/frame.html">Stasi versus NSA - Wieviel Platz brauchen die Aktenschr&auml;nke?</a></iframe>
+
+
+<br><small>Gehe zu <a href="http://apps.opendatacity.de/stasi-vs-nsa/">Stasi versus NSA</a>.  Realisiert von <a href="http://www.opendatacity.de/">OpenDataCity</a> (<a rel="license" href="http://creativecommons.org/licenses/by/3.0/de/">CC-BY 3.0</a>)</small>
+
+
+<p>Wenn wir also spätesens seit Juni in der Gewissheit der ständigen Vollüberwachung leben und sich die Ereignisse und Enthüllungen fast täglich überschlagen, stellt sich für mich die Frage, wo noch die politischen Handlungsoptionen innerhalb des Prisma liegen, was wir bedeckt unter der Karte im Maßstab 1:1 noch erreichen können.</p>
+
+<p>Der viel zu gute, viel zu wenig gelesene Science-Fiction-Roman &#8221;<a href="https://de.wikipedia.org/wiki/Der_Schockwellenreiter">Der Schockwellenreiter</a>&#8221; von John Brunner aus dem Jahre 1975(!) endet mit einer Volksabstimmung, nachdem ein weltumspannendes Überwachungsnetzwerk öffentlich gemacht und durch einen Computerwurm unschädlich gemacht wurde. Die Einleitung auf dem Stimmzettel für alle Menschen des Planeten lautet:</p>
+
+<blockquote><p>„Wir sind eine zivilisierte Spezies. Deshalb soll künftig niemand einen unrechtmäßigen Vorteil aufgrund der Tatsache erlangen, dass wir gemeinsam mehr wissen, als einer von uns wissen kann.“</p><footer><strong>John Brunner</strong><cite>Der Schockwellenreiter</cite></footer></blockquote>
+
+
+<p><span class='pullquote-right' data-pullquote='Es liegt an uns, aus der Technologie und Infrastruktur von Prism die Grundlage für eine maschinenlesbare Regierung zu bauen. '>
+Es ist richtig, sich über Prism zu empören. Es ist verständlich, wenn wir verzweifeln wollen (auch wenn das keine Lösung sein kann). Es ist wichtig, jetzt Kryptographie als praktische Form der digitalen Selbstverteidigung zu lernen oder es anderen Menschen beizubringen. Noch wichtiger ist es aber, aus dem unfassbaren Skandal der totalen Überwachung politische Forderungen zu entwickeln. Meine Forderung für ein besseres, menschenwürdigeres digitales Leben bleibt die gleiche wie vor Bekanntwerden von Prism, wenn auch mit einem anderen Betrachtungswinkel: Mehr Daten für alle. Es liegt an uns, aus der Technologie und Infrastruktur von Prism die Grundlage für eine maschinenlesbare Regierung zu bauen. Wer mag, kann das als digitale Abrüstung im Überwachungsstaat sehen: Schwerter zu Pflugscharen, Stahlhelme zu Nachttöpfen, Prism zur offenen strukturierten Datenbasis über Regierungshandeln. Die Frage nach politischer Teilhabe anhand von Daten gehört nachdrücklich gestellt und die gewaltvolle Aufteilung in allwissende Geheimdienste und einen Planeten informationeller Habenichtse muss politisch aufgehoben werden. Stellt euch die Möglichkeiten vor, die wir hätten, wenn wir gemeinsam auf Basis der größten Datensammlung aller Zeiten (über öffentliche, politische Daten, nicht über die private Kommunikation von Menschen untereinander) verfügen könnten. Jeder Mensch könnte zumindest zeitweise und nach Feierabend zur Politikerin werden, um Expertise einzubringen. Ein Landwirt hätte an seinem PC nach getaner Arbeit einen gigantischen wissenschaftlichen Dienst zur Verfügung zur Untermauerung des Bauchgefühls, dass irgendwas mit der Landwirtschaftspolitik nicht in Ordnung ist. Andere würden ihr jeweiliges politisches Interessengebiet beackern. Die Bevölkerung würde sich (wenn auch nur punktuell und nur ein paar Minuten in der Woche) in eine gigantische, unglaublich gut informierte Opposition verwandeln, die in einem ständigen Kreislauf Kleiner Anfragen die beste Politik für uns alle aus der Datenflut extrahiert. Erledigen wir Prism und andere Schnüffelsysteme politisch, indem wir dafür sorgen, dass künftig niemand einen unrechtmäßigen Vorteil aufgrund der Tatsache erlangen, dass wir gemeinsam mehr wissen, als einer von uns wissen kann. Beenden wir die Herrschaft der Geheimdienste über die Daten und machen sie nutzbar für uns alle.
+</span></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What's next?]]></title>
@@ -445,66 +475,6 @@ Die meisten Deutschlandstämmigen Bürger_innen dieses Landes leben in einer biz
 <li><strong>Verbot der NPD</strong> <br/>
 Die einfachste Maßnahme, die oft als erste genannt wird, sollte am Schluß stehen. Ein Verbot der NPD ist tatsächlich nicht die einzige Lösung im Kampf gegen den Nazi-Terror. Es wäre aber eine rasche Sofortmaßnahme, zum Beispiel um die Unterstützung der mit der NPD eng verflochtenen und vermutlich über 100 Mann starken Terrorgruppe <a href="http://de.wikipedia.org/wiki/Skinheads_S%C3%A4chsische_Schweiz">Skinheads Sächsische Schweiz</a>, die <a href="http://www.heise.de/tp/artikel/18/18947/1.html">trotz Verbot weiterhin aktiv</a> zu sein scheint, zu stören. Ich benutze den Begriff “Terrorgruppe” hier als wertfreie Beschreibung für eine Vereinigung, die nachgewiesenermaßen ein Waffenarsenal hortete und Todeslisten von Gegnern anlegte. Mit <a href="http://de.wikipedia.org/wiki/Uwe_Leichsenring">Uwe Leichsenring</a> saß bis zu seinem Tod ein Mitglied der Terroristen im sächsischen Landtag, was diese im Internet damit prahlen ließ, ihre Server ständen nun bei jemandem, der Immunität genieße. Darin hat sich <a href="http://blog.johl.io/blog/2011/11/16/verfassungsschutz/">seit einem Jahr</a> nichts geändert.</li>
 </ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fizzbuzz für Ponies — It's Magic!]]></title>
-    <link href="http://blog.johl.io/blog/2012/10/20/fim/"/>
-    <updated>2012-10-20T20:23:00+02:00</updated>
-    <id>http://blog.johl.io/blog/2012/10/20/fim</id>
-    <content type="html"><![CDATA[<p>FiM++ ist eine esoterische Programmiersprache, die nach den &#8221;<a href="http://mlp.wikia.com/wiki/Friendship_reports">friendship reports</a>&#8221; in der Fernsehserie &#8221;<a href="http://mlp.wikia.com/wiki/My_Little_Pony_Friendship_is_Magic">My Little Pony Friendship is Magic</a>&#8221; aufgebaut ist.
-FIM++ ist eine imperative, dynamisch typisierte, interpretierte Sprache, deren Sprachumfang momentan Ganzzahlenarithmetik, Ausgaben auf der Konsole, dynamisch wachsende Arrays und Subroutinen unterstützt.</p>
-
-<p>Ursprünglich entstand FiM++ als Idee in einem Posting <a href="http://www.equestriadaily.com/2012/10/editorial-fim-pony-programming-language.html">auf dem Blog Equestria Daily</a>, gefolgt von <a href="http://www.equestriadaily.com/2012/10/fim-update.html">einem weiteren Posting</a>, bis schließlich so etwas wie ein Sprachstandard <a href="https://docs.google.com/document/d/1gU-ZROmZu0Xitw_pfC1ktCDvJH5rM85TxxQf5pg_xmg/mobilebasic?pli=1">als GoogleDocs-Dokument</a> veröffentlicht wurde.</p>
-
-<p>Ein einigermaßen funktionierender Interpreter ist <a href="https://github.com/KarolS/fimpp">auf github verfügbar</a> und lässt sich problemlos an den Start bringen, wenn Scala installiert ist.</p>
-
-<p>Zum Ausprobieren von FiM++ habe ich mich mal an eine Version des Fizzbuzz-Tests gemacht. Dabei wird eine Schleife durchlaufen und die Zahl ausgedruckt. Wenn die Zahl ohne Rest durch 3 teilbar ist, wird stattdessen &#8220;Fizz!&#8221; ausgegeben, wenn sie ohne Rest durch 5 teilbar ist, wird &#8220;Buzz!&#8221; ausgegeben und wenn sie ohne Rest durch 3 und 5 gleichzeitig teilbar ist, wird stattdessen &#8220;Fizzbuzz!&#8221; ausgegeben. Fizzbuzz ist eine klassische und im Grunde beschämend einfache Aufgabe in Vorstellungsgesprächen für Programmierer_innen — <a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">die aber faszinierenderweise dennoch von erschreckend vielen Kandidat_innen nicht gelöst werden kann</a>.</p>
-
-<p>Fizzbuzz für Ponies sieht so aus:</p>
-
-<div><script src='https://gist.github.com/3924535.js?file=fizzbuzz.fimpp'></script>
-<noscript><pre><code>Dear Princess Celestia: Letter about the great and powerful Fizzbuzz.
-
-I learned about Fizzbuzz:
-Did you know that Rainbow Dash likes 1, because she wants to be number 1 in everything?
-I said Rainbow Dash!
-Did you know that Pinkie Pie likes 3, because she's so random? 
-Did you know that Applejack likes 5, because it's a pretty down-to-earth number?
-I did this while Rainbow Dash had less than 101:
-Rarity made remainder of Rainbow Dash and Pinkie Pie, because she is just stylish like that!
-Fluttershy made remainder of Rainbow Dash and Applejack, because even her sneezes are graceful!
-When Rarity was equal to zero:
-When Fluttershy was equal to zero:
-When Twilight Sparkle was equal to zero:
-I sang &quot;Fizzbuzz!&quot;.
-Did you know that Twilight Sparkle likes 1?
-That's what I did.  That's what I did.
-When Twilight Sparkle was equal to zero:
-I wrote &quot;Fizz!&quot;. Did you know that Twilight Sparkle likes 1?
-That's what I did.  That's what I did.
-When Rarity had more than zero:
-When Fluttershy was equal to zero:
-When Twilight Sparkle was equal to zero:
-I said &quot;Buzz!&quot;. Did you know that Twilight Sparkle likes 1?
-That's what I did.  That's what I did.
-When Twilight Sparkle was equal to zero:
-I said Rainbow Dash!
-Did you know that Twilight Sparkle likes 1?
-That's what I did!  That's what I did!
-Rainbow Dash got one more.
-Did you know that Twilight Sparkle likes 0?
-That's what I did!
-That's about Fizzbuzz!
-
-Today I learned:
-  I made Fizzbuzz!
-
-Your faithful student, johl.</code></pre></noscript></div>
-
-
 
 ]]></content>
   </entry>
