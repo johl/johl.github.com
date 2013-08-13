@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2013-08-11T23:52:53+02:00</updated>
+  <updated>2013-08-13T08:19:10+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Steile These]]></title>
+    <link href="http://blog.johl.io/blog/2013/08/13/steile-these/"/>
+    <updated>2013-08-13T08:12:00+02:00</updated>
+    <id>http://blog.johl.io/blog/2013/08/13/steile-these</id>
+    <content type="html"><![CDATA[<p>Ich mach das mal mit der steilen These bzw. Prophezeiung ohne empirische Basis, aber mit unbestimmtem Bauchgefühl.</p>
+
+<p>Here we go:</p>
+
+<p>In etwa zwei Jahren werden wir, beziehungsweise relevante Teile der Internetnutzerschaft, unsere Internetkommunikation aufgeteilt haben. Wir werden das Clearnet benutzen, um Dinge in der Wikipedia nachzuschlagen oder Katzenvideos zu schauen oder zu bloggen. Wir werden unsere persönliche Kommunikation (Chat, Mail) und unseren Austausch von Medien im Darknet vornehmen, vielleicht in <a href="http://hyperboria.net/">Hyperboria</a>.</p>
+
+<p>Mag jemand wetten?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Iron Blogging]]></title>
@@ -437,23 +452,6 @@ Manchmal kommt die Geschichte wieder zurück und das Rad wird in einer neuen, ve
 Ich habe gar nichts gegen eine gute Geschichte, wenn sich das naive Politikverständnis der alten Cypherpunks modernisieren liesse. Im schlimmsten Fall endet ein mit Werten wie &#8220;Freiheit&#8221; aufgeladener Diskurs, der auf die totale Unmittelbarkeit politischen Handelns baut, bei dem, was wir 1995 als &#8221;<a href="http://en.wikipedia.org/wiki/Assassination_market">Assassination Politics</a>&#8221; angeboten bekamen. In einem Essay aus dem Cypherpunk-Umfeld rief Jim Bell dazu auf, auf einem elektronischen Marktplatz Kopfgelder für die Liquidierung von Regierungsmitarbeitern auszusetzen, in Form eines Wett-Pools, bei dem der Tod von Beamten &#8220;vorausgesagt&#8221; werden kann, was Wired zusammenfasste als &#8220;an unholy mix of encryption, anonymity, and digital cash to bring about the ultimate annihilation of all forms of government&#8221;. Bells Idee war immerhin gefährlich genug, um ihn deswegen <a href="http://en.wikipedia.org/wiki/Jim_Bell#Investigation.2C_prosecution_and_imprisonment">Strafverfolgung und Gefängnis</a> einzubringen. Sein Essay ist aber nach wie vor im Web <a href="http://cryptome.org/ap.htm">zu finden</a>. Mit seinem hyper-liberalem Traum (politisiert wurde Bell durch seinen Unwillen, Steuern zu zahlen) von der Erschiessung von Regierungsmitarbeitern mit Hilfe von Kryptopgraphietechnologie stellt &#8220;Assassination Politics&#8221; die Naivität der unmittelbaren Kryptopolitik in seiner reinsten Form dar.</p>
 
 <p>Bei einem aufgewärmten Cypherpunk-Mythos hätte ich gern eine Reflexion über die dunkle Seite des vernerdeten Politikverständnisses, in dem uns die Kryptographie von allem Bösen (und speziell von Regierungsbeamten) erlösen soll.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mediawiki in hübsch]]></title>
-    <link href="http://blog.johl.io/blog/2012/12/13/making-mediawiki-pretty/"/>
-    <updated>2012-12-13T22:43:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2012/12/13/making-mediawiki-pretty</id>
-    <content type="html"><![CDATA[<p><img src="http://f.cl.ly/items/393l0y0H1d2i2R1k0Y1I/14.12.12%2000:21-Schnappschuss.png">
-Das aktuelle Wiki des
-<a href="https://events.ccc.de/congress/2012/wiki/Main_Page">29C3</a>, das
-<a href="http://erdgeist.org/">erdgeist</a> und andere gezaubert haben, ist
-wunderschön: endlich sieht es aus wie eine Webseite im Jahr 2012 und
-nicht mehr wie ein mehr oder weniger umgestaltetes Mediawiki. Mir war
-nicht bewusst, dass man mit der <a href="https://github.com/mtyeh411/mediawiki-bootstrap">Bootstrap Skin für
-Mediawiki</a> so etwas
-zaubern kann. Chapeau!</p>
 ]]></content>
   </entry>
   
