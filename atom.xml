@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2013-08-13T08:19:10+02:00</updated>
+  <updated>2013-09-03T17:30:32+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Schnelle Links]]></title>
+    <link href="http://blog.johl.io/blog/2013/09/03/schnelle-links/"/>
+    <updated>2013-09-03T17:24:00+02:00</updated>
+    <id>http://blog.johl.io/blog/2013/09/03/schnelle-links</id>
+    <content type="html"><![CDATA[<ul>
+<li>Welche Farbe hat das Universum? <a href="https://en.wikipedia.org/wiki/Cosmic_latte">Cosmic Latte</a></li>
+<li>Falls jemand gedacht hat, MEGA von Kim Dotcom sei sicher: <a href="http://nzkoz.github.io/MegaPWN/">MEGApwn</a></li>
+<li>Schwarze Zukunft: <a href="http://www.iafrofuturism.com/">Afrofuturism: The World of Black Sci Fi and Fantasy Culture</a></li>
+<li>Zelluläre Automaten und Rogue-likes: <a href="http://roguebasin.roguelikedevelopment.org/index.php?title=Cellular_Automata_Method_for_Generating_Random_Cave-Like_Levels">Cellular Automata Method for Generating Random Cave-Like Levels</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Steile These]]></title>
@@ -422,36 +437,6 @@ Es gibt nämlich ganz klar politisch Verantwortliche am Tod Aarons. So wie für 
 <p><span class='pullquote-right' data-pullquote='Kultur ist Remix: Daran hat sich vermutlich seit dem ersten Höhlenbild, das von einem anderen inspiriert wurde, nichts geändert. '>
 Kultur ist Remix: Daran hat sich vermutlich seit dem ersten Höhlenbild, das von einem anderen inspiriert wurde, nichts geändert. <a href="http://de.wikipedia.org/wiki/Tod_des_Autors">Die poststrukturalistische Analyse von Roland Barthes zum Tod des Autors</a> hat diese grundlegende Erfahrung menschlichen Schaffens nur in ein neues Zeitalter gehoben. Wir leben in verwirrenden Zeiten, die so wenig mit der Wirklichkeit unserer Kultur zu tun haben. Während der eigentlich tote Autor rechtlich geschützt noch 70 Jahre nach seinem Ableben weiterexistiert, treibt unsere Gesellschaft einen Datenbefreier wie Aaron Swartz in den Tod. Es wird Zeit, dass sich etwas grundsätzlich ändert.
 </span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Neo-Cypherpunk?]]></title>
-    <link href="http://blog.johl.io/blog/2012/12/17/neo-cypherpunk/"/>
-    <updated>2012-12-17T15:27:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2012/12/17/neo-cypherpunk</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/7/7b/SantiagoChileCryptoParty.jpg" width="450" title="'By Santiago Cryptoparty CC-BY-3.0, via Wikimedia Commons'" >
-Manchmal kommt die Geschichte wieder zurück und das Rad wird in einer neuen, verbesserten Version neu erfunden und ein bisschen runder — oder es werden schon längst geführte Diskurse einfach nochmal geführt. Am 22.  August 2012 twitterte die australische alleinerziehende Mutter und digitale Aktivistin, die sich im Netz Asher Wolf nennt, eine <a href="https://twitter.com/Asher_Wolf/status/238224764739653632">Party-Einladung, bei der sie zu einer Crypto-Party einlud: &#8220;BYO devices, beer, &amp; music.&#8221;</a>.</p>
-
-<p>Daraus entstand so etwas wie <a href="http://en.wikipedia.org/wiki/CryptoParty">eine weltweite Bewegung von Parties, auf denen Verschlüsselungs- und Anonymisierungstechniken mit Tor, GnuPG oder OTR erklärt und installiert werden</a>. Bei der ersten dieser Parties in Berlin entstand dann auch in einem <a href="http://www.booksprints.net/">Booksprint</a> das <a href="https://github.com/cryptoparty/handbook">CryptoParty Handbook</a>, bei dem nicht nur die Anwesenden in Berlin mitschrieben, sondern auch Asher Wolf zugeschaltet wurde.</p>
-
-<p>Die fast vergessene Geschichte von den Cypherpunks, die ihre <a href="http://ciphersaber.gurus.org/">CipherSaber</a> wie Lichtschwerter herumwirbeln und mit Software Politik machen, ist wieder da, fast wie zu Zeiten des <a href="http://en.wikipedia.org/wiki/Clipper_chip">Clipper-Chips</a> und der <a href="http://www.philzimmermann.com/EN/essays/WhyIWrotePGP.html">Kryptokriege um PGP</a> — und Crypto-Parties sind nur ein Beispiel unter vielen:</p>
-
-<ul>
-<li>Julian Assange nennt sein gerade erschienenes Buch schlicht &#8220;Cypherpunks&#8221;</li>
-<li>Aus den schwelenden Überresten von Hacktivismus um Wikileaks, Anonymous und anderem bildet sich <a href="https://crypto.is/">crypto.is</a>, &#8220;a Cypherpunk project&#8221;</li>
-<li>Im Schwung der SOPA-Proteste entstehen Überlegungen zu einem unzensierbaren, vermeshten Internet, der &#8220;DarkNet Plan&#8221; und <a href="http://www.reddit.com/r/darknetplan/comments/13hdw3/why_cjdns_is_important_as_a_mesh_technology_in/">eine grandiose Erzählung von einem postapokalyptischen DarkNet auf Basis von CJDNS</a>, das heute schon in Form des sagenumwobenen <a href="http://hyperboria.net/">Hyperboria</a> in entlegenen Ecken des Internets heranwächst (oder so).</li>
-</ul>
-
-
-<p>Ich bin fasziniert, wie ein Diskurs aus den 1990er Jahren einfach so neu aufgewärmt werden kann in einer Welt, die sich in der Zwischenzeit sehr verändert hat und in der Netzpolitik mit ganz anderen Bedrohungen zu kämpfen hat als Exportkontrolle für Software — u.a. weil die ökonomische Wichtigkeit von (verschlüsselten) Verbindungen im e-Commerce mittlerweile allen Akteuren klar ist. Und hatten sich nicht die aktiveren Hacker und Cypherpunks mit den Worten &#8220;We Lost The War&#8221; von ihrer Rolle als revolutionäres Subjekt verabschiedet, um fortan in FAZ-Artikeln und als Berater des Verfassungsgerichts Politik zu machen?</p>
-
-<p>Natürlich ist Software auch weiterhin politisch, sei es in Form von freiem Wissen oder in den Fragen nach Netzneutralität. Nur die Idee der Rettung durch Kryptographie wirkt seltsam aus der Zeit gefallen, auch wenn sie sich im Grunde einfach erkären lässt. Wir brauchen wohl weiterhin Mythen, die wir beim flackernden Schein der Monitore am Internet-Lagerfeuer erzählen. Telecomix hat mit ihrem Engagement im (viel zu komplexen, viel zu unverständlichen) Arabischen Frühling eine neue Heldengeschichte und einen neuen Cypherpunk-Mythos erzählt, den wir hören wollten. Hinter der Sehnsucht nach der Rückkehr der Cypherpunks steht auch ein verträumtes Politikverständnis von dem, was unmittelbar machbar ist, wo einzelne Helden handeln mit der Waffe in der Hand gegen den Landvogt, der im Internet seinen auf einem Pfosten platzierten Hut grüßen lässt. Das postmoderne Stimmengewirr und die täglich im Zusammenspiel aller konstruierte Macht lässt sich sperriger erzählen als eine vormoderne Geschichte.</p>
-
-<p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/2/26/The_assassination_of_President_Lincoln_at_Ford%27s_Theatre.jpg" width="300" title="&#34;The assassination of President Lincoln at Ford's Theatre von Currier & Ives [Public domain], via Wikimedia Commons&#34;" alt="&#34;The assassination of President Lincoln at Ford's Theatre von Currier & Ives [Public domain], via Wikimedia Commons&#34;">
-Ich habe gar nichts gegen eine gute Geschichte, wenn sich das naive Politikverständnis der alten Cypherpunks modernisieren liesse. Im schlimmsten Fall endet ein mit Werten wie &#8220;Freiheit&#8221; aufgeladener Diskurs, der auf die totale Unmittelbarkeit politischen Handelns baut, bei dem, was wir 1995 als &#8221;<a href="http://en.wikipedia.org/wiki/Assassination_market">Assassination Politics</a>&#8221; angeboten bekamen. In einem Essay aus dem Cypherpunk-Umfeld rief Jim Bell dazu auf, auf einem elektronischen Marktplatz Kopfgelder für die Liquidierung von Regierungsmitarbeitern auszusetzen, in Form eines Wett-Pools, bei dem der Tod von Beamten &#8220;vorausgesagt&#8221; werden kann, was Wired zusammenfasste als &#8220;an unholy mix of encryption, anonymity, and digital cash to bring about the ultimate annihilation of all forms of government&#8221;. Bells Idee war immerhin gefährlich genug, um ihn deswegen <a href="http://en.wikipedia.org/wiki/Jim_Bell#Investigation.2C_prosecution_and_imprisonment">Strafverfolgung und Gefängnis</a> einzubringen. Sein Essay ist aber nach wie vor im Web <a href="http://cryptome.org/ap.htm">zu finden</a>. Mit seinem hyper-liberalem Traum (politisiert wurde Bell durch seinen Unwillen, Steuern zu zahlen) von der Erschiessung von Regierungsmitarbeitern mit Hilfe von Kryptopgraphietechnologie stellt &#8220;Assassination Politics&#8221; die Naivität der unmittelbaren Kryptopolitik in seiner reinsten Form dar.</p>
-
-<p>Bei einem aufgewärmten Cypherpunk-Mythos hätte ich gern eine Reflexion über die dunkle Seite des vernerdeten Politikverständnisses, in dem uns die Kryptographie von allem Bösen (und speziell von Regierungsbeamten) erlösen soll.</p>
 ]]></content>
   </entry>
   
