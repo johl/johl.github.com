@@ -9,7 +9,7 @@
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="In der Endphase befindet sich bei mir gerade das Korrekturlesen für ein kleines, feines Buch, das demnächst bei O’Reilly erscheint und das ich &hellip;">
+  <meta name="description" content="In der Endphase befindet sich bei mir gerade das Korrekturlesen für ein kleines, feines Buch, das demnächst bei O&#8217;Reilly erscheint und das ich &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,8 +100,8 @@
   </header>
 
 
-  <div class="entry-content"><p><img class="left" src="http://www.oreilly.de/catalog/covers/hackerbrauseprger.s.gif" />
-In der Endphase befindet sich bei mir gerade das Korrekturlesen für <a href="http://www.oreilly.de/catalog/hackerbrauseprger/">ein kleines, feines Buch, das demnächst bei O’Reilly erscheint</a> und das ich zusammen mit zwei tollen Menschen geschrieben habe. Es handelt sich um ein Buch zum Thema Hackerbrause und ist quasi das Papier-Pendant zu unserem Blog <a href="http://hacker.brau.se/">hacker.brau.se</a>. 
+  <div class="entry-content"><p><img class="left" src="http://www.oreilly.de/catalog/covers/hackerbrauseprger.s.gif">
+In der Endphase befindet sich bei mir gerade das Korrekturlesen für <a href="http://www.oreilly.de/catalog/hackerbrauseprger/">ein kleines, feines Buch, das demnächst bei O&#8217;Reilly erscheint</a> und das ich zusammen mit zwei tollen Menschen geschrieben habe. Es handelt sich um ein Buch zum Thema Hackerbrause und ist quasi das Papier-Pendant zu unserem Blog <a href="http://hacker.brau.se/">hacker.brau.se</a>.
 Über den Verlauf der Buchproduktion werde ich in den nächsten Tagen an dieser Stelle berichten.</p>
 </div>
   
@@ -133,86 +133,90 @@ In der Endphase befindet sich bei mir gerade das Korrekturlesen für <a href="ht
   </header>
 
 
-  <div class="entry-content"><p>Für dieses Blog benutze ich <a href="http://octopress.org/">Octopress</a>, das “blogging framework for hackers”. Theoretisch
+  <div class="entry-content"><p>Für dieses Blog benutze ich <a href="http://octopress.org/">Octopress</a>, das &#8220;blogging framework for hackers&#8221;. Theoretisch
 gibt es da auch ein <code>rake</code>-Kommando, um neue Posts abzusetzen (nämlich <code>rake new_post</code>), ich hatte allerdings schon ein halbfertiges Skript da, welches ich als <code>/usr/local/bin/git-blog</code>
 gespeichert habe.</p>
 
 <p>Mit diesem Skript wird ein neues Posting angelegt und mein Lieblingseditor geöffnet. Sobald es gespeichert ist, verfügt meine lokale Git-Installation über einen neuen Befehl, <code>git blog</code>.
 Nifty, was?</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>/usr/local/bin/git-blog  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-<span class="line-number">20</span>
-</pre></td><td class="code"><pre><code class="sh"><span class="line"><span class="c">#!/bin/sh</span>
-</span><span class="line"><span class="k">if </span><span class="nb">test</span> <span class="nv">$# </span>-eq 0; <span class="k">then</span>
-</span><span class="line"><span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;blog title required&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit </span>1
-</span><span class="line"><span class="k">else</span>
-</span><span class="line"><span class="k">    </span><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span>
-</span><span class="line">    <span class="nv">title</span><span class="o">=</span><span class="nv">$@</span>
-</span><span class="line">    <span class="nv">date</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&quot;%Y-%m-%d %H:%M&quot;</span><span class="sb">`</span>
-</span><span class="line">    <span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;_posts/$(date +&quot;</span>%Y-%m-%d<span class="s2">&quot;)-$(echo $@|sed -e &#39;s/[^ -~]//g&#39;|sed -e &#39;s/ /-/g&#39;|sed -e &#39;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&#39;).markdown&quot;</span>
-</span><span class="line">    <span class="k">if</span> <span class="o">[</span> ! -f <span class="nv">$filename</span> <span class="o">]</span>;
-</span><span class="line">        <span class="k">then</span>
-</span><span class="line"><span class="k">            </span><span class="nb">echo</span> <span class="s2">&quot;---&quot;</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class="line">            <span class="nb">echo</span> <span class="s2">&quot;layout: post&quot;</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class="line">            <span class="nb">echo</span> <span class="s2">&quot;title:&quot;</span> <span class="nv">$title</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class="line">            <span class="nb">echo</span> <span class="s2">&quot;date: &quot;</span> <span class="nv">$date</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class="line">            <span class="nb">echo</span> <span class="s2">&quot;comments: true&quot;</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class="line">            <span class="nb">echo</span> <span class="s2">&quot;categories:&quot;</span> &gt;&gt; <span class="nv">$filename</span>
-</span><span class="line">            <span class="nb">echo</span> <span class="s2">&quot;---&quot;</span> &gt;&gt; <span class="nv">$filename</span>;
-</span><span class="line">        <span class="k">fi</span>
-</span><span class="line">    <span class="k">$(</span>git config core.editor<span class="k">)</span> <span class="nv">$filename</span>
-</span><span class="line"><span class="k">fi</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+<figure class='code'><figcaption><span>/usr/local/bin/git-blog  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'><span class="k">if </span><span class="nb">test</span> <span class="nv">$# </span>-eq 0; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;blog title required&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit </span>1
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="k">    </span><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span>
+</span><span class='line'>    <span class="nv">title</span><span class="o">=</span><span class="nv">$@</span>
+</span><span class='line'>    <span class="nv">date</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&quot;%Y-%m-%d %H:%M&quot;</span><span class="sb">`</span>
+</span><span class='line'>    <span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;_posts/$(date +&quot;</span>%Y-%m-%d<span class="s2">&quot;)-$(echo $@|sed -e &#39;s/[^ -~]//g&#39;|sed -e &#39;s/ /-/g&#39;|sed -e &#39;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&#39;).markdown&quot;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="o">[</span> ! -f <span class="nv">$filename</span> <span class="o">]</span>;
+</span><span class='line'>        <span class="k">then</span>
+</span><span class='line'><span class="k">            </span><span class="nb">echo</span> <span class="s2">&quot;---&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;layout: post&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;title:&quot;</span> <span class="nv">$title</span> &gt;&gt; <span class="nv">$filename</span>
+</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;date: &quot;</span> <span class="nv">$date</span> &gt;&gt; <span class="nv">$filename</span>
+</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;comments: true&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;categories:&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+</span><span class='line'>            <span class="nb">echo</span> <span class="s2">&quot;---&quot;</span> &gt;&gt; <span class="nv">$filename</span>;
+</span><span class='line'>        <span class="k">fi</span>
+</span><span class='line'>    <span class="k">$(</span>git config core.editor<span class="k">)</span> <span class="nv">$filename</span>
+</span><span class='line'><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Vorher sollte noch <code>git</code> konfiguriert werden. Dabei sollte das <code>blog.path</code>-Verzeichnis das sein, in dem sich das <code>_posts</code>-Verzeichnis befindet (bei Octopress ist das unterhalb von <code>source</code>):
-&lt;div class=&#8217;bogus-wrapper&#8217;&gt;<notextile><figure class="code">&lt;div class=&#8221;highlight&#8221;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#8221;gutter&#8221;&gt;&lt;pre class=&#8221;line-numbers&#8221;&gt;<span class="line-number">1</span>
-<span class="line-number">2</span>
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;<code class=""><span class="line">$ git config --global blog.path /pfad/zu/meinem/octopress
-</span><span class="line">$ git config --global core.editor /pfad/zu/meinem/lieblingseditor</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;</p>
+
+<p>Vorher sollte noch <code>git</code> konfiguriert werden. Dabei sollte das <code>blog.path</code>-Verzeichnis das sein, in dem sich das <code>_posts</code>-Verzeichnis befindet (bei Octopress ist das unterhalb von <code>source</code>):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --global blog.path /pfad/zu/meinem/octopress
+</span><span class='line'>$ git config --global core.editor /pfad/zu/meinem/lieblingseditor</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Wer Lust hat, kann sich danach noch einen <code>git</code>-Befehl namens <code>git blog-deploy</code> anlegen:</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>/usr/local/bin/git-blog-deploy  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-</pre></td><td class="code"><pre><code class="sh"><span class="line"><span class="c">#!/bin/sh</span>
-</span><span class="line"><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span>
-</span><span class="line">git add _posts/
-</span><span class="line">git status | grep <span class="s2">&quot;Changes to be committed:&quot;</span>
-</span><span class="line"><span class="k">if </span><span class="nb">test</span> <span class="nv">$?</span> -eq 0; <span class="k">then</span>
-</span><span class="line"><span class="k">    </span>git commit -a -m <span class="s2">&quot;Automatically commited.&quot;</span>
-</span><span class="line">    <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake generate <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake deploy
-</span><span class="line"><span class="k">else</span>
-</span><span class="line"><span class="k">    </span><span class="nb">exit</span>
-</span><span class="line"><span class="k">fi</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+<figure class='code'><figcaption><span>/usr/local/bin/git-blog-deploy  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span>
+</span><span class='line'>git add _posts/
+</span><span class='line'>git status | grep <span class="s2">&quot;Changes to be committed:&quot;</span>
+</span><span class='line'><span class="k">if </span><span class="nb">test</span> <span class="nv">$?</span> -eq 0; <span class="k">then</span>
+</span><span class='line'><span class="k">    </span>git commit -a -m <span class="s2">&quot;Automatically commited.&quot;</span>
+</span><span class='line'>    <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake generate <span class="o">&amp;&amp;</span> <span class="sb">`</span>cat <span class="k">$(</span>git config blog.path<span class="k">)</span>/../.rvmrc<span class="sb">`</span> rake deploy
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="k">    </span><span class="nb">exit</span>
+</span><span class='line'><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Ach ja. Nebenbei bemerkt: Hallo Welt!</p>
 </div>

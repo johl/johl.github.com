@@ -110,17 +110,20 @@ this is love, love is not True or False, love is love
 
 
   <div class="entry-content">
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="c"># Python on love:</span>
-</span><span class="line"><span class="kn">import</span> <span class="nn">this</span>
-</span><span class="line"><span class="n">love</span> <span class="o">=</span> <span class="n">this</span>
-</span><span class="line"><span class="n">this</span> <span class="ow">is</span> <span class="n">love</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="n">love</span>
-</span><span class="line"><span class="o">&gt;&gt;</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># Python on love:</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">this</span>
+</span><span class='line'><span class="n">love</span> <span class="o">=</span> <span class="n">this</span>
+</span><span class='line'><span class="n">this</span> <span class="ow">is</span> <span class="n">love</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="n">love</span>
+</span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
 
 </div>
   
@@ -152,8 +155,10 @@ this is love, love is not True or False, love is love
   </header>
 
 
-  <div class="entry-content"><div><script src="https://gist.github.com/5281890.js?file="></script>
+  <div class="entry-content"><div><script src='https://gist.github.com/5281890.js?file='></script>
 <noscript><pre><code></code></pre></noscript></div>
+
+
 
 </div>
   
@@ -187,44 +192,43 @@ this is love, love is not True or False, love is love
 
   <div class="entry-content"><p>Für ein Buch, an dem ich gerade arbeite, war der folgende Text zu lang und zu ausführlich. Wegwerfen wollte ich ihn aber nicht, so dass er hier im Blog landete, in dem schon lange nichts mehr aus dem Bereich Programmieren vorkam.</p>
 
-<h2 id="javascript-und-semikolons">JavaScript und Semikolons</h2>
+<h2>JavaScript und Semikolons</h2>
 
-<p>Das automatische Einfügen von Semikolons (<em>Automatic Semicolon Insertion</em>, ASI) ist eine der verwirrendsten und umstrittensten Eigenschaften von JavaScript. Die Regeln für das Einfügen von Semikolons beginnen im <a href="http://ecma-international.org/ecma-262/5.1/">Sprachstandard ECMA 262</a> recht simpel: Wenn ein gültiges JavaScript-Statement von einem anderen gültigen JavaScript-Statement durch einen Zeilenumbruch (<em>linefeed</em>) oder das Zeichen “<code>}</code>” getrennt wird, dann wird ein Semikolon vor dem Trennzeichen eingesetzt. Am Ende einer Zeile oder eines Blocks können Semikolons also normalerweise weggelassen werden.</p>
+<p>Das automatische Einfügen von Semikolons (<em>Automatic Semicolon Insertion</em>, ASI) ist eine der verwirrendsten und umstrittensten Eigenschaften von JavaScript. Die Regeln für das Einfügen von Semikolons beginnen im <a href="http://ecma-international.org/ecma-262/5.1/">Sprachstandard ECMA 262</a> recht simpel: Wenn ein gültiges JavaScript-Statement von einem anderen gültigen JavaScript-Statement durch einen Zeilenumbruch (<em>linefeed</em>) oder das Zeichen &#8221;<code>}</code>&#8221; getrennt wird, dann wird ein Semikolon vor dem Trennzeichen eingesetzt. Am Ende einer Zeile oder eines Blocks können Semikolons also normalerweise weggelassen werden.</p>
 
 <p>Ein Semikolon kann zudem am Ende eines Programms weggelassen werden. Es muss also nicht als letztes Zeichen in der Datei stehen. Dies sind schon alle einfacheren Bedingungen für ASI.  Es gilt zudem die Regel, dass ein Semikolon niemals automatisch eingefügt wird (und damit auch nicht weggelassen werden kann), wenn dadurch ein leeres Statement zustande käme. Auch in der Klammer mit den Bedingungen einer <code>for</code>-Schleife wird niemals automatisch ein Semikolon ergänzt.</p>
 
-<p>Die Postfix-Ausdrücke <code>++</code> und <code>--</code> und die Befehle <code>continue</code>, <code>break</code>, <code>return</code> und <code>throw</code> haben ihre eigenen Regeln.  Wenn <code>++</code> oder <code>--</code> als Postfix-Operator geparst werden können und sie vom vorhergehenden Zeichen durch einen Zeilenumbruch getrennt werden, dann fügt JavaScript vor ihnen ein Semikolon ein.  </p>
+<p>Die Postfix-Ausdrücke <code>++</code> und <code>--</code> und die Befehle <code>continue</code>, <code>break</code>, <code>return</code> und <code>throw</code> haben ihre eigenen Regeln.  Wenn <code>++</code> oder <code>--</code> als Postfix-Operator geparst werden können und sie vom vorhergehenden Zeichen durch einen Zeilenumbruch getrennt werden, dann fügt JavaScript vor ihnen ein Semikolon ein.</p>
 
-<p><code>a = b</code><br />
-  <code>++c</code>  </p>
+<p>  <code>a = b</code><br/>
+  <code>++c</code></p>
 
 <p>wird also zu:</p>
 
-<p><code>a = b;</code><br />
-  <code>++c;</code>  </p>
+<p>  <code>a = b;</code><br/>
+  <code>++c;</code></p>
 
-<p>Wenn bei continue, break, return und throw das nächste Zeichen erst nach einem Zeilenumbruch folgt, dann fügt JavaScript nach diesen Befehlen ein Semikolon ein. </p>
+<p>Wenn bei continue, break, return und throw das nächste Zeichen erst nach einem Zeilenumbruch folgt, dann fügt JavaScript nach diesen Befehlen ein Semikolon ein.</p>
 
-<p><code>return</code><br />
-  <code>a + b</code>  </p>
+<p>  <code>return</code><br/>
+  <code>a + b</code></p>
 
 <p>wird demnach zu:</p>
 
-<p><code>return;</code><br />
-  <code>a + b;</code>  </p>
+<p>  <code>return;</code><br/>
+  <code>a + b;</code></p>
 
-<p>Rund um die ASI ist ein geradezu religiöser Streit in der JavaScript-Community entstanden. Ursprünglich dachte Brendan Eich, dass sich mit ASI die Anzahl der Fehler beim Parsen von Programmcode verringern lassen — JavaScript war schließlich für weniger versierte Programmiererinnen und Programmierer gedacht. Douglas Crockford, Autor des wahrscheinlich meistgelesenen JavaScript Stil-Handbuchs <a href="http://www.oreilly.de/catalog/9780596517748/">“JavaScript: The Good Parts”</a> und einflussreicher Entwickler von Technologien wie JSON (JavaScript Object Notation, also der Serialisierung von Daten in JavaScript), empfiehlt, ASI vollständig zu missachten und jedes Statement einfach mit einem Semikolon abzuschließen, ohne auf die eingebaute Magie des Parsers zu vertrauen.  </p>
+<p>Rund um die ASI ist ein geradezu religiöser Streit in der JavaScript-Community entstanden. Ursprünglich dachte Brendan Eich, dass sich mit ASI die Anzahl der Fehler beim Parsen von Programmcode verringern lassen — JavaScript war schließlich für weniger versierte Programmiererinnen und Programmierer gedacht. Douglas Crockford, Autor des wahrscheinlich meistgelesenen JavaScript Stil-Handbuchs <a href="http://www.oreilly.de/catalog/9780596517748/">&#8220;JavaScript: The Good Parts&#8221;</a> und einflussreicher Entwickler von Technologien wie JSON (JavaScript Object Notation, also der Serialisierung von Daten in JavaScript), empfiehlt, ASI vollständig zu missachten und jedes Statement einfach mit einem Semikolon abzuschließen, ohne auf die eingebaute Magie des Parsers zu vertrauen.</p>
 
-<p>Demgegenüber steht das meist beobachtete Projekt auf Github, das Framework <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a>, das in seinem JavaScript-Code völlig auf Semikolons verzichtet. Crockford kommentierte das renommierte Bootstrap-Projekt in Hinblick auf seinen JavaScript-Komprimierer JSMin drastisch: “<em>That is insanely stupid code.  I am not going to dumb down JSMin for this case. (…) Learn to use semicolons properly. ! is not intended to be a statement separator. ; is.</em>”” </p>
+<p>Demgegenüber steht das meist beobachtete Projekt auf Github, das Framework <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a>, das in seinem JavaScript-Code völlig auf Semikolons verzichtet. Crockford kommentierte das renommierte Bootstrap-Projekt in Hinblick auf seinen JavaScript-Komprimierer JSMin drastisch: &#8221;<em>That is insanely stupid code.  I am not going to dumb down JSMin for this case. (&#8230;) Learn to use semicolons properly. ! is not intended to be a statement separator. ; is.</em>&#8221;&#8221;</p>
 
 <p>Woraufhin der Bootstrap-Entwickler Jacob Thornton antwortete:
-“<em>I have learned to use them, that’s why there isn’t one present.</em>”</p>
+&#8221;<em>I have learned to use them, that’s why there isn’t one present.</em>&#8221;</p>
 
 <p>Aus praktischen Gründen empfiehlt es sich, sich hauptsächlich an Crockford zu halten. Allerdings
-sollten wir zur 
+sollten wir zur
 Kenntnis nehmen, dass es auch andere religiöse Ansichten zu Semikolons gibt,
-die wir zu respektieren haben. </p>
-
+die wir zu respektieren haben.</p>
 </div>
   
   
@@ -257,10 +261,10 @@ die wir zu respektieren haben. </p>
 
   <div class="entry-content"><p><a href="https://de.wikipedia.org/wiki/Infinite-Monkey-Theorem">Das Infinite-Monkey-Theorem, auch deutsch Theorem der endlos tippenden Affen, besagt, dass ein Affe, der unendlich lange zufällig auf einer Schreibmaschine herumtippt, fast sicher irgendwann alle Bücher in der Bibliothèque nationale de France, der Nationalbibliothek Frankreichs, schreiben wird. In englischsprachigen Ländern heißt es, dass so irgendwann die Werke William Shakespeares entstehen werden.</a></p>
 
-<p>Der Kindle-Store von Amazon wird derzeit von einer Menge an seltsamen Büchern überschwemmt. Eins der Werke, die dort angeboten werden, beinhaltet <a href="https://en.wikipedia.org/wiki/The_Song_That_Never_Ends">den Liedtext des Nerv-Klassikers “The Song That Never Ends”</a>, immer wieder wiederholt <a href="http://www.publishingtrends.com/2011/03/the-kindle-swindle/">auf über 700 Seiten</a>, andere Titel <a href="http://tech.fortune.cnn.com/2012/04/16/amazon-knock-off-bestsellers/">sind Bestsellern zum Verwechseln ähnlich</a>. E-Books und textgenerierende Algorithmen machen es möglich.</p>
+<p>Der Kindle-Store von Amazon wird derzeit von einer Menge an seltsamen Büchern überschwemmt. Eins der Werke, die dort angeboten werden, beinhaltet <a href="https://en.wikipedia.org/wiki/The_Song_That_Never_Ends">den Liedtext des Nerv-Klassikers &#8220;The Song That Never Ends&#8221;</a>, immer wieder wiederholt <a href="http://www.publishingtrends.com/2011/03/the-kindle-swindle/">auf über 700 Seiten</a>, andere Titel <a href="http://tech.fortune.cnn.com/2012/04/16/amazon-knock-off-bestsellers/">sind Bestsellern zum Verwechseln ähnlich</a>. E-Books und textgenerierende Algorithmen machen es möglich.</p>
 
-<p><img class="left" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Typing_monkey.svg" />
-Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand von einer unendlichen Anzahl von Affen (oder Algorithmen) jeder beliebige Text, jede mögliche Buchstabenkombination verlegt und bei Amazon verkauft werden kann, wer bekommt dann die Einkünfte aus dem Leistungsschutzrecht für automatisch generierte Texte? Und: Wenn mit einer gewissen Wahrscheinlichkeit irgendwann der Affe/Algorithmus “Mein Kampf” generiert und bei Amazon zum Verkauf anbietet, macht sich der Affe/Algorithmus dann strafbar? Schirrmacher, hilf!</p>
+<p><img class="left" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Typing_monkey.svg">
+Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand von einer unendlichen Anzahl von Affen (oder Algorithmen) jeder beliebige Text, jede mögliche Buchstabenkombination verlegt und bei Amazon verkauft werden kann, wer bekommt dann die Einkünfte aus dem Leistungsschutzrecht für automatisch generierte Texte? Und: Wenn mit einer gewissen Wahrscheinlichkeit irgendwann der Affe/Algorithmus &#8220;Mein Kampf&#8221; generiert und bei Amazon zum Verkauf anbietet, macht sich der Affe/Algorithmus dann strafbar? Schirrmacher, hilf!</p>
 </div>
   
   
@@ -324,7 +328,8 @@ Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand 
   </header>
 
 
-  <div class="entry-content"><blockquote><p>TPB AFK: The Pirate Bay Away From Keyboard is a documentary film released on February 8 2013, directed by Simon Klose, based on the lives of the three founders of The Pirate Bay - Peter Sunde, Fredrik Neij and Gottfrid Svartholm.</p><footer><strong>Wikipedia, TPB AFK</strong><cite><a href="http://en.wikipedia.org/wiki/TPB_AFK">en.wikipedia.org/wiki/TPB_AFK/&hellip;</a></cite></footer></blockquote>
+  <div class="entry-content"><blockquote><p>TPB AFK: The Pirate Bay Away From Keyboard is a documentary film released on February 8 2013, directed by Simon Klose, based on the lives of the three founders of The Pirate Bay - Peter Sunde, Fredrik Neij and Gottfrid Svartholm.</p><footer><strong>Wikipedia, TPB AFK</strong><cite><a href='http://en.wikipedia.org/wiki/TPB_AFK'>en.wikipedia.org/wiki/TPB_AFK/&hellip;</a></cite></footer></blockquote>
+
 
 <p><a href="http://thepiratebay.se/search/tpb.afk/0/99/0">Viel mehr gibt es nicht zu sagen. Seht selbst.</a></p>
 </div>
@@ -359,7 +364,7 @@ Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand 
 
   <div class="entry-content"><p>Ich habe ein Verständnisproblem und hoffe ganz ernsthaft, ihr könnt mir helfen. Geheime, sichere und nicht manipulierbare Wahlen über das Internet sind nicht möglich, soweit mein bisheriger Kenntnisstand. Schon Wahlen auf Papier sind manipulierbar, wenn ein Computer ins Spiel kommt, der beliebig programmiert werden kann, skaliert die Manipulierbarkeit ins Unendliche. Das ist letztendlich auch der Hintergrund für das <a href="http://wahlcomputer.ccc.de/rechtliches/urteil-wahlcomputer/">Urteil des Bundesverfassungsgerichts am 3. März 2009</a>, dass der Einsatz von Wahlcomputern bei der Bundestagswahl 2005 verfassungswidrig war, da der Wähler weder die abgegebenen Stimmen noch deren Auszählung selbst kontrollieren konnte. Der Chaos Computer Club hat sich um die Ächtung von Wahlcomputern in den letzten Jahren <a href="http://wahlcomputer.ccc.de/">verdient gemacht</a>.</p>
 
-<p>Bis ins Jahr 1997 existierte an der Universität Göttingen der <a href="http://de.wikipedia.org/wiki/Wolfskehl-Preis">Wolfskehl-Preis</a>, der für den Beweis des <a href="http://de.wikipedia.org/wiki/Gro%C3%9Fer_Fermatscher_Satz">großen Fermatschen Satzes</a> ausgelobt war. Am Göttinger Mathematischen Institut waren fast 90 Jahre (1908-1997) lang ein oder zwei Assistenten mit der Bearbeitung von Einsendungen beschäftigt, die von Unmengen von Amateuren eingeschickt wurden. Meist reichte ein einfacher Formbrief als Antwort, in dem nur eingetragen werden musste, auf welcher Seite und in welcher Zeile sich der erste logische Fehler im “Beweis” befand.</p>
+<p>Bis ins Jahr 1997 existierte an der Universität Göttingen der <a href="http://de.wikipedia.org/wiki/Wolfskehl-Preis">Wolfskehl-Preis</a>, der für den Beweis des <a href="http://de.wikipedia.org/wiki/Gro%C3%9Fer_Fermatscher_Satz">großen Fermatschen Satzes</a> ausgelobt war. Am Göttinger Mathematischen Institut waren fast 90 Jahre (1908-1997) lang ein oder zwei Assistenten mit der Bearbeitung von Einsendungen beschäftigt, die von Unmengen von Amateuren eingeschickt wurden. Meist reichte ein einfacher Formbrief als Antwort, in dem nur eingetragen werden musste, auf welcher Seite und in welcher Zeile sich der erste logische Fehler im &#8220;Beweis&#8221; befand.</p>
 
 <p>Wenn jetzt ein Paper behauptet, das Problem geheimer und sicherer,
 manipulationsresistenter Wahlen per Computer gelöst zu haben, ist
@@ -368,7 +373,8 @@ sich der erste logische Fehler?</p>
 
 <p><a href="http://people.scs.carleton.ca/~clark/projects/commitcoin/">CommitCoin: Carbon Dating Commitments with Bitcoin</a></p>
 
-<blockquote><p>Can you have both secret ballots and verifiable results?</p><p>Yes. Crypto can do seemingly impossible things. One of those things is<br />having a voting system where ballot is anonymous (you can&#8217;t prove how<br />you voted) and yet you can make sure that your ballot is included<br />unmodified in the final tally! Crypto voting systems are often called<br />E2E or end-to-end verifiable. Scantegrity is one, there are others.<br />Scantegrity is the only one that has been used in an actual governmental<br />election (two municipal elections in Takoma Park, Maryland, USA).</p></blockquote>
+<blockquote><p>Can you have both secret ballots and verifiable results?</p><p>Yes. Crypto can do seemingly impossible things. One of those things is<br/>having a voting system where ballot is anonymous (you can&#8217;t prove how<br/>you voted) and yet you can make sure that your ballot is included<br/>unmodified in the final tally! Crypto voting systems are often called<br/>E2E or end-to-end verifiable. Scantegrity is one, there are others.<br/>Scantegrity is the only one that has been used in an actual governmental<br/>election (two municipal elections in Takoma Park, Maryland, USA).</p></blockquote>
+
 </div>
   
   
@@ -399,13 +405,13 @@ sich der erste logische Fehler?</p>
   </header>
 
 
-  <div class="entry-content"><p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/1/1c/Salmon_onigiri_by_yomi955.jpg" width="450" title="'By yomi955 (Flickr) CC-BY-2.0 via Wikimedia Commons'" />
-Es besteht die Möglichkeit, dass ich mich für den nächsten Hype entschuldigen muss, wenn die Zeit gekommen ist. Die Tatsache, dass ich Bubble Tea vor einer gefühlten Ewigkeit (ca. letzter Sommer) noch abfeierte, weil es ihn endlich häufiger so zu kaufen gab, wie ich ihn aus New Yorks Chinatown kannte und liebte, lastet immer noch ein bisschen auf mir und mein Enthusiasmus tut mir leid. Ich bin voll in die Hipster-Falle getappt, plötzlich wurden die Innenstädte von Bubble Tea überschwemmt, Läden machten auf und gingen kurz danach ein und am Schluß gab es überzuckerten Schlabber mit Perlen sogar bei McDonald’s — of all places. Bitte verzeiht mir.</p>
+  <div class="entry-content"><p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/1/1c/Salmon_onigiri_by_yomi955.jpg" width="450" title="'By yomi955 (Flickr) CC-BY-2.0 via Wikimedia Commons'" >
+Es besteht die Möglichkeit, dass ich mich für den nächsten Hype entschuldigen muss, wenn die Zeit gekommen ist. Die Tatsache, dass ich Bubble Tea vor einer gefühlten Ewigkeit (ca. letzter Sommer) noch abfeierte, weil es ihn endlich häufiger so zu kaufen gab, wie ich ihn aus New Yorks Chinatown kannte und liebte, lastet immer noch ein bisschen auf mir und mein Enthusiasmus tut mir leid. Ich bin voll in die Hipster-Falle getappt, plötzlich wurden die Innenstädte von Bubble Tea überschwemmt, Läden machten auf und gingen kurz danach ein und am Schluß gab es überzuckerten Schlabber mit Perlen sogar bei McDonald&#8217;s — of all places. Bitte verzeiht mir.</p>
 
-<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/d/d7/Rice_balls_of_Seven-Eleven.jpg" width="300" title="'By Corpse Reviver (Own work) GFDL or CC-BY-SA-3.0 via Wikimedia Commons'" />
-Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit Sachen (Lachs oder Hühnchen oder Sesam und Gemüse), bisweilen umhüllt von einem Algenblatt: Das bessere Butterbrot, ab zwei oder drei Stück erstaunlich sättigend, was wohl am Reis liegt. In Japan sind Onigiri viel verbreiteter als alles, was wir hier an japanischem Essen zu kaufen bekommen: Oft daheim zubereitet werden sie zur Arbeit mitgebracht, im Supermarkt werden sie in langen Reihen im Kühlregal fertig angeboten. Aus Korea kenne ich sie als Chumokbap (추믁밥), was “Faust-Reis” heisst. Ich mag Onigiri und ich habe mich gefreut, als ich nur kurze Zeit hintereinander zwei Möglichkeiten in Berlin entdeckt habe, um mir den Bauch mit ihnen vollzuschlagen.</p>
+<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/d/d7/Rice_balls_of_Seven-Eleven.jpg" width="300" title="'By Corpse Reviver (Own work) GFDL or CC-BY-SA-3.0 via Wikimedia Commons'" >
+Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit Sachen (Lachs oder Hühnchen oder Sesam und Gemüse), bisweilen umhüllt von einem Algenblatt: Das bessere Butterbrot, ab zwei oder drei Stück erstaunlich sättigend, was wohl am Reis liegt. In Japan sind Onigiri viel verbreiteter als alles, was wir hier an japanischem Essen zu kaufen bekommen: Oft daheim zubereitet werden sie zur Arbeit mitgebracht, im Supermarkt werden sie in langen Reihen im Kühlregal fertig angeboten. Aus Korea kenne ich sie als Chumokbap (추믁밥), was &#8220;Faust-Reis&#8221; heisst. Ich mag Onigiri und ich habe mich gefreut, als ich nur kurze Zeit hintereinander zwei Möglichkeiten in Berlin entdeckt habe, um mir den Bauch mit ihnen vollzuschlagen.</p>
 
-<p>Da gibt es zunächst am <a href="http://de.wikipedia.org/wiki/U-Bahnhof_Sch%C3%B6nleinstra%C3%9Fe">U-Bahnhof Schönleinstraße</a> den Onigiri-Stand <a href="http://rice-up.de/">Rice Up</a>, den ich deshalb als ersten erwähne, weil er jeden Morgen auch ein potenzielles Anlaufziel auf dem Weg zur Arbeit für mich darstellt. Schön Bio alles, etwas kleine (und dafür teure) Portionen, aber durchaus gut: Jeden Tag vegane Onigiri und welche mit Fleisch oder Fisch (Lachs mit scharfer Pflaume ist ein prima Frühstück). Natürlich ist der Stand gut zu erreichen, weil er ja genau auf dem Bahnsteig liegt, aber insgesamt gehen bei dem Angebot schon leichte Hipster-Alarmglocken los. Sei’s drum. Es schmeckt.</p>
+<p>Da gibt es zunächst am <a href="http://de.wikipedia.org/wiki/U-Bahnhof_Sch%C3%B6nleinstra%C3%9Fe">U-Bahnhof Schönleinstraße</a> den Onigiri-Stand <a href="http://rice-up.de/">Rice Up</a>, den ich deshalb als ersten erwähne, weil er jeden Morgen auch ein potenzielles Anlaufziel auf dem Weg zur Arbeit für mich darstellt. Schön Bio alles, etwas kleine (und dafür teure) Portionen, aber durchaus gut: Jeden Tag vegane Onigiri und welche mit Fleisch oder Fisch (Lachs mit scharfer Pflaume ist ein prima Frühstück). Natürlich ist der Stand gut zu erreichen, weil er ja genau auf dem Bahnsteig liegt, aber insgesamt gehen bei dem Angebot schon leichte Hipster-Alarmglocken los. Sei&#8217;s drum. Es schmeckt.</p>
 
 <p>Dann gibt es die unglaublich nette Natsuko, die mit ihrem <a href="http://samuraisnack.com/">Samurai Snack</a> eine lustige Idee verfolgt: Zur Mittagszeit liefert sie an Büros (hauptsächlich Start-Ups, wenn ich das richtig verstanden habe). Wenn sie beladen mit ihren Onigiri, die man tags zuvor über ein Formular per Mail bestellt, in unserem Büro auftaucht, pünktlich um 11:30 Uhr, ist die Freude groß. Statt irgendwelchem Fast-Food-Quatsch einfach mal Onigiri in der Mittagspause, da gibt es eigentlich keine Gegenargumente, zumal ihre Onigiri nur die Hälfte von denen an der Schönleinstraße kosten, dafür aber größer und viel leckerer sind. Die ersten Male gibt es die Onigiri sogar kostenlos, wenn man ihr Feedback und Kommentare gibt. Natsuko holt sich Rezepte für Onigiri regelmäßig bei ihrer Mutter in Japan ab und ich finde man schmeckt die Mühe, die sie in ihr kleines Unternehmen steckt.</p>
 
@@ -440,15 +446,19 @@ Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit 
   </header>
 
 
-  <div class="entry-content"><p><a href="http://windytan.blogspot.fi/2012/11/the-sound-of-dialup-pictured.html" title="The sound of the dialup, pictured"> <img src="http://1.bp.blogspot.com/-ocE3ypOxO_c/UKf6aOz38lI/AAAAAAAAAn0/lwAZYB11ztY/s400/dialup-final.png" /> </a></p>
+  <div class="entry-content"><p><a href="http://windytan.blogspot.fi/2012/11/the-sound-of-dialup-pictured.html" title="The sound of the dialup, pictured"> <img src="http://1.bp.blogspot.com/-ocE3ypOxO_c/UKf6aOz38lI/AAAAAAAAAn0/lwAZYB11ztY/s400/dialup-final.png"> </a></p>
+
 <blockquote><p>Kennen Sie das taoistische Märchen von der Zähmung der Harfe?</p><p>Vor langer, langer Zeit stand in der Schlucht von Lungmen ein Kiri-Baum, ein wahrhafter König des Waldes.  Er reckte seine Krone so hoch, daß er mit den Wolken sprechen konnte; seine Wurzeln reichten tief in die Erde, wo ihre bronzefarbenen Locken sich mit denen des silbernen Drachens vermischten, der darunter schlief. Eines Tages geschah es, daß ein mächtiger Zauberer aus diesem Baum eine wundersame Harfe fertigte, deren widerstrebender Geist nur vom größten aller Musiker gezähmt werden konnte.  Lange Zeit befand sich das Instrument im Besitz des Kaisers von China, aber alle Bemühungen, seinen Saiten eine Melodie zu entlocken, waren vergebens. Selbst wenn man sich noch so sehr mühte - aus der Harfe erklangen nur harte, verächtliche Töne, die nicht zu den Liedern paßten, die die Musiker gerne gesungen hätten. Die Harfe wollte keinen von ihnen als ihren Meister anerkennen.</p><p>Zuletzt kam Pei-ya, der Prinz unter den Harfespielern.  Er strich mit zarter Hand über die Harfe, wie jemand, der ein widerspenstiges Pferd besänftigen will und berührte sachte die Saiten. Er sang von der Natur und den Jahreszeiten, von den hohen Bergen und fließenden Wassern. Und siehe da - alle Erinnerungen des Baumes erwachten! Noch einmal spürte der Baum den süßten Atem des Frühlings in seinen Ästen. Die frischen Wasserfälle, die die Schlucht hinuntersprangen, lachten den knospenden Blumen zu. Alsbald hörte man die träumenden Stimmen des Sommers mit seinen Myriaden von Insekten, dem sanften Plätschern des Regens, dem Wehklagen Ein Tiger brüllt - im Tal hallt sein Schrei wider. Es ist Herbst, in der Verlassenheit der Nacht scheint der Mond scharf wie eine Schwert auf das bereifte Gras. Nun herrscht Winter, und durch die schneeige Luft wirbeln Scharen von Schwänen und auf die Zweige prasseln Hagelkörner mit grimmigem Vergnügen.</p><p>Dann wechselte Pei-ya die Tonart und sang von der Liebe.</p><p>Der Wald wiegte sich wie ein entflammter Liebhaber, tief in Gedanken verloren. Hoch oben zog eine hell leuchtende Wolke vorüber, stolz wie ein hochmütiges Mädchen; indem sie weiterzog, warf sie lange Schatten auf den Boden, schwarz wie die Verzeiflung.  Wiederum wechselte die Tonart: Pei-ya sang vom Krieg, von klirrendem Stahl und stampfenden Streitrössern.Und in der Harfe erwuchs der der Sturm der Lungmen, der Drachen ritt auf dem Blitz, die Lawine brach grollend durch die Hügel.</p><p>Von Begeisterung erfüllt, fragte der chinesiche Kaiser Pei-ya, worin das Geheimnis seines Sieges liege.  &#8220;Herr&#8221;, antwortete dieser, andere haben versagt, weil sie nur von sich selbst gesunden haben. Ich überließ es der Harfe, das Thema zu wählen und ich wußte nicht mehr genau, ob die Harfe Pei-ya war oder Pei-ya die Harfe.&#8221;</p><footer><strong>Kakuzo Okakura</strong><cite></cite></footer></blockquote>
+
+
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F77099391"></iframe>
+
 
 <p>Das Netz der 1980er und 1990er war ein Klangkörper, ein Instrument, auf dem gespielt wurde — oder das eben mit den Benutzer_innen spielte. Wer ins Netz wollte, hörte Klänge: Pfeifen und Zischen, Modulationen und Demodulationen. Mit dem Aufkommen von Highspeed-Internetverbindungen wie DSL oder Kabel wurde das Netz stumm und hatte keinen eigenen Klang mehr. Gleichzeitig füllte es sich mit Menschen und ihren sozialen Verknüpfungen und wurde ein völlig anderes Wesen: weniger technisch, aber auch sinnlich weniger greifbar.</p>
 
 <p>Das technische Wissen über <a href="http://de.wikipedia.org/wiki/AT-Befehlssatz">AT-Befehle</a> und <a href="http://de.wikipedia.org/wiki/XModem">Datenübertragungsprotokolle</a>, das notwendig war, um iüberhaupt eine Verbindung herzustellen, hatte zur Folge, dass das, was damals an Netzwerken existierte, in weiten Teilen ein Tummelplatz für Geeks und Technikenthusiasten war. Die Tatsache, dass die Bundespost mit ihrem Staatsmonopol <a href="http://www.schrutzki.net/texte/eigene/ds/postbesuch.php3?sid=510a5677dcba1">den Einsatz von leistungsfähigen Modems verbot oder erschwerte</a> machte das Datenreisen fast zu einer halblegalen Angelegenheit — auf den Betrieb eines Modems ohne ZZF-Prüfsiegel stand zumindest theoretisch eine Haftstrafe von fünf Jahren, was diese Straftat in die gleiche Liga brachte wie das <a href="http://dejure.org/gesetze/StGB/307.html">Herbeiführen einer Explosion durch Kernenergie</a>.</p>
 
-<p>Beim Aufbau des <a href="http://www.foebud.org/fruehere-projekte/zamir">Zamir Transnational Network</a> war das Wissen über Modems notwendig für die Herstellung von Datenverbindungen im kriegsgeschüttelten zerfallenden Jugoslawien. Die Qualität der Telefonleitungen war so schlecht, dass Billigmodems aufgaben, nur die teureren Geräte (die Herstellernamen “ZyXel” und “US Robotics” wurden erfurchtsvoll geraunt) waren den Störgeräuschen auf der Leitung gewachsen. Wenn abgehoben wurde, konnte es möglicherweise minutenlang dauern, bis ein Freizeichen (postdeutsch: “Amt”) zu hören war — das bedeutete im Modemwählstring eine schier unendliche Anzahl von Kommata, was im AT-Befehlssatz für “bitte warten” stand. Stille war gleich Verhinderung von Kommunikation, ein Ausnahmezustand, mit dem das Modem umgehen musste. Erst wenn es quietschte und kratzte, konnten Daten reisen, anders als im schweigenden DSL von heute.</p>
+<p>Beim Aufbau des <a href="http://www.foebud.org/fruehere-projekte/zamir">Zamir Transnational Network</a> war das Wissen über Modems notwendig für die Herstellung von Datenverbindungen im kriegsgeschüttelten zerfallenden Jugoslawien. Die Qualität der Telefonleitungen war so schlecht, dass Billigmodems aufgaben, nur die teureren Geräte (die Herstellernamen &#8220;ZyXel&#8221; und &#8220;US Robotics&#8221; wurden erfurchtsvoll geraunt) waren den Störgeräuschen auf der Leitung gewachsen. Wenn abgehoben wurde, konnte es möglicherweise minutenlang dauern, bis ein Freizeichen (postdeutsch: &#8220;Amt&#8221;) zu hören war — das bedeutete im Modemwählstring eine schier unendliche Anzahl von Kommata, was im AT-Befehlssatz für &#8220;bitte warten&#8221; stand. Stille war gleich Verhinderung von Kommunikation, ein Ausnahmezustand, mit dem das Modem umgehen musste. Erst wenn es quietschte und kratzte, konnten Daten reisen, anders als im schweigenden DSL von heute.</p>
 
 <p>Das Netz-Instrument, das wir heute spielen, ist abstrakter: Gesellschaft, Gedanken, Ideen, Beziehungen. Es ist mächtiger, aber stiller geworden.</p>
 </div>
@@ -481,18 +491,19 @@ Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit 
   </header>
 
 
-  <div class="entry-content"><p><img class="left" src="//upload.wikimedia.org/wikipedia/commons/8/8a/Jakobinerklub.jpg" width="512" title="Jakobinerklub. Stich nach einer Zeichnung von Vilette (Bibliothèque 11 nationale de France, Paris)..DaQuirin at de.wikipedia [Public domain], 12 from Wikimedia Commons" />
-<a href="http://blog.lqfb.piratenpartei.de/2013/01/17/testbetrieb-neue-api-und-bombay-crushed/">Inspiriert von der alternativen Oberfläche zu LiquidFeedback, der gerade im Testbetrieb gestarteten “Saftigen Kumquat”</a>, habe ich mich auf die Suche nach einem Tool für eine Leerstelle bei der Meinungsbildung über LiquidDemocracy gemacht.</p>
+  <div class="entry-content"><p><img class="left" src="//upload.wikimedia.org/wikipedia/commons/8/8a/Jakobinerklub.jpg" width="512" title="Jakobinerklub. Stich nach einer Zeichnung von Vilette (Bibliothèque 11 nationale de France, Paris)..DaQuirin at de.wikipedia [Public domain], 12 from Wikimedia Commons" >
+<a href="http://blog.lqfb.piratenpartei.de/2013/01/17/testbetrieb-neue-api-und-bombay-crushed/">Inspiriert von der alternativen Oberfläche zu LiquidFeedback, der gerade im Testbetrieb gestarteten &#8220;Saftigen Kumquat&#8221;</a>, habe ich mich auf die Suche nach einem Tool für eine Leerstelle bei der Meinungsbildung über LiquidDemocracy gemacht.</p>
 
 <p>Meines Erachtens fehlt dem sehr ausgeklügelten Delegations- und Wahlsystem für Vorschläge ein entsprechend strukturierendes Element für die Debattenphase, bei der Argumente pro und contra abgewogen und eingebracht werden können. Die jetztigen Mechanismen zum Einbringen von Änderungsvorschlägen oder Gegeninitiativen sind nicht immer für eine schrittweise Verbesserung des Textes geeignet und ein gern genommener Work-Around, nämlich ein einfacher Link auf ein EtherPad zur Initiative, kann nur bei Selbstdisziplin der Teilnehmer_innen als Tool für eine strukturierte Debatte fungieren.</p>
 
 <p>Da ich dieses Blog auch gerne mal für unfertige Gedanken und Work in Progress benutze spricht nichts gegen eine Liste von Tools, oder?</p>
 
 <ul>
-  <li><a href="http://de.wikiarguments.net/">Wikiarguments</a> strukturiert die Debatte so: Jede These kann beliebig viele Pro- und Contra-Argumente bekommen.  Diese können hoch- und runtergevotet werden. Ich hätte eine <a href="http://www.mediawiki.org/wiki/Manual:Extensions">Mediawiki-Extension</a> erwartet, aber Wikiargument scheint selbstgestrickter PHP-Code zu sein, der mich auf den ersten Blick nicht überzeugte.</li>
-  <li>Wenn man dem Motto <a href="http://de.wikipedia.org/wiki/Code_and_Other_Laws_of_Cyberspace">“Code is Law”</a> folgt, dann ist das Schaffen von Gesetzen gleichzusetzen mit Codieren. Und das macht die Debatte vor dem Beschluss wiederum zum Code-Review. Warum also nicht gleich ein etabliertes Werkzeug zum interlinearen Code Review benutzen, um einen Initiativentext zu annotieren und zu zerpflücken? Etwa so: &lt;iframe src=&#8221;http://player.vimeo.com/video/20084957&#8221; width=&#8221;500&#8221; height=&#8221;375&#8221; frameborder=&#8221;0&#8221; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt; </li>
-  <li>Reddit hat sich als Debattentool bewährt, ist als gut verständliche Python-Applikation <a href="https://github.com/reddit">Open Source verfügbar</a> und bietet quasi die Luxus-Variante von dem, was Wikiarguments macht: Hoch- und runtervoten, verschiedene Unterbereiche, Diskussionsfäden etc. Was spricht eigentlich dagegen, es zu benutzen?</li>
+<li><a href="http://de.wikiarguments.net/">Wikiarguments</a> strukturiert die Debatte so: Jede These kann beliebig viele Pro- und Contra-Argumente bekommen.  Diese können hoch- und runtergevotet werden. Ich hätte eine <a href="http://www.mediawiki.org/wiki/Manual:Extensions">Mediawiki-Extension</a> erwartet, aber Wikiargument scheint selbstgestrickter PHP-Code zu sein, der mich auf den ersten Blick nicht überzeugte.</li>
+<li>Wenn man dem Motto <a href="http://de.wikipedia.org/wiki/Code_and_Other_Laws_of_Cyberspace">&#8220;Code is Law&#8221;</a> folgt, dann ist das Schaffen von Gesetzen gleichzusetzen mit Codieren. Und das macht die Debatte vor dem Beschluss wiederum zum Code-Review. Warum also nicht gleich ein etabliertes Werkzeug zum interlinearen Code Review benutzen, um einen Initiativentext zu annotieren und zu zerpflücken? Etwa so: <iframe src="http://player.vimeo.com/video/20084957" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li>
+<li>Reddit hat sich als Debattentool bewährt, ist als gut verständliche Python-Applikation <a href="https://github.com/reddit">Open Source verfügbar</a> und bietet quasi die Luxus-Variante von dem, was Wikiarguments macht: Hoch- und runtervoten, verschiedene Unterbereiche, Diskussionsfäden etc. Was spricht eigentlich dagegen, es zu benutzen?</li>
 </ul>
+
 
 <p>Gibt es noch mehr Ideen und Anregungen? Bitte kommentiert!</p>
 </div>
