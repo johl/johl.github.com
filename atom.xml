@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2013-10-24T17:36:13+02:00</updated>
+  <updated>2013-10-24T22:06:13+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -27,9 +27,9 @@
 mkdir: a/b: No such file or directory
 </code></pre>
 
-<p><a title="By Universal Studios (Dr. Macro) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AFrankenstein's_monster_(Boris_Karloff).jpg"><img width="256" align="left" style="margin-right: 10px" alt="Frankenstein&#039;s monster (Boris Karloff)" src="http://blog.johl.io//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Frankenstein%27s_monster_%28Boris_Karloff%29.jpg/256px-Frankenstein%27s_monster_%28Boris_Karloff%29.jpg" /></a> In anderen Betriebssytemen wäre das anders. Die fehlenden, implizit genannten Schachtelungen, würden automatisch erzeugt. Wie von Geisterhand würden sie ins Leben gerufen werden. Es lebt! <strong>Ergänzung</strong>: <em>Ganz richtig in den Kommentaren bemerkt:</em> <code>mkdir -p a/b/c</code> <em>bringt unter Unix natürlich auch das erwünschte Ergebnis</em>.</p>
+<p><a title="By Universal Studios (Dr. Macro) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AFrankenstein's_monster_(Boris_Karloff).jpg"><img width="256" align="left" style="margin-right: 10px" alt="Frankenstein&#039;s monster (Boris Karloff)" src="http://blog.johl.io//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Frankenstein%27s_monster_%28Boris_Karloff%29.jpg/256px-Frankenstein%27s_monster_%28Boris_Karloff%29.jpg" /></a> In anderen Betriebssystemen wäre das anders. Die fehlenden, implizit genannten Schachtelungen, würden automatisch erzeugt. Wie von Geisterhand würden sie ins Leben gerufen werden. Es lebt! <strong>Ergänzung</strong>: <em>Ganz richtig in den Kommentaren bemerkt:</em> <code>mkdir -p a/b/c</code> <em>bringt unter Unix natürlich auch das erwünschte Ergebnis</em>.</p>
 
-<p>Autovivication ist je nach Erwartungshaltung an die Programmiersprache eine überraschende oder logische Eigenschaft von verschachelten Datentypen wie Hashes in Perl, die auch als assoziative Arrays oder in Python-Lingo als Dictionaries bekannt sind. Wenn ich ein Elemente zuweise oder abfrage, das in einem anderen Element geschachtelt ist, ds ich bisher noch nicht belegt habe, wird das implizit benannte Element der höheren Schachtelungstiefe automisch angelegt oder eben belebt.</p>
+<p>Autovivication ist je nach Erwartungshaltung an die Programmiersprache eine überraschende oder logische Eigenschaft von verschachelten Datentypen wie Hashes in Perl, die auch als assoziative Arrays oder in Python-Lingo als Dictionaries bekannt sind. Wenn ich ein Elemente zuweise oder abfrage, das in einem anderen Element geschachtelt ist, das ich bisher noch nicht belegt habe, wird das implizit benannte Element der höheren Schachtelungstiefe automisch angelegt oder eben belebt.</p>
 
 <p>Die automatische Belebung hilft zum Beispiel, wenn ich mit einem Klumpen an Daten arbeite, vielleicht aus einer Open-Data-Quelle wie der <a href="http://daten.berlin.de/datensaetze/als-naturdenkmale-gesch%C3%BCtzte-findlinge-charlottenburg-wilmersdorf">Liste der als Naturdenkmale geschützte Findlinge in Charlottenburg-Wilmersdorf</a> oder einer Abfrage <a href="http://www.wikidata.org/w/api.php?action=wbgetentities&amp;sites=dewiki&amp;titles=Ada%20Lovelace&amp;format=jsonfm&amp;languages=de">bei Wikidata</a>. In dem Klumpen können diverse Verschachtelungstiefen bestehen, ohne dass ich die dahinterstehende Struktur im Detail kenne oder kennen möchte. Wenn ich die Struktur naiv in ein assoziatives Array hineinschlürfe, geht das mit Perl, in anderen Sprachen würde ich höflich, aber bestimmt darauf hingewiesen werden, dass ich einem noch nicht definierten Key einen Wert zuweisen will und das Programm stürzt typischerweise ab. Besonders drollig stellt sich hier PHP mit einem Verhalten an, das als Pseudo-Autovivication bezeichnet werden könnte: Zuweisungen an noch nicht vorher definierte Keys beliebiger Schachtelungstiefe gehen (wie in Perl), Abfragen von nicht definierten Keys gehen nicht (wie in anderen Sprachen).</p>
 
@@ -54,7 +54,7 @@ mkdir: a/b: No such file or directory
 </span><span class="line"><span class="k">print</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">%data</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>Das CPAN-Modul <code>Data::Dumper</code> ist möglicherweise vorher noch mit <code>cpan install Data::Dumper</code> zu installieren, bevor es benutzt werden kann. Es dient einfach dazu, eine Datastruktur in Perl zu inspizieren oder formatiert auszugeben. Mit <code>my %data;</code> definieren wir ein assoziatives Array (Hash) namens data. <code>$data{1}{2}{3} = 10;</code> weist diesem Hash den Wert 10 zu für den Key 3, der in einem Hash mit dem Key 2 steckt, das wiederum in dem Hash-Key 1 von <code>data</code> steckt. Für diejenigen, die in der schwarzen Magie von Perl nicht (mehr) so bewandert sind: Bei der Zuweisung wird aus dem Hash-Vorzeichen <code>%</code> ein <code>$</code>, weil die Variable hier in einem <a href="https://de.wikipedia.org/wiki/Skalare_Variable">skalaren Kontext</a> benutzt wird.</p>
+<p>Das CPAN-Modul <code>Data::Dumper</code> ist möglicherweise vorher noch mit <code>cpan install Data::Dumper</code> zu installieren, bevor es benutzt werden kann. Es dient einfach dazu, eine Datenstruktur in Perl zu inspizieren oder formatiert auszugeben. Mit <code>my %data;</code> definieren wir ein assoziatives Array (Hash) namens data. <code>$data{1}{2}{3} = 10;</code> weist diesem Hash den Wert 10 zu für den Key 3, der in einem Hash mit dem Key 2 steckt, das wiederum in dem Hash-Key 1 von <code>data</code> steckt. Für diejenigen, die in der schwarzen Magie von Perl nicht (mehr) so bewandert sind: Bei der Zuweisung wird aus dem Hash-Vorzeichen <code>%</code> ein <code>$</code>, weil die Variable hier in einem <a href="https://de.wikipedia.org/wiki/Skalare_Variable">skalaren Kontext</a> benutzt wird.</p>
 
 <p>Die Ausgabe ergibt dann:</p>
 
@@ -77,7 +77,7 @@ KeyError: 1
 
 <p>Da für die Keys der höheren Schachtelungstiefe noch nichts angelegt wurde, wird die Ausnahme KeyError geworfen und das Programm beendet.</p>
 
-<p>In seiner Standard-Libary hat Python allerdings im Modul <code>collections</code> auch den Datentyp <code>defaultdict</code>. Gedacht ist er dafür, um Dictionaries zu erzeugen, bei denen ein Defaultwert schon vorgegeben ist — wenn der Wert nicht definiert ist, soll zum Beispiel standardmäßig 0 als Wert angelegt werden.</p>
+<p>In seiner Standard-Library hat Python allerdings im Modul <code>collections</code> auch den Datentyp <code>defaultdict</code>. Gedacht ist er dafür, um Dictionaries zu erzeugen, bei denen ein Defaultwert schon vorgegeben ist — wenn der Wert nicht definiert ist, soll zum Beispiel standardmäßig 0 als Wert angelegt werden.</p>
 
 <p>Indem wir <code>defaultdict</code> auf leicht kreative Weise mißbrauchen, können wir Autovivication in Python bekommen. Was wäre, wenn wir die Datenstruktur rekursiv definieren und als Defaultwert eine Funktionsreferenz auf eine die Datenstruktur selbst erzeugende Funktion angeben? </p>
 
