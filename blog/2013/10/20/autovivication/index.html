@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Autovivication in Python - Hackety hack hack</title>
+  <meta name="author" content="Jens Ohlig">
+
+  
+  <meta name="description" content="Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won’t usually need your flowcharts &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.johl.io/blog/2013/10/20/autovivication">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Hackety hack hack" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hackety hack hack</a></h1>
+  
+    <h2>Atypisches Nutzerverhalten mit Rat und Tat.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.johl.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Autovivication in Python</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2013-10-20T14:19:00+02:00" pubdate>Oct 20<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><blockquote><p>Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won’t usually need your flowcharts; they’ll be obvious.</p><footer><strong>Fred Brooks</strong><cite>The Mythical Man-Month: Essays on Software Engineering</cite></footer></blockquote>
+<p>Datenstrukturen sind Magie. In einer magischen, fast vergessenen Sprache wie Perl sind sie sogar noch ein bisschen magischer, um nicht zu sagen: frankensteinhaft. Die Rede ist von Autovivication.</p>
+
+<p>Wenn ich einen langen komplexen Pfad in meinem Dateisystem anlege, der ein Directory in einem noch zu erstellenden Directory erstellt, möchte mein Unix-System nichts davon wissen:</p>
+
+<pre><code>[~]$ mkdir a/b/c
+mkdir: a/b: No such file or directory
+</code></pre>
+
+<p><a title="By Universal Studios (Dr. Macro) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AFrankenstein's_monster_(Boris_Karloff).jpg"><img width="256" align="left" style="margin-right: 10px" alt="Frankenstein&#039;s monster (Boris Karloff)" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Frankenstein%27s_monster_%28Boris_Karloff%29.jpg/256px-Frankenstein%27s_monster_%28Boris_Karloff%29.jpg" /></a> In anderen Betriebssytemen wäre das anders. Die fehlenden, implizit genannten Schachtelungen, würden automatisch erzeugt. Wie von Geisterhand würden sie ins Leben gerufen werden. Es lebt!</p>
+
+<p>Autovivication ist je nach Erwartungshaltung an die Programmiersprache eine überraschende oder logische Eigenschaft von verschachelten Datentypen wie Hashes in Perl, die auch als assoziative Arrays oder in Python-Lingo als Dictionaries bekannt sind. Wenn ich ein Elemente zuweise oder abfrage, das in einem anderen Element geschachtelt ist, ds ich bisher noch nicht belegt habe, wird das implizit benannte Element der höheren Schachtelungstiefe automisch angelegt oder eben belebt.</p>
+
+<p>Die automatische Belebung hilft zum Beispiel, wenn ich mit einem Klumpen an Daten arbeite, vielleicht aus einer Open-Data-Quelle wie der <a href="http://daten.berlin.de/datensaetze/als-naturdenkmale-gesch%C3%BCtzte-findlinge-charlottenburg-wilmersdorf">Liste der als Naturdenkmale geschützte Findlinge in Charlottenburg-Wilmersdorf</a> oder einer Abfrage <a href="http://www.wikidata.org/w/api.php?action=wbgetentities&amp;sites=dewiki&amp;titles=Ada%20Lovelace&amp;format=jsonfm&amp;languages=de">bei Wikidata</a>. In dem Klumpen können diverse Verschachtelungstiefen bestehen, ohne dass ich die dahinterstehende Struktur im Detail kenne oder kennen möchte. Wenn ich die Struktur naiv in ein assoziatives Array hineinschlürfe, geht das mit Perl, in anderen Sprachen würde ich höflich, aber bestimmt darauf hingewiesen werden, dass ich einem noch nicht definierten Key einen Wert zuweisen will und das Programm stürzt typischerweise ab. Besonders drollig stellt sich hier PHP mit einem Verhalten an, das als Pseudo-Autovivication bezeichnet werden könnte: Zuweisungen an noch nicht vorher definierte Keys beliebiger Schachtelungstiefe gehen (wie in Perl), Abfragen von nicht definierten Keys gehen nicht (wie in anderen Sprachen).</p>
+
+<p>Schauen wir uns doch mal Autovivication in Perl an:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Autovivication in Perl</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class="perl"><span class="line"><span class="c1">#!/usr/bin/perl -w</span>
+</span><span class="line">
+</span><span class="line"><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+</span><span class="line"><span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">my</span> <span class="nv">%data</span><span class="p">;</span>
+</span><span class="line"><span class="nv">$data</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="mi">2</span><span class="p">}{</span><span class="mi">3</span><span class="p">}</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class="line"><span class="k">print</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">%data</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Das CPAN-Modul <code>Data::Dumper</code> ist möglicherweise vorher noch mit <code>cpan install Data::Dumper</code> zu installieren, bevor es benutzt werden kann. Es dient einfach dazu, eine Datastruktur in Perl zu inspizieren oder formatiert auszugeben. Mit <code>my %data;</code> definieren wir ein assoziatives Array (Hash) namens data. <code>$data{1}{2}{3} = 10;</code> weist diesem Hash den Wert 10 zu für den Key 3, der in einem Hash mit dem Key 2 steckt, das wiederum in dem Hash-Key 1 von <code>data</code> steckt. Für diejenigen, die in der schwarzen Magie von Perl nicht (mehr) so bewandert sind: Bei der Zuweisung wird aus dem Hash-Vorzeichen <code>%</code> ein <code>$</code>, weil die Variable hier in einem <a href="https://de.wikipedia.org/wiki/Skalare_Variable">skalaren Kontext</a> benutzt wird.</p>
+
+<p>Die Ausgabe ergibt dann:</p>
+
+<pre><code>$VAR1 = '1';
+$VAR2 = {
+          '2' =&gt; {
+                   '3' =&gt; 10
+                 }
+        };
+</code></pre>
+
+<p>In Python wäre der entsprechende Code nicht möglich und würde mit einem Fehler abbrechen:</p>
+
+<pre><code>&gt;&gt;&gt; data = {}
+&gt;&gt;&gt; data[1][2][3] = 10
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+KeyError: 1
+</code></pre>
+
+<p>Da für die Keys der höheren Schachtelungstiefe noch nichts angelegt wurde, wird die Ausnahme KeyError geworfen und das Programm beendet.</p>
+
+<p>In seiner Standard-Libary hat Python allerdings im Modul <code>collections</code> auch den Datentyp <code>defaultdict</code>. Gedacht ist er dafür, um Dictionaries zu erzeugen, bei denen ein Defaultwert schon vorgegeben ist — wenn der Wert nicht definiert ist, soll zum Beispiel standardmäßig 0 als Wert angelegt werden.</p>
+
+<p>Indem wir <code>defaultdict</code> auf leicht kreative Weise mißbrauchen, können wir Autovivication in Python bekommen. Was wäre, wenn wir die Datenstruktur rekursiv definieren und als Defaultwert eine Funktionsreferenz auf eine die Datenstruktur selbst erzeugende Funktion angeben? </p>
+
+<p>Wenn sich die leichte Verwirrung im Kopf über den letzten Satz und rekursiv definierte Datenstrukturen gelegt haben, können wir uns diese Lösung auch mal einfach ansehen:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>Autovivication in Python</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+</span><span class="line"><span class="n">AutovivicationDict</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">AutovivicationDict</span><span class="p">)</span>
+</span><span class="line"><span class="n">data</span> <span class="o">=</span> <span class="n">AutovivicationDict</span><span class="p">()</span>
+</span><span class="line"><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Hurra, Python kann jetzt Autovivication! Allerdings sind die auf diese Weise erzeugten Dictionaries immer noch ziemlich besonders. Wir können (in beliebiger Schachtelungstiefe) zuweisen und abfragen, aber dass es kein herkömmliches Dictionary ist, stellen wir fest, wenn wir es uns einmal ansehen:</p>
+
+<pre><code>&gt;&gt;&gt; data
+defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {2: defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {3: 10})})})
+</code></pre>
+
+<p>Huch, da ist ja alles voller Referenzen auf eine <a href="https://de.wikipedia.org/wiki/Anonyme_Funktion">anonyme Funktion</a>! Für die meisten Anwendungen sollte das keinen Unterschied machen, mit welchem Wert das <code>defaultdict</code> gefüllt wird. Wenn wir allerdings eine Umwandlung unseres speziellen autovivizierten Dictionaries in ein herkömmliches Dictionary brauchen (etwa, um daraus JSON zu machen), brauchen wir noch eine Umwandlungsfunktion. Weil wir gerade so schön im Flow sind, definieren wir diese auch wieder rekursiv und unter Einsatz von <code>lambda</code>:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>dictify</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="n">dictify</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dd</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">dictify</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">dd</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">defaultdict</span><span class="p">)</span> <span class="k">else</span> <span class="n">dd</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Und jetzt haben wir hier ein ganz normales Dictionary:</p>
+
+<pre><code>&gt;&gt;&gt; dictify(data)
+{1: {2: {3: 10}}}
+</code></pre>
+
+<p>Wie bereits eingangs erwähnt: Datenstrukturen sind magisch.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jens Ohlig</span></span>
+
+      
+
+
+
+
+  
+
+<time datetime="2013-10-20T14:19:00+02:00" pubdate>Oct 20<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a class="FlattrButton" style="display:none;"
+        title="Autovivication in Python"
+        lang="en_GB"
+        rev="flattr;uid:johl;category:rest;button:compact;"
+        href="http://blog.johl.io/blog/2013/10/20/autovivication/">Autovivication in Python ( http://blog.johl.io/blog/2013/10/20/autovivication/ )</a>
+  
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.johl.io/blog/2013/10/20/autovivication/" data-via="johl" data-counturl="http://blog.johl.io/blog/2013/10/20/autovivication/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/09/03/schnelle-links/" title="Previous Post: Schnelle Links">&laquo; Schnelle Links</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <div>
+  <img class="left" src="http://www.gravatar.com/avatar.php?size=100&gravatar_id=9de3f3969367fffe2051c2b405b79810">
+  Das hier ist das Blog von <a href="http://www.johl.io">Jens Ohlig</a>. Es geht u.a. um: Programmierung, Basteln, Politik. Bisweilen sogar um Essen und Popkultur. Möglicherweise auch um völlig andere Themen.
+  </div>
+</section>
+<section>
+  <h1>Zuletzt geschrieben</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/10/20/autovivication/">Autovivication in Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/schnelle-links/">Schnelle Links</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/13/steile-these/">Steile These</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/11/iron-blogging/">Iron Blogging</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/07/totalreflexion-der-daten-durch-prism/">Totalreflexion der Daten durch Prism</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Dankeschön</h1>
+  <p>
+  <a class="FlattrButton" style="display:none;" href="http://johl.github.com/"></a>
+  <noscript><a href="http://flattr.com/thing/420157/Hackety-hack-hack-Atypisches-Nutzerverhalten-mit-Rat-und-Tat-" target="_blank">
+  <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+  </p>
+</section>
+
+<section>
+  <h1>Zuletzt getwittert</h1>
+  <p>
+  <a class="twitter-timeline" href="https://twitter.com/johl" data-widget-id="356792985440112640">Tweets by @johl</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </p>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/113575664537952525641?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div align="center">
+  <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.de"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />Die Texte aller Artikel auf diesem Blog stehen unter einer <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.de">Creative Commons Namensnennung 3.0 Unported Lizenz</a>.
+</div>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blogityblogblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.johl.io/blog/2013/10/20/autovivication';
+        var disqus_url = 'http://blog.johl.io/blog/2013/10/20/autovivication';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
