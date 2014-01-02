@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2013-11-18T13:11:20+01:00</updated>
+  <updated>2014-01-02T12:22:40+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,143 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Assoziationen aufgrund eines Ohrwurms nach dem Hören des Stückes „Halleluja“ von Leonard Cohen]]></title>
+    <link href="http://blog.johl.io/blog/2014/01/02/halleluja/"/>
+    <updated>2014-01-02T01:00:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2014/01/02/halleluja</id>
+    <content type="html"><![CDATA[<p><strong>Ein Stück im Radio</strong></p>
+
+<p>Wenn man sich in die Welt da draussen begibt, <em>auf der anderen Seite des Videoschirms</em>, wie es in dem Film Tron heisst, trifft man unvermeidlicherweise auf fremde kulturelle Praktiken. Es wird fern gesehen und Radio gehört, zum Beispiel. Über die Weihnachtsfeiertage spielte das Radio ein Lied von Leonard Cohen, das wohl als passend zum Weihnachtsprogramm empfunden wurde. Der Titel lautet &#8220;Halleluja&#8221; und das Wort hört man ja zur Weihnachtszeit häufiger in christlichen Kirchen, müssen sich die Radiomenschen gedacht haben, also spielen wir das mal. Dass man <a href="https://de.wikipedia.org/wiki/Cohen">anhand des Namens des Interpreten Leonard Cohen</a> hätte raten können, dass er vielleicht einer anderen Religion angehört, dessen Bildsprache auch einen wichtigen Platz in seinen Liedern einnimmt — geschenkt. Ebensowenig fiel ins Gewicht, dass Cohen (die praktische Doppelmitgliedschaftsoption des Zen-Buddhismus mitnehmend) einige Zeit als zenbuddhistischer Mönch gelebt hatte.</p>
+
+<p>Einen Ohrwurm wegzubekommen ist nicht einfach, wenn das Internet mit immer neuen Möglichkeiten lockt, noch mehr Details zu einem Lied zu erfahren. Schlimmstenfalls kann es sich zu einer Obsession entwickeln, für die nur ein Blogbeitrag die angemessene Katharsis ist. Dies ist dieser Blogeintrag. Vielleicht ist er an Informationen etwas zu dicht geraten, langsames Lesen ist möglicherweise eine gute Strategie zu Annäherung. Alternativ könnte es auch sein, dass ich einen einzelnen Song einfach zu wichtig nehme und zuviel Zeit in Assoziationen bezüglich eines Popmusikstückes gesteckt habe.</p>
+
+<p><strong>Erste Strophe: Quine und Strange Loop</strong></p>
+
+<pre>
+G                   Em  
+I heard there was a secret chord 
+G                        Em
+that David played and it pleased the Lord,
+    C  2x            (D)               G     (D)
+But you don't really care for music do you.
+G                     /C         D     
+It goes like this the fourth the fifth,              
+   /Em                /C     D    
+the minor fall and the major lift
+   /Em(D)            D(D7/+?)  Em
+The baffled king composing hallelujah
+     C         Em          C        G-D-G
+Halleluja, Halleluja, Halleluja, Halleluja
+</pre>
+
+
+<p>Das Lied ist in G-Dur und im 6/8-Takt. Ein Takt in Triolen (3/4 oder 6/8) ist typisch für Gospel-Musik, da es auch bei langsamen, getragenen Stücken noch eine gewisse Dynamik, einen tänzelnden Charakter behält.</p>
+
+<p>Die erste Zeile bezieht sich auf König David, den Psalmendichter, der auf seiner Harfe spielt. Auf die biblische Bildsprache kommen wir später zurück, denn viel auffälliger ist in der Strophe die Selbstbezüglichkeit.</p>
+
+<p>Benannt nach dem amerikanischen Logiker <a href="https://de.wikipedia.org/wiki/Willard_Van_Orman_Quine">Willard Van Orman Quine</a> prägte <a href="https://de.wikipedia.org/wiki/Douglas_Hofstadter">Douglas Hofstadter</a> den Begriff <em>Quine</em> für ein <a href="https://de.wikipedia.org/wiki/Quine_(Computerprogramm)">selbstbezügliches Computerprogramm</a>, <em>das eine Kopie seiner selbst (üblicherweise seines Quelltextes) als Ausgabe schreibt.</em></p>
+
+<p>Ein Quine in Lisp könnte etwa so aussehen:</p>
+
+<pre>
+((lambda (x)
+  (list x (list (quote quote) x)))
+ (quote
+    (lambda (x)
+      (list x (list (quote quote) x)))))
+</pre>
+
+
+<p>Beim Aufruf ergibt dieses Programm genau die Ausgabe seiner selbst. In Sprachen, die eine leere Eingabedatei als syntaktisch korrektes Programm erlauben, ist ein minimales Quine-Programm denkbar: eine leere Datei, die kompiliert ihren Inhalt, nämlich nichts, ausgibt. Interessanter sind Quines höherer Ordnung, etwa <a href="http://blog.sigfpe.com/2011/01/quine-central.html">dieser mehrstufige Quine</a>: <em>The code below spits out a Haskell program that prints out a Perl program that prints out a Python program that prints out a Ruby program that prints out a C program that prints out a Java program that prints out the original program.</em></p>
+
+<p>In der allerersten Ausgabe der CCC-Zeitschrift <a href="https://de.wikipedia.org/wiki/Die_Datenschleuder">Datenschleuder</a> 1984 gab es eine <a href="http://www.offiziere.ch/trust-us/habi1/136_aufnahme.html">„Aufnahmeprüfung für den C.C.C.“</a> mit der Forderung, einen Quine zu programmieren:</p>
+
+<p><em>Gesucht ist ein Programm in einer beliebigen Programmiersprache, das eine &#8220;rekursive&#8221; Aufgabe erfüllt: Es soll, wenn es läuft, den Programmquelltext (sich selbst) ausgegeben. Triviallösungen wie (unter einigen BASIC&#8217;s möglich) von</em>
+<code>10 LIST</code>
+<em>werden nicht akzeptiert!!!</em></p>
+
+<p>Die erste Stufe von Cohens &#8220;Halleluja&#8221; beinhaltet einen musikalischen Quine und erzeugt damit eine <a href="https://de.wikipedia.org/wiki/Seltsame_Schleife">Seltsame Schleife oder einen Strange Loop</a>, also einen Text, der Aussagen über sich selbst macht und damit möglicherweise  kognitiv ein Paradox erzeugt, das den Text auf eine weitere Ebene hebt. Das bekannte <a href="https://de.wikipedia.org/wiki/L%C3%BCgner-Paradox">Lügner-Paradox</a>, also ein Satz, der seine eigene Falschheit behauptet, ist ein Beispiel für eine Seltsame Schleife. In der ersten Strophe von Halleluja finden wir ein weiteres Beispiel. Die geheime Harmoniefolge, die David auf seiner Laute schlägt und die den Herrn erfreut und mit der er zu seinem eigenen Erstaunen das Halleluja komponiert („<em>the baffled king composing Halleluja</em>“) wird explizit genannt und stellt für das Lied, wenn es als mathematische Funktion gesehen wird, die Ausagbe dar: <em>It goes like this the fourth the fifth, the minor fall and the major lift</em>. Von G ausgehend begleitet den Text dabei die Quarte (C-Dur), die Quinte (D-Dur), der <em>minor fall</em> in die parallele Moll-Tonart (E-Moll) und hinauf ins Dur (C-Dur). Ein musikalischer Quine entsprechend der Harmonielehre, <em>but you don&#8217;t really care for music do you?</em></p>
+
+<p><strong> Zweite Strophe: Bathseda und Delila </strong></p>
+
+<pre>
+G                             Em
+Your faith was strong but you needed proof
+G                   Em
+You saw her bathing on the roof
+    C                            G
+Her beauty and the moonlight overthrew you
+G                /C       D     
+She tied you to a kitchen chair
+   /Em                        /C        D      
+She broke your throne, and she cut your hair
+   /Em(D)              D             Em
+And from your lips she drew the Hallelujah
+     C         Em            C         G-D-G 
+Hallelujah, Hallelujah, Hallelujah, Hallelujah
+</pre>
+
+
+<p>Die zweite Strophe ist vollgestopft mit der Bildsprache der Bibel. Allerdings scheint es sich um eine andere als die hebräische Bibel zu handeln, vielleicht aus einem Paralleluniversum stammend, denn Geschichten werden hier remixt und zusammengeführt, die eigentlich getrennt sind. David, der psalmendichtende König Israels aus der ersten Strophe beobachtet Batheseda auf dem Dach und sieht sie baden, was eine lange Schicksalskette von Ehebruch und Sünde, aber auch die Zeugung des späteren Königs Salomon auslöst (<a href="http://www.bibleserver.com/text/EU/2.Samuel11">2. Samuel 11</a>).</p>
+
+<p>Dann wieder ist König David eigentlich Samson der <a href="https://de.wikipedia.org/wiki/Nasir%C3%A4er">Nasiräer</a> (<a href="http://www.bibleserver.com/text/EU/Richter16%2C4">Richter 16,4</a>), der von Gott von Geburt an mit unbesiegbarer Stärke ausgestattet war, solange er sein Gelübde einhielt, niemals seine Haare schneiden zu lassen (die Parallelen zu den <a href="https://de.wikipedia.org/wiki/Dreadlocks">Dreadlocks</a> der Rastafari-Kultur sind nicht zufällig). Seine Feinde waren vom Volk der Philister, die auch der Region den heutigen arabischen Namen فلسطين‎ Falastīn gaben, auch wenn die jetztige palästinenische Bevölkerung aus Arabern besteht, die mit dem historischen Volk der Philister nichts zu tun haben. Die Fürsten der Philister überedeten Dalila, das Geheimnis seiner Stärke herauszufinden. Als archetypische Figur der Verführerin in der Bibel — die ihren Betrug zu aller Schande sogar für Geld vollzog! — tat Dalila, wie ihr geheissen und entlockte Samsons nach drei Versuchen, in denen er ihr die falsche Antwort gab, das Geheimnis. Sie schor ihm schlafend die Haare und Samson konnte von den Philister besiegt werden. Nach seiner Gefangennahme wurde Samson nach Gaza verschleppt, ein Schicksal das viele Jahrhunderte später Leonard Cohen erspart blieb, als er sich 1973 auf israelischer Seite im Yom-Kippur-Krieg verpflichtete und als Truppenunterhalter in der Sinai-Wüste in ein Feuergefecht geriet.</p>
+
+<p><strong> Dritte Strophe: HaSchem </strong></p>
+
+<pre>
+G                  Em
+You say I took the name in vain
+G            Em
+I don't even know the name
+    C                                G
+But if I did, well really, what's it to you?
+G                       /C        D    
+There's a blaze of light in every word
+  /Em            /C         D      
+It doesn't matter which you heard                    
+   /Em(D)          D        Em
+The holy or the broken Hallelujah
+     C         Em            C          G-D-G 
+Hallelujah, Hallelujah, Hallelujah, Hallelujah
+</pre>
+
+
+<p>Der Erzähler verwehrt sich gegen den Vorwurf, gegen das Gebot „<em>Du sollst den Namen des Herrn, deines Gottes, nicht missbrauchen; denn der Herr lässt den nicht ungestraft, der seinen Namen missbraucht</em>“ (<a href="http://www.bibleserver.com/go.php?lang=de&amp;bible=EU&amp;ref=Ex20%2C7">Exodus 20,7</a>) verstoßen zu haben mit dem Argument, er kenne den Namen ja gar nicht. Mit diesem Unwissen steht er nicht ganz alleine da, denn der Name Gottes (haSchem, השם ‚Der Name‘) ist nach jüdischem Verständnis verloren: Mit der Zerstörung des letzten Tempels im Jahr 70 ging das Wissen um die Aussprache des Namens verloren.</p>
+
+<p>In einem meiner Lieblingsfilme wird die fieberhafte Suche nach dem Namen als mathematische Formel direkt angesprochen. In Darren Aronofskys Film „π“ dreht sich alles um die Suche nach Mustern, die dem vermeintlichen Chaos der Welt zugrunde liegen können: die Fibonacci-Folge ebenso wie das Auf und Ab des Börsenmarktes. Der Mathematiker Max Cohen (noch ein <a href="https://de.wikipedia.org/wiki/Kohanim">Cohen</a>!) vergräbt sich immer wahnhafter in der Suche nach dem Muster, mit katastrophalen Folgen für ihn am Ende. In einer Szene wird er in einem Brooklyner Coffee Shop von einem kabbalistischen Torah-Schüler angesprochen. Dieser versucht ihm zu erklären, dass Hebräisch eine Folge von Zahlen ist; ein Code. In der esoterischen Zahlenmystik erkennt der Mathematiker — vielleicht schon vom Wahnsinn gezeichnet — Parallelen zu seiner eigenen Arbeit:</p>
+
+<iframe width="420" height="315"
+src="http://blog.johl.io//www.youtube.com/embed/WFmWhwyA0NU" frameborder="0"
+allowfullscreen></iframe>
+
+
+<p>Aber vielleicht ist die Suche nach dem Namen auch nicht so wichtig, zumindest für Leonard Cohen. <em>It doesn&#8217;t matter which you heard / The holy or the broken Hallelujah</em> Das wirklich Wichtige kommt erst noch.</p>
+
+<p><strong> Vierte Strophe: Eigentlich geht es um die Liebe </strong></p>
+
+<pre>
+G                Em
+I did my best it wasn't much.
+G                    Em
+I couldn't feel so I learned to touch.
+     C                                G
+I've told the truth, I didn't come to fool you.
+G                  C        D
+And even though it all went wrong,
+     Em               C       D
+I'll stand before the Lord of Song 
+     Em            D               Em
+with nothing on my tongue but Hallelujah
+     C         Em            C         G-D-G 
+Hallelujah, Hallelujah, Hallelujah, Hallelujah
+</pre>
+
+
+<p>Von dem Lied „Halleluja“ existieren über 100 Cover-Versionen. Die meisten von ihnen benutzen nicht die Strophen 1-4 aus diesem Blogpost, sondern eine neuere Version, die von Leonard Cohen auch live gesungen wird. In einem Interview bezeichnete er die neue Version, die sich deutlich von dem Lied auf seinem 1984er Album <em>Various Positions</em> unterscheidet, als das „weltliche Halleluja“. Das Thema der neueren Version ist klar die Liebe und es finden sich Zeilen wie „<em>Now maybe there&#8217;s a god above / but all I ever learned from love / is how to shoot at someone who outdrew you</em>“. In der Album-Version tritt der Aspekt, dass es eigentlich am Ende in erster Linie um die Liebe und die Beziehung zu einem Partner geht, viel weniger deutlich zu Tage.  Dafür gibt es mehr Mathematik und Bilder aus der Bibel, erst in der letzten Strophe wird das Geheimnis aufgedeckt. <em>I did my best it wasn&#8217;t much. / I couldn&#8217;t feel so I learned to touch.</em> Wovon man nicht sprechen kann, das müssen wir lernen zu fühlen.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Anfrage nach dem Hamburger Transparenzgesetz]]></title>
@@ -485,25 +622,6 @@ sich der erste logische Fehler?</p>
 
 <blockquote><p>Can you have both secret ballots and verifiable results?</p><p>Yes. Crypto can do seemingly impossible things. One of those things is<br/>having a voting system where ballot is anonymous (you can&#8217;t prove how<br/>you voted) and yet you can make sure that your ballot is included<br/>unmodified in the final tally! Crypto voting systems are often called<br/>E2E or end-to-end verifiable. Scantegrity is one, there are others.<br/>Scantegrity is the only one that has been used in an actual governmental<br/>election (two municipal elections in Takoma Park, Maryland, USA).</p></blockquote>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Oh! Onigiri]]></title>
-    <link href="http://blog.johl.io/blog/2013/02/06/onigiri/"/>
-    <updated>2013-02-06T04:22:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2013/02/06/onigiri</id>
-    <content type="html"><![CDATA[<p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/1/1c/Salmon_onigiri_by_yomi955.jpg" width="450" title="'By yomi955 (Flickr) CC-BY-2.0 via Wikimedia Commons'" >
-Es besteht die Möglichkeit, dass ich mich für den nächsten Hype entschuldigen muss, wenn die Zeit gekommen ist. Die Tatsache, dass ich Bubble Tea vor einer gefühlten Ewigkeit (ca. letzter Sommer) noch abfeierte, weil es ihn endlich häufiger so zu kaufen gab, wie ich ihn aus New Yorks Chinatown kannte und liebte, lastet immer noch ein bisschen auf mir und mein Enthusiasmus tut mir leid. Ich bin voll in die Hipster-Falle getappt, plötzlich wurden die Innenstädte von Bubble Tea überschwemmt, Läden machten auf und gingen kurz danach ein und am Schluß gab es überzuckerten Schlabber mit Perlen sogar bei McDonald&#8217;s — of all places. Bitte verzeiht mir.</p>
-
-<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/d/d7/Rice_balls_of_Seven-Eleven.jpg" width="300" title="'By Corpse Reviver (Own work) GFDL or CC-BY-SA-3.0 via Wikimedia Commons'" >
-Jetzt also Onigiri. Japanische Reisbällchen, oft in Dreiecksform, gefüllt mit Sachen (Lachs oder Hühnchen oder Sesam und Gemüse), bisweilen umhüllt von einem Algenblatt: Das bessere Butterbrot, ab zwei oder drei Stück erstaunlich sättigend, was wohl am Reis liegt. In Japan sind Onigiri viel verbreiteter als alles, was wir hier an japanischem Essen zu kaufen bekommen: Oft daheim zubereitet werden sie zur Arbeit mitgebracht, im Supermarkt werden sie in langen Reihen im Kühlregal fertig angeboten. Aus Korea kenne ich sie als Chumokbap (추믁밥), was &#8220;Faust-Reis&#8221; heisst. Ich mag Onigiri und ich habe mich gefreut, als ich nur kurze Zeit hintereinander zwei Möglichkeiten in Berlin entdeckt habe, um mir den Bauch mit ihnen vollzuschlagen.</p>
-
-<p>Da gibt es zunächst am <a href="http://de.wikipedia.org/wiki/U-Bahnhof_Sch%C3%B6nleinstra%C3%9Fe">U-Bahnhof Schönleinstraße</a> den Onigiri-Stand <a href="http://rice-up.de/">Rice Up</a>, den ich deshalb als ersten erwähne, weil er jeden Morgen auch ein potenzielles Anlaufziel auf dem Weg zur Arbeit für mich darstellt. Schön Bio alles, etwas kleine (und dafür teure) Portionen, aber durchaus gut: Jeden Tag vegane Onigiri und welche mit Fleisch oder Fisch (Lachs mit scharfer Pflaume ist ein prima Frühstück). Natürlich ist der Stand gut zu erreichen, weil er ja genau auf dem Bahnsteig liegt, aber insgesamt gehen bei dem Angebot schon leichte Hipster-Alarmglocken los. Sei&#8217;s drum. Es schmeckt.</p>
-
-<p>Dann gibt es die unglaublich nette Natsuko, die mit ihrem <a href="http://samuraisnack.com/">Samurai Snack</a> eine lustige Idee verfolgt: Zur Mittagszeit liefert sie an Büros (hauptsächlich Start-Ups, wenn ich das richtig verstanden habe). Wenn sie beladen mit ihren Onigiri, die man tags zuvor über ein Formular per Mail bestellt, in unserem Büro auftaucht, pünktlich um 11:30 Uhr, ist die Freude groß. Statt irgendwelchem Fast-Food-Quatsch einfach mal Onigiri in der Mittagspause, da gibt es eigentlich keine Gegenargumente, zumal ihre Onigiri nur die Hälfte von denen an der Schönleinstraße kosten, dafür aber größer und viel leckerer sind. Die ersten Male gibt es die Onigiri sogar kostenlos, wenn man ihr Feedback und Kommentare gibt. Natsuko holt sich Rezepte für Onigiri regelmäßig bei ihrer Mutter in Japan ab und ich finde man schmeckt die Mühe, die sie in ihr kleines Unternehmen steckt.</p>
-
-<p>In einer Stadt mit gleich zwei Onigiri-Optionen zu leben ist irgendwie auch Luxus ausserhalb Ostasiens. Hoffen wir mal, dass der Hypezirkel bis zum Absturz in die Peinlichkeit diesmal nicht ganz so rasant verläuft wie bei Bubble Tea.</p>
 ]]></content>
   </entry>
   
