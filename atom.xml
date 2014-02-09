@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-01-12T01:47:23+01:00</updated>
+  <updated>2014-02-09T10:41:00+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Links zwischendurch]]></title>
+    <link href="http://blog.johl.io/blog/2014/02/09/links/"/>
+    <updated>2014-02-09T10:35:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2014/02/09/links</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://zulko.github.io/blog/2014/01/23/making-animated-gifs-from-video-files-with-python/">Making GIFs From Video Files With
+Python</a></li>
+<li><a href="http://www.math.nus.edu.sg/aslaksen/calendar/chinese.shtml">The Mathematics of the Chinese
+Calendar</a></li>
+<li><a href="http://pcg.wikidot.com/pcg-algorithm:dungeon-generation">Procedural Content Generation Wiki: Dungeon
+Generation</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Pad-Thai-Tag]]></title>
@@ -635,17 +652,6 @@ die wir zu respektieren haben.</p>
 
 <p><img class="left" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Typing_monkey.svg">
 Hier sind zwei Fragen für juristisch interessierte Futurologen: Wenn on Demand von einer unendlichen Anzahl von Affen (oder Algorithmen) jeder beliebige Text, jede mögliche Buchstabenkombination verlegt und bei Amazon verkauft werden kann, wer bekommt dann die Einkünfte aus dem Leistungsschutzrecht für automatisch generierte Texte? Und: Wenn mit einer gewissen Wahrscheinlichkeit irgendwann der Affe/Algorithmus &#8220;Mein Kampf&#8221; generiert und bei Amazon zum Verkauf anbietet, macht sich der Affe/Algorithmus dann strafbar? Schirrmacher, hilf!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Leichter Neid zum Berlin Geekettes Hackathon]]></title>
-    <link href="http://blog.johl.io/blog/2013/03/03/bghackathon/"/>
-    <updated>2013-03-03T19:39:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2013/03/03/bghackathon</id>
-    <content type="html"><![CDATA[<p>Ich habe heute kurz zum Abschluß, wo auch Gäste zugelassen waren, ein paar Präsentationen von Projekten angesehen, die über das Wochenende beim <a href="http://berlingeekettes.github.com/hackathon/">Berlin Geekettes Hackathon</a> entstanden sind. Ich bin geflasht und beeindruckt. Es gab einen morsenden Mini-Hubschrauber, eine E-Book-Leseapp für Hörbücher, Gürtelschnallen zum Tetris-Spielen, einen Wecker, der bei jedem mißlungenen Versuch ihn abzustellen immer schlechtere Musik spielte, eine App die ausgehend von Etsy-Einkäufen Immobilien vorschlägt und vieles mehr, was in ca. 24 Stunden entstanden ist.</p>
-
-<p>Deutschlands (wahrscheinlich) erster Women-Only-Hackathon, den die <a href="http://berlingeekettes.com/">Berlin Geekettes</a> organisiert wurde, schien für all die kreativen Hackerinnen dort <a href="http://bghackathon.tumblr.com/">ein großer Spaß</a> gewesen zu sein. Ich war auf eine sehr schöne Art und Weise neidisch darauf, einfach mal nicht gemeint zu sein, wenn es um den kreativen Umgang mit Technik geht. Ich wünsche mir mehr Momente dieses Neids. Irgendwann in ferner Zukunft könnte es dann auch auch mal sein, dass so ein Neid nicht mehr nötig ist. <a href="http://www.youtube.com/watch?v=wKu7RxpOo2Y">Aber das ist ein Märchen von Übermorgen</a>.</p>
 ]]></content>
   </entry>
   
