@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-03-19T13:41:40+01:00</updated>
+  <updated>2014-05-29T22:07:53+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dinge]]></title>
+    <link href="http://blog.johl.io/blog/2014/05/29/dinge/"/>
+    <updated>2014-05-29T18:42:00+02:00</updated>
+    <id>http://blog.johl.io/blog/2014/05/29/dinge</id>
+    <content type="html"><![CDATA[<p>Einigen Dingen ist etwas einbeschrieben:</p>
+
+<blockquote><p>Wie manchen Dingen Gesten, und damit Weisen des Verhaltens einbeschrieben sind. Pantoffel — »Schlappen«, Slippers — sind darauf berechnet, daß man ohne Hilfe der Hand mit den Füßen hineinschlüpft. Sie sind Denkmale des Hasses gegen das sich Bücken.</p><footer><strong>Theodor W. Adorno</strong><cite>Minima Moralia</cite></footer></blockquote>
+
+
+<p>Andere Dinge hingegen werden durch kreativ-kritische Aneignung von dem Kontext befreit, in denen ihnen ein intendierter Zweck einbeschrieben ist.</p>
+
+<p>Eine Dose mit Chips von <a href="http://www.oreillynet.com/cs/weblog/view/wlg/448">Pringels wird zur Wavelan-Yagi-Antenne</a> — auch wenn Pringels-Dosen sich gar nicht am besten für <a href="https://en.wikipedia.org/wiki/Cantenna">diesen Antennentyp</a> eignen.</p>
+
+<p>Und eine <a href="https://en.wikipedia.org/wiki/Altoids">Dose mit Altoids-Mints</a> ist für mich dann kein Behälter für Minz-Bonbons mehr. In erster Linie sehe ich es es als <a href="http://tryingtodotheprojects.blogspot.de/2008/04/arduino-altoids-tin.html">Gehäuse für Arduino-Basteleien</a>.</p>
+
+<p>Hacken ist das selbstbewußte Entfernen der Einbeschreibungen von Dingen.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Es tut sich was]]></title>
@@ -602,53 +622,6 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Plötzlich Semikolon — Automatic Semicolon Insertion]]></title>
-    <link href="http://blog.johl.io/blog/2013/03/29/semikolon/"/>
-    <updated>2013-03-29T21:01:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2013/03/29/semikolon</id>
-    <content type="html"><![CDATA[<p>Für ein Buch, an dem ich gerade arbeite, war der folgende Text zu lang und zu ausführlich. Wegwerfen wollte ich ihn aber nicht, so dass er hier im Blog landete, in dem schon lange nichts mehr aus dem Bereich Programmieren vorkam.</p>
-
-<h2>JavaScript und Semikolons</h2>
-
-<p>Das automatische Einfügen von Semikolons (<em>Automatic Semicolon Insertion</em>, ASI) ist eine der verwirrendsten und umstrittensten Eigenschaften von JavaScript. Die Regeln für das Einfügen von Semikolons beginnen im <a href="http://ecma-international.org/ecma-262/5.1/">Sprachstandard ECMA 262</a> recht simpel: Wenn ein gültiges JavaScript-Statement von einem anderen gültigen JavaScript-Statement durch einen Zeilenumbruch (<em>linefeed</em>) oder das Zeichen &#8221;<code>}</code>&#8221; getrennt wird, dann wird ein Semikolon vor dem Trennzeichen eingesetzt. Am Ende einer Zeile oder eines Blocks können Semikolons also normalerweise weggelassen werden.</p>
-
-<p>Ein Semikolon kann zudem am Ende eines Programms weggelassen werden. Es muss also nicht als letztes Zeichen in der Datei stehen. Dies sind schon alle einfacheren Bedingungen für ASI.  Es gilt zudem die Regel, dass ein Semikolon niemals automatisch eingefügt wird (und damit auch nicht weggelassen werden kann), wenn dadurch ein leeres Statement zustande käme. Auch in der Klammer mit den Bedingungen einer <code>for</code>-Schleife wird niemals automatisch ein Semikolon ergänzt.</p>
-
-<p>Die Postfix-Ausdrücke <code>++</code> und <code>--</code> und die Befehle <code>continue</code>, <code>break</code>, <code>return</code> und <code>throw</code> haben ihre eigenen Regeln.  Wenn <code>++</code> oder <code>--</code> als Postfix-Operator geparst werden können und sie vom vorhergehenden Zeichen durch einen Zeilenumbruch getrennt werden, dann fügt JavaScript vor ihnen ein Semikolon ein.</p>
-
-<p>  <code>a = b</code><br/>
-  <code>++c</code></p>
-
-<p>wird also zu:</p>
-
-<p>  <code>a = b;</code><br/>
-  <code>++c;</code></p>
-
-<p>Wenn bei continue, break, return und throw das nächste Zeichen erst nach einem Zeilenumbruch folgt, dann fügt JavaScript nach diesen Befehlen ein Semikolon ein.</p>
-
-<p>  <code>return</code><br/>
-  <code>a + b</code></p>
-
-<p>wird demnach zu:</p>
-
-<p>  <code>return;</code><br/>
-  <code>a + b;</code></p>
-
-<p>Rund um die ASI ist ein geradezu religiöser Streit in der JavaScript-Community entstanden. Ursprünglich dachte Brendan Eich, dass sich mit ASI die Anzahl der Fehler beim Parsen von Programmcode verringern lassen — JavaScript war schließlich für weniger versierte Programmiererinnen und Programmierer gedacht. Douglas Crockford, Autor des wahrscheinlich meistgelesenen JavaScript Stil-Handbuchs <a href="http://www.oreilly.de/catalog/9780596517748/">&#8220;JavaScript: The Good Parts&#8221;</a> und einflussreicher Entwickler von Technologien wie JSON (JavaScript Object Notation, also der Serialisierung von Daten in JavaScript), empfiehlt, ASI vollständig zu missachten und jedes Statement einfach mit einem Semikolon abzuschließen, ohne auf die eingebaute Magie des Parsers zu vertrauen.</p>
-
-<p>Demgegenüber steht das meist beobachtete Projekt auf Github, das Framework <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a>, das in seinem JavaScript-Code völlig auf Semikolons verzichtet. Crockford kommentierte das renommierte Bootstrap-Projekt in Hinblick auf seinen JavaScript-Komprimierer JSMin drastisch: &#8221;<em>That is insanely stupid code.  I am not going to dumb down JSMin for this case. (&#8230;) Learn to use semicolons properly. ! is not intended to be a statement separator. ; is.</em>&#8221;&#8221;</p>
-
-<p>Woraufhin der Bootstrap-Entwickler Jacob Thornton antwortete:
-&#8221;<em>I have learned to use them, that’s why there isn’t one present.</em>&#8221;</p>
-
-<p>Aus praktischen Gründen empfiehlt es sich, sich hauptsächlich an Crockford zu halten. Allerdings
-sollten wir zur
-Kenntnis nehmen, dass es auch andere religiöse Ansichten zu Semikolons gibt,
-die wir zu respektieren haben.</p>
 ]]></content>
   </entry>
   
