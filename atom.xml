@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-11-07T12:12:16+01:00</updated>
+  <updated>2014-11-07T13:27:28+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Schnelle Links]]></title>
+    <link href="http://blog.johl.io/blog/2014/11/07/links/"/>
+    <updated>2014-11-07T12:55:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2014/11/07/links</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://dangerousminds.net/comments/codex_seraphinianus_a_new_edition_of_the_strangest_book_in_the_world">Codex Seraphinianus: A new edition of the strangest book in the world</a></li>
+<li><a href="http://chrishadfield.ca/space-oddity/">When David Bowie wrote and recorded Space Oddity in 1969, I wonder if he ever imagined it being played in orbit?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/How_does_one_patch_KDE2_under_FreeBSD%3F">&#8220;How does one patch KDE2 under FreeBSD?&#8221; (Russian: &#8220;Как пропатчить KDE2 под FreeBSD?&#8221;), an internet meme in Russian Internet culture</a></li>
+<li><a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">What&#8217;s the matter with PGP?</a></li>
+<li><a href="http://pastebin.com/HrcErVWe">Pastebin: Recommendations for the Hacktivist Community</a>(via <a href="http://www.reddit.com/r/blackhat/comments/2ljjey/recommendations_for_the_hacktivist_community/">reddit</a>)</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Praktische Fragen der Ethik in der Software-Entwicklung]]></title>
@@ -594,30 +610,6 @@ entwickelt</a> <br/><em>Three engineers made an app for the &#8216;Íslendingab�
 <li><a href="http://derstandard.at/1363708039372/Betrachten-von-Tierfotos-steigert-die-Produktivitaet">Betrachten von Tierfotos steigert die
 Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir wollen diesen Dingen näher kommen, achten mehr auf Details&#8221;, sagt Nittono im Interview mit der &#8220;Zeit&#8221;. Alleine durch das Betrachten entstehe ein Zustand fokussierter Aufmerksamkeit, der über das Anschauen selbst hinausgeht, so der Forscher. Die Erklärung dafür heißt &#8220;kawaii&#8221;, was in Japan so viel wie die Kraft des Niedlichen bedeutet.</em></li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Python und die Liebe]]></title>
-    <link href="http://blog.johl.io/blog/2013/04/01/python-und-die-liebe/"/>
-    <updated>2013-04-01T00:53:00+02:00</updated>
-    <id>http://blog.johl.io/blog/2013/04/01/python-und-die-liebe</id>
-    <content type="html"><![CDATA[
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># Python on love:</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">this</span>
-</span><span class='line'><span class="n">love</span> <span class="o">=</span> <span class="n">this</span>
-</span><span class='line'><span class="n">this</span> <span class="ow">is</span> <span class="n">love</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="n">love</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
 
 ]]></content>
   </entry>

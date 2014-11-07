@@ -9,9 +9,7 @@
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="Welche Farbe hat das Universum? Cosmic Latte
-Falls jemand gedacht hat, MEGA von Kim Dotcom sei sicher: MEGApwn
-Schwarze Zukunft: Afrofuturism: The &hellip;">
+  <meta name="description" content="Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won’t usually need your flowcharts &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +76,137 @@ Schwarze Zukunft: Afrofuturism: The &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/20/autovivication/">Autovivication in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2013-10-20T14:19:00+02:00" pubdate>Oct 20<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won’t usually need your flowcharts; they’ll be obvious.</p><footer><strong>Fred Brooks</strong><cite>The Mythical Man-Month: Essays on Software Engineering</cite></footer></blockquote>
+
+
+<p>Datenstrukturen sind Magie. In einer magischen, fast vergessenen Sprache wie Perl sind sie sogar noch ein bisschen magischer, um nicht zu sagen: frankensteinhaft. Die Rede ist von Autovivication.</p>
+
+<p>Wenn ich einen langen komplexen Pfad in meinem Dateisystem anlege, der ein Directory in einem noch zu erstellenden Directory erstellt, möchte mein Unix-System nichts davon wissen:</p>
+
+<pre><code>[~]$ mkdir a/b/c
+mkdir: a/b: No such file or directory
+</code></pre>
+
+<p><a title="By Universal Studios (Dr. Macro) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AFrankenstein's_monster_(Boris_Karloff).jpg"><img width="256" align="left" style="margin-right: 10px" alt="Frankenstein&#039;s monster (Boris Karloff)" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Frankenstein%27s_monster_%28Boris_Karloff%29.jpg/256px-Frankenstein%27s_monster_%28Boris_Karloff%29.jpg"></a> In anderen Betriebssystemen wäre das anders. Die fehlenden, implizit genannten Schachtelungen, würden automatisch erzeugt. Wie von Geisterhand würden sie ins Leben gerufen werden. Es lebt! <strong>Ergänzung</strong>: <em>Ganz richtig in den Kommentaren bemerkt:</em> <code>mkdir -p a/b/c</code> <em>bringt unter Unix natürlich auch das erwünschte Ergebnis</em>.</p>
+
+<p>Autovivication ist je nach Erwartungshaltung an die Programmiersprache eine überraschende oder logische Eigenschaft von verschachelten Datentypen wie Hashes in Perl, die auch als assoziative Arrays oder in Python-Lingo als Dictionaries bekannt sind. Wenn ich ein Elemente zuweise oder abfrage, das in einem anderen Element geschachtelt ist, das ich bisher noch nicht belegt habe, wird das implizit benannte Element der höheren Schachtelungstiefe automisch angelegt oder eben belebt.</p>
+
+<p>Die automatische Belebung hilft zum Beispiel, wenn ich mit einem Klumpen an Daten arbeite, vielleicht aus einer Open-Data-Quelle wie der <a href="http://daten.berlin.de/datensaetze/als-naturdenkmale-gesch%C3%BCtzte-findlinge-charlottenburg-wilmersdorf">Liste der als Naturdenkmale geschützte Findlinge in Charlottenburg-Wilmersdorf</a> oder einer Abfrage <a href="http://www.wikidata.org/w/api.php?action=wbgetentities&amp;sites=dewiki&amp;titles=Ada%20Lovelace&amp;format=jsonfm&amp;languages=de">bei Wikidata</a>. In dem Klumpen können diverse Verschachtelungstiefen bestehen, ohne dass ich die dahinterstehende Struktur im Detail kenne oder kennen möchte. Wenn ich die Struktur naiv in ein assoziatives Array hineinschlürfe, geht das mit Perl, in anderen Sprachen würde ich höflich, aber bestimmt darauf hingewiesen werden, dass ich einem noch nicht definierten Key einen Wert zuweisen will und das Programm stürzt typischerweise ab. Besonders drollig stellt sich hier PHP mit einem Verhalten an, das als Pseudo-Autovivication bezeichnet werden könnte: Zuweisungen an noch nicht vorher definierte Keys beliebiger Schachtelungstiefe gehen (wie in Perl), Abfragen von nicht definierten Keys gehen nicht (wie in anderen Sprachen).</p>
+
+<p>Schauen wir uns doch mal Autovivication in Perl an:</p>
+
+<figure class='code'><figcaption><span>Autovivication in Perl</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="c1">#!/usr/bin/perl -w</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
+</span><span class='line'><span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">my</span> <span class="nv">%data</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$data</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="mi">2</span><span class="p">}{</span><span class="mi">3</span><span class="p">}</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class='line'><span class="k">print</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">%data</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Das CPAN-Modul <code>Data::Dumper</code> ist möglicherweise vorher noch mit <code>cpan install Data::Dumper</code> zu installieren, bevor es benutzt werden kann. Es dient einfach dazu, eine Datenstruktur in Perl zu inspizieren oder formatiert auszugeben. Mit <code>my %data;</code> definieren wir ein assoziatives Array (Hash) namens data. <code>$data{1}{2}{3} = 10;</code> weist diesem Hash den Wert 10 zu für den Key 3, der in einem Hash mit dem Key 2 steckt, das wiederum in dem Hash-Key 1 von <code>data</code> steckt. Für diejenigen, die in der schwarzen Magie von Perl nicht (mehr) so bewandert sind: Bei der Zuweisung wird aus dem Hash-Vorzeichen <code>%</code> ein <code>$</code>, weil die Variable hier in einem <a href="https://de.wikipedia.org/wiki/Skalare_Variable">skalaren Kontext</a> benutzt wird.</p>
+
+<p>Die Ausgabe ergibt dann:</p>
+
+<pre><code>$VAR1 = '1';
+$VAR2 = {
+          '2' =&gt; {
+                   '3' =&gt; 10
+                 }
+        };
+</code></pre>
+
+<p>In Python wäre der entsprechende Code nicht möglich und würde mit einem Fehler abbrechen:</p>
+
+<pre><code>&gt;&gt;&gt; data = {}
+&gt;&gt;&gt; data[1][2][3] = 10
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+KeyError: 1
+</code></pre>
+
+<p>Da für die Keys der höheren Schachtelungstiefe noch nichts angelegt wurde, wird die Ausnahme KeyError geworfen und das Programm beendet.</p>
+
+<p>In seiner Standard-Library hat Python allerdings im Modul <code>collections</code> auch den Datentyp <code>defaultdict</code>. Gedacht ist er dafür, um Dictionaries zu erzeugen, bei denen ein Defaultwert schon vorgegeben ist — wenn der Wert nicht definiert ist, soll zum Beispiel standardmäßig 0 als Wert angelegt werden.</p>
+
+<p>Indem wir <code>defaultdict</code> auf leicht kreative Weise mißbrauchen, können wir Autovivication in Python bekommen. Was wäre, wenn wir die Datenstruktur rekursiv definieren und als Defaultwert eine Funktionsreferenz auf eine die Datenstruktur selbst erzeugende Funktion angeben?</p>
+
+<p>Wenn sich die leichte Verwirrung im Kopf über den letzten Satz und rekursiv definierte Datenstrukturen gelegt haben, können wir uns diese Lösung auch mal einfach ansehen:</p>
+
+<figure class='code'><figcaption><span>Autovivication in Python</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+</span><span class='line'><span class="n">AutovivicationDict</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">AutovivicationDict</span><span class="p">)</span>
+</span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="n">AutovivicationDict</span><span class="p">()</span>
+</span><span class='line'><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hurra, Python kann jetzt Autovivication! Allerdings sind die auf diese Weise erzeugten Dictionaries immer noch ziemlich besonders. Wir können (in beliebiger Schachtelungstiefe) zuweisen und abfragen, aber dass es kein herkömmliches Dictionary ist, stellen wir fest, wenn wir es uns einmal ansehen:</p>
+
+<pre><code>&gt;&gt;&gt; data
+defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {2: defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {3: 10})})})
+</code></pre>
+
+<p>Huch, da ist ja alles voller Referenzen auf eine <a href="https://de.wikipedia.org/wiki/Anonyme_Funktion">anonyme Funktion</a>! Für die meisten Anwendungen sollte das keinen Unterschied machen, mit welchem Wert das <code>defaultdict</code> gefüllt wird. Wenn wir allerdings eine Umwandlung unseres speziellen autovivizierten Dictionaries in ein herkömmliches Dictionary brauchen (etwa, um daraus JSON zu machen), brauchen wir noch eine Umwandlungsfunktion. Weil wir gerade so schön im Flow sind, definieren wir diese auch wieder rekursiv und unter Einsatz von <code>lambda</code>:</p>
+
+<figure class='code'><figcaption><span>dictify</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">dictify</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dd</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">dictify</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">dd</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">defaultdict</span><span class="p">)</span> <span class="k">else</span> <span class="n">dd</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Und jetzt haben wir hier ein ganz normales Dictionary:</p>
+
+<pre><code>&gt;&gt;&gt; dictify(data)
+{1: {2: {3: 10}}}
+</code></pre>
+
+<p>Wie bereits eingangs erwähnt: Datenstrukturen sind magisch.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -465,52 +594,6 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/01/python-und-die-liebe/">Python und die Liebe</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2013-04-01T00:53:00+02:00" pubdate>Apr 1<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># Python on love:</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">this</span>
-</span><span class='line'><span class="n">love</span> <span class="o">=</span> <span class="n">this</span>
-</span><span class='line'><span class="n">this</span> <span class="ow">is</span> <span class="n">love</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="n">love</span>
-</span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -534,6 +617,10 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/07/links/">Schnelle Links</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/07/ethik/">Praktische Fragen der Ethik in der Software-Entwicklung</a>
       </li>
     
@@ -547,10 +634,6 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
     
       <li class="post">
         <a href="/blog/2014/02/09/links/">Links zwischendurch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/11/pad-thai/">Pad-Thai-Tag</a>
       </li>
     
   </ul>
