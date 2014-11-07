@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-07-09T14:56:02+02:00</updated>
+  <updated>2014-11-07T12:12:16+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Praktische Fragen der Ethik in der Software-Entwicklung]]></title>
+    <link href="http://blog.johl.io/blog/2014/11/07/ethik/"/>
+    <updated>2014-11-07T12:04:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2014/11/07/ethik</id>
+    <content type="html"><![CDATA[<blockquote><p>It should be noted that no ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. Basic professional ethics would instead require him to write a DestroyCity procedure, to which Baghdad could be given as a parameter.</p><footer><strong>Nathaniel Borenstein</strong><cite><a href='http://www.guppylake.com/~nsb/CSCW-ATOMICMAIL.txt'>Computational Mail as Network Infrastructure for Computer-Supported Cooperative Work</a></cite></footer></blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dinge]]></title>
@@ -606,19 +616,6 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
 </span><span class='line'><span class="n">this</span> <span class="ow">is</span> <span class="n">love</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">,</span> <span class="n">love</span> <span class="ow">is</span> <span class="n">love</span>
 </span><span class='line'><span class="o">&gt;&gt;</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Was mag es sein?]]></title>
-    <link href="http://blog.johl.io/blog/2013/03/31/was-mag-es-sein%3F/"/>
-    <updated>2013-03-31T22:23:00+02:00</updated>
-    <id>http://blog.johl.io/blog/2013/03/31/was-mag-es-sein?</id>
-    <content type="html"><![CDATA[<div><script src='https://gist.github.com/5281890.js?file='></script>
-<noscript><pre><code></code></pre></noscript></div>
 
 
 
