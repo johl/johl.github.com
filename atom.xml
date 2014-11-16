@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-11-16T13:11:28+01:00</updated>
+  <updated>2014-11-16T13:14:58+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -19,6 +19,7 @@
     <updated>2014-11-16T13:06:00+01:00</updated>
     <id>http://blog.johl.io/blog/2014/11/16/links</id>
     <content type="html"><![CDATA[<ul>
+<li><a href="https://github.com/mapmeld/profanity65#profanity65">Encrypt your e-mail with PGP and random profanity</a></li>
 <li><a href="http://learnlispthehardway.org/">Learn Lisp The Hard Way</a></li>
 <li><a href="https://wwwwwwwwwwwwwwwwwwwwww.bitnik.org/r/">&#8220;The Random Darknet Shopper is an automated online shopping bot which we provide with a budget of $100 in Bitcoins per week. Once a week the bot goes on shopping spree in the deep web where it randomly choses and purchases one item and has it mailed to us.&#8221;</a></li>
 <li><a href="http://www.washingtonpost.com/news/storyline/wp/2014/11/11/the-mathematician-who-proved-why-hipsters-all-look-alike/">The mathematician who proved why hipsters all look alike: What brain neurons tell us about the &#8216;hipster effect&#8217; when all contrarians end up looking the same</a></li>
