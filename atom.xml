@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-11-16T13:14:58+01:00</updated>
+  <updated>2014-11-17T22:12:27+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,256 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Die Cola oder das Cola? Mediawiki APIs hacken]]></title>
+    <link href="http://blog.johl.io/blog/2014/11/17/mediawiki-api/"/>
+    <updated>2014-11-17T22:10:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2014/11/17/mediawiki-api</id>
+    <content type="html"><![CDATA[<p>Die Web-API von Mediawiki (und damit von den meisten Wikimedia-Projekten) ist zwar nicht gerade versteckt, aber meiner Meinung nach viel zu unbekannt. In loser Folge werde ich ein paar Hacks mit APIs für verschiedene Projekte vorstellen, auch um dazu anzuregen, selbst mit der Infrastruktur zu spielen.</p>
+
+<h3>Die Web-API von Mediawiki</h3>
+
+<p>Mediawiki hat eine RESTful Web-API. Leider ist API im Mediawiki-Umfeld ein mehrfach belegtes Wort, so dass es auch eine API gibt, um eigene Erweiterungen in PHP zu schreiben; diese API meine ich in dem Fall nicht, sondern die Schnittstelle, mit der sich Daten und Inhalte per <code>HTTP</code> aus Mediawiki holen lassen.</p>
+
+<p>Zunächst gibt es da einen Endpunkt. Bei den Wikimedia-Projekten liegt dieser unter <code>/w/api.php</code>, bei dem unten benutzten <code>Wiktionary</code> also unter <code>https://de.wiktionary.org/w/api.php</code>. Praktischerweise ist der Endpunkt für die API-Calls auch gleich eine URL zur Dokumentation. Einfach den Endpunkt im Browser eingeben es erscheint eine Seite, auf der die möglichen Calls verzeichnet sind und auch mit Beispielen erklärt werden.</p>
+
+<p>Ein vollständiger API-Call könnte etwa so aussehen:</p>
+
+<p><code>https://de.wiktionary.org/w/api.php?format=json&amp;action=query&amp;prop=revisions&amp;rvprop=content&amp;titles=Cola</code></p>
+
+<p>Schauen wir uns den API-Call mal genauer an und zerlegen ihn in seine Einzelteile.</p>
+
+<h4>Das Format für die Serialisierung</h4>
+
+<p><code>format=json</code></p>
+
+<p>Hiermit sagen wir dem Wikimedia-Web-Service, dass wir den Rückgabewert gern als <code>JSON</code> formatiert bekommen wollen. Alternativ können wir zur Anzeige im Webbrowser das auch schön formatiert mit dem Aufruf <code>format=jsonfm</code> bekommen – das ist manchmal für das Debugging übersichtlicher und hilfreicher. Die API unterstützt noch andere Ausgabeformate wie <code>WDDX</code>, <code>XML</code>, <code>YAML</code> und eine native PHP-Serialisierung, aber möglicherweise werde diese in Zukunft nicht mehr bedient. <code>JSON</code> wird stark präferiert und sollte wenn immer möglich benutzt werden.</p>
+
+<h4>Die Action</h4>
+
+<p><code>action=query</code></p>
+
+<p>Die &#8220;Action&#8221;, also sozusagen das Verb, ist der eigentliche Befehl, der aufgerufen wird. Es gibt etliche solche Actions, die in der Mediawiki-API dokumentiert sind, Extensions können noch weitere Actions hinzufügen, die Actions zu Wikidata etwa beginnen mit &#8220;wb&#8221; für <a href="http://wikiba.se/">Wikibase</a>. Hier benutzen wir <code>query</code>zur Abfrage von Daten.</p>
+
+<p>Die Action <code>query</code> ist selbst wieder umfangreich dokumentiert, wir
+schauen uns hier ein paar beispielhafte Parameter an.</p>
+
+<h4>Action-spezifische Parameter</h4>
+
+<p><code>titles=Cola</code></p>
+
+<p>Wir fragen hier die API nach den Daten einer Wiki-Seite mit dem Titel &#8220;Cola&#8221;. In der Abfrage werden Titel URL-kodiert, wenn der Titel also ein Leerzeichen enthält, wird dieses zu <code>%20</code>. Wenn mehrere Seiten gleichzeitig abgefragt werden können (und sollten) sie kombiniert werden, um nicht durch mehrere Abfragen hintereinander die Netzwerklast unnötig zu erhöhen: <code>titles=PageA|PageB|PageC</code></p>
+
+<p><code>prop=revisions</code></p>
+
+<p>Mit diesem Parameter können wir eine Revision der Seite angeben. Wenn wir keine weiteren Informationen zur Revision angeben bekommen wir die aktuelle Version der Seite.</p>
+
+<p><code>rvprop=content</code></p>
+
+<p>Mit diesem Parameter sagen wir der API, dass wir den Inhalt der Seite haben wollen. Hätten wir stattdessen zum Beispiel <code>rvprop=content|user</code> angegen, bekämen wir den Inhalt un den Benutzer, der die letzte Änderung vorgenommen hat.</p>
+
+<p>Es gibt über die API und mögliche Parameter und Actions noch viel mehr zu sagen, aber als Beispiel reicht das erstmal. Die Dokumentation zur API ist noch viel umfangreicher. Ein guter Einstiegspunkt ist die <a href="https://www.mediawiki.org/wiki/API:Main_page">Dokumentation auf Mediawiki</a>, die ich hier teilweise übersetzt habe.</p>
+
+<p>Eine gute Einführung in die API gibt es auch als Video:</p>
+
+<iframe src="https://commons.wikimedia.org/wiki/File%3AThe_MediaWiki_Web_API_and_How_to_use_it_-_San_Francisco_Wikipedia_Hackathon_2012.ogv?embedplayer=yes" width="512" height="288" frameborder="0" ></iframe>
+
+
+<div class="description mw-content-ltr en" dir="ltr" lang="en"  style="font-size: small;">Video from the <a href="http://blog.johl.io//www.mediawiki.org/wiki/San_Francisco_Hackathon_2012" class="extiw" title="mw:San Francisco Hackathon 2012">San Francisco Hackathon 2012</a>: How to use the <a href="http://blog.johl.io//www.mediawiki.org/wiki/API" class="extiw" title="mw:API">MediaWiki API</a>. Speaker is <a href="https://commons.wikimedia.org/w/index.php?title=User:Catrope&amp;action=edit&amp;redlink=1" class="new" title="User:Catrope (page does not exist)">Roan Kattouw</a>, facilitated by <a href="https://commons.wikimedia.org/wiki/User:Sumanah" title="User:Sumanah">Sumana Harihareswara</a>. <a class="external text" href="https://www.mediawiki.org/wiki/API/Tutorial">Tutorial reference includes useful links and instructions.</a></div>
+
+
+<p></p>
+
+
+<h3>Artikel von Substantiven mit <code>migrationsschatten.py</code> abfragen</h3>
+
+<p>Als erstes Beispiel für eine Spielerei mit der API geht es um Zweifelsfragen der deutschen Sprache. Eine sehr gute Freundin von mir, beneidenswert bilingual aufgewachsen mit Deutsch und Englisch als Muttersprache, erzählte mir vor einiger Zeit davon, dass sie dann doch manchmal überrascht sei, welches grammatikalische Geschlecht und damit welchen Artikel ein Wort im Deutschen hat: <em>&#8220;<strong>Der</strong> Knoblauch? Ernsthaft?&#8221;</em>. Wie gesagt, es handelt sich bei ihr um eine Muttersprachlerin, aber diesen Einwand wischte sie schnell beiseite mit <em>&#8220;Ach, das ist eben mein Migrationsschatten&#8221;</em>.</p>
+
+<p>Das Problem ist aber häufig genug, um sich hinzusetzen und ein kleines Programm zu schreiben, das Wiktionary nach dem korrekten Artikel befragt. Heisst es &#8220;der Laptop&#8221; oder &#8220;das Laptop&#8221;? Und was war mit der Werbung einer österreichischen Energydrink-Marke, die von &#8220;das Cola&#8221; sprach? Ist das korrekt?</p>
+
+<p>Das Progrämmchen ist ein bisschen älter, aber ich habe es seitdem ein bisschen poliert und umgeschrieben. Die Freundin mit der Frage nach den Artikeln benutzt es nach eigener Aussage regelmäßig. Im Original ist es <a href="https://gist.github.com/johl/5515041">als gist auf Github</a> verfügbar, aber gehen wir das Programm doch mal der Reihe nach durch:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">json</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">re</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">urllib2</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Es beginnt mit ein paar Imports. Das Programm ist für Python 2.7 geschrieben, eine Portierung nach Python3 lasse ich mal als Aufgabe für die Leserin oder den Leser (<code>urllib2</code> und <code>json</code> bräuchten dafür Liebe, die über die automatische Portierung mit
+<a href="https://docs.python.org/2/library/2to3.html">2to3</a> hinausgeht).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s">&#39;Abfrage mit: </span><span class="si">%s</span><span class="s"> Substantiv&#39;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span class='line'><span class="n">substantiv</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Wenn kein Substantiv angegeben ist, ist die ganze Sache auch schon vorbei, ansonsten nehmen wir an, dass der erste Kommandozeilenparameter das gesuchte Substantiv ist.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">try</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">r</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
+</span><span class='line'>        <span class="s">&#39;http://de.wiktionary.org/w/api.php?&#39;</span> <span class="o">+</span>
+</span><span class='line'>        <span class="s">&#39;format=json&#39;</span> <span class="o">+</span>
+</span><span class='line'>        <span class="s">&#39;&amp;action=query&#39;</span> <span class="o">+</span>
+</span><span class='line'>        <span class="s">&#39;&amp;prop=revisions&#39;</span> <span class="o">+</span>
+</span><span class='line'>        <span class="s">&#39;&amp;rvprop=content&#39;</span> <span class="o">+</span>
+</span><span class='line'>        <span class="s">&#39;&amp;titles=&#39;</span> <span class="o">+</span>
+</span><span class='line'>        <span class="n">substantiv</span>
+</span><span class='line'>        <span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span><span class='line'><span class="k">except</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">URLError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s">&#39;Problem beim Zugriff auf Wiktionary.&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Wir basteln uns die API-Anfrage zusammen. Oben ist erklärt, wieso die Abfrage so aussieht, wie sie aussieht. Wenn die Abfrage über das Internet nicht klappen sollte, brechen wir hier ab.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">content</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</span><span class='line'><span class="n">page</span> <span class="o">=</span> <span class="n">content</span><span class="p">[</span><span class="s">&#39;query&#39;</span><span class="p">][</span><span class="s">&#39;pages&#39;</span><span class="p">][</span><span class="n">content</span><span class="p">[</span><span class="s">&#39;query&#39;</span><span class="p">][</span><span class="s">&#39;pages&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">0</span><span class="p">]]</span>
+</span><span class='line'><span class="k">if</span> <span class="s">&#39;revisions&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+</span><span class='line'>        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span>
+</span><span class='line'>            <span class="s">&#39;Substantiv nicht im deutschsprachigen Wiktionary</span>
+</span><span class='line'><span class="n">verzeichnet</span><span class="o">.</span><span class="s">&#39;</span>
+</span><span class='line'>        <span class="p">)</span>
+</span><span class='line'><span class="n">wikitext</span> <span class="o">=</span> <span class="p">(</span><span class="n">page</span><span class="p">[</span><span class="s">&#39;revisions&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;*&#39;</span><span class="p">])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Der Seiteninhalt wird als <code>JSON</code> eingelesen und in eine Python-Datenstruktur hineingeschlürft. Wenn es keine Seite mit dem Titel gibt, der gewünscht ist, brechen wir ab. <a href="http://blog.johl.io/blog/2013/10/20/autovivication/">Python kennt schließlich keine Autovivication bei Collections</a>, also passen wir auf wie ein Luchs, dass wir nicht auf eine Struktur zugreifen, für die es keinen Key gibt.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+</span><span class='line'>    <span class="s">&#39;===\s?,\s?&#39;</span> <span class="o">+</span>
+</span><span class='line'>    <span class="s">&#39;&#39;</span> <span class="o">+</span>
+</span><span class='line'>    <span class="s">&#39;(,\s?(,\s?)?)*&#39;</span> <span class="o">+</span>
+</span><span class='line'>    <span class="s">&#39;\s?===&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="n">wikitext</span><span class="p">)</span>
+</span><span class='line'><span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s">&#39;Kein Substantiv!&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Es folgt eine epische <em>regular expression</em>, mit der der <a href="https://de.wikipedia.org/wiki/Wikitext">Wikitext</a> geparst wird. Leider wird im Wiktionary nicht ganz durchgängig dasselbe Pattern für die Angabe des grammatischen Geschlechts genutzt. Aber irgendwie sowas wie &#8220;m&#8221; oder &#8220;mf&#8221; oder &#8220;m,f,n&#8221; steht hinter einer Template-Variable, die ein Substantiv bezeichnet. Wenn nicht mal dieses Pattern gefunden wird, ist der Suchstring wohl kein Substantiv und wir verabschieden uns aus dem Programm.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">genera</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">&#39;^[mfn]$&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span>
+</span><span class='line'>                <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Wir filtern aus den <em>capturing brackets</em> alles heraus, was nicht &#8220;m&#8221;, &#8220;f&#8221;, oder &#8220;n&#8221; ist. Ich finde da eine Lösung mit zwei Filtern (anonymen Lambda-Funktionen) am elegantesten, aber das ist natürlich Geschmackssache.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;der &quot;</span> <span class="o">+</span> <span class="n">substantiv</span> <span class="k">for</span> <span class="n">genus</span> <span class="ow">in</span> <span class="n">genera</span> <span class="k">if</span> <span class="n">genus</span> <span class="o">==</span> <span class="s">&quot;m&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;die &quot;</span> <span class="o">+</span> <span class="n">substantiv</span> <span class="k">for</span> <span class="n">genus</span> <span class="ow">in</span> <span class="n">genera</span> <span class="k">if</span> <span class="n">genus</span> <span class="o">==</span> <span class="s">&quot;f&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;das &quot;</span> <span class="o">+</span> <span class="n">substantiv</span> <span class="k">for</span> <span class="n">genus</span> <span class="ow">in</span> <span class="n">genera</span> <span class="k">if</span> <span class="n">genus</span> <span class="o">==</span> <span class="s">&quot;n&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="n">artikel</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="n">f</span> <span class="o">+</span> <span class="n">n</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mit ein paar <em>list comprehensions</em> bauen wir uns drei Listen mit den gefilterten Ergebnissen, die wir dann zu einer flachen Ergebnisliste vereinigen (<code>artikel</code>). Natürlich kann ein Substantiv mehr als ein grammtisches Geschlecht und damit mehr als einen gültigen Artikel haben.</p>
+
+<p>Warum basteln wir uns eine Liste? Nun, darum:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nb">map</span><span class="p">(</span><span class="k">print</span><span class="p">,</span> <span class="n">artikel</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lieber ein gedingenes <code>map</code> auf eine Liste als eine <code>for</code>-Schleife. Da wir <code>print</code> als Funktion benutzen können (wir haben extra <code>from __future__ import print_function</code> benutzt), können wir diese Funktion auf alle möglichen Ergebnis-Strings anwenden.</p>
+
+<p>Was gibt dieses Programm jetzt aus? Nun, schauen wir mal:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">python</span> <span class="n">migrationsschatten</span><span class="o">.</span><span class="n">py</span> <span class="n">Knoblauch</span>
+</span><span class='line'><span class="n">der</span> <span class="n">Knoblauch</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>oder auch:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">python</span> <span class="n">migrationsschatten</span><span class="o">.</span><span class="n">py</span> <span class="n">Ketchup</span>
+</span><span class='line'><span class="n">der</span> <span class="n">Ketchup</span>
+</span><span class='line'><span class="n">das</span> <span class="n">Ketchup</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>oder gar:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">python</span> <span class="n">migrationsschatten</span><span class="o">.</span><span class="n">py</span> <span class="n">Joghurt</span>
+</span><span class='line'><span class="n">der</span> <span class="n">Joghurt</span>
+</span><span class='line'><span class="n">die</span> <span class="n">Joghurt</span>
+</span><span class='line'><span class="n">das</span> <span class="n">Joghurt</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Und was ist mit der Frage aus der Überschrift?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">python</span> <span class="n">migrationsschatten</span><span class="o">.</span><span class="n">py</span> <span class="n">Cola</span>
+</span><span class='line'><span class="n">die</span> <span class="n">Cola</span>
+</span><span class='line'><span class="n">das</span> <span class="n">Cola</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So seltsam das für bundesdeutsche Sprecherinnen und Sprecher klingen mag, <strong>das</strong> Cola ist okay, sagt Wiktionary. Es handelt sich um einen <a href="https://de.wikipedia.org/wiki/Austriazismus">Austriazismus</a>.</p>
+
+<p><a href="https://de.wiktionary.org/wiki/leiwand">Leiwand</a>!</p>
+
+<p>Wie bereits gesagt, das vollständige Programm <a href="https://gist.github.com/johl/5515041">findet sich hier</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Links, Links, Links]]></title>
@@ -70,8 +320,6 @@
 <p>Eine Dose mit Chips von <a href="http://www.oreillynet.com/cs/weblog/view/wlg/448">Pringels wird zur Wavelan-Yagi-Antenne</a> — auch wenn Pringels-Dosen sich gar nicht am besten für <a href="https://en.wikipedia.org/wiki/Cantenna">diesen Antennentyp</a> eignen.</p>
 
 <p>Und eine <a href="https://en.wikipedia.org/wiki/Altoids">Dose mit Altoids-Mints</a> ist für mich dann kein Behälter für Minz-Bonbons mehr. In erster Linie sehe ich es es als <a href="http://tryingtodotheprojects.blogspot.de/2008/04/arduino-altoids-tin.html">Gehäuse für Arduino-Basteleien</a>.</p>
-
-<p>Hacken ist das bewußte Entfernen der Einbeschreibungen von Dingen.</p>
 ]]></content>
   </entry>
   
@@ -358,14 +606,14 @@ mkdir: a/b: No such file or directory
 <p>Schauen wir uns doch mal Autovivication in Perl an:</p>
 
 <figure class='code'><figcaption><span>Autovivication in Perl</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="c1">#!/usr/bin/perl -w</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
@@ -407,10 +655,10 @@ KeyError: 1
 <p>Wenn sich die leichte Verwirrung im Kopf über den letzten Satz und rekursiv definierte Datenstrukturen gelegt haben, können wir uns diese Lösung auch mal einfach ansehen:</p>
 
 <figure class='code'><figcaption><span>Autovivication in Python</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 </span><span class='line'><span class="n">AutovivicationDict</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">AutovivicationDict</span><span class="p">)</span>
 </span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="n">AutovivicationDict</span><span class="p">()</span>
@@ -427,7 +675,7 @@ defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;
 <p>Huch, da ist ja alles voller Referenzen auf eine <a href="https://de.wikipedia.org/wiki/Anonyme_Funktion">anonyme Funktion</a>! Für die meisten Anwendungen sollte das keinen Unterschied machen, mit welchem Wert das <code>defaultdict</code> gefüllt wird. Wenn wir allerdings eine Umwandlung unseres speziellen autovivizierten Dictionaries in ein herkömmliches Dictionary brauchen (etwa, um daraus JSON zu machen), brauchen wir noch eine Umwandlungsfunktion. Weil wir gerade so schön im Flow sind, definieren wir diese auch wieder rekursiv und unter Einsatz von <code>lambda</code>:</p>
 
 <figure class='code'><figcaption><span>dictify</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">dictify</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dd</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">dictify</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">dd</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">defaultdict</span><span class="p">)</span> <span class="k">else</span> <span class="n">dd</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -575,31 +823,6 @@ Netzneutralität bedeutet, die diskriminierungsfreie Teilhabe am Internet zu gar
 </span></p>
 
 <p>Ja, es gibt durchaus konkrete technische Forderungen zur Netzneutralität, die sich auf niedrigere Netzwerkschichten beziehen. Preistranparenz, QoS-Transparenz und verbindliche Peering-Regeln etwa, kein Monopol auf der letzten Meile, frei wählbare DSL-Profile und feste IPv6-Präfixe oder IP-Adressen, um vom Konsumenten zum Teilnehmer im Netz zu werden, sind technische Forderungen an die Carrier. Natürlich graut es mir auch davor, wenn <a href="http://mobil.abendblatt.de/hamburg/article116670240/Informatikstreit-Walter-Scheuerl-im-Internet-Shitstorm.html">mit gefährlichem Halbwissen ausgestattete Politiker</a> im Bundestag technisch komplizierte Details zu Netzwerken debattieren sollen. Aber vielleicht geht es auch weniger um technische Details auf den Schichten unterhalb von Layer 9. Versuchen wir den höchsten Layer netzneutral zu gestalten.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Laufende Projekte]]></title>
-    <link href="http://blog.johl.io/blog/2013/05/13/laufende-projekte/"/>
-    <updated>2013-05-13T22:45:00+02:00</updated>
-    <id>http://blog.johl.io/blog/2013/05/13/laufende-projekte</id>
-    <content type="html"><![CDATA[<p>Neben meiner Arbeit beschäftigen mich zur Zeit zwei Projekte (plus einige andere Dinge, die ein anderes Mal erzählt werden sollen), die ich noch nicht direkt in diesem Blog erwähnt habe.</p>
-
-<h2>Das Curry-Buch - Funktional programmieren lernen mit JavaScript von Jens Ohlig, Stefanie Schirmer, Hannes Mehnert</h2>
-
-<p><img class="left" src="ftp://ftp.oreilly.de/pub/ora/graphics/book_covers/hi-res/9783868993691.jpg" width="400" title="Das Curry-Buch - Funktional programmieren lernen mit JavaScript von Jens Ohlig, Stefanie Schirmer, Hannes Mehnert" ></p>
-
-<p>Ende Juni erscheint unsere <a href="http://www.oreilly.de/catalog/currybuchger/index.html">Einführung in die funktionale Programmierung</a> am Beispiel von JavaScript bei O&#8217;Reilly. Wir haben lange an diesem Buch gesessen, vielleicht sogar ein bisschen zu lange, aber ich bin mit dem Ergebnis sehr zufrieden. Neben map, reduce und Kolleginnen, dem Lambda-Kalkül und den gefürchteten Monaden-Gesetzen treten dort auch Vindaloo-Curry, Auberginen und ein leckeres Mango-Lassi auf, denn gutes Programmieren ist wie gutes Kochen und der Begriff Curry hat nicht nur in der indischen Küche, sondern auch in der theoretischen Informatik eine besondere Bedeutung. Ich bastle gerade an der Webseite zu dem Buch, die sicher bald folgt.</p>
-
-<p>Das Buch konnte bei O&#8217;Reilly unter einer CC-Lizenz, nämlich <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/de/">CC-BY-NC-SA 2.0 DE</a> erscheinen, was mich besonders freut, dass der Verlag bei so einem mutigen Experiment dabei ist und die Weitergabe zu nicht-kommerziellen Zwecken gestattet. Nach etlichen Schreib- und Korrektursessions der letzten Monate, bei denen ich das Projekt streckenweise fast nicht mehr sehen konnte, bin ich jetzt sehr stolz auf das, was daraus geworden ist.  Wie mir jemand schrieb ist es das Buch, dass er gerne gelesen hätte, als er anfing, sich mit funktionaler Programmierung zu beschäftigen. Genauso ging es uns auch. Deshalb haben wir dieses Buch geschrieben.</p>
-
-<h2>Ohai Brause</h2>
-
-<p><img class="right" src="http://ohai-brause.de/assets/img/ohai-large.png"></p>
-
-<p>Irgendwann kam mein Arbeitskollege Abraham zu mir und berichtete davon, dass er völlig übermüdet mit seinem Kumpel Markus aus Karlsruhe eine Vision hatte. Statt sich mit Club- oder sonstiger Mate aufzutanken, wäre doch eine koffeinhaltige Schleckbrause aus dem Tütchen, wie wir es aus unserer Kindheit kennen, eine tolle Idee. Nach einigen Experimenten und viel Zittern und erhöhter Herzfrequenz beim Austüfteln der richtigen Koffeinladung haben wir einen ziemlich bitteren Prototypen entwickelt, der mit Zitronenaroma einen Geschmack in Richtung Grapefruit bekommt und so richtig wach macht (fast doppelt so wach wie ein Energy-Drink oder fast dreimal so stark wie ein Espresso).</p>
-
-<p>Unser Kleinunternehmen, das hauptsächlich von dem übermenschlichen Engagement von Abraham und Markus lebt, läuft ganz gut. Neugierige können sich die Tütchen mit der Matrix-Katze, die überrascht &#8220;OHAI!&#8221; ausruft, <a href="http://ohai-brause.de/">online bestellen</a>. Ausserdem gibt es Ohai Brause bei ausgewählten Händlern, in Berlin z.B. in der c-base, bei der Meta Mate Bar oder bei der Filmkunst-Videothek Delikatessen, aber <a href="http://ohai-brause.de/kaufen.html">schaut selbst in die Liste</a>. Diesen Sommer gibt es unser kleines Produkt dann auch bei einigen Events, etwa der GPN Gulaschprogrammiernacht. Bleibt wach, okay?</p>
 ]]></content>
   </entry>
   

@@ -117,14 +117,14 @@ mkdir: a/b: No such file or directory
 <p>Schauen wir uns doch mal Autovivication in Perl an:</p>
 
 <figure class='code'><figcaption><span>Autovivication in Perl</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="c1">#!/usr/bin/perl -w</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
@@ -166,10 +166,10 @@ KeyError: 1
 <p>Wenn sich die leichte Verwirrung im Kopf über den letzten Satz und rekursiv definierte Datenstrukturen gelegt haben, können wir uns diese Lösung auch mal einfach ansehen:</p>
 
 <figure class='code'><figcaption><span>Autovivication in Python</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 </span><span class='line'><span class="n">AutovivicationDict</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">AutovivicationDict</span><span class="p">)</span>
 </span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="n">AutovivicationDict</span><span class="p">()</span>
@@ -186,7 +186,7 @@ defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;
 <p>Huch, da ist ja alles voller Referenzen auf eine <a href="https://de.wikipedia.org/wiki/Anonyme_Funktion">anonyme Funktion</a>! Für die meisten Anwendungen sollte das keinen Unterschied machen, mit welchem Wert das <code>defaultdict</code> gefüllt wird. Wenn wir allerdings eine Umwandlung unseres speziellen autovivizierten Dictionaries in ein herkömmliches Dictionary brauchen (etwa, um daraus JSON zu machen), brauchen wir noch eine Umwandlungsfunktion. Weil wir gerade so schön im Flow sind, definieren wir diese auch wieder rekursiv und unter Einsatz von <code>lambda</code>:</p>
 
 <figure class='code'><figcaption><span>dictify</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">dictify</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dd</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">dictify</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">dd</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">defaultdict</span><span class="p">)</span> <span class="k">else</span> <span class="n">dd</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -273,6 +273,10 @@ defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/17/mediawiki-api/">Die Cola oder das Cola? Mediawiki APIs hacken</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/16/links/">Links, Links, Links</a>
       </li>
     
@@ -286,10 +290,6 @@ defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;
     
       <li class="post">
         <a href="/blog/2014/05/29/dinge/">Dinge</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/19/probe/">Es tut sich was</a>
       </li>
     
   </ul>

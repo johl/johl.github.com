@@ -106,26 +106,26 @@ gespeichert habe.</p>
 Nifty, was?</p>
 
 <figure class='code'><figcaption><span>/usr/local/bin/git-blog  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
 </span><span class='line'><span class="k">if </span><span class="nb">test</span> <span class="nv">$# </span>-eq 0; <span class="k">then</span>
 </span><span class='line'><span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;blog title required&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit </span>1
@@ -151,8 +151,8 @@ Nifty, was?</p>
 
 <p>Vorher sollte noch <code>git</code> konfiguriert werden. Dabei sollte das <code>blog.path</code>-Verzeichnis das sein, in dem sich das <code>_posts</code>-Verzeichnis befindet (bei Octopress ist das unterhalb von <code>source</code>):</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --global blog.path /pfad/zu/meinem/octopress
 </span><span class='line'>$ git config --global core.editor /pfad/zu/meinem/lieblingseditor</span></code></pre></td></tr></table></div></figure>
 
@@ -160,16 +160,16 @@ Nifty, was?</p>
 <p>Wer Lust hat, kann sich danach noch einen <code>git</code>-Befehl namens <code>git blog-deploy</code> anlegen:</p>
 
 <figure class='code'><figcaption><span>/usr/local/bin/git-blog-deploy  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
 </span><span class='line'><span class="nb">cd</span> <span class="k">$(</span>git config blog.path<span class="k">)</span>
 </span><span class='line'>git add _posts/
@@ -257,6 +257,10 @@ Nifty, was?</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/17/mediawiki-api/">Die Cola oder das Cola? Mediawiki APIs hacken</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/16/links/">Links, Links, Links</a>
       </li>
     
@@ -270,10 +274,6 @@ Nifty, was?</p>
     
       <li class="post">
         <a href="/blog/2014/05/29/dinge/">Dinge</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/19/probe/">Es tut sich was</a>
       </li>
     
   </ul>
