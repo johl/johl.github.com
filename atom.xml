@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-11-18T02:21:39+01:00</updated>
+  <updated>2014-11-18T02:23:26+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -185,7 +185,7 @@ schauen uns hier ein paar beispielhafte Parameter an.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Wir filtern aus den <em>capturing brackets</em> alles heraus, was nicht &#8220;m&#8221;, &#8220;f&#8221;, oder &#8220;n&#8221; ist. Ich finde da eine Lösung mit zwei Filtern (anonymen Lambda-Funktionen) am elegantesten, aber das ist natürlich Geschmackssache.</p>
+<p>Wir filtern aus den <em>capturing brackets</em> alles heraus, was nicht &#8220;m&#8221;, &#8220;f&#8221;, oder &#8220;n&#8221; ist. Ich finde da eine Lösung mit zwei Filtern (und anonymen Lambda-Funktionen) am elegantesten, aber das ist natürlich Geschmackssache.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
 <span class='line-number'> </span>
