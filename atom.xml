@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-11-23T18:29:17+01:00</updated>
+  <updated>2014-11-23T18:35:26+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Was gibt es hier zu sehen? Mediawiki API hacken]]></title>
+    <title type="html"><![CDATA[Was gibt es hier zu sehen? Mediawiki APIs hacken]]></title>
     <link href="http://blog.johl.io/blog/2014/11/23/around-me/"/>
     <updated>2014-11-23T16:33:00+01:00</updated>
     <id>http://blog.johl.io/blog/2014/11/23/around-me</id>
