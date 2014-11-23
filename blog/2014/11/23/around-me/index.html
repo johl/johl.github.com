@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Was gibt es hier zu sehen? Mediawiki API hacken - Hackety hack hack</title>
+  <meta name="author" content="Jens Ohlig">
+
+  
+  <meta name="description" content="Chantek ist ein besonderer Orang-Utan. Im Yerkes Regional Primate Research Center geboren lernte er innerhalb eines Forschungsprojektes mittels der &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.johl.io/blog/2014/11/23/around-me">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Hackety hack hack" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Hackety hack hack</a></h1>
+  
+    <h2>Atypisches Nutzerverhalten mit Rat und Tat.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.johl.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Was gibt es hier zu sehen? Mediawiki API hacken</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2014-11-23T16:33:00+01:00" pubdate>Nov 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Chantek ist ein besonderer Orang-Utan. Im Yerkes Regional Primate Research Center geboren lernte er innerhalb eines Forschungsprojektes mittels der amerikanischen Gebärdensprache (ASL) mit Menschen zu kommunizieren und gesprochenes Englisch zu verstehen, Grundlagen des Umgangs mit Geld und Spiele. Mit fünfeinhalb Jahren wurde ihm der Stand eines etwa zweijährigen Kindes attestiert, wobei er in einigen Bereichen (z. B. Sprachverständnis und Werkzeugnutzung) die Fertigkeiten eines vierjährigen Kindes aufwies. Über Chantek gibt es <a href="http://de.wikipedia.org/wiki/Chantek">in der Wikipedia</a> noch mehr zu lesen, als ich hier zitiert und zusammengefasst habe.</p>
+
+<p><a href="https://github.com/hay/chantek">Chantek</a> ist aber auch der Name eines Hacks, der auf dem <a href="http://www.mediawiki.org/wiki/Amsterdam_Hackathon_2014">Mediawiki Hackathon 2014 in Amsterdam</a> von <a href="http://www.haykranen.nl/">Hay Kranen</a> gebastelt wurde. Auf Niederländisch heisst &#8220;Api&#8221; auch <a href="http://nl.wikipedia.org/wiki/Apen">Affe</a>. Eine API, die menschliche Sprache (zumindest ein bisschen) versteht, ist gut geeignet, um nach dem sprechenden Affen Chantek benannt zu werden.</p>
+
+<p>Über die Mediawiki API habe ich im letzten Blogbeitrag bereits <a href="http://blog.johl.io/blog/2014/11/17/mediawiki-api/">eine umfassende Einführung</a> geschrieben. Chantek vereinfacht diese API auf besonders schlanke Weise und macht die Unterhaltung ein bisschen angenehmer. Um Properties bei Wikidata abzufragen und Titel darzustellen, brauche ich bei der klassischen <a href="http://www.mediawiki.org/wiki/Wikibase/API">Mediawiki API zu Wikidata</a> typischerweise mehrere API-Calls. Bei Chantek kann ich zum Beispiel sagen, dass mich nur Abfrageergebnisse auf Deutsch interessieren und ich bekomme die Werte dann auch mit ihrer deutschen Bezeichnung zurück.</p>
+
+<h3>Über die Grenzen der Same-Origin-Policy hinweg mit CORS</h3>
+
+<p>Chantek ist eine Python-Anwendung, die die <a href="http://enable-cors.org/">CORS-Spezifikation</a> implementiert, um JavaScript-Anwendungen in Web-Anwendungen zu ermöglichen, Daten auszulesen und darzustellen. Normalerweise gibt es bei JavaScript im Browser die <a href="http://de.wikipedia.org/wiki/Same-Origin-Policy">Same-Origin-Policy</a>, die verhindert, dass Daten aus beliebigen (und damit potenziell unsicheren) Quellen einfach so nachgeladen werden können: Clientseitiges JavaScript kann nur auf Daten der Domain zugreifen, woher auch das JavaScript selbst geladen wurde. Bei API-Calls stellt sich diese Maßnahme als gelinde gesagt schwierig dar. Um diese Beschränkung zu umgehen, gibt es zum Beispiel <a href="http://de.wikipedia.org/wiki/JavaScript_Object_Notation#JSONP">JSONP</a>, das aber selbst nicht unproblematisch ist. CORS ist eine Möglichkeit, die Grenzen der Same-Origin-Policy zu überschreiten, die auch Authentifizierung und feinere Sicherheitsabstufungen beinhaltet und vom W3C spezifiziert wurde.</p>
+
+<p>Leider ist CORS nicht in allen Browsern vorhanden. Wie man browserunhabhängig prüft, ob CORS zur Verfügung steht (bei den meisten modernen Browsern ist das der Fall), zeigt etwa <a href="http://www.html5rocks.com/en/tutorials/cors/">dieses Tutorial von Monsur Hossain</a> und der darin benutzte Code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">createCORSRequest</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;withCredentials&quot;</span> <span class="k">in</span> <span class="nx">xhr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Check if the XMLHttpRequest object has a &quot;withCredentials&quot; property.</span>
+</span><span class='line'>    <span class="c1">// &quot;withCredentials&quot; only exists on XMLHTTPRequest2 objects.</span>
+</span><span class='line'>    <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">XDomainRequest</span> <span class="o">!=</span> <span class="s2">&quot;undefined&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Otherwise, check if XDomainRequest.</span>
+</span><span class='line'>    <span class="c1">// XDomainRequest only exists in IE, and is IE&#39;s way of making CORS requests.</span>
+</span><span class='line'>    <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XDomainRequest</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Otherwise, CORS is not supported by the browser.</span>
+</span><span class='line'>    <span class="nx">xhr</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">xhr</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Zeig mir meine Umgebung, Wikidata!</h3>
+
+<p>Mit Chantek (und CORS) wollte ich eine JavaScript-Webanwendung schreiben, die mir anzeigt, was es in Wikidata um mich herum an geogetaggten Wisssensgegenständen gibt. In Berlin (zumindest innerhalb des S-Bahn-Rings) ist das einiges — viele interessante Orte sinde nur ein paar Hundert Meter weit entfernt und haben einen Wikipedia-Artikel.  Auf dem Land müsste ich meine Anwendung vermutlich ein bisschen erweitern: ein Radius von 500m ist nicht besonders üppig für manche Gegenden. Auch, dass ich Wissensgegenstände nur auf Deutsch suche und Artikel in der deutschsprachigen Wikipedia dazu anzeige, könnte eine überarbeitete Version meiner Anwendung als Parameter änderbar machen.</p>
+
+<p>Als kleiner, schneller Hack zwischendurch, aufgespielt auf einen Webserver, hat mir meine Anwendung aber durchaus Spaß bereitet. Mit dem Mobiltelefon kann ich so schauen, was Wikidata für meine Umgebung anzeigt.</p>
+
+<p>Ein API-Call, um Dinge im meiner Umgebung zu finden, kann mit Chantek
+etwa so aussehen:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">http</span><span class="o">:</span><span class="c1">//chantek.bykr.org/wikidata/query?q=around[625,52.205,0.119,15]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hiermit frage ich Chantek (über die <a href="http://wdq.wmflabs.org/api_documentation.html">WikidataQuery-API</a>) nach Wikidata-Wissensgegenständen im Umkreis von 15km um Cambridge in England: der erste Parameter (625) bezieht sich auf den Planeten, für den die Koordinaten gelten (Erde), die nächsten zwei sind die Koordinaten von Cambridge und mit 15 gebe ich den Radius an. Auch Brüche sind bei der Angabe des Radius möglich, 0.5 ist also 500m.</p>
+
+<p>Jetzt fehlen mir nur noch meine aktuellen Koordinaten. Moderne Browser unterstützen das HTML5-Feature Geolocation, mit der JavaScript-Bibliothek <a href="http://modernizr.com/">Modernizr</a> kann ich überprüfen, ob dieses Feature vorhanden ist. Da es Privatsphärenbedenken bei der Abfrage von Geokoordinaten gibt, muss der Browser bei der ersten Abfrage der Koordinaten des Standorts von einer neuen Seite die Benutzerin oder den Benutzer fragen, ob das so in Ordnung ist. Wenn zugestimmt wird, können wir die Koordinaten benutzen, eine Abfrage starten und bekommen eine Liste von Wikidata-Items zurück. Tatsächlich erzeugen wir zuerst einen CORS-Request und als Callback-Funktion geht es gleich in die nächste Abfrage, denn wir wollen ja für jedes Element der Liste einen Titel und eine Wikipedia-Seite haben. Das könnte zum Beispiel so aussehen:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">locate_me</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Check if we can do HTML5 geolocation</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">Modernizr</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>       <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">lat</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">lon</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">chantek</span> <span class="o">=</span> <span class="s2">&quot;http://chantek.bykr.org/wikidata/&quot;</span><span class="p">;</span>
+</span><span class='line'>          <span class="c1">// Query data around me</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="s2">&quot;query?q=around[625,&quot;</span> <span class="o">+</span> <span class="nx">lat</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nx">lon</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="s2">&quot;0.5]&amp;callback=?&quot;</span><span class="p">;</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">query_xhr</span> <span class="o">=</span> <span class="nx">createCORSRequest</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">chantek</span><span class="o">+</span><span class="nx">query</span><span class="p">);</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">query_xhr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;CORS not supported&#39;</span><span class="p">);</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="nx">query_xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">query_xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">response</span><span class="p">).</span><span class="nx">response</span><span class="p">;</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>              <span class="c1">// Call queried entities and display them</span>
+</span><span class='line'>              <span class="kd">var</span> <span class="nx">entity</span> <span class="o">=</span> <span class="s2">&quot;entity?q=Q&quot;</span><span class="o">+</span> <span class="nx">value</span> <span class="o">+</span> <span class="s2">&quot;&amp;lang=de&amp;callback=?&quot;</span><span class="p">;</span>
+</span><span class='line'>              <span class="kd">var</span> <span class="nx">entity_xhr</span> <span class="o">=</span> <span class="nx">createCORSRequest</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">chantek</span><span class="o">+</span><span class="nx">entity</span><span class="p">);</span>
+</span><span class='line'>              <span class="nx">entity_xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>                <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">entity_xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+</span><span class='line'>                <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">response</span><span class="p">).</span><span class="nx">response</span><span class="p">;</span>
+</span><span class='line'>                <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#location-list&quot;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span>
+</span><span class='line'>                    <span class="s2">&quot;&lt;li&gt;&quot;</span> <span class="o">+</span>
+</span><span class='line'>                    <span class="s2">&quot;&lt;big&gt;&quot;</span> <span class="o">+</span>
+</span><span class='line'>                    <span class="s2">&quot;&lt;a href=&quot;</span> <span class="o">+</span> <span class="s2">&quot;\&quot;&quot;</span> <span class="o">+</span>
+</span><span class='line'>                    <span class="nx">data</span><span class="p">[</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]].</span><span class="nx">sitelinks</span><span class="p">.</span><span class="nx">de</span><span class="p">.</span><span class="nx">url</span> <span class="o">+</span>
+</span><span class='line'>                    <span class="s2">&quot;\&quot;&gt;&quot;</span><span class="o">+</span>
+</span><span class='line'>                    <span class="nx">data</span><span class="p">[</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]].</span><span class="nx">labels</span> <span class="o">+</span>
+</span><span class='line'>                    <span class="s2">&quot;&lt;/a&gt;&quot;</span> <span class="o">+</span>
+</span><span class='line'>                    <span class="s2">&quot;&lt;/big&gt;&quot;</span> <span class="o">+</span>
+</span><span class='line'>                    <span class="s2">&quot;&lt;/li&gt;&quot;</span>
+</span><span class='line'>                <span class="p">);</span>
+</span><span class='line'>              <span class="p">};</span>
+</span><span class='line'>              <span class="nx">entity_xhr</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Error making the request&#39;</span><span class="p">);</span>
+</span><span class='line'>              <span class="p">};</span>
+</span><span class='line'>              <span class="nx">entity_xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span><span class='line'>            <span class="p">});</span>
+</span><span class='line'>          <span class="p">};</span>
+</span><span class='line'>          <span class="nx">query_xhr</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Error making the request&#39;</span><span class="p">);</span>
+</span><span class='line'>          <span class="p">};</span>
+</span><span class='line'>          <span class="nx">query_xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Geolocation not supported&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Der fertige Hack</h3>
+
+<p>Mit ein bisschen UI und HTML drumherum habe ich diesen kleinen Hack unter <a href="http://www.johl.io/aroundme-wikidata/">http://www.johl.io/aroundme-wikidata/</a> ins Netz gestellt. Ich wünsche viel Spaß!</p>
+
+<p>In der Nähe des U-Bahnhofs Eberswalder Straße in Berlin sieht das auf meinem Mobiltelefon etwa so aus:</p>
+
+<p><img src="http://f.cl.ly/items/262K2m0k4531221t0g1R/aroundme-wikidata.png" width="300"></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jens Ohlig</span></span>
+
+      
+
+
+
+
+  
+
+<time datetime="2014-11-23T16:33:00+01:00" pubdate>Nov 23<span>rd</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a class="FlattrButton" style="display:none;"
+        title="Was gibt es hier zu sehen? Mediawiki API hacken"
+        lang="en_GB"
+        rev="flattr;uid:johl;category:rest;button:compact;"
+        href="http://blog.johl.io/blog/2014/11/23/around-me/">Was gibt es hier zu sehen? Mediawiki API hacken ( http://blog.johl.io/blog/2014/11/23/around-me/ )</a>
+  
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.johl.io/blog/2014/11/23/around-me/" data-via="johl" data-counturl="http://blog.johl.io/blog/2014/11/23/around-me/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/11/17/mediawiki-api/" title="Previous Post: Die Cola oder das Cola? Mediawiki APIs hacken">&laquo; Die Cola oder das Cola? Mediawiki APIs hacken</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <div>
+  <img class="left" src="http://www.gravatar.com/avatar.php?size=100&gravatar_id=9de3f3969367fffe2051c2b405b79810">
+  Das hier ist das Blog von <a href="http://www.johl.io">Jens Ohlig</a>. Es geht u.a. um: Programmierung, Basteln, Politik. Bisweilen sogar um Essen und Popkultur. Möglicherweise auch um völlig andere Themen.
+  </div>
+</section>
+<section>
+  <h1>Zuletzt geschrieben</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/23/around-me/">Was gibt es hier zu sehen? Mediawiki API hacken</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/17/mediawiki-api/">Die Cola oder das Cola? Mediawiki APIs hacken</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/16/links/">Links, Links, Links</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/07/links/">Schnelle Links</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/07/ethik/">Praktische Fragen der Ethik in der Software-Entwicklung</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Dankeschön</h1>
+  <p>
+  <a class="FlattrButton" style="display:none;" href="http://johl.github.com/"></a>
+  <noscript><a href="http://flattr.com/thing/420157/Hackety-hack-hack-Atypisches-Nutzerverhalten-mit-Rat-und-Tat-" target="_blank">
+  <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+  </p>
+</section>
+
+<section>
+  <h1>Zuletzt getwittert</h1>
+  <p>
+  <a class="twitter-timeline" href="https://twitter.com/johl" data-widget-id="356792985440112640">Tweets by @johl</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </p>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/113575664537952525641?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div align="center">
+  <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.de"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />Die Texte aller Artikel auf diesem Blog stehen unter einer <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.de">Creative Commons Namensnennung 3.0 Unported Lizenz</a>.
+</div>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blogityblogblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.johl.io/blog/2014/11/23/around-me';
+        var disqus_url = 'http://blog.johl.io/blog/2014/11/23/around-me';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
