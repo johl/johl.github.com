@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-11-23T18:35:26+01:00</updated>
+  <updated>2014-12-07T21:34:46+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Links, frische (und halbfrische) Links!]]></title>
+    <link href="http://blog.johl.io/blog/2014/12/07/links/"/>
+    <updated>2014-12-07T21:25:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2014/12/07/links</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.theeuropeanlibrary.org/tel4/access/data/opendata/details?id=opendata">European Library released Linked Open Data for 82 million bibliographic records from 25 member libraries. All CC0.</a></li>
+<li><a href="https://jakevdp.github.io/blog/2014/11/11/the-hipster-effect-interactive/">The Hipster Effect: An IPython Interactive Exploration</a></li>
+<li><a href="http://spectrum.ieee.org/computing/networks/osi-the-internet-that-wasnt">OSI: The Internet That Wasn’t. How TCP/IP eclipsed the Open Systems Interconnection standards to become the global protocol for computer networking</a></li>
+<li><a href="https://en.wikipedia.org/wiki/History_of_radio#Legal_issues_with_radio">„When radio was introduced in the 1920s many predicted the end of records. Radio was a free medium for the public to hear music for which they would normally pay. While some companies saw radio as a new avenue for promotion, others feared it would cut into profits from record sales and live performances. Many companies had their major stars sign agreements that they would not appear on radio.&#8221;</a></li>
+<li><a href="http://rijksemotions.com/">Rijks Emotions is a student project from Hyper Island, using the Rijksmuseum and Sightcorp api, matching people&#8217;s emotions with their relatives that hang on the museum&#8217;s walls.</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Was gibt es hier zu sehen? Mediawiki APIs hacken]]></title>
@@ -962,28 +978,6 @@ understand the last sentence, don&#8217;t just read over it, assuming it&#8217;s
 <li>Build upon hope in a hopeless environment.</li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Zwei oder drei Dinge, die es zu Karaoke zu sagen gibt]]></title>
-    <link href="http://blog.johl.io/blog/2013/06/09/karaoke/"/>
-    <updated>2013-06-09T20:47:00+02:00</updated>
-    <id>http://blog.johl.io/blog/2013/06/09/karaoke</id>
-    <content type="html"><![CDATA[<p>Bei Wikimedia Deutschland gibt es regelmäßige gemeinsame Karaoke-Abende <a href="http://www.karaokemonster.de/">in Berlins seltsamster Karaoke-Bar</a> als Team-Building-Experience (oder Team-Breaking-Experience, je nachdem), die nach einem hochkomplizierten Algorithmus festgelegt werden: Wenn innerhalb von 48 Stunden mehrere Leute fragen &#8220;Wann ist eigentlich wieder Karaoke?&#8221; wird ein neuer Termin gesucht.</p>
-
-<p>Es ist schade, dass kaum eine Kunstform die Problematik von Mashup und Copyright so sehr vor Augen führt wie Karaoke: Die Gesangskünste der Gesellschaft zur Förderung Freien Wissens e.V werden es wegen fehlender CC-Lizensierung wohl nie auf <a href="http://commons.wikimedia.org/">Commons</a> schaffen und werden auch bei YouTube nicht in diesem Land verfügbar sein. Das tut uns leid.</p>
-
-<p>Zum Ausgleich ein bisschen Freies Wissen um Karaoke, das 1971 von Daisuke Inoue erfunden wurde.</p>
-
-<ol>
-<li>Karaoke kann tödlich sein.  Auf den Philippinen sorgt seit Jahrzehnten das Phänomen der <a href="http://en.wikipedia.org/wiki/My_Way_killings">&#8220;My Way Killings&#8221;</a> für Unruhe.  Eine Reihe von Todesfällen in Karaoke-Bars wird dort immer wieder mit dem Lied von Frank Sinatra in Verbindung gebracht. Dabei werden Sänger von anderen aufgebrachten Gästen erschossen, wenn die Sänger bei ihrer Performance allzu großzügig beim Treffen der Töne sind. Ob es sich hier um ein Phänomen handelt, das in dem gewalttätigen und alkoholisierten Klima der Bars entsteht, in denen &#8220;My Way&#8221; einfach häufig gesungen wird, oder ob der triumphale und fast arrogante Text des Liedes damit zu tun hat, ist umstritten. Etliche philippinische Karaoke-Bars haben &#8220;My Way&#8221; jedenfalls aus ihrem Programm verbannt.</li>
-</ol>
-
-
-<p><img class="left" src="http://upload.wikimedia.org/wikipedia/commons/d/d7/Kabuki-makeup.PNG">
-2. Das Wort für das eigene Spezial-Vorzeige-Lied beim Karaoke, 十八番, hat eine recht interessante Geschichte. Ich kannte es zuerst in seiner koreanischen Aussprache 십팔번 (&#8220;ship-pal-beon&#8221;) als Fachterminus für das Lied, das man beim Karaoke auswählt, um zu zeigen was man für eine supertolle Gesangsstimme hat. Der Special Move. Die Superkraft. Richtig klar ist mir nicht geworden, was es bedeutet, wörtlich heisst es &#8220;der 18er Kasten&#8221;. Tatsächlich kommt es aus dem Japanischen, was ungewöhnlich ist, weil japanische Lehnwörter in Korea aus geschichtlichen Gründen nicht sehr gern gesehen sind. Der 18er Kasten war tatsächlich früher ein Kasten, in dem Theaterstücke aufbewahrt wurden, nämlich die <a href="http://en.wikipedia.org/wiki/Kabuki_J%C5%ABhachiban">18 repräsentativen Theaterstücke Kabuki Jūhachiban</a> aus der Schauspielerfamilie <a href="http://en.wikipedia.org/wiki/Ichikawa_Danj%C5%ABr%C5%8D">Ichikawa</a>. Diese Stücke, von denen heutzutage nicht mehr alle regelmäßig gespielt werden, gelten als die Vorzeigestücke des Kabuki-Theaters. Heutzutage hat <a href="http://en.wiktionary.org/wiki/%E5%8D%81%E5%85%AB%E7%95%AA">十八番</a> (auf japanisch &#8220;ohako&#8221; ausgesprochen) die Bedeutung &#8220;ein Talent, in der jemand gut ist&#8221; oder &#8220;eine Handlung oder Aufführung, die jemand häufig zum besten gibt&#8221;.<p></p>
-3. Wo wir gerade bei Japan sind — möglicherweise hat Karaoke über Umwege einen politischen Ursprung. Die <a href="http://en.wikipedia.org/wiki/Utagoe_coffeehouse">Utagoe-Kaffeehäuser</a> in den 1950er und 1960er Jahren waren Cafés, in denen sich die Gäste zum gemeinsamen Singen trafen. Diese Cafés, die heutzutage fast vollständig durch Karaoke-Bars abgelöst sind, hatten einen linken Hintergrund und boten u.a. der sozialistischen und der kommunistischen Partei oder Gewerkschaften einen Treffpunkt. Singen war hier nicht nur Quatsch, den man mit betrunkenem Kopf macht, sondern ernsthafte politische Arbeit. Auch das sollte beim nächsten Karaoke-Ausflug bedacht werden.</p>
 ]]></content>
   </entry>
   
