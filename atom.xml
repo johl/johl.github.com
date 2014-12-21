@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2014-12-07T21:34:46+01:00</updated>
+  <updated>2014-12-21T15:04:08+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Vollkommen subjektive Auswahl — was ich mir auf dem #31c3 ansehen werde (wenn ich dazu komme)]]></title>
+    <link href="http://blog.johl.io/blog/2014/12/21/31c3/"/>
+    <updated>2014-12-21T13:53:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2014/12/21/31c3</id>
+    <content type="html"><![CDATA[<p>Der 31. <a href="https://de.wikipedia.org/wiki/Chaos_Communication_Congress">Chaos Communication Congress</a> naht. Das <a href="https://events.ccc.de/congress/2014/Fahrplan/">Programm</a> ist prall gefüllt mit wirklich hervorragenden Vorträgen und anderen Events. Aus Erfahrung kann ich sagen, dass es trotzdem schwierig ist, den Congress zum Anhören von Vorträgen zu planen, dafür passiert an allen Ecken einfach zuviel. Spätestens am zweiten Tag schmeisst man das sorgsam ausgearbeitete Programm über den Haufen und bleibt in einer Ecke kleben, wo verrückte Menschen gerade an etwas arbeiten, was unbeschreiblich ist und trotzdem hat man einen Congress erlebt, der unvergleichlich ist. Vielleicht ist es wichtiger, sich mit der <a href="https://github.com/MacLemon/CongressChecklist/blob/master/README.md">Checkliste</a> der mitzubringenden Sachen zu beschäftigen, als mit dem Programm. Da Vorträge aufgezeichnet werden, kann man sie später ja noch nachschauen — allerdings könnte das gleich zum nächsten Trugschluss werden: Wenn die &#8220;schau ich mir lieber in der Aufzeichnung an&#8221;-Liste zu lang wird, ist es dann auch wieder Dezember 2015, bis man sie durch hat.</p>
+
+<p>That being said: Eine kleine Auswahl von Vorträgen, die ich in Erwägung ziehe, folgt. Große, für viele sozial wichtige Veranstaltungen (Jahresrückblicke etc.) habe ich erstmal nicht aufgeführt.</p>
+
+<h1>Tag 1</h1>
+
+<p><a href="https://events.ccc.de/congress/2014/Fahrplan/events/6571.html">Die Keynote</a> von <a href="https://de.wikipedia.org/wiki/Alec_Empire">Alec Empire</a> versuche ich mir mal anzusehen. Wird bestimmt hyperreal und noisy. Von Alec Empire stammte schon die Musik zum Trailer vom letzten Jahr.</p>
+
+<p>Dann gehe ich in Saal 2, zu <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6443.html">Trustworthy secure modular operating system engineering</a> von hannes und David. Hannes träumt seit ein paar Jahrzehnten vom Ausstieg aus der Unix-Technologie weltweit und jetzt sieht es so aus, als könnte es was werden, mit einem Betriebsystem, dass die Schwächen von C hinter sich lässt, indem es konsequent in OCaml implementiert wird. Diesmal ist es kein wilder Traum, sondern tatsächlich etwas, was u.a. mit Unterstützung der Uni in Cambridge echten Wumms erzeigen könnte.</p>
+
+<p>Danach folgt das <a href="https://de.wikipedia.org/wiki/Zentrum_f%C3%BCr_politische_Sch%C3%B6nheit">Zentrum für politische Schönheit</a>: <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6584.html">Mit Kunst die Gesellschaft hacken</a>, also die mit den Mauerkreuzen an der EU-Aussengrenze und der Belohnung von 25.000€ für die Verhaftung der Eigentümerfamilie der Firma Krauss-Maffei Wegmann.</p>
+
+<p>Parallel dazu findet ein Vortrag statt, den ich dadurch erst später sehen kann: <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6447.html">Let’s build our own personalized open textile production line</a>.  Schade, denn Open Source auf andere Bereiche der Ökonomie übertragen ist ein richtig spannendes Thema.</p>
+
+<p>Ganz, ganz dick im Kalender steht bei mit der Vortrag zu <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6559.html">Jugend hackt</a>, nicht nur, weil ich in den letzten beiden Jahren das Projekt als Mentor mitbegleitet haben, sondern auch, weil ich alle Vortragenden total toll finde.</p>
+
+<p>Später am Abend werde ich vielleicht bei <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6154.html">Crypto Tales from the Trenches</a> reinschauen, wo u.a. Laura Poitras davon berichtet, wie sie sich als Journalistin im direkten Kontakt mit Edward Snowden vor Ausspähung versuchte zu schützen. Anschliessend wird ihr Film <a href="https://de.wikipedia.org/wiki/Citizenfour_(Film)">CITIZENFOUR</a> gezeigt.</p>
+
+<h1>Tag 2</h1>
+
+<p>Vermutlich werde ich in <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6162.html">Programming with dependent types in Idris</a> gehen, weil ich eine Schwäche für Forschung im Bereich Programmiersprachen habe (und wir das Thema im <a href="http://currybuch.de/">Curry-Buch</a> auch kurz anscheiden). Allerdings läuft parallel <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6344.html">Security Analysis of Estonia&#8217;s Internet Voting System</a>.  Hm, mal sehen.</p>
+
+<p>Klar ist dann allerdings <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6582.html">Das Transparenzportal Hamburg</a>.  Mit dem Hamburger Transparenzgesetz hatte ich ja auch schon <a href="http://blog.johl.io/blog/2014/01/06/lampedusaanfrage/">Erfahrungen gemacht</a>.</p>
+
+<p>Später dann: <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6156.html">Fernvale: An Open Hardware and Software Platform, Based on the (nominally) Closed-Source MT6260 SoC</a>, was ich hauptsächlich auf dem Zettel habe, weil der Open-Hardware-Aktivist <a href="https://en.wikipedia.org/wiki/Andrew_Huang">bunnie</a> vorträgt und ich sein Projekt zum offenen Laptop so spannend finde.</p>
+
+<h1>Tag 3</h1>
+
+<p>An Tag 3 tritt das <a href="https://www.c-base.org/projects/c-atre/">c-atre</a> auf, was ich mir an dem Tag zwischen Lampenfieber und Rumgerenne überhaupt ansehen kann, wird sich zeigen. Unser Stück zu Urheberrecht und Zeitreisen <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6543.html">The Time is Right</a> gibt es am Abend, davor ist aber noch reichlich Programm.</p>
+
+<p><a href="https://events.ccc.de/congress/2014/Fahrplan/events/6350.html">Correcting copywrongs</a> von meiner <a href="https://de.wikipedia.org/wiki/Julia_Reda">Lieblings-Abgeordneten im EU-Parlament</a> ist gesetzt. Wird der Hammer.</p>
+
+<p><a href="https://events.ccc.de/congress/2014/Fahrplan/events/6547.html">&#8220;Exploit&#8221; in theater</a> klingt nicht uninteressant und hat auch was mit Theater zu tun, wenn es klappt, dann schau ich mir das vielleicht an.</p>
+
+<p><a href="https://events.ccc.de/congress/2014/Fahrplan/events/6366.html">IFG – Mit freundlichen Grüßen</a>, völlig angemessen in Saal 1, könnte ein Knüller werden. Letzter Jahr startete nach dem Congress-Vortrag von Stefan Wehrmeyer die Debatte um das <a href="https://fragdenstaat.de/presse/2014-01-21-bmi-mahnt-fragdenstaat-ab/">Zensurheberrecht</a>. Ich erwarte eine ähnliche Bombe dieses Jahr :)</p>
+
+<p>Dann ist Theater. Parallel zu unserer Aufführung gibt es einen Vortrag zu <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6253.html">Computer und Informatik in Nordkorea</a>, den ich dann wohl als Aufzeichnung sehen werde.</p>
+
+<h1>Tag 4</h1>
+
+<p><a href="https://events.ccc.de/congress/2014/Fahrplan/events/6213.html">The rise and fall of Internet voting in Norway</a> klingt interessant, wenn ich um die Uhrzeit schon aufnahmefähig bin.</p>
+
+<p><a href="https://events.ccc.de/congress/2014/Fahrplan/events/6214.html">Attribution revolution</a> ist für mich auch beruflich ein Must. Mal sehen, ob sich Ideen aus dem Vortrag für <a href="http://wikimania2014.wikimedia.org/wiki/Submissions/How_to_stay_out_of_jail_and_still_use_images_from_Wikimedia_Commons">ein Projekt bei uns</a> nutzen lassen.</p>
+
+<p>Dann habe ich noch das <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6562.html">Closing Event</a> auf dem Zettel. Und natürlich Party.</p>
+
+<p>Wird das alles klappen? Ich fürchte nicht. Aber aufgeregt bin ich schon beim Durchsehen des Programms&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Links, frische (und halbfrische) Links!]]></title>
@@ -961,23 +1016,6 @@ Es ist richtig, sich über Prism zu empören. Es ist verständlich, wenn wir ver
 
 <p>Erledigen wir Prism und andere Schnüffelsysteme politisch, indem wir dafür sorgen, dass künftig niemand einen unrechtmäßigen Vorteil aufgrund der Tatsache erlangen, dass wir gemeinsam mehr wissen, als einer von uns wissen kann. Beenden wir die Herrschaft der Geheimdienste über die Daten und machen sie nutzbar für uns alle.
 </span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What's next?]]></title>
-    <link href="http://blog.johl.io/blog/2013/06/19/what-next%3F/"/>
-    <updated>2013-06-19T01:11:00+02:00</updated>
-    <id>http://blog.johl.io/blog/2013/06/19/what-next?</id>
-    <content type="html"><![CDATA[<ol>
-<li>Refresh your forgotten GPG/PGP knowledge. Take steps to use it more often. Use OTR. Learn about harddisk encryption.</li>
-<li><a href="http://www.schneier.com/book-applied.html">Read about cryptography.</a> Write a ciphersaber. If you didn&#8217;t
-understand the last sentence, don&#8217;t just read over it, assuming it&#8217;s nerdy nonsense. Use a search engine to find out what a ciphersaber is.</li>
-<li>Understand that no cryptographic technology is a silver bullet against the use of <a href="http://xkcd.com/538/">sheer brute force by a determined surveillance state</a>. Cryptography won&#8217;t help you against <a href="http://www.telegraph.co.uk/technology/facebook/6213590/Gay-men-can-be-identified-by-their-Facebook-friends.html">information that comes from correlations and dependencies</a>.</li>
-<li>Become politically active. Don&#8217;t become paranoid, use the greatest communication tool we ever had to free yourself.</li>
-<li>Build upon hope in a hopeless environment.</li>
-</ol>
-
 ]]></content>
   </entry>
   
