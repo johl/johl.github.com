@@ -9,7 +9,7 @@
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="Am Wochenende fand die SIGINT in Köln statt, eine Konferenz des Chaos Computer Club zu Diskursen im digitalen Zeitalter, oder weniger hochtrabend &hellip;">
+  <meta name="description" content="This weekeend, I was was busy. I was at the MediaWiki Berlin Hackathon, where an increbibly diverse community of 104 people from 30 countries, all &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,196 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/04/hackathon/">MediaWiki Hackathon Berlin 2012</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-06-04T15:20:00+02:00" pubdate>Jun 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Berlin_Hackathon_2012-42.jpg/800px-Berlin_Hackathon_2012-42.jpg"></p>
+
+<p>This weekeend, I was was busy. I was at the <a href="http://www.mediawiki.org/wiki/Berlin_Hackathon_2012">MediaWiki Berlin Hackathon</a>, where an increbibly diverse community of 104 people from 30 countries, all lovely nerds and
+smart-asses with a heart of pure gold (in short: Wikipedians) came
+together to hack on all parts of technology behind Wikimedia Foundation
+projects.</p>
+
+<p>We presented our work on <a href="http://meta.wikimedia.org/wiki/Wikidata">Wikidata</a> on the two days before the Hackathon for those interested. I had a short session about single sign-on and problems that may come with it. <a href="http://ultimategerardm.blogspot.de/2012/06/wmdevdays-single-signon.html">Gerard Meijssen blogged about this</a>.</p>
+
+<p>Saturday and Sunday was time for hacking and training. I decided to dive into the new possibilties that are offered by the <a href="http://www.mediawiki.org/wiki/Extension:Scribunto">Scribunto extension</a>, a fresh approach to replace the template language that is currently in use at MediaWiki with <a href="http://www.mediawiki.org/wiki/Extension:Scribunto/Parser_interface_design">a new scripting environment in Lua</a>.</p>
+
+<p>I do like Lua. It&#8217;s clean, minimal, and feels like JavaScript with a
+Brazilian-Portuguese accent. The project I came up with takes various
+elements from a table, combines them and returns a longer,
+mouth-wateringly delicious text.</p>
+
+<p>Here&#8217;s what I did this weekend:</p>
+
+<div><script src='https://gist.github.com/2868403.js?file='></script>
+<noscript><pre><code> --[[ 
+ A module to generate a random curry recipe. Uses some functional programming techniques to archieve
+ an incredibly trivial goal, but you might learn a thing or two about Lua.
+ 
+ Invoke it like this:
+ 
+    {{#invoke:Curry.lua|curry|{{CURRENTTIMESTAMP}}|}}
+ 
+Jens Ohlig 17:47, 2 June 2012 (UTC)
+--]]
+ 
+-- Random Permutation
+permute = function(tab, n, count)
+  n = n or #tab
+  for i = 1, count or n do
+    local j = math.random(i, n)
+    tab[i], tab[j] = tab[j], tab[i]
+  end
+  return tab
+end
+-- Use Lua's metatable protocol to implement a lazy table technique
+do
+  local meta = {}
+  function meta:__index(k) return k end
+  function PositiveIntegers() return setmetatable({}, meta) end
+end
+-- Random sample
+random_sample = function(count, range)
+  return {unpack(
+               permute(PositiveIntegers(), range, count),
+               1, count)
+            }
+end
+-- map
+map = function(func, array)
+  local new_array = {}
+  for i,v in ipairs(array) do
+    new_array[i] = func(v)
+  end
+  return new_array
+end
+element = function(array)
+    return function(x)
+        return &quot;* &quot; .. array[x] .. &quot;\n&quot;
+    end
+end
+-- Here is a function to return curried functions to pick stuff for the recipe. Curry, get it?
+pick = function(l) 
+  return function(n)
+      local l_elem = element(l)
+      return (function(x) if (x==1) then return &quot;* &quot; .. l[math.random(#l)] .. &quot;\n&quot; else return map(l_elem, random_sample(x, #l)) end end)(n)
+  end
+end
+-- Helpers for printing
+recipe = &quot;&quot;
+print = function(s)
+    if (type(s) == &quot;string&quot;) then
+        recipe = recipe .. s .. &quot;\n&quot;
+    elseif (type(s) == &quot;table&quot;) then
+        for i,v in ipairs(s) do
+            recipe = recipe .. v .. &quot;\n&quot;
+        end
+    end
+end
+ 
+spices = { 
+           &quot;Cinnamon stick&quot;, 
+           &quot;Cumin&quot;, 
+           &quot;Coriander&quot;, 
+           &quot;Cloves&quot;, 
+           &quot;Cardamom, preferably both green and black&quot;, 
+           &quot;Black peppercorns&quot;,
+           &quot;Red chilis, or red chili powder&quot;,
+           &quot;Wet ginger paste (go to an Indian grocer’s), or fresh ginger, never ever ever powdered ginger&quot;,
+           &quot;Garam masala&quot;, 
+           &quot;Turmeric&quot;
+         }
+base = {
+          &quot;Sauteed and pureed yellow onions&quot;,
+          &quot;Plain yogurt with heavy cream added as a thickener&quot;,
+          &quot;Coconut milk&quot;
+       }
+ingredients = {
+          &quot;Chicken&quot;,
+          &quot;Mutton&quot;,
+          &quot;Cauliflower and potatoes&quot;,
+          &quot;Paneer&quot;,
+          &quot;Eggplants&quot;
+       }
+media = { 
+          &quot;[[File:Curry Ist.jpg|thumb]]&quot;,
+          &quot;[[File:Curry Powder.JPG|thumb]]&quot;,
+          &quot;[[File:Goat Curry, rice and naan.jpg|thumb]]&quot;, 
+          &quot;[[File:Vegetarian Curry.jpeg|thumb]]&quot;,
+          &quot;[[File:Meen curry 2.JPG|thumb]]&quot;,
+          &quot;[[File:Ipoh Curry Mee.jpg|thumb]]&quot;,
+          &quot;[[File:Chicken curry rice.jpg|thumb]]&quot;
+    }
+ 
+pickSpices = pick(spices)
+pickBase = pick(base)
+pickIngredient = pick(ingredients)
+ 
+-- Print out the recipe
+curry = function(frame)
+    math.randomseed(frame.args[1])
+    local random_media = permute(media)
+    for i = 1, 3 do
+        print(random_media[i])
+    end
+    print(&quot;Start by creating a base for your curry. For this curry, I suggest: &quot;)
+    print(pickBase(1))
+    print(&quot;Fry the spices in a pan. You may want to use: &quot;)
+    print(pickSpices(5))
+    print(&quot;Fry the hard ones for two to three minutes over medium heat (3.5 on an electric stove) and puree them.  Cinnamon stick should be left whole in the sauce to leach out its flavor.  Never are more than three cloves needed and they can be left whole too.  Cardamoms can be inserted whole and then removed, especially if large ones are smashed open a bit with a blunt edge.  Otherwise experiment with preferred combinations.&quot;)
+    print(&quot;\nNow for the main ingredient. We will be using this as a main ingredient in our curry:&quot;)
+    print(pickIngredient(1))
+    print(&quot;In a separate pan, quickly cook your ingredient over high heat, then put it into the liquid base together with the spices and turn to low heat until the dish is ready.&quot;)
+    print(&quot;\n\n'''Enjoy!'''&quot;)
+    return recipe
+end
+-- Interface http://scribunto.wmflabs.org/
+local p = {}
+p.curry = curry
+return p</code></pre></noscript></div>
+
+
+<p>This is what it does:
+<a href="http://test2.wikipedia.org/wiki/User:Jens_Ohlig?action=purge">Generate a random curry recipe</a></p>
+
+<p>Everything about the Hackathon was great — I loved the organization as
+well as the participants. I was able to get in touch with someone doing
+operations at Wikipedia who referred me to someone else who could
+potentially help me with some
+<a href="http://en.wikipedia.org/wiki/Puppet_(software)">Puppet</a> problems at
+Wikidata, just because all the experts where just a few steps away in
+the same room, or at least someone who knew them was.</p>
+
+<p>The playful, but incredibly smart atmosphere and the desire to get stuff
+done made all this probably one of the most satisfying technical meetups
+I&#8217;ve ever been to. A++++++, great weekend, would buy again.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -433,37 +623,6 @@ Times of Precarious Work</strong>&#8221;:</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/07/hackerbrause-zum-lesen/">Hackerbrause zum Lesen</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2011-12-07T13:04:00+01:00" pubdate>Dec 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Die letzten Monate haben ihdl, yetzt und ich damit verbracht ein Buch über Hackerbrausen zu schreiben. Jetzt ist es Ende Dezember endlich soweit — gerade noch rechtzeitig für die letzten geekigen Weihnachtsgeschenke erscheint „Hackerbrause kurz&amp;geek“ im O’Reilly Verlag. Alle weiteren Infos, Vorbestellmöglichkeiten und ein Link zu einem Probekapitel findet ihr auf <a href="http://hacker.brau.se/2011/12/ab-20-dezember-2011-erhaltlich-unser-buch/">hacker.brau.se</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -487,6 +646,10 @@ Times of Precarious Work</strong>&#8221;:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/21/oekonomie/">Ökonomie, Griechenland und das Internet der Dinge</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/08/auszeit/">Auszeit</a>
       </li>
     
@@ -500,10 +663,6 @@ Times of Precarious Work</strong>&#8221;:</p>
     
       <li class="post">
         <a href="/blog/2015/01/11/einhegungen/">Einhegungen fallen nicht vom Himmel</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/02/jahresruckblick-2014/">Jahresrückblick 2014</a>
       </li>
     
   </ul>
