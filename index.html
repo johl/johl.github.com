@@ -9,7 +9,7 @@
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="&#8220;Who do we blame when a robot threatens to kill people?&#8221; Können Markov-Ketten und Twitter-Bots für Morddrohungen zur Verantwortung &hellip;">
+  <meta name="description" content="Vielleicht fing es alles auf dem Apple II an. Wenn du zu lange in die Tabellenkalkulation hineinblickst, blickt die Tabellenkalkulation auch in dich &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/03/01/mischmasch/">Mischmasch</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2015-03-01T22:43:00+01:00" pubdate>Mar 1<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Vielleicht fing es alles auf dem Apple II an. Wenn du zu lange in die Tabellenkalkulation hineinblickst, blickt die Tabellenkalkulation auch in dich hinein. Vielleicht fing unser Blick auf die jetzige Ökonomie 1978 mit VisiCalc an – <a href="https://medium.com/backchannel/a-spreadsheet-way-of-knowledge-8de60af7146e">spekuliert zumindest der Autor des Programms</a>.</p>
+
+<p>Keine Spekulation: Ökonomisch verändert sich was im Weltgefüge. Es ist aber nicht alles Share, was glänzt. <a href="http://jetzt.sueddeutsche.de/texte/anzeigen/591846/Geld-her">Manchmal ist es einfach nur Warenform statt Teilen</a>. Vielleicht hilft uns die Wissenschaft namens Cliodynamics, die Isaac Asimov noch als <em>psychohistory</em> als Science Fiction beschrieb, dabei <a href="http://www.wired.com/2013/04/cliodynamics-peter-turchin/all/">endlich die Zukunft zu verstehen</a>.</p>
+
+<p>Und es bleibt ja immer noch Code, wenn du sonst niemanden hast. Damit kannst du <a href="http://red-badger.com/blog/2015/02/23/understanding-the-enigma-machine-with-30-lines-of-ruby-star-of-the-2014-film-the-imitation-game/">die Enigma verstehen</a> (in nur 30 Zeilen). Oder <a href="https://github.com/kanaka/mal">ein Lisp bauen</a> (in 26 Sprachen).</p>
+
+<p>Was? Warum ich mich mit so einem Quatsch beschäftige? Weil das hier mein Blog ist, vielen Dank, <a href="http://www.theatlantic.com/technology/archive/2015/02/thedress-and-the-rise-of-attention-policing/386357/">liebe Aufmerksamkeitspolizei</a>. Während ich dies schreibe wird langsam weiss zu gold. Halt nein, es war schon immer schwarz und blau.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -505,213 +542,6 @@ Woche bringt&#8230;</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/11/23/around-me/">Was gibt es hier zu sehen? Mediawiki APIs hacken</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2014-11-23T16:33:00+01:00" pubdate>Nov 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Chantek ist ein besonderer Orang-Utan. Im Yerkes Regional Primate Research Center geboren lernte er innerhalb eines Forschungsprojektes mittels der amerikanischen Gebärdensprache (ASL) mit Menschen zu kommunizieren und gesprochenes Englisch zu verstehen, Grundlagen des Umgangs mit Geld und Spiele. Mit fünfeinhalb Jahren wurde ihm der Stand eines etwa zweijährigen Kindes attestiert, wobei er in einigen Bereichen (z. B. Sprachverständnis und Werkzeugnutzung) die Fertigkeiten eines vierjährigen Kindes aufwies. Über Chantek gibt es <a href="http://de.wikipedia.org/wiki/Chantek">in der Wikipedia</a> noch mehr zu lesen, als ich hier zitiert und zusammengefasst habe.</p>
-
-<p><a href="https://github.com/hay/chantek">Chantek</a> ist aber auch der Name eines Hacks, der auf dem <a href="http://www.mediawiki.org/wiki/Amsterdam_Hackathon_2014">Mediawiki Hackathon 2014 in Amsterdam</a> von <a href="http://www.haykranen.nl/">Hay Kranen</a> gebastelt wurde. Auf Niederländisch heisst &#8220;Api&#8221; auch <a href="http://nl.wikipedia.org/wiki/Apen">Affe</a>. Eine API, die menschliche Sprache (zumindest ein bisschen) versteht, ist gut geeignet, um nach dem sprechenden Affen Chantek benannt zu werden.</p>
-
-<p>Über die Mediawiki API habe ich im letzten Blogbeitrag bereits <a href="http://blog.johl.io/blog/2014/11/17/mediawiki-api/">eine umfassende Einführung</a> geschrieben. Chantek vereinfacht diese API auf besonders schlanke Weise und macht die Unterhaltung ein bisschen angenehmer. Um Properties bei Wikidata abzufragen und Titel darzustellen, brauche ich bei der klassischen <a href="http://www.mediawiki.org/wiki/Wikibase/API">Mediawiki API zu Wikidata</a> typischerweise mehrere API-Calls. Bei Chantek kann ich zum Beispiel sagen, dass mich nur Abfrageergebnisse auf Deutsch interessieren und ich bekomme die Werte dann auch mit ihrer deutschen Bezeichnung zurück.</p>
-
-<h3>Über die Grenzen der Same-Origin-Policy hinweg mit CORS</h3>
-
-<p>Chantek ist eine Python-Anwendung, die die <a href="http://enable-cors.org/">CORS-Spezifikation</a> implementiert, um JavaScript-Anwendungen in Web-Anwendungen zu ermöglichen, Daten auszulesen und darzustellen. Normalerweise gibt es bei JavaScript im Browser die <a href="http://de.wikipedia.org/wiki/Same-Origin-Policy">Same-Origin-Policy</a>, die verhindert, dass Daten aus beliebigen (und damit potenziell unsicheren) Quellen einfach so nachgeladen werden können: Clientseitiges JavaScript kann nur auf Daten der Domain zugreifen, woher auch das JavaScript selbst geladen wurde. Bei API-Calls stellt sich diese Maßnahme als gelinde gesagt schwierig dar. Um diese Beschränkung zu umgehen, gibt es zum Beispiel <a href="http://de.wikipedia.org/wiki/JavaScript_Object_Notation#JSONP">JSONP</a>, das aber selbst nicht unproblematisch ist. CORS ist eine Möglichkeit, die Grenzen der Same-Origin-Policy zu überschreiten, die auch Authentifizierung und feinere Sicherheitsabstufungen beinhaltet und vom W3C spezifiziert wurde.</p>
-
-<p>Leider ist CORS nicht in allen Browsern vorhanden. Wie man browserunhabhängig prüft, ob CORS zur Verfügung steht (bei den meisten modernen Browsern ist das der Fall), zeigt etwa <a href="http://www.html5rocks.com/en/tutorials/cors/">dieses Tutorial von Monsur Hossain</a> und der darin benutzte Code:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">createCORSRequest</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;withCredentials&quot;</span> <span class="k">in</span> <span class="nx">xhr</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// Check if the XMLHttpRequest object has a &quot;withCredentials&quot; property.</span>
-</span><span class='line'>    <span class="c1">// &quot;withCredentials&quot; only exists on XMLHTTPRequest2 objects.</span>
-</span><span class='line'>    <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">XDomainRequest</span> <span class="o">!=</span> <span class="s2">&quot;undefined&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// Otherwise, check if XDomainRequest.</span>
-</span><span class='line'>    <span class="c1">// XDomainRequest only exists in IE, and is IE&#39;s way of making CORS requests.</span>
-</span><span class='line'>    <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XDomainRequest</span><span class="p">();</span>
-</span><span class='line'>    <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// Otherwise, CORS is not supported by the browser.</span>
-</span><span class='line'>    <span class="nx">xhr</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">xhr</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Zeig mir meine Umgebung, Wikidata!</h3>
-
-<p>Mit Chantek (und CORS) wollte ich eine JavaScript-Webanwendung schreiben, die mir anzeigt, was es in Wikidata um mich herum an geogetaggten Wisssensgegenständen gibt. In Berlin (zumindest innerhalb des S-Bahn-Rings) ist das einiges — viele interessante Orte sinde nur ein paar Hundert Meter weit entfernt und haben einen Wikipedia-Artikel.  Auf dem Land müsste ich meine Anwendung vermutlich ein bisschen erweitern: ein Radius von 500m ist nicht besonders üppig für manche Gegenden. Auch, dass ich Wissensgegenstände nur auf Deutsch suche und Artikel in der deutschsprachigen Wikipedia dazu anzeige, könnte eine überarbeitete Version meiner Anwendung als Parameter änderbar machen.</p>
-
-<p>Als kleiner, schneller Hack zwischendurch, aufgespielt auf einen Webserver, hat mir meine Anwendung aber durchaus Spaß bereitet. Mit dem Mobiltelefon kann ich so schauen, was Wikidata für meine Umgebung anzeigt.</p>
-
-<p>Ein API-Call, um Dinge im meiner Umgebung zu finden, kann mit Chantek
-etwa so aussehen:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">http</span><span class="o">:</span><span class="c1">//chantek.bykr.org/wikidata/query?q=around[625,52.205,0.119,15]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Hiermit frage ich Chantek (über die <a href="http://wdq.wmflabs.org/api_documentation.html">WikidataQuery-API</a>) nach Wikidata-Wissensgegenständen im Umkreis von 15km um Cambridge in England: der erste Parameter (625) bezieht sich auf den Planeten, für den die Koordinaten gelten (Erde), die nächsten zwei sind die Koordinaten von Cambridge und mit 15 gebe ich den Radius an. Auch Brüche sind bei der Angabe des Radius möglich, 0.5 ist also 500m.</p>
-
-<p>Jetzt fehlen mir nur noch meine aktuellen Koordinaten. Moderne Browser unterstützen das HTML5-Feature Geolocation, mit der JavaScript-Bibliothek <a href="http://modernizr.com/">Modernizr</a> kann ich überprüfen, ob dieses Feature vorhanden ist. Da es Privatsphärenbedenken bei der Abfrage von Geokoordinaten gibt, muss der Browser bei der ersten Abfrage der Koordinaten des Standorts von einer neuen Seite die Benutzerin oder den Benutzer fragen, ob das so in Ordnung ist. Wenn zugestimmt wird, können wir die Koordinaten benutzen, eine Abfrage starten und bekommen eine Liste von Wikidata-Items zurück. Tatsächlich erzeugen wir zuerst einen CORS-Request und als Callback-Funktion geht es gleich in die nächste Abfrage, denn wir wollen ja für jedes Element der Liste einen Titel und eine Wikipedia-Seite haben. Das könnte zum Beispiel so aussehen:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">locate_me</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// Check if we can do HTML5 geolocation</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">Modernizr</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>       <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>          <span class="kd">var</span> <span class="nx">lat</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
-</span><span class='line'>          <span class="kd">var</span> <span class="nx">lon</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
-</span><span class='line'>          <span class="kd">var</span> <span class="nx">chantek</span> <span class="o">=</span> <span class="s2">&quot;http://chantek.bykr.org/wikidata/&quot;</span><span class="p">;</span>
-</span><span class='line'>          <span class="c1">// Query data around me</span>
-</span><span class='line'>          <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="s2">&quot;query?q=around[625,&quot;</span> <span class="o">+</span> <span class="nx">lat</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="nx">lon</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="s2">&quot;0.5]&amp;callback=?&quot;</span><span class="p">;</span>
-</span><span class='line'>          <span class="kd">var</span> <span class="nx">query_xhr</span> <span class="o">=</span> <span class="nx">createCORSRequest</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">chantek</span><span class="o">+</span><span class="nx">query</span><span class="p">);</span>
-</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">query_xhr</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;CORS not supported&#39;</span><span class="p">);</span>
-</span><span class='line'>          <span class="p">}</span>
-</span><span class='line'>          <span class="nx">query_xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-</span><span class='line'>            <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">query_xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
-</span><span class='line'>            <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">response</span><span class="p">).</span><span class="nx">response</span><span class="p">;</span>
-</span><span class='line'>            <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>              <span class="c1">// Call queried entities and display them</span>
-</span><span class='line'>              <span class="kd">var</span> <span class="nx">entity</span> <span class="o">=</span> <span class="s2">&quot;entity?q=Q&quot;</span><span class="o">+</span> <span class="nx">value</span> <span class="o">+</span> <span class="s2">&quot;&amp;lang=de&amp;callback=?&quot;</span><span class="p">;</span>
-</span><span class='line'>              <span class="kd">var</span> <span class="nx">entity_xhr</span> <span class="o">=</span> <span class="nx">createCORSRequest</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">chantek</span><span class="o">+</span><span class="nx">entity</span><span class="p">);</span>
-</span><span class='line'>              <span class="nx">entity_xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-</span><span class='line'>                <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">entity_xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
-</span><span class='line'>                <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">response</span><span class="p">).</span><span class="nx">response</span><span class="p">;</span>
-</span><span class='line'>                <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#location-list&quot;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span>
-</span><span class='line'>                    <span class="s2">&quot;&lt;li&gt;&quot;</span> <span class="o">+</span>
-</span><span class='line'>                    <span class="s2">&quot;&lt;big&gt;&quot;</span> <span class="o">+</span>
-</span><span class='line'>                    <span class="s2">&quot;&lt;a href=&quot;</span> <span class="o">+</span> <span class="s2">&quot;\&quot;&quot;</span> <span class="o">+</span>
-</span><span class='line'>                    <span class="nx">data</span><span class="p">[</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]].</span><span class="nx">sitelinks</span><span class="p">.</span><span class="nx">de</span><span class="p">.</span><span class="nx">url</span> <span class="o">+</span>
-</span><span class='line'>                    <span class="s2">&quot;\&quot;&gt;&quot;</span><span class="o">+</span>
-</span><span class='line'>                    <span class="nx">data</span><span class="p">[</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]].</span><span class="nx">labels</span> <span class="o">+</span>
-</span><span class='line'>                    <span class="s2">&quot;&lt;/a&gt;&quot;</span> <span class="o">+</span>
-</span><span class='line'>                    <span class="s2">&quot;&lt;/big&gt;&quot;</span> <span class="o">+</span>
-</span><span class='line'>                    <span class="s2">&quot;&lt;/li&gt;&quot;</span>
-</span><span class='line'>                <span class="p">);</span>
-</span><span class='line'>              <span class="p">};</span>
-</span><span class='line'>              <span class="nx">entity_xhr</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>                <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Error making the request&#39;</span><span class="p">);</span>
-</span><span class='line'>              <span class="p">};</span>
-</span><span class='line'>              <span class="nx">entity_xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-</span><span class='line'>            <span class="p">});</span>
-</span><span class='line'>          <span class="p">};</span>
-</span><span class='line'>          <span class="nx">query_xhr</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Error making the request&#39;</span><span class="p">);</span>
-</span><span class='line'>          <span class="p">};</span>
-</span><span class='line'>          <span class="nx">query_xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Geolocation not supported&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Der fertige Hack</h3>
-
-<p>Mit ein bisschen UI und HTML drumherum habe ich diesen kleinen Hack unter <a href="http://www.johl.io/aroundme-wikidata/">http://www.johl.io/aroundme-wikidata/</a> ins Netz gestellt. Ich wünsche viel Spaß!</p>
-
-<p>In der Nähe des U-Bahnhofs Eberswalder Straße in Berlin sieht das auf meinem Mobiltelefon etwa so aus:</p>
-
-<p><img src="http://f.cl.ly/items/262K2m0k4531221t0g1R/aroundme-wikidata.png" width="300"></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -733,6 +563,10 @@ etwa so aussehen:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/01/mischmasch/">Mischmasch</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/22/links/">Nachrichten aus der Zukunft</a>
       </li>
     
@@ -746,10 +580,6 @@ etwa so aussehen:</p>
     
       <li class="post">
         <a href="/blog/2015/01/25/hackerspaces/">Hackerspaces im Landtag NRW</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/17/lesen/">Mein Internet ist leer! Was könnte ich sonst noch lesen?</a>
       </li>
     
   </ul>
