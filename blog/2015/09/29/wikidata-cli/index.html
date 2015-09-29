@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Auszeit - Hackety hack hack</title>
+  <title>Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken - Hackety hack hack</title>
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="An dieser Stelle hätte ein interessanter Blogartikel stehen können,
-vielleicht mal wieder über ein Programmierprojekt. Aus gesundheitlichen
-Gründen &hellip;">
+  <meta name="description" content="Ein richtiger Hack ist das nicht, aber es ist besser, wenn ich das folgende aufschreibe, bevor ich es wieder vergesse. Wikidata benutzt für jeden &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Gründen &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.johl.io/blog/2015/02/08/auszeit">
+  <link rel="canonical" href="http://blog.johl.io/blog/2015/09/29/wikidata-cli">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -81,7 +79,7 @@ Gründen &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Auszeit</h1>
+      <h1 class="entry-title">Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken</h1>
     
     
       <p class="meta">
@@ -92,17 +90,47 @@ Gründen &hellip;">
 
   
 
-<time datetime="2015-02-08T23:01:00+01:00" pubdate>Feb 8<span>th</span>, 2015</time>
+<time datetime="2015-09-29T13:37:00+02:00" pubdate>Sep 29<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>An dieser Stelle hätte ein interessanter Blogartikel stehen können,
-vielleicht mal wieder über ein Programmierprojekt. Aus gesundheitlichen
-Gründen kam es diese Woche nicht dazu. Schauen wir, was die nächste
-Woche bringt&#8230;</p>
+<div class="entry-content"><p>Ein richtiger Hack ist das nicht, aber es ist besser, wenn ich das folgende aufschreibe, bevor ich es wieder vergesse.</p>
+
+<p><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> benutzt für jeden <a href="https://www.wikidata.org/wiki/Wikidata:Glossary#Entities.2C_items.2C_properties_and_queries">Wissensgegenstand</a> in der Datenbank einen Bezeichner, der mit Q beginnt (oder mit P, wenn es sich um eine Eigenschaft handelt). Berlin ist z.B. <a href="https://www.wikidata.org/wiki/Q64">Q64</a>.</p>
+
+<p>Wenn ich etwa mit <a href="http://googleknowledge.github.io/qlabel/">qLabel</a> die Möglichkeiten multilingualer Labels auf Basis von Wikidata in Webseiten benutzen will, brauche ich diese Bezeichner mit Q für alles, was übersetzt werden soll.</p>
+
+<p>Prima wäre es, wenn ich auf der Kommandozeile einfach ein paar Begriffe eingeben könnte und die entsprechenden Q-Bezeichner als Liste bekomme.  Und so wird&#8217;s gemacht:</p>
+
+<p>Die API von Wikidata folgt im Grunde der allgemeinen MediaWiki-API, die ich schon <a href="http://blog.johl.io/blog/2014/11/17/mediawiki-api/">an anderer Stelle beschrieben</a> habe.</p>
+
+<p>Um jetzt auf der Kommandozeile darauf zuzugreifen, brauche ich noch zwei
+Tools:</p>
+
+<ul>
+<li><a href="http://curl.haxx.se/">curl, ein Kommandozeilen-Tool zum Übertragen von Daten anhand von URLs</a></li>
+<li><a href="https://stedolan.github.io/jq/">jq, einen JSON-Prozessor für die Kommandozeile</a></li>
+</ul>
+
+
+<p>Der Begriff &#8220;Hacker&#8221; ist schön zweideutig und kann viele Bedeutungen annehmen, die jeweils eigene Wissensgegenstände in Wikidata mit eigenem Q-Bezeichner sind. Suchen wir doch einfach danach!</p>
+
+<h3>Suche nach einem Titel (z.B. in der deutschsprachigen Wikipedia)</h3>
+
+<p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbgetentities\&amp;sites\=enwiki\&amp;titles\=Hacker\&amp;languages\=en\&amp;format\=json | jq -r '.entities | keys'</code></p>
+
+<p>Hier bekommen wir nur einen Q-Bezeichner zurück, nämlich genau den, der zu der Seite mit dem Titel &#8220;Hacker&#8221; in der deutschsprachigen Wikipedia passt (in dem Fall: eine Begriffserklärungs-Seite).</p>
+
+<h3>Suche nach Labels von Wissensgegenständen</h3>
+
+<p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbsearchentities\&amp;search\=Hacker\&amp;language\=en\&amp;format\=json | jq -r '[.search[].id]'</code></p>
+
+<p>Hier bekomme eine längere Liste, z.B. mit dem Computerspiel gleichen Namens, der Subkultur, dem Begriff in der Computersicherheit etc.</p>
+
+<p>Mit <code>curl</code> und <code>jq</code> zusammen kann ich mir beliebige Kommandozeilen-Programme für die Wikidata-API schreiben und auf das zurückgegebene JSON-Eregebnis zugreifen. Die Möglichkeiten sind fast endlos.</p>
 </div>
 
 
@@ -120,7 +148,7 @@ Woche bringt&#8230;</p>
 
   
 
-<time datetime="2015-02-08T23:01:00+01:00" pubdate>Feb 8<span>th</span>, 2015</time>
+<time datetime="2015-09-29T13:37:00+02:00" pubdate>Sep 29<span>th</span>, 2015</time>
       
 
 
@@ -129,13 +157,13 @@ Woche bringt&#8230;</p>
       <div class="sharing">
   
   <a class="FlattrButton" style="display:none;"
-        title="Auszeit"
+        title="Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken"
         lang="en_GB"
         rev="flattr;uid:johl;category:rest;button:compact;"
-        href="http://blog.johl.io/blog/2015/02/08/auszeit/">Auszeit ( http://blog.johl.io/blog/2015/02/08/auszeit/ )</a>
+        href="http://blog.johl.io/blog/2015/09/29/wikidata-cli/">Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken ( http://blog.johl.io/blog/2015/09/29/wikidata-cli/ )</a>
   
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.johl.io/blog/2015/02/08/auszeit/" data-via="johl" data-counturl="http://blog.johl.io/blog/2015/02/08/auszeit/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.johl.io/blog/2015/09/29/wikidata-cli/" data-via="johl" data-counturl="http://blog.johl.io/blog/2015/09/29/wikidata-cli/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -148,10 +176,8 @@ Woche bringt&#8230;</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/01/25/hackerspaces/" title="Previous Post: Hackerspaces im Landtag NRW">&laquo; Hackerspaces im Landtag NRW</a>
+        <a class="basic-alignment left" href="/blog/2015/03/01/mischmasch/" title="Previous Post: Mischmasch">&laquo; Mischmasch</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/02/21/oekonomie/" title="next Post: Ökonomie, Griechenland und das Internet der Dinge">Ökonomie, Griechenland und das Internet der Dinge &raquo;</a>
       
     </p>
   </footer>
@@ -246,8 +272,8 @@ Woche bringt&#8230;</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.johl.io/blog/2015/02/08/auszeit';
-        var disqus_url = 'http://blog.johl.io/blog/2015/02/08/auszeit';
+        var disqus_identifier = 'http://blog.johl.io/blog/2015/09/29/wikidata-cli';
+        var disqus_url = 'http://blog.johl.io/blog/2015/09/29/wikidata-cli';
         var disqus_script = 'embed.js';
       
     (function () {

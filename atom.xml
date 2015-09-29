@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2015-03-01T23:16:10+01:00</updated>
+  <updated>2015-09-29T16:37:01+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken]]></title>
+    <link href="http://blog.johl.io/blog/2015/09/29/wikidata-cli/"/>
+    <updated>2015-09-29T13:37:00+02:00</updated>
+    <id>http://blog.johl.io/blog/2015/09/29/wikidata-cli</id>
+    <content type="html"><![CDATA[<p>Ein richtiger Hack ist das nicht, aber es ist besser, wenn ich das folgende aufschreibe, bevor ich es wieder vergesse.</p>
+
+<p><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> benutzt für jeden <a href="https://www.wikidata.org/wiki/Wikidata:Glossary#Entities.2C_items.2C_properties_and_queries">Wissensgegenstand</a> in der Datenbank einen Bezeichner, der mit Q beginnt (oder mit P, wenn es sich um eine Eigenschaft handelt). Berlin ist z.B. <a href="https://www.wikidata.org/wiki/Q64">Q64</a>.</p>
+
+<p>Wenn ich etwa mit <a href="http://googleknowledge.github.io/qlabel/">qLabel</a> die Möglichkeiten multilingualer Labels auf Basis von Wikidata in Webseiten benutzen will, brauche ich diese Bezeichner mit Q für alles, was übersetzt werden soll.</p>
+
+<p>Prima wäre es, wenn ich auf der Kommandozeile einfach ein paar Begriffe eingeben könnte und die entsprechenden Q-Bezeichner als Liste bekomme.  Und so wird&#8217;s gemacht:</p>
+
+<p>Die API von Wikidata folgt im Grunde der allgemeinen MediaWiki-API, die ich schon <a href="http://blog.johl.io/blog/2014/11/17/mediawiki-api/">an anderer Stelle beschrieben</a> habe.</p>
+
+<p>Um jetzt auf der Kommandozeile darauf zuzugreifen, brauche ich noch zwei
+Tools:</p>
+
+<ul>
+<li><a href="http://curl.haxx.se/">curl, ein Kommandozeilen-Tool zum Übertragen von Daten anhand von URLs</a></li>
+<li><a href="https://stedolan.github.io/jq/">jq, einen JSON-Prozessor für die Kommandozeile</a></li>
+</ul>
+
+
+<p>Der Begriff &#8220;Hacker&#8221; ist schön zweideutig und kann viele Bedeutungen annehmen, die jeweils eigene Wissensgegenstände in Wikidata mit eigenem Q-Bezeichner sind. Suchen wir doch einfach danach!</p>
+
+<h3>Suche nach einem Titel (z.B. in der deutschsprachigen Wikipedia)</h3>
+
+<p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbgetentities\&amp;sites\=enwiki\&amp;titles\=Hacker\&amp;languages\=en\&amp;format\=json | jq -r '.entities | keys'</code></p>
+
+<p>Hier bekommen wir nur einen Q-Bezeichner zurück, nämlich genau den, der zu der Seite mit dem Titel &#8220;Hacker&#8221; in der deutschsprachigen Wikipedia passt (in dem Fall: eine Begriffserklärungs-Seite).</p>
+
+<h3>Suche nach Labels von Wissensgegenständen</h3>
+
+<p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbsearchentities\&amp;search\=Hacker\&amp;language\=en\&amp;format\=json | jq -r '[.search[].id]'</code></p>
+
+<p>Hier bekomme eine längere Liste, z.B. mit dem Computerspiel gleichen Namens, der Subkultur, dem Begriff in der Computersicherheit etc.</p>
+
+<p>Mit <code>curl</code> und <code>jq</code> zusammen kann ich mir beliebige Kommandozeilen-Programme für die Wikidata-API schreiben und auf das zurückgegebene JSON-Eregebnis zugreifen. Die Möglichkeiten sind fast endlos.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mischmasch]]></title>
@@ -807,32 +849,6 @@ Dann bekam ich Hunger. <a href="https://de.wikipedia.org/wiki/Phat_Thai">Phat Th
 <p>Das entsprechende Haskell-Package <a href="http://hackage.haskell.org/package/bytestring">bytestrings</a> zickte beim Installieren. Wie mir dann bei der weiteren Suche klar wurde, ist seit Ende letzten Jahres die Haskell-Plattform auf MacOS X 10.9 kaputt — Apple hat beschlossen, den Compiler gcc nicht mehr mit auszuliefern, weshalb bis zur nächsten Haskell-Version ein <a href="http://www.haskell.org/platform/ghc-clang-wrapper">Fix</a> benutzt werden muss, um GHC mitzuteilen, dass clang benutzt werden muss. Die Seite „<a href="http://www.haskell.org/platform/mac.html">Haskell Platform for Mac OS X</a>“ half mir weiter.</p>
 
 <p>Dann passierte noch weiteres Zeug, aber im Wesentlichen war es das mit dem Pad-Thai-Tag.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Polizei Hamburg möchte lieber keine Auskunft nach dem Transparenzgesetz geben]]></title>
-    <link href="http://blog.johl.io/blog/2014/01/06/lampedusaanfrage/"/>
-    <updated>2014-01-06T18:59:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2014/01/06/lampedusaanfrage</id>
-    <content type="html"><![CDATA[<p><a href="https://de.wikipedia.org/wiki/Bootsungl%C3%BCck_vor_Lampedusa_2013">Am 3. Oktober 2013 fanden hunderte Menschen bei dem Versuch von der afrikanischen Küste aus in die Europäische Union zu flüchten den Tod.</a> Einige Tage danach begann die Hamburger Polizei mit der Suche nach Überlebenden, indem sie in den Stadtteilen St. Pauli und St. Georg <a href="http://www.taz.de/!125397/">Kontrollen von Menschen mit nicht-weisser Hautfarbe</a> durchführte. Die Bewertung des Verhaltens der Hamburger Polizei möchte ich den Leserinnen und Lesern überlassen, ich las jedenfalls auch schon die Einschätzung als „rassistisch“ für Massenkontrollen aufgrund der Hautfarbe; in vielen Ländern wäre ein solcher Polizeieinsatz vermutlich illegales <em><a href="https://de.wikipedia.org/wiki/Racial_Profiling">racial profiling</a></em>.</p>
-
-<p>Im Oktober 2013 stellte ich eine <a href="http://blog.johl.io/blog/2013/11/18/anfrage/">Anfrage nach dem Hamburger Transparenzgesetz an die Hamburger Polizei zu den Kosten des Einsatzes</a>. Das Transparenzgesetz gilt als vorbildlich in Deutschland. Das Gesetz wurde von einer Volksinitiative von Mehr Demokratie, Transparency International und dem Chaos Computer Club sowie einigen Bündnispartnern <a href="http://de.hamburgertransparenzgesetz.wikia.com/wiki/Hamburger_Transparenzgesetz_Wiki">in einem Wiki</a> geschrieben. Die Kernelemente des Gesetzes sind eine Veröffentlichungspflicht für alle Informationen von öffentlichem Interesse (u.A. Verträge zur Daseinsvorsorge, Gutachten, Geodaten, Baugenehmigungen, Zuwendungsbescheide, § 3), eine Ausweitung des Behördenbegriffs u.A. auf Unternehmen die öffentliche Aufgaben wahrnehmen (§ 2 Abs. 3) sowie eine deutliche Einschränkung der Ausnahmetatbestände, z.B. Betriebs- und Geschäftsgeheimnisse (§§ 4 bis 7). Damit geht das Transparenzgesetz deutlich über bestehende IFGs hinaus. Das Gesetz trat am 6. Oktober 2012 in Kraft.</p>
-
-<p>Meine Anfrage, die <a href="https://fragdenstaat.de/anfrage/polizei-einsatz-gegen-lampedusa-fluchtlinge-im-oktober-2013/">hier einsehbar ist</a>, traf bei der Hamburger Polizei möglicherweise nicht auf Gegenliebe. Ich wurde in einem Schriftwechsel gebeten, meine Anfrage über die Einsätze im Oktober in Hamburg zu konkretisieren, was ich tat, indem ich mitteilte, dass ich den Zeitraum vom 1. bis zum 31. 10. mit „im Oktober“ meinte und mit „in Hamburg“ das Gebiet der Freien und Hansestadt Hamburg. Daraufhin bekam ich eine Mitteilung über Kosten, die ich zum Glück und Dank der Unterstützung vieler guter Menschen im Internet auf mehrere Schultern verteilen konnte — die Kosten für die Anfrage waren innerhalb weniger Minuten zusammen, nachdem ich auf Twitter um Unterstützung gefragt hatte. Im Dezember (wann genau kann ich wegen Abwesenheit nicht feststellen) bekam ich einen Brief der Polizei Hamburg mit dem Datum vom 18.11., also noch innerhalb der gesetzlichen Frist. Darin teilte man mir mit, dass meine Anfrage nicht beantwortet werden würde, „<em>da es sich bei denen von Ihnen gewünschten Unterlagen [&#8230;] um Informationen handelt, deren Bekanntmachung die innere Sicherheit nicht unerheblich gefährden würden.</em>“ Für diese Auskunft wurden mir 165,50€ in Rechnung gestellt.</p>
-
-<p>Der vollständige Brief ist <a href="https://fragdenstaat.de/files/foi/13354/20140106133058415_geschwaerzt.pdf">hier einsehbar</a>. Am Montag, den 6. Januar 2014, bezifferte Peter Born von der Polizei Hamburg die Kosten des Polizeieinsatzes am 22.12. 2013 mit 1,13 Millionen €. Offensichtlich gab es bei der Pressekonferenz plötzliche keine „nicht unerhebliche“ Gefährungen der inneren Sicherheit durch Nennung von Einsatzkosten.</p>
-
-<p>Für mich stellt die Weigerung der Polizei, ihrer gesetzlichen Transparenzpflicht nachzukommen, einen Akt staatlicher Willkür dar. Ich werde deshalb die zuständigen Behörden um Vermittlung bei meiner Transparenzgesetzanfrage bemühen. Leider steht diese Taktik der Hamburger Polizei, sich über geltendes Recht hinwegzusetzen, in einer langen Reihe von Verstößen in den letzten Tagen. Es ist meine Hoffnung, dass ich durch die Vermittlung durch die Aufsichtsbehörden zumindest in diesem einem kleinen Fall die Hamburger Polizei dazu bewegen kann, die  Einhaltung rechtsstaatlicher Grundsätze in Zukunft ernsthafter in Erwägung zu ziehen.</p>
-
-<p><strong>Update</strong>: Nachdem <a href="http://zapp.blog.ndr.de/kosten-polizeieinsatz-transparenzgesetz-hamburg/2014/01/07/">eine Webseite des NDR auch über diesen Blogpost berichtet hat</a>, liegt mittlerweile eine Stellungnahme der Innenbehörde vor, die ich zitieren möchte:</p>
-
-<blockquote><p>Der Sprecher der Hamburger Innenbehörde, Frank Reschreiter, sagt, es gebe keinen Widerspruch. Die Summe von 1,1 Millionen  Euro setze sich aus den Kosten für den Einsatz von Polizisten aus anderen Bundesländern, die der Stadt Hamburg in Rechnung gestellt würden, sowie der entstandenen Schäden an Polizeifahrzeugen zusammen. Die eigentlichen Einsatzkosten der Hamburger Beamten seien damit also nicht erfasst, würden aber als normale laufenden Kosten auch nicht berechnet. Da bei den Lampedusa-Einsätzen keine “Fremdkosten” durch auswärtige Beamte entstanden seien, könnten dort eben gar keine Angaben gemacht werden (wie Ohlig mitgeteilt). Die Begründung mit der möglichen Gefährdung der inneren Sicherheit bezöge sich lediglich auf die von Ohlig zusätzlich angeforderten Einsatz-Unterlagen, nicht auf seine Frage nach den Kosten.</p></blockquote>
-
-
-<p>Ich nehme zur Kenntnis, dass die Hamburger Polizei keinen Überblick über die Kosten eigener Einsätze (ohne Beteiligung von Polizei aus anderen Bundesländern) hat, auch wenn ich mir vorstellen kann, dass das die (innere) Revision unnötig erschwert. Zu den Kosten von 165,50€ für eine im Wesentlichen unbeantwortete Anfrage werde ich trotzdem die zuständige Behörde zur Vermittlung anrufen.</p>
-
-<p>Für das überaus großartige Portal <a href="https://fragdenstaat.de/">„Frag den Staat“</a>, ohne das ich diese Anfrage vermutlich nie hätte stellen können, kann man auch <a href="https://fragdenstaat.de/hilfe/spenden/">spenden</a>. Um Stefan Wehrmeyer und den anderen tollen Menschen dort beim Weiterbetrieb von „Frag den Staat“ zumindest ein bisschen zu helfen habe ich 10€ in Bitcoin dorthin geschickt.</p>
 ]]></content>
   </entry>
   

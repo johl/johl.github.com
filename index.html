@@ -9,7 +9,7 @@
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="Vielleicht fing es alles auf dem Apple II an. Wenn du zu lange in die Tabellenkalkulation hineinblickst, blickt die Tabellenkalkulation auch in dich &hellip;">
+  <meta name="description" content="Ein richtiger Hack ist das nicht, aber es ist besser, wenn ich das folgende aufschreibe, bevor ich es wieder vergesse. Wikidata benutzt für jeden &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,70 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/09/29/wikidata-cli/">Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2015-09-29T13:37:00+02:00" pubdate>Sep 29<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ein richtiger Hack ist das nicht, aber es ist besser, wenn ich das folgende aufschreibe, bevor ich es wieder vergesse.</p>
+
+<p><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> benutzt für jeden <a href="https://www.wikidata.org/wiki/Wikidata:Glossary#Entities.2C_items.2C_properties_and_queries">Wissensgegenstand</a> in der Datenbank einen Bezeichner, der mit Q beginnt (oder mit P, wenn es sich um eine Eigenschaft handelt). Berlin ist z.B. <a href="https://www.wikidata.org/wiki/Q64">Q64</a>.</p>
+
+<p>Wenn ich etwa mit <a href="http://googleknowledge.github.io/qlabel/">qLabel</a> die Möglichkeiten multilingualer Labels auf Basis von Wikidata in Webseiten benutzen will, brauche ich diese Bezeichner mit Q für alles, was übersetzt werden soll.</p>
+
+<p>Prima wäre es, wenn ich auf der Kommandozeile einfach ein paar Begriffe eingeben könnte und die entsprechenden Q-Bezeichner als Liste bekomme.  Und so wird&#8217;s gemacht:</p>
+
+<p>Die API von Wikidata folgt im Grunde der allgemeinen MediaWiki-API, die ich schon <a href="http://blog.johl.io/blog/2014/11/17/mediawiki-api/">an anderer Stelle beschrieben</a> habe.</p>
+
+<p>Um jetzt auf der Kommandozeile darauf zuzugreifen, brauche ich noch zwei
+Tools:</p>
+
+<ul>
+<li><a href="http://curl.haxx.se/">curl, ein Kommandozeilen-Tool zum Übertragen von Daten anhand von URLs</a></li>
+<li><a href="https://stedolan.github.io/jq/">jq, einen JSON-Prozessor für die Kommandozeile</a></li>
+</ul>
+
+
+<p>Der Begriff &#8220;Hacker&#8221; ist schön zweideutig und kann viele Bedeutungen annehmen, die jeweils eigene Wissensgegenstände in Wikidata mit eigenem Q-Bezeichner sind. Suchen wir doch einfach danach!</p>
+
+<h3>Suche nach einem Titel (z.B. in der deutschsprachigen Wikipedia)</h3>
+
+<p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbgetentities\&amp;sites\=enwiki\&amp;titles\=Hacker\&amp;languages\=en\&amp;format\=json | jq -r '.entities | keys'</code></p>
+
+<p>Hier bekommen wir nur einen Q-Bezeichner zurück, nämlich genau den, der zu der Seite mit dem Titel &#8220;Hacker&#8221; in der deutschsprachigen Wikipedia passt (in dem Fall: eine Begriffserklärungs-Seite).</p>
+
+<h3>Suche nach Labels von Wissensgegenständen</h3>
+
+<p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbsearchentities\&amp;search\=Hacker\&amp;language\=en\&amp;format\=json | jq -r '[.search[].id]'</code></p>
+
+<p>Hier bekomme eine längere Liste, z.B. mit dem Computerspiel gleichen Namens, der Subkultur, dem Begriff in der Computersicherheit etc.</p>
+
+<p>Mit <code>curl</code> und <code>jq</code> zusammen kann ich mir beliebige Kommandozeilen-Programme für die Wikidata-API schreiben und auf das zurückgegebene JSON-Eregebnis zugreifen. Die Möglichkeiten sind fast endlos.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -504,44 +568,6 @@ Woche bringt&#8230;</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/07/links/">Links, frische (und halbfrische) Links!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2014-12-07T21:25:00+01:00" pubdate>Dec 7<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li><a href="http://www.theeuropeanlibrary.org/tel4/access/data/opendata/details?id=opendata">European Library released Linked Open Data for 82 million bibliographic records from 25 member libraries. All CC0.</a></li>
-<li><a href="https://jakevdp.github.io/blog/2014/11/11/the-hipster-effect-interactive/">The Hipster Effect: An IPython Interactive Exploration</a></li>
-<li><a href="http://spectrum.ieee.org/computing/networks/osi-the-internet-that-wasnt">OSI: The Internet That Wasn’t. How TCP/IP eclipsed the Open Systems Interconnection standards to become the global protocol for computer networking</a></li>
-<li><a href="https://en.wikipedia.org/wiki/History_of_radio#Legal_issues_with_radio">„When radio was introduced in the 1920s many predicted the end of records. Radio was a free medium for the public to hear music for which they would normally pay. While some companies saw radio as a new avenue for promotion, others feared it would cut into profits from record sales and live performances. Many companies had their major stars sign agreements that they would not appear on radio.&#8221;</a></li>
-<li><a href="http://rijksemotions.com/">Rijks Emotions is a student project from Hyper Island, using the Rijksmuseum and Sightcorp api, matching people&#8217;s emotions with their relatives that hang on the museum&#8217;s walls.</a></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -563,6 +589,10 @@ Woche bringt&#8230;</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/09/29/wikidata-cli/">Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/01/mischmasch/">Mischmasch</a>
       </li>
     
@@ -576,10 +606,6 @@ Woche bringt&#8230;</p>
     
       <li class="post">
         <a href="/blog/2015/02/08/auszeit/">Auszeit</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/25/hackerspaces/">Hackerspaces im Landtag NRW</a>
       </li>
     
   </ul>
