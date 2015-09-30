@@ -121,11 +121,11 @@ Tools:</p>
 
 <p>Der Begriff &#8220;Hacker&#8221; ist schön zweideutig und kann viele Bedeutungen annehmen, die jeweils eigene Wissensgegenstände in Wikidata mit eigenem Q-Bezeichner sind. Suchen wir doch einfach danach!</p>
 
-<h3>Suche nach einem Titel (z.B. in der deutschsprachigen Wikipedia)</h3>
+<h3>Suche nach einem Titel (z.B. in der englischen Wikipedia)</h3>
 
 <p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbgetentities\&amp;sites\=enwiki\&amp;titles\=Hacker\&amp;languages\=en\&amp;format\=json | jq -r '.entities | keys'</code></p>
 
-<p>Hier bekommen wir nur einen Q-Bezeichner zurück, nämlich genau den, der zu der Seite mit dem Titel &#8220;Hacker&#8221; in der deutschsprachigen Wikipedia passt (in dem Fall: eine Begriffserklärungs-Seite).</p>
+<p>Hier bekommen wir nur einen Q-Bezeichner zurück, nämlich genau den, der zu der Seite mit dem Titel &#8220;Hacker&#8221; in der englischen Wikipedia passt (in dem Fall: eine Begriffserklärungs-Seite).</p>
 
 <h3>Suche nach Labels von Wissensgegenständen</h3>
 
@@ -133,7 +133,7 @@ Tools:</p>
 
 <p>Hier bekomme eine längere Liste, z.B. mit dem Computerspiel gleichen Namens, der Subkultur, dem Begriff in der Computersicherheit etc.</p>
 
-<p>Mit <code>curl</code> und <code>jq</code> zusammen kann ich mir beliebige Kommandozeilen-Programme für die Wikidata-API schreiben und auf das zurückgegebene JSON-Eregebnis zugreifen. Die Möglichkeiten sind fast endlos.</p>
+<p>Mit <code>curl</code> und <code>jq</code> zusammen kann ich mir beliebige Kommandozeilen-Programme für die Wikidata-API schreiben und auf das zurückgegebene JSON-Ergebnis zugreifen. Die Möglichkeiten sind fast endlos.</p>
 </div>
   
   
