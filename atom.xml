@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2015-09-30T09:18:53+02:00</updated>
+  <updated>2015-11-30T16:31:04+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Zwei akademische Papers zu Computerspielen und Daten/Freiem Wissen]]></title>
+    <link href="http://blog.johl.io/blog/2015/11/30/games/"/>
+    <updated>2015-11-30T16:23:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2015/11/30/games</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://antoniosliapis.com/papers/data_adventures.pdf">Data Adventures</a> <em>This paper outlines a system for generating adventure games based on open data, and describes a sketch of the system implementation at its current state. The adventure game genre has been popular for a long time and differs significantly in design priorities from game genres which are commonly addressed in PCG research. In order to create believable and engaging content, we use data from DBpedia to generate the game’s non-playable characters locations and plot, and OpenStreetMaps to create the game’s levels.</em></li>
+<li><a href="ftp://ftp.tik.ee.ethz.ch/pub/students/2015-FS/BA-2015-13.pdf">Drawing Questions from Wikidata</a> <em>Bachelor Thesis by Fabian Bissig, Distributed Computing Group, Computer Engineering and Networks Laboratory, ETH Zürich</em></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken]]></title>
@@ -818,37 +831,6 @@ Calendar</a></li>
 Generation</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Pad-Thai-Tag]]></title>
-    <link href="http://blog.johl.io/blog/2014/01/11/pad-thai/"/>
-    <updated>2014-01-11T23:11:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2014/01/11/pad-thai</id>
-    <content type="html"><![CDATA[<p>Es fing damit an, dass ich dies hier auf Twitter schrieb:</p>
-
-<blockquote class="twitter-tweet" lang="en"><p>The most cryptographically secure stir-fried rice noodle dish in the world: One-time Pad Thai.</p>&mdash; Jens Ohlig (@johl) <a href="https://twitter.com/johl/statuses/421802367320064000">January 11, 2014</a></blockquote>
-
-
-<p> <script async src="http://blog.johl.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
-Dann bekam ich Hunger. <a href="https://de.wikipedia.org/wiki/Phat_Thai">Phat Thai oder Pad Thai (Thai: ผัดไทย) ist ein traditionelles Nudelgericht der thailändischen Küche.</a> Mit Reisnudeln, die zusammen mit ein paar Eiern, reichlich Knoblauch und Chili, Tofu, Hühnchen, Austernsauce, Fischsauce, Frühlingszwiebeln und ein bisschen Zucker im Wok gerührt, gebraten und mit nicht zu knapp Mungobohnensprossen und Erdnüssen garniert werden (die Shrimps, die noch dazu gehören, hatte ich nicht zur Hand) lässt sich schon etwas zaubern, was ganz lecker ist. Während des Entstehungsprozesses sah es so aus:
-<img src="https://lh6.googleusercontent.com/-0DgupN9I13Q/UtHjKJiAWmI/AAAAAAAADQ8/AZcBQQiykSo/w597-h796-no/1389460376371.jpg" width="320"></p>
-
-<p>Auf meiner Liste von Dingen, die ich mir für 2014 vorgenommen habe, steht neben „Ukulele lernen“ auch „mehr Haskell programmieren“, also warum nicht mal schauen, wie das mit dem One-Time-Pad in Haskell geht.  Ein One-Time-Pad, auch bekannt als Vernam-Chiffre, ist ein kryptographisches Verfahren:</p>
-
-<blockquote><p>Das One-Time-Pad (Abkürzung: OTP, deutsch: Einmalverschlüsselung oder Einmalschlüssel-Verfahren, wörtlich Einmal-Block, nicht zu verwechseln mit dem Einmal-Passwort-Verfahren) ist ein symmetrisches Verschlüsselungsverfahren zur geheimen Nachrichtenübermittlung.  Kennzeichnend ist, dass ein Schlüssel verwendet wird, der (mindestens) so lang ist wie die Nachricht selbst. Das OTP ist informationstheoretisch sicher und kann nachweislich nicht gebrochen werden – vorausgesetzt, es wird bestimmungsgemäß verwendet.</p><footer><strong>Wikipedia</strong><cite><a href='https://de.wikipedia.org/wiki/One-Time-Pad'>One-Time-Pad</a></cite></footer></blockquote>
-
-
-<p>Zunächst muss ich dazu den Key und den Eingabetext in Bytes umwandeln, damit ich die einzelnen Zeichen per <a href="https://de.wikipedia.org/wiki/Kontravalenz">XOR</a> verbinden kann, um zu verschlüsseln.  Das Internet bietet ja alles. Deshalb war es auch nicht besonders schwer, <a href="https://www.fpcomplete.com/school/to-infinity-and-beyond/pick-of-the-week/bytestring-bits-and-pieces">eine Webseite zu finden, die mir einiges über Bytestrings in Haskell erzählte und auch noch die Lösung für den OTP enthielt</a>.</p>
-
-<div><script src='https://gist.github.com/8378452.js?file='></script>
-<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://github.com/gist/8378452&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
-
-
-<p>Das entsprechende Haskell-Package <a href="http://hackage.haskell.org/package/bytestring">bytestrings</a> zickte beim Installieren. Wie mir dann bei der weiteren Suche klar wurde, ist seit Ende letzten Jahres die Haskell-Plattform auf MacOS X 10.9 kaputt — Apple hat beschlossen, den Compiler gcc nicht mehr mit auszuliefern, weshalb bis zur nächsten Haskell-Version ein <a href="http://www.haskell.org/platform/ghc-clang-wrapper">Fix</a> benutzt werden muss, um GHC mitzuteilen, dass clang benutzt werden muss. Die Seite „<a href="http://www.haskell.org/platform/mac.html">Haskell Platform for Mac OS X</a>“ half mir weiter.</p>
-
-<p>Dann passierte noch weiteres Zeug, aber im Wesentlichen war es das mit dem Pad-Thai-Tag.</p>
 ]]></content>
   </entry>
   
