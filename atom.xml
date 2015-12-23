@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2015-11-30T16:34:20+01:00</updated>
+  <updated>2015-12-23T19:33:37+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Nebeneinkünftequartett der Bundestagsabgeordneten – Offene Karten mit offenen Daten]]></title>
+    <link href="http://blog.johl.io/blog/2015/12/23/bundestagsquartett/"/>
+    <updated>2015-12-23T19:05:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2015/12/23/bundestagsquartett</id>
+    <content type="html"><![CDATA[<p>Seit einiger Zeit gibt es die Nebeneinkünfte der Bundestagsabgeordneten als offene Daten. Die Berliner von OpenDataCity haben seinerzeit daraus eine JSON-Datei gebastelt, die in zehn Stufen einmalige, monatliche und jährliche Nebeneinkünfte vermerkt (noch genauer wollten es die Abgeordneten dann doch nicht haben mit der Transparenz).</p>
+
+<p>Mit Python, <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>, <a href="https://mustache.github.io/">Mustache</a> und SVG habe ich mich hingesetzt und daraus Spielkarten gebastelt, für besinnliche Quartettrunden mit Offenen Daten an langen Winterabenden.</p>
+
+<p>So sieht etwa die Spielkarte für Dr. h. c. Hans Michelbach aus der CDU/CSU-Fraktion aus:</p>
+
+<p><img src="http://www.johl.io/static/img/michelbach.svg" width="50%" alt="Dr. h. c. Hans Michelbach"></p>
+
+<p>Den kompletten Satz aller Spielkarten gibt es als <a href="www.johl.io/static/BTQuartettKarten.zip">.zip-Datei zum Download</a>.</p>
+
+<p>Das Python-Skript, um die Spielkarten selbst zu generieren, liegt <a href="https://github.com/johl/btquartett">auf github</a>. Nicht in allen Fällen konnte ich mit Wikidata ein Bild des oder der Abgeordneten finden, im Zweifel liegt das aber an mir.</p>
+
+<p>Viel Spaß beim Spiel und möge das höhere Nebeneinkommen gewinnen. Oder so.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Zwei akademische Papers zu Computerspielen und Daten aus Freiem Wissen]]></title>
@@ -814,23 +835,6 @@ schauen uns hier ein paar beispielhafte Parameter an.</p>
     <content type="html"><![CDATA[<p>Es passieren Sachen im <a href="http://www.c-base.org/projects/c-atre/">c-atre</a>, dem Science-Fiction-Theater in der <a href="https://de.wikipedia.org/wiki/C-base">c-base</a>. Stichworte: Urheberrecht, Zeitreisen. Im Mai wissen wir mehr.</p>
 
 <p><img src="http://f.cl.ly/items/0u1E432E1E1w3x1H3L0A/probe.jpg"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Links zwischendurch]]></title>
-    <link href="http://blog.johl.io/blog/2014/02/09/links/"/>
-    <updated>2014-02-09T10:35:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2014/02/09/links</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://zulko.github.io/blog/2014/01/23/making-animated-gifs-from-video-files-with-python/">Making GIFs From Video Files With
-Python</a></li>
-<li><a href="http://www.math.nus.edu.sg/aslaksen/calendar/chinese.shtml">The Mathematics of the Chinese
-Calendar</a></li>
-<li><a href="http://pcg.wikidot.com/pcg-algorithm:dungeon-generation">Procedural Content Generation Wiki: Dungeon
-Generation</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
