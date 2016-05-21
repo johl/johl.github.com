@@ -9,7 +9,9 @@
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="Seit einiger Zeit gibt es die Nebeneinkünfte der Bundestagsabgeordneten als offene Daten. Die Berliner von OpenDataCity haben seinerzeit daraus eine &hellip;">
+  <meta name="description" content="<a title="By Jarekt (Own work) [CC BY-SA 4.0
+(http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons"
+href="https://commons.wikimedia &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +78,132 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/05/22/pokemon-prime/">Gotta catch &#8216;em all if they are prime</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2016-05-22T03:48:31+02:00" pubdate>May 22<span>nd</span>, 2016</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a title="By Jarekt (Own work) [CC BY-SA 4.0
+(http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons"
+href="https://commons.wikimedia.org/wiki/File%3APokemon_collection.jpg"><img
+width="512" align="left" alt="Pokemon collection"
+src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Pokemon_collection.jpg"/></a></p>
+
+<p><em><a href="//en.wikipedia.org/wiki/Pok%C3%A9mon" class="extiw" title="en:Pokémon">Pokémon</a></em>, as Wikipedia tells us, <em> is a multi-billion dollar media franchise controlled by video game giant <a href="/wiki/Nintendo" title="Nintendo">Nintendo</a>, and created by <a href="//en.wikipedia.org/wiki/Satoshi_Tajiri" class="extiw" title="en:Satoshi Tajiri">Satoshi Tajiri</a> around 1995</em>. Interestingly enough, Pokémon has had quite an impact on the Wikipedia project, with the completeness of Pokémon characters resulting in the <a href="https://en.wikipedia.org/wiki/Wikipedia:Pok%C3%A9mon_test">Pokémon test</a>, so named after editors used similar arguments to try to “keep” other articles—if [named Pokemon character] has an article, why shouldn’t this topic? For example, in arguing against the deletion of an article in 2005, one editor <a href="https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Nicholas_J._Hopper">wrote</a> &#8220;Wikipedia is not paper; if we can have articles for every minor character in <em>Star Wars</em>, <em>Star Trek</em>, and each of those pesky Pokémon, we can have an article about Professor Hopper.&#8221; (See the <a href="https://blog.wikimedia.org/2016/02/26/pokemon-wikipedia-impact/">article on the Wikimedia blog</a> for the full story).</p>
+
+<p>I played around with the <a href="https://query.wikidata.org">Wikidata Query Service</a> and <a href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a> queries recently. As one of the first projects on Wikidata was <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Pok%C3%A9mon">WikiProject Pokémon</a> (initially known as the Pokémon Task Force), information on the fictional Pokémon species and their numbers (the Pokédex numbers) is rather complete. A query with SPARQL for all Pokémon is easy:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Gotta catch 'em all
+</span><span class='line'>SELECT ?pokemon ?pokemonLabel ?pokedexNumber
+</span><span class='line'>WHERE
+</span><span class='line'>{
+</span><span class='line'>  ?pokemon wdt:P31 wd:Q3966183.
+</span><span class='line'>     ?pokemon wdt:P1112 ?pokedexNumber
+</span><span class='line'>SERVICE wikibase:label { bd:SERVICEParam wikibase:language "en" }
+</span><span class='line'>} ORDER BY (?pokedexNumber)</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://tinyurl.com/jht8n3w">You can try out this query</a>.</p>
+
+<p>But I wanted a query that was a little more complex: <em>Find all Pokémon with a number in the Pokédex that is prime</em>. My first try didn&#8217;t work.  The mistake I made: I wanted to compare the Pokédex number with the label of a prime number. Unfortunately, the label service in the Wikidata Query Service fills in labels too late to use them in a subquery. But the community was helpful as ever. <a href="https://www.wikidata.org/wiki/User:Nikki">User:Nikki</a> pointed me in the correct direction: Use <code>rdfs:label</code> instead.
+Here&#8217;s the solution:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Gotta catch 'em all if they are prime
+</span><span class='line'>SELECT ?pokemon ?pokemonLabel ?pokedex WHERE {
+</span><span class='line'>{ 
+</span><span class='line'>   SELECT ?prime WHERE {
+</span><span class='line'>    ?p wdt:P31 wd:Q49008;
+</span><span class='line'>   rdfs:label ?WHEREprime FILTER (lang(?prime) = "en") .
+</span><span class='line'>    }
+</span><span class='line'>  }
+</span><span class='line'>  ?pokemon wdt:P31 wd:Q3966183;
+</span><span class='line'>   wdt:P1112 ?pokedex
+</span><span class='line'>  FILTER (xsd:integer(?pokedex) =         xsd:integer(?prime)).
+</span><span class='line'>  SERVICE wikibase:label { bd:serviceParam wikibasease:language "en". }.
+</span><span class='line'>}
+</span><span class='line'>ORDER BY ?pokedex</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://tinyurl.com/hszk5ya">Try it out</a></p>
+
+<p>But there&#8217;s an even simpler solution without a subquery that is obvious once you wrape your head around the fact that query doesn&#8217;t work like <code>map</code> in functional languages but is rather closer to <a href="https://en.wikipedia.org/wiki/Declarative_programming">declarative programming</a>. It&#8217;s basically: &#8220;Find a solution that satisfies all the triples given above&#8221;.</p>
+
+<p>See it here:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Gotta catch 'em all if they are prime
+</span><span class='line'>SELECT ?pokemon ?pokemonLabel ?pokedex WHERE {
+</span><span class='line'>?prime wdt:P31 wd:Q49008;
+</span><span class='line'>   wdt:P1181 ?pokedex .
+</span><span class='line'>      
+</span><span class='line'>?pokemon wdt:P31 wd:Q3966183;
+</span><span class='line'> wdt:P1112 ?pokedex .
+</span><span class='line'>
+</span><span class='line'>SERVICE wikidatabase:label { bd:serviceParam wikibase:language "en". }.
+</span><span class='line'>}
+</span><span class='line'>ORDER BY ?pokedex</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://tinyurl.com/z92ammg">Try out this</a></p>
+
+<p>Thanks again, <a href="https://www.wikidata.org/wiki/User:Nikki">User:Nikki</a>!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -483,61 +611,6 @@ Woche bringt&#8230;</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/01/11/einhegungen/">Einhegungen fallen nicht vom Himmel</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2015-01-11T17:11:00+01:00" pubdate>Jan 11<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Aaron Swartz starb heute vor zwei Jahren. Das Internet ohne Einhegungen auf Grundlage der Allmende war bereits schon dabei, parzelliert und eingezäunt zu werden.</p>
-
-<blockquote><p>Information is power. But like all power, there are those who want to keep it for themselves. The world&#8217;s entire scientific and cultural heritage, published over centuries in books and journals, is increasingly being digitized and locked up by a handful of private corporations. Want to read the papers featuring the most famous results of the sciences? You&#8217;ll need to send enormous amounts to publishers like Reed Elsevier. </p><p>There are those struggling to change this. The Open Access Movement has fought valiantly to ensure that scientists do not sign their copyrights away but instead ensure their work is published on the Internet, under terms that allow anyone to access it. But even under the best scenarios, their work will only apply to things published in the future.  Everything up until now will have been lost.  </p><p>That is too high a price to pay. Forcing academics to pay money to read the work of their colleagues? Scanning entire libraries but only allowing the folks at Google to read them?  Providing scientific articles to those at elite universities in the First World, but not to children in the Global South? It&#8217;s outrageous and unacceptable.</p><footer><strong>Aaron Swartz</strong><cite><a href='https://archive.org/details/GuerillaOpenAccessManifesto'>The Guerilla Open Access Manifesto</a></cite></footer></blockquote>
-
-
-<p>Einhegungen, die aus einer Gemeinwirtschaft Privatbesitz schaffen, finden nicht über Nacht statt. In England begann die Transformation der Landwirtschaft im 16. Jahrhundert und war im 19. Jahrhundert abgeschlossen. Der Höhepunkt der Einhegungen lag zwischen 1760 und 1832, danach waren in Großbritannien die mittelalterlichen Strukturen so gut wie verschwunden, es gab das Konzept des gemeinwirtschaftlichen Landbesitzes nicht mehr.</p>
-
-<p>Am Ende der Transformation war die Idee von Land, dass sich nicht in Privatbesitz befand, bereits so aus dem Bewusstsein verschwunden, dass der bloße Gedanke, über Privatgrundstücke könnten etwa Eisenbahnlinien geführt werden, von Liberalen als &#8220;Diebstahl&#8221; bezeichnet wurde.</p>
-
-<p>George Orwell, der <a href="https://en.wikipedia.org/wiki/As_I_Please">in einer Reihe von Kommentaren für die linksgerichtete Tribune</a> in den 1940er Jahren davon schrieb, sah sich durch einen Kommentator eben dieses Vorwurfs ausgesetzt: Privateigentum an Land für die Allgemeinheit zu nutzen ist Diebstahl.</p>
-
-<p>Daran zu erinnern, wie Landbesitz überhaupt zustande gekommen war, dass es kein vom Himmel gefallenes Naturrecht ist, sondern tatsächlich in einem Transformationsprozess mit Gewalt der Allmende entrissen wurde, war 1944 schon beinahe eine revolutionäre Aussage. Der englische Landadel hatte das Land der Gemeinwirtschaft schlicht unter sich aufgeteilt, mit keiner anderen Legitimation, als der, dass sie zur Durchsetzung ihrer Interessen Gewalt und Staat benutzen konnten. Die Grundlage der Agrarrevolution in England und Wales, die Verarmung der Landbevölkerung und die Freisetzung von Arbeitskräften für die Industrielle Revolution hatte keine andere Legitimation als die, dass die Interessengruppen des Landadels es einfach getan hatten.</p>
-
-<blockquote><p>If giving the land of England back to the people of England is theft, I am quite happy to call it theft. In his zeal to defend private property, my correspondent does not stop to consider how the so-called owners of the land got hold of it. They simply seized it by force, afterwards hiring lawyers to provide them with title-deeds. In the case of the enclosure of the common lands, which was going on from about 1600 to 1850, the landgrabbers did not even have the excuse of being foreign conquerors; they were quite frankly taking the heritage of their own countrymen, upon no sort of pretext except that they had the power to do so.</p><footer><strong>George Orwell</strong><cite><a href='http://www.cooperativeindividualism.org/orwell-george_on-the-origins-of-property-in-land-1944.html'>On the Origins of Property in Land, 1944</a></cite></footer></blockquote>
-
-
-<p>Erst sehr viel später setzte das Bewusstsein dafür ein, dass Wirtschaften mit Gemeingut nachhaltiger möglich ist. <a href="https://de.wikipedia.org/wiki/Elinor_Ostrom">Elinor Ostrom</a>, die 2009 als erste Frau den Alfred-Nobel-Gedächtnispreis für Wirtschaftswissenschaften für ihre Arbeiten zur Gemeinwirtschaft bekam, befasste sich mit der Frage, wie sich Menschen organisieren, um gemeinschaftlich komplexe Probleme zu lösen. Sie analysierte, wie institutionelle Regeln sich auf Handlungen von Individuen auswirken, die bestimmten Anreizen ausgesetzt sind, Entscheidungen treffen (müssen), und sich zudem noch gegenseitig beeinflussen, und sie zeigte praktikable, gerechte und effiziente Lösungen für diese Probleme auf.</p>
-
-<p>In <a href="https://en.wikipedia.org/wiki/Landless_Workers%27_Movement">Brasilien</a> oder <a href="https://en.wikipedia.org/wiki/Narmada_Bachao_Andolan">Indien</a> entstanden soziale Bewegungen, die sich der revolutionären Erkenntnis widmeten, dass Gemeingut eben nicht von Natur aus eingezäunt werden muss, sondern gemeinsam verwaltet und bewirtschaftet werden kann. Dabei geht es nicht mal um utopische Forderungen wie die Abschaffung von Privateigentum — dieses bleibt neben der Allmende bestehen. Es geht darum, gleichberechtigt einen Raum zu schaffen, in dem kollaborativ, verantwortungsvoll und gemeinsam an der Grundlage des gemeinsamen Überlebens gearbeitet wird und die Schaffung von Einhegungen für das, was vorher nicht eingehegt war, nicht zu ohne Argumente zu akzeptieren.</p>
-
-<p>Dem Internet und der Wissensallmende drohen Einhegungen, die von Landadeligen des 12. Jahrhunderts schrittweise vorgenommen werden, mit keinem anderen Argument als dem, dass es ihnen möglich ist. In Deutschland wurden Hecken und Grenzsteine etwa ab 2004 <a href="https://de.wikipedia.org/wiki/Urheberrechtsgesetz_(Deutschland)#Zweiter_Korb">beim sogenannten Zweiten Korb der Urheberrechtsreform</a> gesetzt, durch den die Rechte der Nutzerinnen und Nutzer eingeschränkt wurden und das Recht auf Privatkopie entstellt wurde. Das <a href="https://de.wikipedia.org/wiki/Leistungsschutzrecht_f%C3%BCr_Presseverleger">Leistungsschutzrecht für Presseverleger</a> ist eine Einhegung der Wiesen und Felder der Allmende im Internet mit keinem anderen Argument als dem, dass es eben mit Lobbyarbeit von Verlagen wie der Axel Springer SE möglich ist, diese als Gesetz durchzusetzen.</p>
-
-<p>Es gibt keinen naturgegebenen Grund dafür, die Allmende zu zerstückeln und einzuhegen, wenn wir sie auch gemeinsam beackern können. Wir können mit Elinor Ostrom wirtschaftswissenschaftlich zeigen, dass Zusammenarbeit möglich und nachhaltig ist und moralisch ist das Argument &#8220;Ich kann es euch wegnehmen, weil ich es euch weggnehmen kann&#8221; einem kulturoptimistischem gemeinschaftlichen Wirtschaften nicht überlegen.</p>
-
-<p>Im schlimmsten Fall sind Einhegungen tödlich. Am zweiten Todestag von Aaron Swartz lohnt es sich daran zu erinnern, dass durch Einhegungen der Wissensallmende einem großen Talent die Luft zum Atmen genommen wurde.  <a href="http://blog.johl.io/blog/2013/01/13/urheberrechtsextremismus/">So wie für den Suizid von Alan Turing die menschenverachtenden homophoben Gesetze der damaligen Zeit und die, die sie geschaffen haben, politisch verantwortlich sind, ist der Wahnsinn der Urheberrechtsextremisten verantwortlich für Aarons Tod. Copyright kills.  An den Händen der Urheberrechtsextremisten klebt sein Blut.</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -559,6 +632,10 @@ Woche bringt&#8230;</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/05/22/pokemon-prime/">Gotta catch &#8216;em all if they are prime</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/12/23/bundestagsquartett/">Nebeneinkünftequartett der Bundestagsabgeordneten – Offene Karten mit offenen Daten</a>
       </li>
     
@@ -572,10 +649,6 @@ Woche bringt&#8230;</p>
     
       <li class="post">
         <a href="/blog/2015/03/01/mischmasch/">Mischmasch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/22/links/">Nachrichten aus der Zukunft</a>
       </li>
     
   </ul>

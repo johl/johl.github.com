@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2015-12-25T21:42:41+01:00</updated>
+  <updated>2016-05-22T01:51:16+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,110 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Gotta catch 'em all if they are prime]]></title>
+    <link href="http://blog.johl.io/blog/2016/05/22/pokemon-prime/"/>
+    <updated>2016-05-22T03:48:31+02:00</updated>
+    <id>http://blog.johl.io/blog/2016/05/22/pokemon-prime</id>
+    <content type="html"><![CDATA[<p><a title="By Jarekt (Own work) [CC BY-SA 4.0
+(http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons"
+href="https://commons.wikimedia.org/wiki/File%3APokemon_collection.jpg"><img
+width="512" align="left" alt="Pokemon collection"
+src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Pokemon_collection.jpg"/></a></p>
+
+<p><em><a href="http://blog.johl.io//en.wikipedia.org/wiki/Pok%C3%A9mon" class="extiw" title="en:Pokémon">Pokémon</a></em>, as Wikipedia tells us, <em> is a multi-billion dollar media franchise controlled by video game giant <a href="http://blog.johl.io/wiki/Nintendo" title="Nintendo">Nintendo</a>, and created by <a href="http://blog.johl.io//en.wikipedia.org/wiki/Satoshi_Tajiri" class="extiw" title="en:Satoshi Tajiri">Satoshi Tajiri</a> around 1995</em>. Interestingly enough, Pokémon has had quite an impact on the Wikipedia project, with the completeness of Pokémon characters resulting in the <a href="https://en.wikipedia.org/wiki/Wikipedia:Pok%C3%A9mon_test">Pokémon test</a>, so named after editors used similar arguments to try to “keep” other articles—if [named Pokemon character] has an article, why shouldn’t this topic? For example, in arguing against the deletion of an article in 2005, one editor <a href="https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Nicholas_J._Hopper">wrote</a> &#8220;Wikipedia is not paper; if we can have articles for every minor character in <em>Star Wars</em>, <em>Star Trek</em>, and each of those pesky Pokémon, we can have an article about Professor Hopper.&#8221; (See the <a href="https://blog.wikimedia.org/2016/02/26/pokemon-wikipedia-impact/">article on the Wikimedia blog</a> for the full story).</p>
+
+<p>I played around with the <a href="https://query.wikidata.org">Wikidata Query Service</a> and <a href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a> queries recently. As one of the first projects on Wikidata was <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Pok%C3%A9mon">WikiProject Pokémon</a> (initially known as the Pokémon Task Force), information on the fictional Pokémon species and their numbers (the Pokédex numbers) is rather complete. A query with SPARQL for all Pokémon is easy:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Gotta catch 'em all
+</span><span class='line'>SELECT ?pokemon ?pokemonLabel ?pokedexNumber
+</span><span class='line'>WHERE
+</span><span class='line'>{
+</span><span class='line'>  ?pokemon wdt:P31 wd:Q3966183.
+</span><span class='line'>     ?pokemon wdt:P1112 ?pokedexNumber
+</span><span class='line'>SERVICE wikibase:label { bd:SERVICEParam wikibase:language "en" }
+</span><span class='line'>} ORDER BY (?pokedexNumber)</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://tinyurl.com/jht8n3w">You can try out this query</a>.</p>
+
+<p>But I wanted a query that was a little more complex: <em>Find all Pokémon with a number in the Pokédex that is prime</em>. My first try didn&#8217;t work.  The mistake I made: I wanted to compare the Pokédex number with the label of a prime number. Unfortunately, the label service in the Wikidata Query Service fills in labels too late to use them in a subquery. But the community was helpful as ever. <a href="https://www.wikidata.org/wiki/User:Nikki">User:Nikki</a> pointed me in the correct direction: Use <code>rdfs:label</code> instead.
+Here&#8217;s the solution:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Gotta catch 'em all if they are prime
+</span><span class='line'>SELECT ?pokemon ?pokemonLabel ?pokedex WHERE {
+</span><span class='line'>{ 
+</span><span class='line'>   SELECT ?prime WHERE {
+</span><span class='line'>    ?p wdt:P31 wd:Q49008;
+</span><span class='line'>   rdfs:label ?WHEREprime FILTER (lang(?prime) = "en") .
+</span><span class='line'>    }
+</span><span class='line'>  }
+</span><span class='line'>  ?pokemon wdt:P31 wd:Q3966183;
+</span><span class='line'>   wdt:P1112 ?pokedex
+</span><span class='line'>  FILTER (xsd:integer(?pokedex) =         xsd:integer(?prime)).
+</span><span class='line'>  SERVICE wikibase:label { bd:serviceParam wikibasease:language "en". }.
+</span><span class='line'>}
+</span><span class='line'>ORDER BY ?pokedex</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://tinyurl.com/hszk5ya">Try it out</a></p>
+
+<p>But there&#8217;s an even simpler solution without a subquery that is obvious once you wrape your head around the fact that query doesn&#8217;t work like <code>map</code> in functional languages but is rather closer to <a href="https://en.wikipedia.org/wiki/Declarative_programming">declarative programming</a>. It&#8217;s basically: &#8220;Find a solution that satisfies all the triples given above&#8221;.</p>
+
+<p>See it here:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Gotta catch 'em all if they are prime
+</span><span class='line'>SELECT ?pokemon ?pokemonLabel ?pokedex WHERE {
+</span><span class='line'>?prime wdt:P31 wd:Q49008;
+</span><span class='line'>   wdt:P1181 ?pokedex .
+</span><span class='line'>      
+</span><span class='line'>?pokemon wdt:P31 wd:Q3966183;
+</span><span class='line'> wdt:P1112 ?pokedex .
+</span><span class='line'>
+</span><span class='line'>SERVICE wikidatabase:label { bd:serviceParam wikibase:language "en". }.
+</span><span class='line'>}
+</span><span class='line'>ORDER BY ?pokedex</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://tinyurl.com/z92ammg">Try out this</a></p>
+
+<p>Thanks again, <a href="https://www.wikidata.org/wiki/User:Nikki">User:Nikki</a>!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Nebeneinkünftequartett der Bundestagsabgeordneten – Offene Karten mit offenen Daten]]></title>
@@ -824,17 +928,6 @@ schauen uns hier ein paar beispielhafte Parameter an.</p>
 <p>Eine Dose mit Chips von <a href="http://www.oreillynet.com/cs/weblog/view/wlg/448">Pringels wird zur Wavelan-Yagi-Antenne</a> — auch wenn Pringels-Dosen sich gar nicht am besten für <a href="https://en.wikipedia.org/wiki/Cantenna">diesen Antennentyp</a> eignen.</p>
 
 <p>Und eine <a href="https://en.wikipedia.org/wiki/Altoids">Dose mit Altoids-Mints</a> ist für mich dann kein Behälter für Minz-Bonbons mehr. In erster Linie sehe ich es es als <a href="http://tryingtodotheprojects.blogspot.de/2008/04/arduino-altoids-tin.html">Gehäuse für Arduino-Basteleien</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Es tut sich was]]></title>
-    <link href="http://blog.johl.io/blog/2014/03/19/probe/"/>
-    <updated>2014-03-19T13:31:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2014/03/19/probe</id>
-    <content type="html"><![CDATA[<p>Es passieren Sachen im <a href="http://www.c-base.org/projects/c-atre/">c-atre</a>, dem Science-Fiction-Theater in der <a href="https://de.wikipedia.org/wiki/C-base">c-base</a>. Stichworte: Urheberrecht, Zeitreisen. Im Mai wissen wir mehr.</p>
-
-<p><img src="http://f.cl.ly/items/0u1E432E1E1w3x1H3L0A/probe.jpg"></p>
 ]]></content>
   </entry>
   
