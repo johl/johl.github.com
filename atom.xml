@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2016-05-22T01:51:16+02:00</updated>
+  <updated>2016-05-22T02:04:44+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -64,19 +64,17 @@ Here&#8217;s the solution:</p>
 <span class='line-number'> </span>
 <span class='line-number'> </span>
 <span class='line-number'> </span>
-<span class='line-number'> </span>
 </pre></td><td class='code'><pre><code class=''><span class='line'># Gotta catch 'em all if they are prime
 </span><span class='line'>SELECT ?pokemon ?pokemonLabel ?pokedex WHERE {
 </span><span class='line'>{ 
-</span><span class='line'>   SELECT ?prime WHERE {
+</span><span class='line'>  SELECT ?prime WHERE {
 </span><span class='line'>    ?p wdt:P31 wd:Q49008;
-</span><span class='line'>   rdfs:label ?WHEREprime FILTER (lang(?prime) = "en") .
-</span><span class='line'>    }
+</span><span class='line'>   rdfs:label ?prime FILTER (lang(?prime) = "en") .
+</span><span class='line'>         }
 </span><span class='line'>  }
 </span><span class='line'>  ?pokemon wdt:P31 wd:Q3966183;
-</span><span class='line'>   wdt:P1112 ?pokedex
-</span><span class='line'>  FILTER (xsd:integer(?pokedex) =         xsd:integer(?prime)).
-</span><span class='line'>  SERVICE wikibase:label { bd:serviceParam wikibasease:language "en". }.
+</span><span class='line'>   wdt:P1112 ?pokedex FILTER (xsd:integer(?pokedex) = xsd:integer(?prime)).
+</span><span class='line'>  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }.
 </span><span class='line'>}
 </span><span class='line'>ORDER BY ?pokedex</span></code></pre></td></tr></table></div></figure>
 
