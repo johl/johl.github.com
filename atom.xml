@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2016-05-22T02:04:44+02:00</updated>
+  <updated>2016-05-28T22:41:02+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Orte, die mit 'ow' oder 'itz' enden]]></title>
+    <link href="http://blog.johl.io/blog/2016/05/28/orte/"/>
+    <updated>2016-05-28T20:43:00+02:00</updated>
+    <id>http://blog.johl.io/blog/2016/05/28/orte</id>
+    <content type="html"><![CDATA[<p>Ich hatte eine Hypothese, auf die ich durch ein Lied gebracht wurde: Orte, die mit &#8220;ow&#8221; oder &#8220;itz&#8221; enden, befinden sich mehrheitlich nicht in Westdeutschland (aka die alten Bundesländer).</p>
+
+<p>Schön, dass sich diese Hypothese mit Wikidata überprüfen lässt:</p>
+
+<script src="https://gist.github.com/johl/4a75166ff0afe95d25ad60f9ea071e84.js"></script>
+
+
+<p><a href="http://tinyurl.com/h9umdfp">Hier lässt es sich ausprobieren</a></p>
+
+<p><img src="https://s3.amazonaws.com/f.cl.ly/items/350w0q0A1z1j2K032B1j/Wikidata_Query_Service__Beta_.png?v=3df90ebd" alt="Ergebnis der Query" style="width: 320px;" align="left"/>
+Ich muss sagen, das Ergebnis erstaunt mich. Es gibt ein paar Ausrutscher, aber das Cluster der Punkte bildet ziemlich genau die Umrisse der ehemaligen DDR. In dieser Deutlichkeit hatte ich nicht erwartet, dass die Hypothese belegt wird. Woher kommt es?</p>
+
+<blockquote><p>Die Namen auf -ow finden sich vor allem in Nordostdeutschland, wo Ortsnamen slawischer Herkunft häufig sind. Mithin in Mecklenburg, Vorpommern, weiten Teilen Brandenburgs (in der Lausitz seltener), dem Norden und Osten der Altmark, dem Wendland und Teilen des Herzogtums Lauenburg. Auch unter den deutschen Namen von Orten im Osten von Pommern und im Osten von Brandenburg, die heute in Polen liegen, finden sich solche auf -ow. Dagegen sind in Gegenden wie Sachsen oder Teilen von Österreich, wo es eine Reihe von Ortsnamen slawischer Herkunft gibt, keine auf -ow zu finden.</p><footer><strong>Wikipedia</strong><cite><a href='https://de.wikipedia.org/wiki/-ow'>de.wikipedia.org/wiki/-ow/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Ebenso slawischen Ursprungs und in Ostdeutschland verbreitet ist <a href="https://de.wikipedia.org/wiki/-itz">die Endung -itz</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Gotta catch 'em all if they are prime]]></title>
@@ -908,24 +932,6 @@ schauen uns hier ein paar beispielhafte Parameter an.</p>
     <id>http://blog.johl.io/blog/2014/11/07/ethik</id>
     <content type="html"><![CDATA[<blockquote><p>It should be noted that no ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. Basic professional ethics would instead require him to write a DestroyCity procedure, to which Baghdad could be given as a parameter.</p><footer><strong>Nathaniel Borenstein</strong><cite><a href='http://www.guppylake.com/~nsb/CSCW-ATOMICMAIL.txt'>Computational Mail as Network Infrastructure for Computer-Supported Cooperative Work</a></cite></footer></blockquote>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dinge]]></title>
-    <link href="http://blog.johl.io/blog/2014/05/29/dinge/"/>
-    <updated>2014-05-29T18:42:00+02:00</updated>
-    <id>http://blog.johl.io/blog/2014/05/29/dinge</id>
-    <content type="html"><![CDATA[<p>Einigen Dingen ist etwas einbeschrieben:</p>
-
-<blockquote><p>Wie manchen Dingen Gesten, und damit Weisen des Verhaltens einbeschrieben sind. Pantoffel — »Schlappen«, Slippers — sind darauf berechnet, daß man ohne Hilfe der Hand mit den Füßen hineinschlüpft. Sie sind Denkmale des Hasses gegen das sich Bücken.</p><footer><strong>Theodor W. Adorno</strong><cite>Minima Moralia</cite></footer></blockquote>
-
-
-<p>Andere Dinge hingegen werden durch kreativ-kritische Aneignung von dem Kontext befreit, in denen ihnen ein intendierter Zweck einbeschrieben ist.</p>
-
-<p>Eine Dose mit Chips von <a href="http://www.oreillynet.com/cs/weblog/view/wlg/448">Pringels wird zur Wavelan-Yagi-Antenne</a> — auch wenn Pringels-Dosen sich gar nicht am besten für <a href="https://en.wikipedia.org/wiki/Cantenna">diesen Antennentyp</a> eignen.</p>
-
-<p>Und eine <a href="https://en.wikipedia.org/wiki/Altoids">Dose mit Altoids-Mints</a> ist für mich dann kein Behälter für Minz-Bonbons mehr. In erster Linie sehe ich es es als <a href="http://tryingtodotheprojects.blogspot.de/2008/04/arduino-altoids-tin.html">Gehäuse für Arduino-Basteleien</a>.</p>
 ]]></content>
   </entry>
   
