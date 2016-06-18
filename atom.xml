@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2016-05-28T22:41:02+02:00</updated>
+  <updated>2016-06-18T23:41:51+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bemerkenswerte Datensätze]]></title>
+    <link href="http://blog.johl.io/blog/2016/06/18/datasets/"/>
+    <updated>2016-06-18T23:32:00+02:00</updated>
+    <id>http://blog.johl.io/blog/2016/06/18/datasets</id>
+    <content type="html"><![CDATA[<p>Wer Dinge mit Daten veranstalten möchte, braucht Datensätze. Das Netz ist voll mit Datensätze, auch solche mit <a href="https://motherboard.vice.com/read/70000-okcupid-users-just-had-their-data-published">zweifelhafter Ethik</a>.</p>
+
+<p>Hier sind ein paar interessante, die mir aufgefallen sind:</p>
+
+<ul>
+<li><a href="https://github.com/pffy/data-sriracha-bottle-chinese-characters">Sriracha Bottle Chinese Characters</a> <em>Free and open source data set of Chinese characters on the (Huy Fong Foods) sriracha sauce bottle.</em></li>
+<li><a href="https://openbeerdb.com/">Open Beer Database</a></li>
+<li><a href="https://datahub.io/dataset/data-incubator-pokedex">Pokedex data in RDF</a> <em>Linked data on all Pokemon in the Pokedex</em></li>
+<li><a href="http://data.opendatasoft.com/explore/dataset/open-data-sources@public/">Open Data Inception</a> <em>A list of Open Data portals around the world</em></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Orte, die mit 'ow' oder 'itz' enden]]></title>
@@ -921,16 +940,6 @@ schauen uns hier ein paar beispielhafte Parameter an.</p>
 <li><a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">What&#8217;s the matter with PGP?</a></li>
 <li><a href="http://pastebin.com/HrcErVWe">Pastebin: Recommendations for the Hacktivist Community</a> (via <a href="http://www.reddit.com/r/blackhat/comments/2ljjey/recommendations_for_the_hacktivist_community/">reddit</a>)</li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Praktische Fragen der Ethik in der Software-Entwicklung]]></title>
-    <link href="http://blog.johl.io/blog/2014/11/07/ethik/"/>
-    <updated>2014-11-07T12:04:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2014/11/07/ethik</id>
-    <content type="html"><![CDATA[<blockquote><p>It should be noted that no ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. Basic professional ethics would instead require him to write a DestroyCity procedure, to which Baghdad could be given as a parameter.</p><footer><strong>Nathaniel Borenstein</strong><cite><a href='http://www.guppylake.com/~nsb/CSCW-ATOMICMAIL.txt'>Computational Mail as Network Infrastructure for Computer-Supported Cooperative Work</a></cite></footer></blockquote>
 
 ]]></content>
   </entry>
