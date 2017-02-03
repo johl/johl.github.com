@@ -9,7 +9,8 @@
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="It should be noted that no ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. Basic professional ethics &hellip;">
+  <meta name="description" content="Codex Seraphinianus: A new edition of the strangest book in the world
+When David Bowie wrote and recorded Space Oddity in 1969, I wonder if he ever &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +77,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/07/links/">Schnelle Links</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2014-11-07T12:55:00+01:00" pubdate>Nov 7<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://dangerousminds.net/comments/codex_seraphinianus_a_new_edition_of_the_strangest_book_in_the_world">Codex Seraphinianus: A new edition of the strangest book in the world</a></li>
+<li><a href="http://chrishadfield.ca/space-oddity/">When David Bowie wrote and recorded Space Oddity in 1969, I wonder if he ever imagined it being played in orbit?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/How_does_one_patch_KDE2_under_FreeBSD%3F">&#8220;How does one patch KDE2 under FreeBSD?&#8221; (Russian: &#8220;Как пропатчить KDE2 под FreeBSD?&#8221;), an internet meme in Russian Internet culture</a></li>
+<li><a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">What&#8217;s the matter with PGP?</a></li>
+<li><a href="http://pastebin.com/HrcErVWe">Pastebin: Recommendations for the Hacktivist Community</a> (via <a href="http://www.reddit.com/r/blackhat/comments/2ljjey/recommendations_for_the_hacktivist_community/">reddit</a>)</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -561,137 +600,6 @@ Hallelujah, Hallelujah, Hallelujah, Hallelujah
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/20/autovivication/">Autovivication in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2013-10-20T14:19:00+02:00" pubdate>Oct 20<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won’t usually need your flowcharts; they’ll be obvious.</p><footer><strong>Fred Brooks</strong><cite>The Mythical Man-Month: Essays on Software Engineering</cite></footer></blockquote>
-
-
-<p>Datenstrukturen sind Magie. In einer magischen, fast vergessenen Sprache wie Perl sind sie sogar noch ein bisschen magischer, um nicht zu sagen: frankensteinhaft. Die Rede ist von Autovivication.</p>
-
-<p>Wenn ich einen langen komplexen Pfad in meinem Dateisystem anlege, der ein Directory in einem noch zu erstellenden Directory erstellt, möchte mein Unix-System nichts davon wissen:</p>
-
-<pre><code>[~]$ mkdir a/b/c
-mkdir: a/b: No such file or directory
-</code></pre>
-
-<p><a title="By Universal Studios (Dr. Macro) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AFrankenstein's_monster_(Boris_Karloff).jpg"><img width="256" align="left" style="margin-right: 10px" alt="Frankenstein&#039;s monster (Boris Karloff)" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Frankenstein%27s_monster_%28Boris_Karloff%29.jpg/256px-Frankenstein%27s_monster_%28Boris_Karloff%29.jpg"></a> In anderen Betriebssystemen wäre das anders. Die fehlenden, implizit genannten Schachtelungen, würden automatisch erzeugt. Wie von Geisterhand würden sie ins Leben gerufen werden. Es lebt! <strong>Ergänzung</strong>: <em>Ganz richtig in den Kommentaren bemerkt:</em> <code>mkdir -p a/b/c</code> <em>bringt unter Unix natürlich auch das erwünschte Ergebnis</em>.</p>
-
-<p>Autovivication ist je nach Erwartungshaltung an die Programmiersprache eine überraschende oder logische Eigenschaft von verschachelten Datentypen wie Hashes in Perl, die auch als assoziative Arrays oder in Python-Lingo als Dictionaries bekannt sind. Wenn ich ein Elemente zuweise oder abfrage, das in einem anderen Element geschachtelt ist, das ich bisher noch nicht belegt habe, wird das implizit benannte Element der höheren Schachtelungstiefe automisch angelegt oder eben belebt.</p>
-
-<p>Die automatische Belebung hilft zum Beispiel, wenn ich mit einem Klumpen an Daten arbeite, vielleicht aus einer Open-Data-Quelle wie der <a href="http://daten.berlin.de/datensaetze/als-naturdenkmale-gesch%C3%BCtzte-findlinge-charlottenburg-wilmersdorf">Liste der als Naturdenkmale geschützte Findlinge in Charlottenburg-Wilmersdorf</a> oder einer Abfrage <a href="http://www.wikidata.org/w/api.php?action=wbgetentities&amp;sites=dewiki&amp;titles=Ada%20Lovelace&amp;format=jsonfm&amp;languages=de">bei Wikidata</a>. In dem Klumpen können diverse Verschachtelungstiefen bestehen, ohne dass ich die dahinterstehende Struktur im Detail kenne oder kennen möchte. Wenn ich die Struktur naiv in ein assoziatives Array hineinschlürfe, geht das mit Perl, in anderen Sprachen würde ich höflich, aber bestimmt darauf hingewiesen werden, dass ich einem noch nicht definierten Key einen Wert zuweisen will und das Programm stürzt typischerweise ab. Besonders drollig stellt sich hier PHP mit einem Verhalten an, das als Pseudo-Autovivication bezeichnet werden könnte: Zuweisungen an noch nicht vorher definierte Keys beliebiger Schachtelungstiefe gehen (wie in Perl), Abfragen von nicht definierten Keys gehen nicht (wie in anderen Sprachen).</p>
-
-<p>Schauen wir uns doch mal Autovivication in Perl an:</p>
-
-<figure class='code'><figcaption><span>Autovivication in Perl</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-</pre></td><td class='code'><pre><code class='perl'><span class='line'><span class="c1">#!/usr/bin/perl -w</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">use</span> <span class="n">strict</span><span class="p">;</span>
-</span><span class='line'><span class="k">use</span> <span class="nn">Data::</span><span class="n">Dumper</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">my</span> <span class="nv">%data</span><span class="p">;</span>
-</span><span class='line'><span class="nv">$data</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="mi">2</span><span class="p">}{</span><span class="mi">3</span><span class="p">}</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span><span class='line'><span class="k">print</span> <span class="n">Dumper</span><span class="p">(</span><span class="nv">%data</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Das CPAN-Modul <code>Data::Dumper</code> ist möglicherweise vorher noch mit <code>cpan install Data::Dumper</code> zu installieren, bevor es benutzt werden kann. Es dient einfach dazu, eine Datenstruktur in Perl zu inspizieren oder formatiert auszugeben. Mit <code>my %data;</code> definieren wir ein assoziatives Array (Hash) namens data. <code>$data{1}{2}{3} = 10;</code> weist diesem Hash den Wert 10 zu für den Key 3, der in einem Hash mit dem Key 2 steckt, das wiederum in dem Hash-Key 1 von <code>data</code> steckt. Für diejenigen, die in der schwarzen Magie von Perl nicht (mehr) so bewandert sind: Bei der Zuweisung wird aus dem Hash-Vorzeichen <code>%</code> ein <code>$</code>, weil die Variable hier in einem <a href="https://de.wikipedia.org/wiki/Skalare_Variable">skalaren Kontext</a> benutzt wird.</p>
-
-<p>Die Ausgabe ergibt dann:</p>
-
-<pre><code>$VAR1 = '1';
-$VAR2 = {
-          '2' =&gt; {
-                   '3' =&gt; 10
-                 }
-        };
-</code></pre>
-
-<p>In Python wäre der entsprechende Code nicht möglich und würde mit einem Fehler abbrechen:</p>
-
-<pre><code>&gt;&gt;&gt; data = {}
-&gt;&gt;&gt; data[1][2][3] = 10
-Traceback (most recent call last):
-  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-KeyError: 1
-</code></pre>
-
-<p>Da für die Keys der höheren Schachtelungstiefe noch nichts angelegt wurde, wird die Ausnahme KeyError geworfen und das Programm beendet.</p>
-
-<p>In seiner Standard-Library hat Python allerdings im Modul <code>collections</code> auch den Datentyp <code>defaultdict</code>. Gedacht ist er dafür, um Dictionaries zu erzeugen, bei denen ein Defaultwert schon vorgegeben ist — wenn der Wert nicht definiert ist, soll zum Beispiel standardmäßig 0 als Wert angelegt werden.</p>
-
-<p>Indem wir <code>defaultdict</code> auf leicht kreative Weise mißbrauchen, können wir Autovivication in Python bekommen. Was wäre, wenn wir die Datenstruktur rekursiv definieren und als Defaultwert eine Funktionsreferenz auf eine die Datenstruktur selbst erzeugende Funktion angeben?</p>
-
-<p>Wenn sich die leichte Verwirrung im Kopf über den letzten Satz und rekursiv definierte Datenstrukturen gelegt haben, können wir uns diese Lösung auch mal einfach ansehen:</p>
-
-<figure class='code'><figcaption><span>Autovivication in Python</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-<span class='line-number'> </span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-</span><span class='line'><span class="n">AutovivicationDict</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">AutovivicationDict</span><span class="p">)</span>
-</span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="n">AutovivicationDict</span><span class="p">()</span>
-</span><span class='line'><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Hurra, Python kann jetzt Autovivication! Allerdings sind die auf diese Weise erzeugten Dictionaries immer noch ziemlich besonders. Wir können (in beliebiger Schachtelungstiefe) zuweisen und abfragen, aber dass es kein herkömmliches Dictionary ist, stellen wir fest, wenn wir es uns einmal ansehen:</p>
-
-<pre><code>&gt;&gt;&gt; data
-defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {2: defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {3: 10})})})
-</code></pre>
-
-<p>Huch, da ist ja alles voller Referenzen auf eine <a href="https://de.wikipedia.org/wiki/Anonyme_Funktion">anonyme Funktion</a>! Für die meisten Anwendungen sollte das keinen Unterschied machen, mit welchem Wert das <code>defaultdict</code> gefüllt wird. Wenn wir allerdings eine Umwandlung unseres speziellen autovivizierten Dictionaries in ein herkömmliches Dictionary brauchen (etwa, um daraus JSON zu machen), brauchen wir noch eine Umwandlungsfunktion. Weil wir gerade so schön im Flow sind, definieren wir diese auch wieder rekursiv und unter Einsatz von <code>lambda</code>:</p>
-
-<figure class='code'><figcaption><span>dictify</span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">dictify</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">dd</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">dictify</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">dd</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">defaultdict</span><span class="p">)</span> <span class="k">else</span> <span class="n">dd</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Und jetzt haben wir hier ein ganz normales Dictionary:</p>
-
-<pre><code>&gt;&gt;&gt; dictify(data)
-{1: {2: {3: 10}}}
-</code></pre>
-
-<p>Wie bereits eingangs erwähnt: Datenstrukturen sind magisch.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -715,6 +623,10 @@ defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2017/02/03/dash-button/">Der Dash-Button: Keine gute Idee</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/06/18/datasets/">Bemerkenswerte Datensätze</a>
       </li>
     
@@ -728,10 +640,6 @@ defaultdict(&lt;function &lt;lambda&gt; at 0x10a774938&gt;, {1: defaultdict(&lt;
     
       <li class="post">
         <a href="/blog/2015/12/23/bundestagsquartett/">Nebeneinkünftequartett der Bundestagsabgeordneten – Offene Karten mit offenen Daten</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/11/30/games/">Zwei akademische Papers zu Computerspielen und Daten aus Freiem Wissen</a>
       </li>
     
   </ul>

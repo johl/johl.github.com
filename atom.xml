@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2016-06-18T23:41:51+02:00</updated>
+  <updated>2017-02-03T11:08:55+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Der Dash-Button: Keine gute Idee]]></title>
+    <link href="http://blog.johl.io/blog/2017/02/03/dash-button/"/>
+    <updated>2017-02-03T10:15:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2017/02/03/dash-button</id>
+    <content type="html"><![CDATA[<p>Seit Dezember betreibe ich ein kleines Experiment am Arbeitsplatz. Mit einem <a href="https://en.wikipedia.org/wiki/Amazon_Dash">Amazon Dash-Button</a> und einem Raspberry PI habe ich eine kleine Installation angebracht, denn Wertschätzung ist wichtig: ein Button, der auf Knopfdruck zufällige Komplimente per Mail an eine zufällige Kollegin oder einen zufälligen Kollegen verschickt.</p>
+
+<p>Drückt jemand auf den WLAN-getriebenen Internet-of-Things-Button bekommt irgendjemand im Büro ein Kompliment per Mail.</p>
+
+<p>Gezielte Komplimente können natürlich auch weiterhin persönlich und analog überbracht werden, aber digital ist besser.</p>
+
+<p>Grundlage des Projekts ist <a href="https://github.com/maddox/dasher">dasher</a>.</p>
+
+<p><img src="https://d17oy1vhnax1f7.cloudfront.net/items/15271l3y0L2Q01282i3B/Someone_pressed_the_compliment_button__Here_is_a_compliment_for_you__-_Posteingang_-_jens_ohlig_wikimedia_de.png?v=26cf69cc" alt="Screenshot Kompliment" /></p>
+
+<p>Es gibt auch <a href="https://www.instagram.com/p/BOAflZigy3U/">eine Aufnahme von einem der ersten Knopfdrücke</a>.</p>
+
+<p>Leider hat sich der Amazon Dash Button als nicht besonders gut für das Experiment herausgestellt: <a href="https://thenextweb.com/gadgets/2016/05/16/dash-elsewhere/">Nach einer geringen 3-stelligen Anzahl von Knopfdrücken stellt dieser den Betrieb ein.</a> Wenn wir jetzt jedes Mal den Button neu kaufen, würde uns das ca. 4ct pro Kompliment kosten. Das ist es uns natürlich Wert, aber wir sollten auch an die Umwelt denken.</p>
+
+<p>Im Moment arbeiten wir an einem Ersatz auf der Basis von <a href="https://en.wikipedia.org/wiki/NodeMCU">NodeMCU</a>. Sobald diese Lösung fertig ist gibt es auch das gesamte Projekt unter einer freien Lizenz.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bemerkenswerte Datensätze]]></title>
@@ -923,22 +946,6 @@ schauen uns hier ein paar beispielhafte Parameter an.</p>
 <li><a href="https://wwwwwwwwwwwwwwwwwwwwww.bitnik.org/r/">&#8220;The Random Darknet Shopper is an automated online shopping bot which we provide with a budget of $100 in Bitcoins per week. Once a week the bot goes on shopping spree in the deep web where it randomly choses and purchases one item and has it mailed to us.&#8221;</a></li>
 <li><a href="http://www.washingtonpost.com/news/storyline/wp/2014/11/11/the-mathematician-who-proved-why-hipsters-all-look-alike/">The mathematician who proved why hipsters all look alike: What brain neurons tell us about the &#8216;hipster effect&#8217; when all contrarians end up looking the same</a></li>
 <li><a href="http://openoil.net/2014/11/11/openoil-launches-repository-385-oil-contracts-from-54-countries-one-click-away/">OpenOil launches repository: 385 oil contracts from 54 countries, one click away</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Schnelle Links]]></title>
-    <link href="http://blog.johl.io/blog/2014/11/07/links/"/>
-    <updated>2014-11-07T12:55:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2014/11/07/links</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://dangerousminds.net/comments/codex_seraphinianus_a_new_edition_of_the_strangest_book_in_the_world">Codex Seraphinianus: A new edition of the strangest book in the world</a></li>
-<li><a href="http://chrishadfield.ca/space-oddity/">When David Bowie wrote and recorded Space Oddity in 1969, I wonder if he ever imagined it being played in orbit?</a></li>
-<li><a href="https://en.wikipedia.org/wiki/How_does_one_patch_KDE2_under_FreeBSD%3F">&#8220;How does one patch KDE2 under FreeBSD?&#8221; (Russian: &#8220;Как пропатчить KDE2 под FreeBSD?&#8221;), an internet meme in Russian Internet culture</a></li>
-<li><a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">What&#8217;s the matter with PGP?</a></li>
-<li><a href="http://pastebin.com/HrcErVWe">Pastebin: Recommendations for the Hacktivist Community</a> (via <a href="http://www.reddit.com/r/blackhat/comments/2ljjey/recommendations_for_the_hacktivist_community/">reddit</a>)</li>
 </ul>
 
 ]]></content>
