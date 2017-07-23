@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2017-02-03T11:10:22+01:00</updated>
+  <updated>2017-07-23T15:39:20+02:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rezepte, Urheberrecht, Werke]]></title>
+    <link href="http://blog.johl.io/blog/2017/07/23/rezepte/"/>
+    <updated>2017-07-23T15:07:00+02:00</updated>
+    <id>http://blog.johl.io/blog/2017/07/23/rezepte</id>
+    <content type="html"><![CDATA[<p>Steile Thesen können zum Absturz führen oder wie eine Sprungschanze zum Weiterfliegen dienen. Hier ist eine steile These zum Urheberrecht, zum Werkbegriff und vielleicht zum Thema Geschlechter:</p>
+
+<blockquote class="twitter-tweet" data-lang="de"><p lang="de" dir="ltr">Für Kochrezepte gab es nie Copyright. Das gefällt mir, zeigt aber auch, welchem Geschlecht schützenswerte Schöpfungen zugeschrieben werden.</p>&mdash; Jens Ohlig (@johl) <a href="https://twitter.com/johl/status/888844088442748932">22. Juli 2017</a></blockquote>
+
+
+<script async src="http://blog.johl.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Bei 140 Zeichen auf Twitter ist selten alles so differenziert wie bei einem längeren Text. Zum Glück gibt es Blogs.</p>
+
+<p>Ich bin davon überzeugt, dass es bei der Frage, was der Allgemeinheit gehört und was Privateigentum ist, keine Naturgesetze zum Tragen kommen. <a href="http://blog.johl.io/blog/2015/01/11/einhegungen/">Einhegungen fallen nicht vom Himmel</a>. Bei Fragen nach Urheberrecht und geistigem Eigentum lohnt es sich also immer, auch auf die Gesellschaft und ihre Machtverhältnisse zu schauen. Für mich spricht diese allgemeine Erkenntnis dafür, dass bei der Frage, warum Kochrezepte keinen Schutz nach dem Urheberrecht genießen, gesellschaftliche Machtverhältnisse und Zuschreibungen eine Rolle spielen. Sie spielen überall im Leben eine Rolle, warum dann nicht auch hier?</p>
+
+<p>Jedoch: Es gibt ein paar Anzeichen dafür, dass die Aussage &#8220;Kochrezepte fallen nicht unter den Schutz des Urheberrechts, weil meistens Frauen kochen&#8221; in einer ganz vereinfachten Form auch problematisch ist:
+1. In der Spitze und deshalb auch bei den Autoren von Kochbüchern finden sich viele Männer (Bocuse, Oliver). Wenn Männer für ihre Werke Urheberrecht durchsetzen, um Geld zu verdienen, dann hätten sie hier durchaus eine wirtschaftliche Motivation.
+2. In anderen Bereichen, die Teile der Gesellschaft als traditionell weiblich lesen (Handarbeit, Mode), gibt es durchaus Copyfight: Auch wenn zumindest im amerikanischen Recht <a href="https://en.wikipedia.org/wiki/Baker_v._Selden">das Schnittmuster selbst nicht unter den Schutz des Copyright fällt, sondern nur Layout und Abbildung</a>, so gibt es doch teilweise harte Kämpfe um Copyright und Nachnutzung, geführt sowohl von Unternehmen wie Burda als auch von Indie-Designer_innen im Internet.</p>
+
+<p>Nach längerem Nachdenken (und Nachlesen im Internet) habe ich kein eindeutiges Fazit der steilen These.</p>
+
+<p>Ich vermute, dass es Praxen gibt (in diesem Fall: kochen), die seit Jahrhunderten als völlig verschieden von dem Genius der schöpferischen Arbeit angesehen werden. Manchmal werden sie nicht mal als Arbeit gesehen (der Begriff der <a href="https://de.wikipedia.org/wiki/Care-Arbeit">Care-Arbeit</a> setzt hier an). Dann wiederum ist unbestreitbar, dass es Stars gibt (viele davon Männer), die mit urheberrechtlich geschützten Rezepten Geld verdienen könnten.</p>
+
+<p>Als Zwischenergebnis bleibt für mich nur: Urheberrecht ist verwirrend – und manchmal eben auch willkürlich.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Komplimente per Knopfdruck mit dem Dash-Button]]></title>
@@ -25,8 +54,6 @@
 <p>Gezielte Komplimente können natürlich auch weiterhin persönlich und analog überbracht werden, aber digital ist besser.</p>
 
 <p>Grundlage des Projekts ist <a href="https://github.com/maddox/dasher">dasher</a>.</p>
-
-<p><img src="https://d17oy1vhnax1f7.cloudfront.net/items/15271l3y0L2Q01282i3B/Someone_pressed_the_compliment_button__Here_is_a_compliment_for_you__-_Posteingang_-_jens_ohlig_wikimedia_de.png?v=26cf69cc" alt="Screenshot Kompliment" /></p>
 
 <p>Es gibt auch <a href="https://www.instagram.com/p/BOAflZigy3U/">eine Aufnahme von einem der ersten Knopfdrücke</a>.</p>
 
@@ -932,22 +959,6 @@ schauen uns hier ein paar beispielhafte Parameter an.</p>
 <p><a href="https://de.wiktionary.org/wiki/leiwand">Leiwand</a>!</p>
 
 <p>Wie bereits gesagt, das vollständige Programm <a href="https://gist.github.com/johl/5515041">findet sich hier</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Links, Links, Links]]></title>
-    <link href="http://blog.johl.io/blog/2014/11/16/links/"/>
-    <updated>2014-11-16T13:06:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2014/11/16/links</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="https://github.com/mapmeld/profanity65#profanity65">Encrypt your e-mail with PGP and random profanity</a></li>
-<li><a href="http://learnlispthehardway.org/">Learn Lisp The Hard Way</a></li>
-<li><a href="https://wwwwwwwwwwwwwwwwwwwwww.bitnik.org/r/">&#8220;The Random Darknet Shopper is an automated online shopping bot which we provide with a budget of $100 in Bitcoins per week. Once a week the bot goes on shopping spree in the deep web where it randomly choses and purchases one item and has it mailed to us.&#8221;</a></li>
-<li><a href="http://www.washingtonpost.com/news/storyline/wp/2014/11/11/the-mathematician-who-proved-why-hipsters-all-look-alike/">The mathematician who proved why hipsters all look alike: What brain neurons tell us about the &#8216;hipster effect&#8217; when all contrarians end up looking the same</a></li>
-<li><a href="http://openoil.net/2014/11/11/openoil-launches-repository-385-oil-contracts-from-54-countries-one-click-away/">OpenOil launches repository: 385 oil contracts from 54 countries, one click away</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
