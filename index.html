@@ -9,7 +9,7 @@
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="&#8220;Africa&#8221; by Toto to play on eternal loop in Namib desert: &#8221;Some Namibians love it and some say it&#8217;s probably the worst sound &hellip;">
+  <meta name="description" content="Emoji By The People, For The People versucht den Prozess für neue Emojis inklusiver zu machen. Beispielhaft: Die erfolgreiche Einreichung für das &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,49 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2019/02/09/2019-02-09/">Diverse Fundstücke</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2019-02-09T09:45:00+01:00" pubdate>Feb 9<span>th</span>, 2019</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ul>
+<li><a href="http://www.emojination.org/">Emoji By The People, For The People</a> versucht den Prozess für neue Emojis inklusiver zu machen. Beispielhaft: <a href="https://unicode.org/L2/L2016/16024-dumpling-emoji.pdf">Die erfolgreiche Einreichung für das Emoji für gefüllte Teigtaschen</a>, dazu gibt es auch <a href="http://www.dumplingemoji.org/">eine Seite</a>.</li>
+<li>Open Data in Düsseldorf. Die Stadt Düsseldorf schreibt <a href="https://opendata.duesseldorf.de/blog/jahresr%C3%BCckblick-2018">in einem Blogpost</a> über die 2018 veröffentlichten Datensätze.</li>
+<li>20% der Internetbevölkerung hat schon mal von Wikidata gehört, sagt <a href="https://wikimediafoundation.org/2019/02/07/how-does-the-world-see-wikimedia-brands/">eine Untersuchung der Wikimedia Foundation</a>.</li>
+<li>Endlich auch als Offene Daten: Das Handelsregister in Deutschland. Großartige Aktion der Open Knowledge Foundation auf <a href="https://offeneregister.de/">Offene Register</a> zusammen mit Open Corporates.</li>
+<li>Passend dazu: &#8221;<em>The Open Refine Reconciliation API allows Open Refine users to match company names to legal corporate entities. This is especially useful when you have an exist spreadsheet or dataset featuring lots of companies. Matching (or reconciling) to legal entities allows you to get more information about the companies (for example the registered address or statutory filings), and makes it easier to match with other datasets or exchange with other organisations.</em>&#8221; (<a href="https://api.opencorporates.com/documentation/Open-Refine-Reconciliation-API">API</a>). Mit Open Refine ist auch der Abgleich mit Wikidata möglich.</li>
+<li><a href="https://www.kotaku.com.au/2018/07/game-studio-with-no-bosses-pays-everyone-the-same/">Game Studio With No Bosses Pays Everyone The Same</a></li>
+<li><a href="http://networkcultures.org/longform/2016/12/19/communication-control-communism-on-socialist-cybernetics-accelerationist-dreams-and-tiqquns-nightmares/">On Socialist Cybernetics, Accelerationist Dreams, and Tiqqun’s Nightmares</a></li>
+<li>Artikel 13 ist zurück. Es gibt einen Kompromiss zwischen Frankreich und Deutschland. <a href="https://juliareda.eu/2019/02/council-worst-article-13/">Es ist schrecklich</a></li>
+<li>Apropos Zombies: Bei Netflix gibt es <em>Kingdom</em> (<em>킹덤</em>), eine Serie, die zwei sehr koreanische Genres vereint: Opulentes Historiendrama in der Joseon-Zeit und sehr gruseliger Horrorschocker mit Zombies. Es ist ein bisschen wie Game of Thrones im mittelalterlichen Korea mit The Walking Dead. <a href="https://www.netflix.com/title/80180171">Netflix</a>.</li>
+<li>Restaurant-Entdeckung in Berlin: <a href="https://alepposupper.club/">Aleppo Supper Club</a>, wunderbares syrisches Essen.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -550,70 +593,6 @@ Here&#8217;s the solution:</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/09/29/wikidata-cli/">Wikidata-Items schnell auf der Kommandozeile nachschlagen? Mediawiki APIs hacken</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2015-09-29T13:37:00+02:00" pubdate>Sep 29<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ein richtiger Hack ist das nicht, aber es ist besser, wenn ich das folgende aufschreibe, bevor ich es wieder vergesse.</p>
-
-<p><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> benutzt für jeden <a href="https://www.wikidata.org/wiki/Wikidata:Glossary#Entities.2C_items.2C_properties_and_queries">Wissensgegenstand</a> in der Datenbank einen Bezeichner, der mit Q beginnt (oder mit P, wenn es sich um eine Eigenschaft handelt). Berlin ist z.B. <a href="https://www.wikidata.org/wiki/Q64">Q64</a>.</p>
-
-<p>Wenn ich etwa mit <a href="http://googleknowledge.github.io/qlabel/">qLabel</a> die Möglichkeiten multilingualer Labels auf Basis von Wikidata in Webseiten benutzen will, brauche ich diese Bezeichner mit Q für alles, was übersetzt werden soll.</p>
-
-<p>Prima wäre es, wenn ich auf der Kommandozeile einfach ein paar Begriffe eingeben könnte und die entsprechenden Q-Bezeichner als Liste bekomme.  Und so wird&#8217;s gemacht:</p>
-
-<p>Die API von Wikidata folgt im Grunde der allgemeinen MediaWiki-API, die ich schon <a href="http://blog.johl.io/blog/2014/11/17/mediawiki-api/">an anderer Stelle beschrieben</a> habe.</p>
-
-<p>Um jetzt auf der Kommandozeile darauf zuzugreifen, brauche ich noch zwei
-Tools:</p>
-
-<ul>
-<li><a href="http://curl.haxx.se/">curl, ein Kommandozeilen-Tool zum Übertragen von Daten anhand von URLs</a></li>
-<li><a href="https://stedolan.github.io/jq/">jq, einen JSON-Prozessor für die Kommandozeile</a></li>
-</ul>
-
-
-<p>Der Begriff &#8220;Hacker&#8221; ist schön zweideutig und kann viele Bedeutungen annehmen, die jeweils eigene Wissensgegenstände in Wikidata mit eigenem Q-Bezeichner sind. Suchen wir doch einfach danach!</p>
-
-<h3>Suche nach einem Titel (z.B. in der englischen Wikipedia)</h3>
-
-<p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbgetentities\&amp;sites\=enwiki\&amp;titles\=Hacker\&amp;languages\=en\&amp;format\=json | jq -r '.entities | keys'</code></p>
-
-<p>Hier bekommen wir nur einen Q-Bezeichner zurück, nämlich genau den, der zu der Seite mit dem Titel &#8220;Hacker&#8221; in der englischen Wikipedia passt (in dem Fall: eine Begriffserklärungs-Seite).</p>
-
-<h3>Suche nach Labels von Wissensgegenständen</h3>
-
-<p><code>curl -s https://www.wikidata.org/w/api.php\?action\=wbsearchentities\&amp;search\=Hacker\&amp;language\=en\&amp;format\=json | jq -r '[.search[].id]'</code></p>
-
-<p>Hier bekomme eine längere Liste, z.B. mit dem Computerspiel gleichen Namens, der Subkultur, dem Begriff in der Computersicherheit etc.</p>
-
-<p>Mit <code>curl</code> und <code>jq</code> zusammen kann ich mir beliebige Kommandozeilen-Programme für die Wikidata-API schreiben und auf das zurückgegebene JSON-Ergebnis zugreifen. Die Möglichkeiten sind fast endlos.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -635,6 +614,10 @@ Tools:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2019/02/09/2019-02-09/">Diverse Fundstücke</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2019/01/19/2019-01-19/">Möglicherweise von Interesse</a>
       </li>
     
@@ -648,10 +631,6 @@ Tools:</p>
     
       <li class="post">
         <a href="/blog/2017/02/03/dash-button/">Komplimente per Knopfdruck mit dem Dash-Button</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/06/18/datasets/">Bemerkenswerte Datensätze</a>
       </li>
     
   </ul>

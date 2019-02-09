@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2019-01-19T14:37:25+01:00</updated>
+  <updated>2019-02-09T10:06:09+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Diverse Fundstücke]]></title>
+    <link href="http://blog.johl.io/blog/2019/02/09/2019-02-09/"/>
+    <updated>2019-02-09T09:45:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2019/02/09/2019-02-09</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.emojination.org/">Emoji By The People, For The People</a> versucht den Prozess für neue Emojis inklusiver zu machen. Beispielhaft: <a href="https://unicode.org/L2/L2016/16024-dumpling-emoji.pdf">Die erfolgreiche Einreichung für das Emoji für gefüllte Teigtaschen</a>, dazu gibt es auch <a href="http://www.dumplingemoji.org/">eine Seite</a>.</li>
+<li>Open Data in Düsseldorf. Die Stadt Düsseldorf schreibt <a href="https://opendata.duesseldorf.de/blog/jahresr%C3%BCckblick-2018">in einem Blogpost</a> über die 2018 veröffentlichten Datensätze.</li>
+<li>20% der Internetbevölkerung hat schon mal von Wikidata gehört, sagt <a href="https://wikimediafoundation.org/2019/02/07/how-does-the-world-see-wikimedia-brands/">eine Untersuchung der Wikimedia Foundation</a>.</li>
+<li>Endlich auch als Offene Daten: Das Handelsregister in Deutschland. Großartige Aktion der Open Knowledge Foundation auf <a href="https://offeneregister.de/">Offene Register</a> zusammen mit Open Corporates.</li>
+<li>Passend dazu: &#8221;<em>The Open Refine Reconciliation API allows Open Refine users to match company names to legal corporate entities. This is especially useful when you have an exist spreadsheet or dataset featuring lots of companies. Matching (or reconciling) to legal entities allows you to get more information about the companies (for example the registered address or statutory filings), and makes it easier to match with other datasets or exchange with other organisations.</em>&#8221; (<a href="https://api.opencorporates.com/documentation/Open-Refine-Reconciliation-API">API</a>). Mit Open Refine ist auch der Abgleich mit Wikidata möglich.</li>
+<li><a href="https://www.kotaku.com.au/2018/07/game-studio-with-no-bosses-pays-everyone-the-same/">Game Studio With No Bosses Pays Everyone The Same</a></li>
+<li><a href="http://networkcultures.org/longform/2016/12/19/communication-control-communism-on-socialist-cybernetics-accelerationist-dreams-and-tiqquns-nightmares/">On Socialist Cybernetics, Accelerationist Dreams, and Tiqqun’s Nightmares</a></li>
+<li>Artikel 13 ist zurück. Es gibt einen Kompromiss zwischen Frankreich und Deutschland. <a href="https://juliareda.eu/2019/02/council-worst-article-13/">Es ist schrecklich</a></li>
+<li>Apropos Zombies: Bei Netflix gibt es <em>Kingdom</em> (<em>킹덤</em>), eine Serie, die zwei sehr koreanische Genres vereint: Opulentes Historiendrama in der Joseon-Zeit und sehr gruseliger Horrorschocker mit Zombies. Es ist ein bisschen wie Game of Thrones im mittelalterlichen Korea mit The Walking Dead. <a href="https://www.netflix.com/title/80180171">Netflix</a>.</li>
+<li>Restaurant-Entdeckung in Berlin: <a href="https://alepposupper.club/">Aleppo Supper Club</a>, wunderbares syrisches Essen.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Möglicherweise von Interesse]]></title>
@@ -556,22 +577,6 @@ Woche bringt&#8230;</p>
 <p>Dann habe ich noch das <a href="https://events.ccc.de/congress/2014/Fahrplan/events/6562.html">Closing Event</a> auf dem Zettel. Und natürlich Party.</p>
 
 <p>Wird das alles klappen? Ich fürchte nicht. Aber aufgeregt bin ich schon beim Durchsehen des Programms&#8230;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Links, frische (und halbfrische) Links!]]></title>
-    <link href="http://blog.johl.io/blog/2014/12/07/links/"/>
-    <updated>2014-12-07T21:25:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2014/12/07/links</id>
-    <content type="html"><![CDATA[<ul>
-<li><a href="http://www.theeuropeanlibrary.org/tel4/access/data/opendata/details?id=opendata">European Library released Linked Open Data for 82 million bibliographic records from 25 member libraries. All CC0.</a></li>
-<li><a href="https://jakevdp.github.io/blog/2014/11/11/the-hipster-effect-interactive/">The Hipster Effect: An IPython Interactive Exploration</a></li>
-<li><a href="http://spectrum.ieee.org/computing/networks/osi-the-internet-that-wasnt">OSI: The Internet That Wasn’t. How TCP/IP eclipsed the Open Systems Interconnection standards to become the global protocol for computer networking</a></li>
-<li><a href="https://en.wikipedia.org/wiki/History_of_radio#Legal_issues_with_radio">„When radio was introduced in the 1920s many predicted the end of records. Radio was a free medium for the public to hear music for which they would normally pay. While some companies saw radio as a new avenue for promotion, others feared it would cut into profits from record sales and live performances. Many companies had their major stars sign agreements that they would not appear on radio.&#8221;</a></li>
-<li><a href="http://rijksemotions.com/">Rijks Emotions is a student project from Hyper Island, using the Rijksmuseum and Sightcorp api, matching people&#8217;s emotions with their relatives that hang on the museum&#8217;s walls.</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
