@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Neues vom Angriff der Zukunft auf die Gegenwart - Hackety hack hack</title>
+  <title>So I wrote a bot for Mastodon and learned some things - Hackety hack hack</title>
   <meta name="author" content="Jens Ohlig">
 
   
-  <meta name="description" content="<a title="By Jean Marc Cote [Public domain or Public domain], via
-Wikimedia Commons"
-href="http://commons.wikimedia.org/wiki/File% &hellip;">
+  <meta name="description" content="Everything becomes hip and modern when you put the prefix &#8220;cyber&#8221; to it. And what could be more hip and modern than the wonderful world &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ href="http://commons.wikimedia.org/wiki/File% &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.johl.io/blog/2013/04/19/zukunft">
+  <link rel="canonical" href="http://blog.johl.io/blog/2019/02/16/cyberbot">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -81,7 +79,7 @@ href="http://commons.wikimedia.org/wiki/File% &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Neues vom Angriff der Zukunft auf die Gegenwart</h1>
+      <h1 class="entry-title">So I wrote a bot for Mastodon and learned some things</h1>
     
     
       <p class="meta">
@@ -92,32 +90,48 @@ href="http://commons.wikimedia.org/wiki/File% &hellip;">
 
   
 
-<time datetime="2013-04-19T00:05:00+02:00" pubdate>Apr 19<span>th</span>, 2013</time>
+<time datetime="2019-02-16T20:45:00+01:00" pubdate>Feb 16<span>th</span>, 2019</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><a title="By Jean Marc Cote [Public domain or Public domain], via
-Wikimedia Commons"
-href="http://commons.wikimedia.org/wiki/File%3AFrance_in_XXI_Century._Electric_scrubbing.jpg"><img
-width="512" alt="France in XXI Century. Electric scrubbing"
-src="//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/France_in_XXI_Century._Electric_scrubbing.jpg/512px-France_in_XXI_Century._Electric_scrubbing.jpg"/></a></p>
+<div class="entry-content"><p>Everything becomes hip and modern when you put the prefix &#8220;cyber&#8221; to it. And what could be more hip and modern than the wonderful world of governance and administration in Germany? You may (cynically!) think otherwise, but the German government really keeps up with the cyber. Case in point: It regularily publishes openings for dream jobs that have the word &#8220;cyber&#8221; in them. Let&#8217;s keep track of those and post them through a bot! (This wonderful idea originally comes from <a href="https://twitter.com/didumdida">@didumdida</a>).</p>
 
-<p>Eine kleine Sammlung an Links:</p>
+<p>Writing a bot for <a href="https://en.wikipedia.org/wiki/Mastodon_(software)">Mastodon</a> is delightfully simple. There is a special instance that welcomes bots — <a href="https://botsin.space/about/">botsin.space</a> — and this is where the bot for federal cyber job offers or &#8220;Bundescyberjobangebote&#8221; in German (it&#8217;s a long word, but that&#8217;s kind of a German thing) currently lives as <a href="https://botsin.space/@bundescyberjob">@bundescyberjob</a>.</p>
 
-<ul>
-<li><a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=qb7DN3kpl2o">Durex bringt Arduino-basierte Internet-Unterwäsche
-heraus.</a><br/>Laut Promo-Video wohl für Hetero-Paare. Vielleicht ist das aber auch die normative Matrix.</li>
-<li><a href="http://www.newsoficeland.com/home/technology/innovation/item/1124-new-app-prevents-icelanders-from-sleeping-with-their-relatives">Isländerinnen und Isländer können per App checken, ob sie allzu eng
-verwandt sind, bevor sich mehr
-entwickelt</a> <br/><em>Three engineers made an app for the &#8216;Íslendingabók&#8217; database. People can now easily, and on the go, look up how they are related to other Icelanders. And a precious feature, using the bump technology, allows people that meet to just bump their phones together, to instantly see if they are too related to take things any further. The engineers&#8217; slogan for this feature was: &#8220;Bump the app before you bump in bed&#8221;.</em></li>
-<li><a href="http://io9.com/you-ll-probably-never-upload-your-mind-into-a-computer-474941498">Garant für schlechte Stimmung bei der transhumanistischen Bewegung: &#8220;You’ll Probably Never Upload Your Mind Into A Computer&#8221;</a><br/><em>To be fair, however, there are a number of genuine scientific, philosophical, ethical, and even security concerns that could significantly limit or even prevent consciousness uploads from ever happening.</em></li>
-<li><a href="http://derstandard.at/1363708039372/Betrachten-von-Tierfotos-steigert-die-Produktivitaet">Betrachten von Tierfotos steigert die
-Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir wollen diesen Dingen näher kommen, achten mehr auf Details&#8221;, sagt Nittono im Interview mit der &#8220;Zeit&#8221;. Alleine durch das Betrachten entstehe ein Zustand fokussierter Aufmerksamkeit, der über das Anschauen selbst hinausgeht, so der Forscher. Die Erklärung dafür heißt &#8220;kawaii&#8221;, was in Japan so viel wie die Kraft des Niedlichen bedeutet.</em></li>
-</ul>
+<p>The listing of job offers from the federal government with the word &#8220;cyber&#8221; in it lives <a href="https://www.service.bund.de/Content/DE/Stellen/Suche/Formular.html;jsessionid=F2B0D25B9C4913B2C271DBD0260DE9C8.1_cid385?nn=4642046&amp;ambit_distance=10&amp;type=0&amp;resultsPerPage=100&amp;templateQueryString=cyber&amp;sortOrder=dateOfIssue_dt+desc&amp;jobsrss=true">here</a> as an RSS feed.</p>
 
+<p>Reading in the RSS feed is pretty straight-forward with the <a href="https://pythonhosted.org/feedparser/">feedparser</a> Python module. Writing it to Mastodon is easy with the <a href="https://github.com/halcy/Mastodon.py">Python wrapper for the Mastodon API</a>.</p>
+
+<p>To keep everything clean and use the installed libraries like feedreader and Mastodon with exactly the version I needed, I used modern Python&#8217;s way to go: <a href="https://docs.python.org/3/library/venv.html#module-venv">venv</a>. But that gave me another problem: How can I call the Python script from <a href="https://en.wikipedia.org/wiki/Cron">cron</a> now to make a daily post? After all, <code>cron</code>&#8217;s environment doesn&#8217;t really know about <code>venv</code>.</p>
+
+<p>And another thing puzzled me about <code>cron</code>: I don&#8217;t want posts to be made at the exact time every day, that just looks ugly and automated. But <code>cron</code> doesn&#8217;t have a concept of &#8220;execute at at random time&#8221;.</p>
+
+<p>To solve both problems, I don&#8217;t call the Python script directly from <code>cron</code>, but rather a wrapper written in <code>bash</code>. This thing only does two things: First, it sleeps up to twelve hours before it continues, spreading the actual posting at some time between 9am and 9pm in my time zone.</p>
+
+<p>Then it just sources the venv <code>activate</code> script to use <code>venv</code>&#8217;s settings and lastly executes the Python script to post. It looks a little like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+<span class='line-number'> </span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/env bash
+</span><span class='line'>
+</span><span class='line'># Sleep for up to 12 hours
+</span><span class='line'>sleep $((RANDOM % 43200))
+</span><span class='line'>
+</span><span class='line'># Run the bot
+</span><span class='line'>source /home/johl/bundescyberjobbot/bin/activate
+</span><span class='line'>python /home/johl/bundescyberjobbot/bundescyberjobbot.py</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With all these pieces in place, I finally had a wonderful little bot to inform the world about cyber-related jobs. CYBER!</p>
 </div>
 
 
@@ -135,7 +149,7 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
 
   
 
-<time datetime="2013-04-19T00:05:00+02:00" pubdate>Apr 19<span>th</span>, 2013</time>
+<time datetime="2019-02-16T20:45:00+01:00" pubdate>Feb 16<span>th</span>, 2019</time>
       
 
 
@@ -151,10 +165,8 @@ Produktivität</a><br/><em>&#8220;Niedliches löst positive Emotionen aus, wir w
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/04/01/python-und-die-liebe/" title="Previous Post: Python und die Liebe">&laquo; Python und die Liebe</a>
+        <a class="basic-alignment left" href="/blog/2019/02/09/2019-02-09/" title="Previous Post: Diverse Fundstücke">&laquo; Diverse Fundstücke</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/05/13/laufende-projekte/" title="next Post: Laufende Projekte">Laufende Projekte &raquo;</a>
       
     </p>
   </footer>
