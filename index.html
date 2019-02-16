@@ -110,7 +110,7 @@
 
 <p>To keep everything clean and use the installed libraries like feedreader and Mastodon with exactly the version I needed, I used modern Python&#8217;s way to go: <a href="https://docs.python.org/3/library/venv.html#module-venv">venv</a>. But that gave me another problem: How can I call the Python script from <a href="https://en.wikipedia.org/wiki/Cron">cron</a> now to make a daily post? After all, <code>cron</code>&#8217;s environment doesn&#8217;t really know about <code>venv</code>.</p>
 
-<p>And another thing puzzled me about <code>cron</code>: I don&#8217;t want posts to be made at the exact time every day, that just looks ugly and automated. But <code>cron</code> doesn&#8217;t have a concept of &#8220;execute at at random time&#8221;.</p>
+<p>And another thing puzzled me about <code>cron</code>: I don&#8217;t want posts to be made at the exact time every day, that just looks ugly and automated. But <code>cron</code> doesn&#8217;t have a concept of &#8220;execute at a random time&#8221;.</p>
 
 <p>To solve both problems, I don&#8217;t call the Python script directly from <code>cron</code>, but rather a wrapper written in <code>bash</code>. This thing only does two things: First, it sleeps up to twelve hours before it continues, spreading the actual posting at some time between 9am and 9pm in my time zone.</p>
 
