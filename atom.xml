@@ -4,7 +4,7 @@
   <title><![CDATA[Hackety hack hack]]></title>
   <link href="http://blog.johl.io/atom.xml" rel="self"/>
   <link href="http://blog.johl.io/"/>
-  <updated>2019-02-17T00:07:22+01:00</updated>
+  <updated>2020-01-01T17:24:40+01:00</updated>
   <id>http://blog.johl.io/</id>
   <author>
     <name><![CDATA[Jens Ohlig]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mephisto]]></title>
+    <link href="http://blog.johl.io/blog/2020/01/01/mephisto/"/>
+    <updated>2020-01-01T17:01:00+01:00</updated>
+    <id>http://blog.johl.io/blog/2020/01/01/mephisto</id>
+    <content type="html"><![CDATA[<p>Am 1. Januar werden in Deutschland Werke <a href="https://de.wikipedia.org/wiki/Gemeinfreiheit">gemeinfrei</a>, deren Urheberinnen und Urheber vor mehr als 70 Jahren gestorben sind. 2020 also alle, die irgendwann im Jahr 1949 gestorben sind. Dazu gehört auch der Schriftsteller <a href="https://de.wikipedia.org/wiki/Klaus_Mann">Klaus Mann</a>. Sein Roman &#8221;<a href="https://de.wikipedia.org/wiki/Mephisto_%28Roman%29">Mephisto</a>&#8221; wird damit gemeinfrei.</p>
+
+<p>Mephisto erzählt die Geschichte des Schauspielers Hendrik Höfgen, der sich im &#8220;Neuen Reich&#8221; mit den Machthabern arrangiert und zu einem gefeierten Star wird, dabei erst spät erkennt, dass er als Opportunist einen Pakt mit dem Teufel geschlossen hat.</p>
+
+<p>1956 wurde der Roman im Aufbau-Verlag in der DDR verlegt. In der Bundesrepublik wurde ein Erscheinen mehrmals gerichtlich verboten.</p>
+
+<p><a href="http://sorminiserv.unibe.ch:8080/tools/ainfo.exe?Command=ShowPrintVersion&amp;Name=bv030173">1971 urteilte das Bundesverfassungsgericht</a> nach mehreren Verfahren zum Verbot des Romans, dass der postmortale Persönlichkeitsschutz des Schauspielers <a href="https://de.wikipedia.org/wiki/Gustaf_Gr%C3%BCndgens">Gustaf Gründgens</a> höher als die Kunstfreiheit nach Art. 5 Abs. 3 GG zu gewichten sei und bestätigte damit das Verbot.</p>
+
+<p>Im Jahr 1981 wurde der Roman trotz des bestehenden Urteils in der Bundesrepublik im Rowohlt Verlag veröffentlicht. Rowohlt wurde dafür nicht juristisch belangt.</p>
+
+<p>Damit wird heute ein Roman gemeinfrei, den westdeutsche Leserinnen und Leser erst seit weniger als 40 Jahren problemlos erwerben konnten. Zuvor konnten sie ihn nur aus der DDR beziehen.</p>
+
+<p>Es ist ein Roman, der <a href="https://www.deutschlandfunk.de/klaus-mann-mephisto-ein-kaltes-und-boeses-buch.700.de.html?dram:article_id=448147">weiterhin nach einem Urteil des Bundesverfassungsgerichts in Deutschland nicht erscheinen darf</a>, aber als gemeinfreies Werk von allen ohne eine Genehmigung oder Zahlungsverpflichtung zu jedem beliebigen Zweck verwendet werden kann.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[So I wrote a bot for Mastodon and learned some things]]></title>
@@ -556,15 +577,6 @@ Woche bringt&#8230;</p>
 <p>Es gibt keinen naturgegebenen Grund dafür, die Allmende zu zerstückeln und einzuhegen, wenn wir sie auch gemeinsam beackern können. Wir können mit Elinor Ostrom wirtschaftswissenschaftlich zeigen, dass Zusammenarbeit möglich und nachhaltig ist und moralisch ist das Argument &#8220;Ich kann es euch wegnehmen, weil ich es euch weggnehmen kann&#8221; einem kulturoptimistischem gemeinschaftlichen Wirtschaften nicht überlegen.</p>
 
 <p>Im schlimmsten Fall sind Einhegungen tödlich. Am zweiten Todestag von Aaron Swartz lohnt es sich daran zu erinnern, dass durch Einhegungen der Wissensallmende einem großen Talent die Luft zum Atmen genommen wurde.  <a href="http://blog.johl.io/blog/2013/01/13/urheberrechtsextremismus/">So wie für den Suizid von Alan Turing die menschenverachtenden homophoben Gesetze der damaligen Zeit und die, die sie geschaffen haben, politisch verantwortlich sind, ist der Wahnsinn der Urheberrechtsextremisten verantwortlich für Aarons Tod. Copyright kills.  An den Händen der Urheberrechtsextremisten klebt sein Blut.</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Jahresrückblick 2014]]></title>
-    <link href="http://blog.johl.io/blog/2015/01/02/jahresruckblick-2014/"/>
-    <updated>2015-01-02T21:05:00+01:00</updated>
-    <id>http://blog.johl.io/blog/2015/01/02/jahresruckblick-2014</id>
-    <content type="html"><![CDATA[<p>Ja, war okay.</p>
 ]]></content>
   </entry>
   
